@@ -7,3 +7,8 @@ Source does not built yet, since I lost the package (sty), which has to be rewri
 
 I don't have the time for it now. 
 
+The build MUST not use pdflatex. 
+
+commits which require pdflatex will all be rejected. 
+
+bibtex, latex, divps and ps2pdf are the only allowed and necessary command lines for this project. 
