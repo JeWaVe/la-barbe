@@ -1,0 +1,760 @@
+%%
+%%  cours de thermodynamique
+%%  
+%%
+\chapter{Thermodynamique}\index{Thermodynamique}
+\partie{Principes~:}
+\spartie{Principe relatif à l'énergie~:}
+\sspartie{Energie interne~:}
+\index{Energie!interne}
+On décompose un système en un grand nombre de particules d'échelle intermédiaire entre micro et 
+macroscopique. Chacune d'entre elles de volume $\delta V$, de masse $\delta m$, contient un grand
+nombre de particules microscopiques dont on note 
+$\ve{v} = \frac{\sum_{\alpha}{m_{\alpha}\ve{v_{\alpha}}}}{\sum_{\alpha}{m_{\alpha}}}$ la vitesse du 
+centre de masse. En décomposant cette somme sur tous les constituants de la matière, notés $C_i$ on 
+montre que cette vitesse n'est autre que la vitesse $\ve{v}(M, t)$ définie dans le cours sur les 
+grandeurs extensives~:\par
+$\ve{v} = \frac{\serie{\alpha}{{}}{m_{\alpha}\ve{v_{\alpha}}}}{\serie{\alpha}{{}}{m_{\alpha}}}
+                  = \dfrac{\serie{i}{{}}{\rho_{i}\ve{v_{i}}}}{\serie{i}{{}}{\rho_{i}}}$\par
+Ainsi la vitesse $\ve{v}(M, t)$ est la vitesse du centre de masse de la particule alors que la dérivée
+particulaire $\df{\ve{v}}{t}$ représente l'accélération.\par
+Notons R le référentiel du laboratoire et $R_M^{\star}$ celui barycentrique de la particule centrée
+en M. Le théorème de Koenig relatif à l'énergie cinétique des particules microscopiques contenues dans
+la particule s'écrit~:
+\encadre{$\delta e_c = \delta e_c^{\star} + \frac{1}{2}\delta_m v^2$}
+En intégrant sur l'ensemble du système on trouve :
+\encadre{$e_c = e_{c,i} + E_c$}
+avec~:\par
+\index{Energie!interne@potentielle interne}
+\index{Energie!interne@cinétique interne}
+\noindent$\left\lbrace
+\begin{tabular}{ccl}
+$e_c$ & = & énergie cinétique dans R des particules microscopiques.\\
+$e_{c,i}$ & = & énergie indépendante de R appelée énergie cinétique interne.\\
+$E_c$ & = & $\int_{\tau}{\frac{1}{2}\rho v^2\dd{\tau}}$~: énergie cinétique macroscopique du système.
+\end{tabular}
+\right.$\par
+$e_{c,i}$ est alors défini comme la différence $e_c - E_c$ o\`u $e_c$ est l'énergie cinétique 
+microscopique définie ci-dessus et $E_c$ l'énergie cinétique macroscopique définie par l'intégrale
+ci-dessus.\par
+Il se trouve que les forces d'interaction mutuelles entre les particules du systèmes dérivent d'une 
+énergie potentielle $e_{p,i}$ qui ne dépend que de la position relative des particules~: elle est 
+invariante par changement de référentiel (cf~: mécanique)\par
+On définit alors l'énergie interne d'un système comme la somme des énergies cinétique et potentielle
+internes, soit~:\par
+\encadre{$U = e_{c,i} + e_{p,i}$}\par
+U est invariante par changement de référentiel~: elle ne dépend que du système considéré. Elle peut
+être calculée dans le cadre de la physique statistique dans le modèle de Boltzmann (cf~: TD).
+\sspartie{Energie totale~:}
+\index{Energie!totale}
+L'énergie totale d'un système macroscopique est la somme de son énergie interne, de son énergie 
+mécanique et de son énergie electromagnétique (cf~: electromagnétisme) soit~:
+\encadre{$E = U + E_m + E_{em}$}
+
+\sspartie{Premier principe~:}
+\index{Principe!premier principe}
+\encadre{L'énergie totale est une grandeur extensive conservative.}\par
+L'énergie totale étant extensive, on peut définir sa densité volumique $e_v$, son courant total 
+$\ve{J_E}$, son courant non-convectif $\ve{J_E}^{\star}$ et par principe son terme de source est
+nul.\par
+L'énergie totale étant conservative, elle ne peut être ni créée ni détruite.\par
+Comme $U = E-E_m-E_{em}$,$U$ est une grandeur extensive. On peut définir son courant non-convectif
+$\ve{J_U}^{\star}$, noté encore $\ve{J_{th}}$. Sa source est généralement non-nulle, U est donc
+non-conservative.
+\index{systeme@Système!ferme@fermé}
+\sspartie{Bilan d'énergie totale d'un système fermé~:}
+Lors d'une évolution infinitésimale d'un sytème quelconque, le bilan d'énergie totale s'écrit~:\par
+$\dd{E} = \delta E^r+\delta E^p = \delta E^r = \delta U^r + \delta E_m^r + \delta E_{em}^r$\par
+$\bullet\;\delta U^{r}~: $\\
+On peut écrire~: $\delta U^{r} = \dd{t}\integrale{\Sigma}{{}}{%
+\ve{J_{th}}^{\star}\cdot\ve{n}\dd{\Sigma}}$. (par définition de $\ve{J_{th}}^{\star}$)\\
+L'énergie interne reçue par un système fermé est identifiable à l'énergie thermique qu'il reçoit de
+l'extérieur~:\par
+\index{Energie!thermique}
+\encadre{$\delta U^{r} = \delta Q$}\par
+$\bullet\;\delta E_m^{r}~: $\\
+Le travail des forces de contact exercées par le milieu exterieur.
+La somme de l'énergie mécanique et e-m reçue par le système est notée $\delta W$ et on a alors~:\par
+\index{Energie!mecanique@mécanique}
+\encadre{$\dd{E} = \delta Q + \delta W$}\par
+En intégrant~:\par
+\encadre{$E_2-E_1 = Q+W$}\par
+\spartie{Principe relatif à l'entropie~:}
+\index{Principe!entropie@relatif à l'entropie}
+\sspartie{Réversibilité d'une évolution~:}
+\index{reversible@Réversibilité}
+L'évolution inverse d'une évolution observée est celle obtenue en renversant le cours du temps, c'est-
+à-dire en changeant $\dd{t}$ en $-\dd{t}$. On peut imaginer qu'on projette le film de l'évolution 
+à l'envers et à la même vitesse.\par
+\encadre{Une évolution est réversible lorsque son évolution inverse est possible.}\par
+Lorsque l'évolution inverse est possible, elle satisfait aux mêmes lois que l'évolution directe.
+Ainsi une évolution réversible est décrite par des lois invariantes  par renversement du temps.
+\sspartie{Enoncé du deuxième principe~:}
+\index{Entropie}
+\encadre{\begin{tabular}{c}
+Il existe une unique grandeur extensive S appelée entropie\\
+qui ne peut pas être détruite.\end{tabular}}\par
+On a toujours~: $S^p \geq 0$. L'entropie est la seule grandeur extensive qui permet d'affirmer ou non
+si une évolution est réversible. Dans le cas d'un système isolé thermiquement, l'entropie reçue est 
+nulle. Dans ces conditions, l'entropie du système ne peut qu'augmenter.
+\sspartie{Critère entropique de réversibilité~:}
+\encadre{L'évolution est réversible $\equivaut$ $S^p$ = 0}\par
+\spartie{Principe reliant $U$ et $S$~:}
+\index{Principe!u@reliant $U$ et $S$}
+Il existe une relation entre S et U ainsi que les autres grandeurs extensives dont la valeur dépend du
+système étudié. En notant $u, s, \ldots, x_i, \ldots$ les densités massiques de ces grandeurs, la relation
+peut être mise sous la forme~:\par
+\encadre{$\dd{u} = T\dd{s}+\serie{i}{{}}{Y_i\dd{x_i}}$}\par
+En notant~: $Y_i = \dpa{u}{x_i}$ et $T = \dpa{u}{s}$.\\
+La température T est définie comme cela~: c'est la grandeur intensive conjuguée de l'entropie.
+
+\point{Exemples}
+\begin{itemize}
+\item{Corps pur fluide~:} $\dd{u} = T\dd{s}-P\dd{w}$ (attention les grandeurs sont massiques!)
+\item{Mélange fluide~:} $\dd{u} = T\dd{s}-P\dd{w}+\sum\limits_{i}{\mu_i \dd{x_i}}$
+\end{itemize}\par
+ O\`u $x_i$ est la fraction massique du constituant $C_i$ et $\mu_i$ le potentiel chimique du 
+constituant $C_i$.\par
+Rappelons les grandeurs extensives et intensives conjuguées~:\par
+\index{Grandeur!conjuguees@conjuguées}\index{temperature@Température}\index{Pression}%
+\centerline{
+\begin{tabular}{|r|c|c|c|}
+\hline Extensive & $S$ & $V$ & $x_i$\\
+\hline Intensive & $T$ & $-P$ & $\mu_i$\\
+\hline
+\end{tabular}}\par
+\rmq Dans le cas d'un système fermé dont les grandeurs sont uniformes on peut repasser au global et trouver le
+``bien'' connu~: 
+$$\dd{U} = T\dd{S} - P\dd{V}$$
+\sspartie{Définitions relatives à l'état d'un système~:}
+\point{Système~:}
+\index{systeme@Système}
+C'est le contenu d'une surface fermée marquant la frontière entre le système et le milieu extérieur.
+\point{Etat d'un système~:}
+\index{systeme@Système!etat@état}
+L'état d'un système est l'ensemble des informations qui permettent son étude.
+Ces informations sont des variables d'état. Dans le cas général elles sont des grandeurs locales.
+\point{Evolution d'un système~:}
+\index{systeme@Système!evolution@évolution}
+L'évolution d'un système entre $t_1$ et $t_2$ est la succession des états du système entre ces deux instants.
+Elle est notée $(E_1 \longrightarrow E_2)$ et ne doit pas être confondue avec la transformation $(E_1, E_2)$ 
+constituée uniquement de $E_1$ et $E_2$.
+\point{Etats stationnaires~:}
+\index{systeme@Système!stationnaire}
+L'état d'un système est dit stationnaire lorsque les variables d'état sont aussi stationnaire.
+\point{Etat d'équilibre~:}
+\index{Equilibre}
+Un état d'équilibre est un état stationnaire dans lequel toutes les forces thermodynamiques sont nulles.
+(cf~: e)
+\point{Equation d'état~:}
+\index{Equation!etat@d'état}
+Une équation d'état est une relation entre les variables d'état et de toute autre grandeur relative au 
+système étudié.
+\sspartie{Bilan local d'entropie~:}
+Le bilan local d'entropie~: $\div\left(\ve{J_s}^{\star}\right)+\rho\df{s}{t} = \sigma_s$ peut être déduit
+de la relation locale~:\par
+$$\dd{u} = T\dd{S} - P\dd{w} + \sum_{i}{\mu_i \dd{x_i}}$$\par
+et des bilans locaux des grandeurs extensives y figurant~:
+\begin{itemize}
+\item{}Energie interne~: $\div\left(\ve{J_{th}}\right)+\rho\df{u}{t} =\sigma_u (= -\sigma_m-\sigma_{em})$
+\item{}Volume~: $\div\left(-\ve{v})\right)+\rho\df{w}{t} = 0$
+\item{}Masse de $C_i$~: $\div\left(\ve{J_i}^{\star}\right) + \rho\df{x_i}{t} = \sigma_i (=\mu_i\sum\limits_{r}%
+                                                                                   {\nu_{i r}v_r})$
+\end{itemize}
+Par identification on obtient le courant non convectif et la source d'entropie (calcul pénible)~:\par
+\index{Entropie}
+\encadre{$\begin{array}{c}
+\ve{J_s}^{\star} = \frac{\ve{J_{th}}}{T} - \sum\limits_i{\frac{\mu_i}{T}\ve{J_i}^{\star}}\\
+\sigma_s = \ve{J_{th}}\cdot\grad\left(\frac{1}{T}\right) +%
+               \sum\limits_i{\ve{J_i}^{\star}\left\lbrack-\grad\left(\frac{\mu_i}{T}\right) +\frac{z'_i}{T}%
+                             \left(\ve{E} + \ve{v}\land\ve{B}\right)\right\rbrack} +%
+               \sum\limits_r{v_r\frac{A_r}{T}}
+\end{array}
+$}
+o\`u on a adopté les notations suivantes~:
+\begin{itemize}
+\item{$\ve{J_{th}}$~:} Courant thermique.
+\item{$\ve{J_{i}^{\star}}$~:} Courant de diffusion du constituant $i$.
+\item{$z'_{i} = \frac{q_i}{m_i}$~:} Charge massique de $C_i$.
+\item{$v_r$~:} Vitesse de la réaction $r$.
+\item{$A_r = -\sum\limits_{i}{\nu_{i r}M_i\mu_i}$~:} Affinité de la réaction $r$.
+\end{itemize}
+
+\sspartie{Bilan d'entropie d'un système fermé~:}
+Calculons l'entropie reçue par un système fermé entre t et $t+\dd{t}$~:\par
+\encadre{$\delta S^r = \dd{t}\integrale{\Sigma}{{}}{\dfrac{\ve{J_{th}}}{T}\cdot\ve{n}\dd{\Sigma}}$}\par
+Car par définition un système fermé ne permet le passage d'aucun constituant de la matière. On a alors des 
+cas particuliers~:
+\begin{itemize}
+\item{}Si la frontière est adiabatique~: elle ne permet pas d'échange thermique donc~:
+\encadre{$\delta S^{r} = 0$}
+\item{}Si la frontière est thermostatée~: elle est maintenue à une température uniforme alors~:
+\encadre{$\delta S^{r} = \dfrac{\delta Q}{T_0}$}
+\end{itemize}
+En fin un théorème important dont la démonstration est facile mais passée ici sous silence~:
+\encadre{Evolution réversible d'un système fermé $\equivaut \dd{S} = \dfrac{\delta Q}{T}$}
+\rmq
+En pratique on ne calculera pas l'entropie produite mais on la déduira du bilan.\par
+\sspartie{Equilibre d'un système~:}
+La source d'entropie est somme de trois termes, chacun révélant une source d'irréversibilité. Chacun de ces 
+termes peut être mis sous la forme du produit d'un ``flux'' et d'une ``force'' thermodynamique.\par
+{\renewcommand{\arraystretch}{1.5}\centerline{%
+\begin{tabular}{|c|c|}
+\hline
+``Flux'' Thermodynamique & ``Force'' Thermodynamique\\
+\hline
+Courant thermique~: $\ve{J_{th}}^{\star}$ & $\grad \bigl(\frac{1}{T}\bigr)$\\
+\hline
+Courant de diffusion~: $\ve{J_i}^{\star}$ &$-\grad\bigl(\frac{\mu_i}{T}\bigr)
+                                          +\frac{z'_i}{T}\bigl(\ve{E} + \ve{v}\land\ve{B}\bigr)$\\
+\hline
+Vitesse de réaction~: $v_r$ & $\dfrac{A_r}{T}$\\
+\hline
+\end{tabular}}}\par\vspace{2pt}
+\rmq
+Un flux est toujours défini par unité de temps, pas une force.\par
+\index{Flux!thermodynamique|textbf}
+\index{Force!thermodynamique|textbf}
+On peut alors définir proprement un état d'équilibre~:\par
+\encadre{\begin{tabular}{c}Un système est à l'équilibre si\\
+son état est stationnaire et toutes les forces y sont nulles.\end{tabular}}\par
+Ainsi, un système chimique est à l'équilibre ssi sa température est uniforme, tous les potentiels chimiques
+sont nuls et toutes les affinités sont nulles. Au voisinage d'un état d'équilibre chaque flux est fonction 
+linéaire des forces thermodynamiques de même nature tensorielle. En appliquant ce principe dû à Onsager aux 
+tenseurs de nature vectorielle on obtient les relations~:\par
+\index{Principe!onsager@d'Onsager}
+\encadre{%
+\begin{tabular}{ccl}
+$\ve{J_{th}}$ & = & $L_{11}\grad\left(\dfrac{1}{T}\right)+\serie{i\geq2}{{}}{L_{1i}\left\lbrack
+  -\grad\left(\frac{\mu_i}{T}\right)+\frac{z'_i}{T}\left(\ve{E} + \ve{v}\land\ve{B}\right)\right\rbrack}$\\
+$\ve{J_i}^{\star}$ & = & $L_{i1}\grad\left(\dfrac{1}{T}\right)+\serie{j\geq2}{{}}{L_{ij}\left\lbrack
+   -\grad\left(\frac{\mu_j}{T}\right)+\frac{z'_j}{T}\left(\ve{E} + \ve{v}\land\ve{B}\right)\right\rbrack}$
+\end{tabular}}\par
+\rmq
+Le principe d'Onsager stipule également que la matrice des $L_{ij}$ est symétrique et que tous ses 
+coefficients sont positifs.\par
+On va maintenant négliger les coefficients non diagonaux de cette matrice et on retombe sur les lois de 
+Fourier, Ohm et Fick relatives aux transferts thermiques, à la conductivité et à la diffusion~:\par
+\encadre{$\ve{J_{th}} = -\lambda\grad{T}$}\par
+\index{Loi!fourier@de Fourier}
+O\`u $\lambda = \frac{L_{11}}{T_0^2}$ est la conductivité thermique du milieu.\par
+\index{conductivite@Conductivité!thermique}
+\rmq
+On est au voisinage d'un état d'équilibre, $T$ est quasi-uniforme~: $T\sim T_0$.\par
+Puis, si on annule le champ e-m, on trouve la loi de Fick~: \par
+\index{Loi!fick@de Fick}
+\encadre{$\ve{J_i}^{\star} = -D_i \grad x_i$}\par
+O\`u $D_i$ est le coefficient de diffusion.\par
+\index{Coefficient!diffusion@de diffusion}
+Et enfin, en considérant que $T$ uniforme et $\grad\mu_i = 0$, on tombe sur la loi d'Ohm~:\par
+\index{Loi!ohm@d'Ohm}
+\encadre{$\ve{j}^{\star} = \gamma(\ve{E} + \ve{v}\land\ve{B})$}
+\index{conductivite@Conductivité!electrique@électrique}
+
+\sspartie{Evolution réversible~:}
+Lors de l'évolution d'un système o\`u il n'y a ni diffusion ni réaction chimiques et au sein duquel les forces 
+thermodynamiques sont des IP1, la création d'entropie est un IP2 donc nulle à l'ordre 1. On peut qualifier une telle 
+évolution de ``réversible''. On considère qu'un mélange fluide qui possède une température, une pression et des 
+$\mu_i$ quasi uniformes évolue de manière réversible et satisfait à la relation~:
+$$\dd{U} = T\dd{S} - P\dd{V} + \sum\limits_{i}{\mu_i\dd{n_i}}$$\\
+On introduit alors les grandeurs suivantes~:\par
+\index{Enthalpie}
+\index{Energie!libre}
+\noindent{\renewcommand{\arraystretch}{1.3}\centerline{\begin{tabular}{|c|c|c|c|}
+\hline
+Grandeur & Définition & Relations différentielles & Variables\\
+\hline
+Energie interne & & $\dd{U} = T\dd{S}-P\dd{V}$ & $(S,V)$\\
+\hline
+Enthalpie & $H = U+PV$ & $\dd{H} = T\dd{S} + V\dd{P}$ & $(P,S)$\\
+\hline
+Energie libre & $F = U-TS$ & $\dd{F} = -S\dd{T}-P\dd{V}$ & $(T,V)$\\
+\hline
+Enthalpie libre & $G=U+PV-TS$ & $\dd{G} = -S\dd{T}+V\dd{P}$ & $(T,P)$\\
+\hline
+\end{tabular}}}
+\sspartie{Coefficients calorimétriques~:}
+Lors d'une évoluton infinitésimale réversible d'un système fermé dont l'état est décrit à l'aide du jeu de
+variables $(A_i)$, la chaleur reçue par le système peut être mise sous la forme~: $\delta Q = T\dd{S}$. Or
+$S$ dépend des $A_i$ d'o\`u~: $\delta Q = T\sum\limits_i{\dpa{S}{A_i}\dd{A_i}}$.
+On pose alors~:\par
+\encadre{$C_i = T\dpa{S}{A_i}$}\par
+C'est le coefficient calorimétrique associé à $A_i$. A partir de maintenant, on ne s'intéresse qu'au corps pur
+fluide~:\par
+\index{Coefficient!calorimétriques}
+\point{Variables $(T,V)$~:}
+$$\delta Q = C_V\dd{T} + l_V\dd{V}$$\par
+\index{Loi!clapeyron@de Clapeyron}
+D'o\`u la première loi de Clapeyron et, dans le cas du GP celle de Joule~:
+\encadre{$l_V = T\left(\dpa{P}{T}\right)_{V}\qquad\dd{U} = C_V\dd{T}$}
+\point{Variables $(T,P)$~:}
+$$\delta Q = C_P\dd{T} + l_P\dd{P}$$\par
+D'o\`u les secondes lois du même nom (et dans les mêmes conditions)~:
+\encadre{$l_P = -T\left(\dpa{V}{T}\right)_{P}\qquad\dd{H} = C_P\dd{T}$}
+
+\point{Exercices}
+On a fait dans le cours certains exos dont la démonstration est longue, on ne donne que le résultat~:\par
+\encadre{%
+GP au sens $PV = nRT$ $\equivaut$
+$\left\lbrace
+\begin{tabular}{l}
+$\dd{U} = C_V\dd{T}$\\
+$\dd{H} = C_P\dd{T}$
+\end{tabular}\right.$}\par
+\index{Relation!mayer@de Mayer}
+Pour un gaz parfait, la relation de Mayer, obtenue en différenciant la relation~: $H = U+PV = U+nRT$~:\par
+\encadre{$C_P - C_V = nR$}\par
+D'o\`u en posant \fbox{$\gamma = \frac{C_P}{C_V}$}, on trouve~:\par
+\encadre{$C_V = \dfrac{nR}{\gamma - 1}\qquad C_P = \dfrac{\gamma n R}{\gamma - 1}$}\par
+Loi de Laplace pour une évolution adiabatique réversible d'un gaz parfait, démontrée à partir de la relation 
+$0 = \frac{c_V}{T}\dd{T}+\frac{P}{T}\dd{V}$ et de l'expression du coefficient $c_V$~:\par
+\encadre{$PV^{\gamma} = $cte}
+\index{Loi!laplace@de Laplace}
+On définit les coefficients de compressibilité suivants~:\par
+\index{Coefficient!compressibilite@de compressibilité}
+$\chi_T = -\dfrac{1}{V}\left(\dpa{V}{P}\right)_{T}$ et $\chi_S = -\dfrac{1}{V}\left(\dpa{V}{P}\right)_{S}$.
+
+Et on trouve la relation suivante, dont on se servira dans le cours sur les ondes~:\par
+Relation de Reech~:\par
+\index{Relation!reech@de Reech}
+\encadre{$\chi_S = \dfrac{\chi_T}{\gamma}$}
+\partie{Applications~:}
+\spartie{Méthode de résolution d'un problème~:}
+\point{Système~:}
+On choisit un système fermé en précisant les caractéristiques géométriques et thermodynamiques de la frontière
+qui le sépare du milieu extérieur.
+\point{Evolution~:}
+On décrit qualitativement l'évolution du système en précisant les états final et initial ainsi que son
+caractère réversible ou non.
+\point{Bilans~:}
+Si l'évolution est irréversible on fait un bilan d'énergie totale, sinon un bilan d'entropie.
+\point{Conclusion~:}
+On commente le résultat obtenu et on discute éventuellement les hypothèses.
+\spartie{Exemples~:}
+\sspartie{Détente de Joule Gay-Lussac~:}
+\index{detente@Détente!gay@de Joule Gay-Lussac}
+\centerline{%
+\begin{pspicture}(7,4)
+\psframe[fillstyle=vlines]%
+(0,1)(3,4)
+\psline[doubleline=true]%
+(3,2.5)(4,2.5)
+\psframe%
+(4,1)(7,4)
+\rput{0}(1.5,0.5){\large{$T_1, V_1$}}
+\rput{0}(5.5,0.5){\large{$V_2$}}
+\rput{0}(5.3,2.5){\large{vide}}
+\end{pspicture}}
+
+\point{Système~:}
+ Les n moles de gaz.
+\point{Evolution~:}
+A $t=0$ on ouvre le robinet qui sépare les deux enceintes. On aboutit à un état final o\`u le gaz a rempli 
+toute l'enceinte. On a donc une évolution $e_1 \longrightarrow e_2$ telle que $e_1$ et $e_2$ soient des états
+d'équilibres. Elle est clairement irréversible (on le vérifiera par le calcul) et on remarque que l'état final
+est atteint grâce à la viscosité du gaz.
+\point{Bilan d'énergie totale~:}
+Vu que c'est irréversible on fait un bilan d'énergie totale entre $e_1$ et $e_2$~: 
+\encadre{$E_2-E_1 = Q+W$}
+\begin{itemize}
+\item[$\diamondsuit$]{} $E_2-E_1 = U_2 - U_1 + (E_{m2} - E_{m1}) + (E_{em2} - E_{em1}) = U_2 - U_1$\par
+En effet il n'y a pas de phénomène électromagnétique et comme les états $e_1$ et $e_2$ sont des états 
+d'équilibre l'énergie cinétique est nulle et on néglige la variation d'énergie potentielle.
+\item[$\diamondsuit$]{}$ Q\sim 0$ car le temps de la détente est trop faible pour permettre les échanges thermiques.
+\item[$\diamondsuit$]{}$W = E_m^r$ donc $W = 0$. En effet il est égal au travail des forces de contact extérieures qui est nul puisque les parois sont immobiles.
+\end{itemize}
+
+En conclusion~: 
+\encadre{$U_1 = U_2$}
+\point{Bilan d'entropie~:}
+On trouve facilement~:
+\encadre{$S^p = nR\ln\left(\dfrac{V_2}{V_1}\right)$}
+\sspartie{Détente de Joule Thomson~:}
+\index{detente@Détente!thomson@de Joule Thomson}
+\point{Description~:}\par\vspace{3pt}
+\centerline{%
+\begin{pspicture}(9,4)
+\psline(0,0)(8,0)
+\psline(0,3)(8,3)
+\psframe(1,0.05)(6.5,2.95)
+\psline[linestyle=dashed](7.5,0)(7.5,3)
+\psline[linestyle=dashed](1.6,0.05)(1.6,2.95)
+\psframe[fillstyle=vlines](3.5,0)(4.5,3)%             paroi
+\rput{0}(3,1.5){\Large{B}}
+\rput{0}(0,4){Amont}
+\rput{0}(7.5,4){Aval}
+\psline{->}(3,4)(4,4)
+\rput{0}(4,2){\tiny{\textbf{Paroi}}}
+\rput{0}(4,1){\tiny{\textbf{poreuse}}}
+\psline{->}(1,1.5)(1.6,1.5)
+\rput{0}(1.3,1.7){\tiny{$\ve{v_{\scriptscriptstyle{1}}}\dd{t}$}}
+\psline{->}(6.5,1.5)(7.5,1.5)
+\rput{0}(7,1.7){\tiny{$\ve{v_{\scriptscriptstyle{2}}}\dd{t}$}}
+\rput{0}(1.3,0.75){$A_1$}
+\rput{0}(6.9,0.75){$A_2$}
+\rput{0}(0.8,2.5){$\Sigma_1$}
+\rput{0}(6.25,2.5){$\Sigma_2$}
+\rput{0}(1.81,2.5){$\Sigma_1^{\prime}$}
+\rput{0}(7.71,2.5){$\Sigma_2^{\prime}$}
+\rput{0}(2.5,3.2){$\Sigma_l$}
+\rput{0}(0,1.5){$T_1,P_1,\ve{v_1}$}
+\rput{0}(9,1.5){$T_2,P_2,\ve{v_2}$}
+\end{pspicture}}\par
+L'écoulement du gaz est stationnaire.\par
+Les parois du tuyau sont calorifugées.
+\point{Choix du système~:}
+On prend le système délimité à l'instant $t$ par les surfaces $\Sigma_1$, $\Sigma_2$ et $\Sigma_l$,
+suffisamment éloignées de la perturbation pour qu'on puisse y considérer $P_i, T_i$ et $\ve{v_i}$ comme 
+uniformes. A $t+\dd{t}$ le système est délimité par les surfaces~: $\Sigma_1^{\prime}$, $\Sigma_2^{\prime}$
+et $\Sigma_l^{\prime}$.
+\point{Bilan de masse~:}
+$\dd{m} = \delta m_{A_2} - \delta m_{A_1}$ (stationnarité de $m_B$)\par
+Puis $\delta m^{r} = \delta m^{p} = 0$ car la masse totale est conservative et le système est fermé.\par
+Donc~:
+\encadre{$\dd{m} = 0\implique \delta m_{A_2} = \delta m_{A_2} = \delta m = D\dd{t}$}
+o\`u D est le débit massique de l'écoulement.
+\point{Bilan d'énergie totale~:}
+On fait le même raisonnement que pour la détente de Joule Gay-lussac et on obtient~:
+\begin{itemize}
+\item[$\diamondsuit$]{}$e_2 - e_1 = u_2 - u_1 + \frac{1}{2}(v_2^2-v_1^2)$
+\item[$\diamondsuit$]{}$\delta W = \delta E_m^r = (p_1v_1 - P_2v_2)\delta m$
+\item[$\diamondsuit$]{}$\delta Q = 0$
+\end{itemize}
+Au final le bilan fournit la relation~:
+\encadre{$\crochet{h+\dfrac{v^2}{2}}{1}{2} = 0$}
+Dans le cas o\`u la vitesse est faible devant l'enthalpie (détente lente) on peut dire que la détente est 
+isenthalpique dans le sens o\`u l'enthalpie massique du gaz a même valeur en amont et en aval 
+(loin de la paroi poreuse).
+\point{Bilan d'entropie~:}
+On trouve~:
+\encadre{$P_S = \dfrac{R D}{M}\ln\left(\dfrac{P_1}{P_2}\right)$}
+\spartie{Machines thermiques~:}
+\index{machines@Machines thermique}
+\sspartie{Caractéristiques générales~:}
+Les machines thermiques ont pour fonction de transformer une énergie ``oné\-reu\-se'' fournie par l'utilisateur en 
+une énergie utile, fournie au milieu extérieur. Par exemple, un moteur à combustion interne ou un réfrigérateur
+sont des machines thermiques.\par
+On définit le coefficient de performance de la machine par~:\par\index{Rendement}
+\index{Coefficient!performance@de performance}
+\encadre{$\eta = \va{\dfrac{\textrm{énergie utile}}{\textrm{énergie onéreuse}}}$}
+Il est qualifié de rendement lorsqu'il est inférieur à 1.
+\sspartie{Exemple du réfrigérateur à compression~:}
+\index{refrigerateur@Réfrigérateur à comression}
+Le système choisi est le fluide qui circule en circuit fermé et permet les transferts d'énergie voulus. On
+suppose que le fluide est dans un état stationnaire, o\`u il est mis en contact avec l'atmosphère ($T_2$), avec
+le milieu à réfrigérer ($T_1$) et avec le compresseur. On néglige tout autre transfert énergétique.
+\point{Bilan d'énergie entre $t$ et $t+\dd{t}$~:}
+\begin{itemize}
+\item[$\diamondsuit$]{}$ \dd{E} = 0$ car l'état est stationnaire.
+\item[$\diamondsuit$]{}$\delta Q = P_1\dd{t}+P_2\dd{t}$, en notant $P_1$ la puissance thermique reçue de l'enceinte à 
+refroidir et $P_2$ celle reçue du milieu extérieur.
+\item[$\diamondsuit$]{}$\delta W = \delta E_m^r = P_m\dd{t}$, en notant $P_m$ la puissance mécanique fournie par le 
+compresseur au fluide.
+\end{itemize}
+Soit une première équation~:
+\encadre{$P_1+P_2+P_m = 0$}
+\point{Bilan d'entropie entre $t$ et $t+\dd{t}$~:}
+\begin{itemize}
+\item[$\diamondsuit$]{}$\dd{S} = 0$ car l'état est stationnaire.
+\item[$\diamondsuit$]{}$\delta S^r = \dd{t}\int_{\Sigma}\frac{\ve{J_{th}}}{T}\cdot\ve{n}\dd{\Sigma}$ car le système est 
+fermé. En découpant $\Sigma$ en trois parties o\`u $T$ est uniforme sur deux d'entre elles et o\`u l'intégrale est
+nulle sur la troisième, on trouve $\dd{t}\frac{P_1}{T_1}+\dd{t}\frac{P_2}{T_2}$.
+\item[$\diamondsuit$]{}$\delta S^p = P_S\dd{t}$, en notant $P_s$ la production d'entropie par unité de temps dans le fluide.
+\end{itemize}
+On a donc une deuxième équation~:
+\encadre{$P_S + \dfrac{P_1}{T_1}+\dfrac{P_2}{T_2}$}
+Des ces deux équations, on déduit par élimination de $P_2$ la valeur de $P_m$. Comme on suppose $P_1 > 0$ 
+(réfrigération) et $T_2 > T_1$ on en déduit que $P_m > 0$.\par
+Le rendement s'écrit alors $\eta = \va{\frac{P_1}{P_m}}$ et se calcule bien avec les expressions ci-dessus.
+\index{transfert@Transfert thermiques}
+\partie{Transferts thermiques~:}
+\spartie{Etude théorique~:}
+\sspartie{Bilan d'énergie d'un système fermé~:}
+Par définition la frontière d'un système fermé ne permet pas de transfert de matière. Par contre elle permet
+le transfert d'énergie~:
+\encadre{$E_2 - E_1 = Q + W$}
+$Q$ est un transfert d'énergie interne appelé transfert thermique.\par
+$W$ est la somme de deux termes~: $E_m^r$ et $E_{em}^r$.\par
+\sspartie{Vecteur courant thermique~:}
+On définit le courant thermique comme le courant non-convectif d'énergie interne~:
+\encadre{$\ve{J_{th}} = \ve{J_U^{\star}}$}
+Ainsi $\ve{J_{th}}\cdot\ve{n}$ représente la puissance thermique surfacique reçue dans le sens de 
+$\ve{n}$.\par
+Dans un milieu continu le vecteur courant thermique satisfait à la loi de Fourier~:
+\encadre{$\ve{J_{th}} = -\lambda\grad T$}
+\noindent $\lambda$ est la conductivité thermique du milieu et varie usuellement entre $10^{-2}$ et 
+$10^{2} Wm^{-1}K^{-1}$.\par
+\sspartie{Condition aux limites à l'interface entre deux milieux~:}
+En faisant un bilan d'énergie totale d'un système le long de l'interface (suffisamment régulière) on obtient
+la condition aux limites suivante~:\index{Condition aux limites}
+\encadre{$\ve{J_{th1}}\cdot\ve{n_{12}} = \ve{J_{th2}}\cdot\ve{n_{12}}$}
+Ce qui était assez logique. Si les deux milieux sont immobiles de conductivité $\lambda_1, \lambda_2$ on 
+trouve~:
+\encadre{$T_1 = T_2$}
+en plus de la condition précédente. Entre un solide et un fluide en mouvement, le gradient de température
+est trop grand pour qu'on dispose de la loi de Fourier et elle est remplacée par la loi empirique de 
+Newton~:\index{Loi!newton@de Newton}
+\encadre{$\ve{J_{th}} = h(T_1 - T_2)\ve{n_{12}}$}
+Le coefficient $h$ est qualifié de conducto-convectif.
+\index{Coefficient!conducto@conducto-convectif}
+\spartie{Exemples et applications~:}
+\sspartie{Equation de diffusion thermique~:}
+\index{Equation!diffusion@de diffusion thermique}
+En faisant un bilan local d'énergie interne dans un milieu immobile condensé et en l'abscence 
+d'électro\-magnétisme, on trouve~:
+\encadre{$\laplacien T = \dfrac{\rho c}{\lambda}\dpa{T}{t}$}
+dans laquelle $c$ est la capacité thermique massique du milieu considéré et $\lambda$ la conductivité thermique, 
+suppposée uniforme.
+\sspartie{Résistance thermique~:}
+\index{resistance@Résistance!thermique}
+Le matériau est un solide immobile dans un état stationnaire placé entre deux thermostats de température $T_1$ et 
+$T_2$. Dans ces conditions le puissance thermique transférée de $1\to 2$ peut être mise sous la forme~:
+\encadre{$P_{12} = \dfrac{T_1 - T_2}{R_{th}}$}
+(cf~: 1.1.4)
+Cette résistance peut être calculée directement à partir de l'é\-qua\-tion de diffusion thermique, en utilisant les
+symétries pour mener à bien les calculs.
+\point{Mur homogène~:}
+On se donne un mur d'épaisseur $e$ de conductivité thermique $\lambda$ uniforme. Si on note $x$ la profondeur, les
+symétries nous indiquent que $T$ ne dépend que de $x$. Le calcul de Laplacien est alors trivial et comme
+on se place en régime stationnaire, il s'intègre tout aussi bien. On en déduit la température en fonction
+de la profondeur~:\par
+\centerline{$\left\lbrace\begin{array}{ll}
+       T = T_1 & \mathrm{si}\;\; x < 0\\
+       T = (T_2 - T_1) \frac{x}{e} + T_1 & \mathrm{si}\;\; 0\leq x\leq e\\
+       T = T_2 & \mathrm{sinon}
+                         \end{array}\right.$}\par
+Le calcul de la puissance thermique transférée est alors trivial et on trouve~:
+\encadre{$R_{th} = \dfrac{e}{\lambda\Sigma}$}
+\rmq Cette étude est à comparer avec celle du condensateur plan, effectuée dans le cours d'électromagnétisme.
+\point{Le matériau est compris entre deux sphères~:}
+On peut reprendre toute cette étude mais le calcul est un peu plus fatigant car il faut connaitre une expression 
+``factorisée'' du laplacien en sphériques d'un champ scalaire ne dépendant que de $r$. Au final on trouve~:
+\encadre{$R_{th} = \dfrac{R_2 - R_1}{R_1 R_2 4\pi\lambda}$}
+\sspartie{Tige plongée dans un bain thermostaté~:}
+Une tige cylindrique de rayon $a$ et de masse volumique $\rho$, de capacité thermique $c$, de conductivité
+thermique $\lambda$ est plongée dans un bain thermostaté à la température $T_0$. On note $h$ le coefficient
+surfacique de trasfert thermique conducto-convectif à l'interface tige-bain.\par
+On suppose la section suffisamment faible et $\lambda$ suffisamment grand pour que la température soit 
+quasi-uniforme sur toute section droite de la tige.\par
+\centerline{\includegraphics*[width=8cm,height=3cm]{images/tige_dansun_bain.eps}}
+\point{Equation aux dérivées partielles~:}
+Effectuons un bilan d'énergie totale entre $t$ et $t+\dd{t}$ pour la tranche de tige située entre $x$ et 
+$x+\dd{x}$~:\par
+\centerline{$\dd{E} = \dd{U} + \dd{E_m} + \dd{E_{em}}$}\par
+Le dernier de ces trois termes est ici sans objet, le second est nul car la tige est immobile. Le premier
+vaut~:
+\begin{itemize}
+\item[$\diamondsuit$]{} $\dd{U} = c\pi a^2\dd{x}\dd{T} = c\pi a^2\dpa{T}{t}\dd{x}\dd{t}$, pour une phase condensée.
+\item[$\diamondsuit$]{} $\delta Q = \dd{t}\integrale{S}{}{\ve{J_{th}}\cdot\ve{n}\dd{S}}$. En appliquant la 
+loi de Fourier sur les surfaces $\Sigma_x$ et $\Sigma_{x+\dd{x}}$ et en exprimant l'autre terme avec le 
+coefficient $h$ (découle directement des définitions) puis en utilisant que la température ne dépend que de
+$x$, on en déduit~:\par
+$\delta Q = \lambda\pi a^2\dpak{2}{T}{x}\dd{x}\dd{t} + h(T_0 -T)2\pi a\dd{x}\dd{t}$\par
+\item[$\diamondsuit$]{} $\delta W = 0$ car la tige est immobile.
+\end{itemize}
+En simplifiant, on obtient l'équation différentielle cherchée~:
+\encadre{$\dpak{2}{\theta}{x} = \dfrac{\rho c}{\lambda}\dpa{\theta}{t} + \dfrac{2 h}{\lambda a}\theta$}
+\point{Analogie électrique~:}\index{Ligne de transmission}
+Rappelons le schéma d'une ligne de transmission entre $x$ et $x+\dd{x}$~:\par
+\centerline{\includegraphics*[width=8cm,height=3cm]{images/ligne_transmission.eps}}\par
+En utilisant les lois usuelles de l'électrocinétique (on est dans le cadre de l'ARQS vu les faibles 
+dimensions du circuit considéré), on obtient les équations  différentielles satisfaites par 
+le potentiel $v(x,t)$ et l'intensité $i(x,t)$~:
+\encadre{$\dpak{2}{v}{x} = L_0C_0\dpak{2}{v}{t}+(L_0G_0 +R_0C_0)\dpa{v}{t} + R_0G_0 v$}
+\rmq Dans le cas d'une ligne de transmission sans perte ($R_0 = G_0 = 0$), on retrouve l'équation d'onde.\par
+Dans le cas o\`u $L_0 =0$ les deux équations précédentes sont formellement identiques et on peut préciser
+l'analogie thermoélectrique~:\par
+{\centerline{\renewcommand{\arraystretch}{2}\begin{tabular}{c|l|l}
+ & Electrocinétique & Thermodynamique\\
+\hline
+Régime & Loi d'Ohm~: $\ve{j} = -\gamma\grad V$ & Loi de Fourier~: $\ve{J_{th}} = -\lambda\grad T$\\
+stationnaire & $V_2 -V_1 = R i$ & $T_2 -T_1 = R_{th}P_{th}$\\
+\hline
+                     & $R_0 = \dfrac{1}{\gamma}\dfrac{1}{\pi a^2}$ & $R_{th} = \dfrac{1}{\lambda}\dfrac{
+                                                                                      1}{\pi a^2}$\\
+Régime               & $C_0$ & $C_{th} = c\rho\pi a^2$\\
+quelconque           & $G_0$ & $G_{th} = 2\pi a h$\\
+                     & $R_0 C_0$ & $R_{th}C_{th} = \dfrac{\rho c}{\lambda}$\\
+\hline
+\end{tabular}}}\par\vspace{2pt}
+\rmq Toutes ces grandeurs sont bien entendu linéiques, et l'analogie se fait entre différence de température
+$\theta$ et  différence de potentiel.
+\sspartie{Analyse dimensionnelle de l'équation de diffusion~:}
+$\bullet\;$ On se place désormais dans un cadre unidimensionnel, en admettant que ça marche en général.\\
+L'équation de diffusion s'écrit~: $\dpa{T}{t} = D \dpak{2}{T}{x}$, en posant $D =\dfrac{\lambda}{\rho c}$.
+on en déduit que la quantité $y = \dfrac{x}{\sqrt{D t}}$ est sans dimension.
+\point{Solution particulière~:}\index{solution@Solution de la chaleur}
+Cherchons une solution particulière de l'équation de diffusion sous la forme $T(x,t) = f(y)$, o\`u $f$ est
+une fonction de classe $\mathcal{C}^2$.\par
+En dérivant deux fois cette composée par rapport à la variable $x$ et une fois par rapport à $t$ et en reportant
+dans l'équation de diffusion, on aboutit à l'équation différentielle~:\par
+$$f''(y) + \frac{1}{2}y f'(y) = 0$$\par
+Ce qui se résout sans problème~: on aboutit à une fonction de type erf c'est-à-dire~:\par
+$f(y) = C_1\integrale{0}{y}{e^{-\frac{\alpha^2}{4}}\dd{\alpha}} + C_2$
+Soit après changement de variable~:\par
+$f(y) = 2C_1\integrale{0}{\frac{y}{2}}{e^{-\frac{\alpha^2}{4}}\dd{\alpha}} + C_2$ ce qui fournit la température~:
+\encadre{$T(x,t) = a + b\dfrac{2}{\sqrt{\pi}}\integrale{0}{\frac{x}{2\sqrt{Dt}}}{e^{-u^2}\dd{u}}$}
+\noindent Notons qu'on a normalisé la solution particulière de sorte que $T(0,t) = a$ et
+$\limf{x\to+\infty}{T(x,t)} = a+b$.\\
+La forme de cette solution suggère son utilisation dans le cadre des milieux ``semi-infinis''.
+\sspartie{Sensation de température~:}\index{sensation@Sensation de température}
+On veut expliquer pourquoi l'acier et le bois ne donnent pas la même impression de température.
+\point{Modélisation~:}
+Avant contact, le bloc est à le température uniforme $\theta_1 = 20^{\circ}C$. On suppose l'expérimentateur en pleine 
+forme  de sorte que son doigt soit à la température uniforme $\theta_2 = 37^{\circ}C$. L'interface est supposée plane,
+d'équation $x = 0$. Les symétries montrent alors que la température ne dépend que de $x,t$ et on la note $T(x,t)$,
+en supposant que le doigt est la partie d'espace $x>0$ et le bloc $x<0$.\par
+\point{Equations de diffusion thermique~:}
+Dans chaque milieu on a l'équation de diffusion bien connue. Les deux milieux étant semi-infinis, on recherche des 
+solutions de la forme ci-dessus, de sorte que~:\par
+\centerline{$\left\lbrace\begin{array}{ll}
+               T(x,t) = a_1 + b_1 f(x,t) & \mathrm{si}\;\; x < 0\\
+               T(x,t) = a_2 + b_2 f(x,t) & \mathrm{si}\;\; x > 0
+             \end{array}\right.$}\par
+en notant $f(x,t)$ la fonction intégrale trouvée au paragraphe précédent, normalisée.
+\point{Conditions aux limites~:}
+\begin{itemize}
+\item{$T(0^-,t) = T(0^+, t) = T_c$} C'est cette température de contact qui fournit la sensation de chaud-froid.\par
+\item{$\limf{x\to-\infty}{T(x,t)} = T_1$} Soit $a_1 - b_1 = T_1$
+\item{$\limf{x\to+\infty}{T(x,t)} = T_2$} Soit $a_2 +b_2 = T_2$
+\item{$-\lambda_1\dpa{T}{x}(0^-,t)\vx = -\lambda_2\dpa{T}{x}(0^+,t)\vx$} C'est la condition correspondant à la
+puissance thermique surfacique. Après calcul, on en déduit~: $\frac{\lambda_1}{\sqrt{D_1}} b_1 = 
+\frac{\lambda_2}{\sqrt{D_2}} b_2$. 
+\end{itemize}
+Ces relations permettent le calcul de $T_c$~: \par
+\encadre{$T_c = \dfrac{E_1 T_1 + E_2 T_2}{E_1 + E_2}$}\par
+en notant $E = \dfrac{\lambda}{\sqrt{D}}$ l'éffusivité du matériau.\index{effusivite@Effusivité}
+\point{Application numérique~:}
+Des données numériques permettent d'arriver à $\theta_c = 22^{\circ}C$ dans le cas de l'acier et à $34^{\circ}C$ dans le cas du
+bois, ce qui explique cette différence.
+%
+\partie{Transferts radiatifs~:}
+\spartie{Equilibre thermodynamique d'un gaz de photons~:}
+\sspartie{Statistique de Bose-Einstein~:}
+Le champ électromagnétique régnant dans une cavité vide de matière est une superposition d'OPPM dont les pulsations
+$\omega$ et les vecteurs d'onde $\ve{k}$ ne peuvent prendre que certaines valeurs appartenant à un ensemble discret
+imposé par les conditions aux limites sur les parois conductrices de la cavité et appelées ``mode propres'' (cf~: 
+guide d'onde). A chaque OPPM sont associés des photons de quantité de mouvement $\ve{p}$ et d'énergie $E$ tels que~:\\
+\centerline{$\begin{array}{lclcl}
+               \ve{p} & = & \hbar\ve{k} & = & \dfrac{h\nu}{c}\ve{u}\\
+               E      & = & \hbar\omega & = & h\nu
+            \end{array}$}\par
+conformément aux lois de De Broglie. D'après les deux premières équations de Maxwell dites de structure, le photon
+est une particule de masse nulle et de spin unité (résultat admis car très difficile).\index{Photon}\par
+Ainsi les photons sont des particules sans intéraction mutuelle et de type boson (spin entier)\index{Boson} qui
+suivent le statistique de Bose-Einstein.\par\index{Bose-Einstein}
+En supposant que le gaz de photons est en équilibre thermodynamique, que les parois opaques sont portées à la 
+température uniforme $T$, il vérifie les propriétés suivantes~:\par
+\begin{itemize}
+\item{} La répartition des photons est uniforme dans l'espace de la cavité.
+\item{} Les photons sont répartis de manière isotrope dans l'espace des vitesses sur une sphère de rayon $c$.
+\item{} Le nombre de photons situé dans $\delta V$ ayant une fréquence $\nu$ à $\dd{\nu}$ près est de la forme~:
+\encadre{$\dfrac{8\pi}{c^3}\dfrac{\nu^2}{e^{\frac{h\nu}{kT}}-1}\delta V\dd{\nu}$}
+Le coefficient est la densité volumique fréquentielle des photons dans la cavité et d'un point de vue constantes, 
+$h$ est la constante de Planck ($6.62\cdot10^{-34}J\cdot s$) et $k$ la constante de Boltzmann ($1.38\cdot 10^{-23}$).
+\end{itemize}
+En multipliant par $h\nu$ on obtient la densité volumique fréquentielle d'énergie électromagnétique~:
+\encadre{$e_{v,\nu} = \dfrac{8\pi h}{c^3}\dfrac{\nu^3}{e^{\frac{h\nu}{kT}}-1}$}
+\rmq En prenant les cas limites $h\nu\ll kT$ ou l'inverse on obtient dans le premier cas l'approximation classique de
+Rayleigh~: $e_{v,\nu} = \dfrac{8\pi k T}{c^3}\nu^2$, et dans le second l'approximation de Wien~:
+$e_{v, \nu} = \dfrac{8\pi h}{c^3}\nu^3e^{-\frac{h\nu}{k T}}$.
+\rmq La relation de dispersion $\lambda = \frac{c}{\nu}$ permet de faire la même chose avec $\lambda$ plutôt que $\nu$.
+On parle alors de densité spectrale.
+\sspartie{Lois de Planck~:}
+\index{Loi!planck@de Planck}
+En arrivant sur la paroi de la cavité, les photons sont successivement absorbés et réémis par excitation et 
+désexcitation des atomes la composant. A l'équilibre l'état est stationnaire, il y a donc autant de photons émis
+que de photons absorbés par unité de temps. Le nombre de photons de fréquence $\nu$ à $\dd{\nu}$ près, possédant
+une quantité de mouvement de direction $\theta, \phim$ à $\dd{\theta}, \dd{\phim}$ près, absorbés par un élément 
+$\delta\Sigma$ de la paroi durant un intervalle de temps de longueur $\delta t$, se calcule par des méthodes de 
+physique statistique en utilisant l'isotropie dans l'espace des vitesses. Ce nombre vaut~: 
+$n_{\nu}c\delta t\delta\Sigma\cos\theta\dd{\nu}\frac{\sin\theta\dd{\theta}\dd{\phim}}{4\pi}$. Par intégration et
+multiplication par $h\nu$ on en déduit l'énergie absorbée pendant $\delta t$ par $\delta \Sigma$ correspondant aux
+photons de fréquence $\nu$~: $e_{\nu} = \phim_{\nu}\dd{\nu}\delta t\delta\Sigma$ avec~:
+\encadre{$\phim_{\nu} = \dfrac{2\pi h}{c^2}\dfrac{\nu^3}{e^{\frac{h\nu}{k T}} - 1}$}
+Et $\phim_{\nu}$ est la puissance surfacique fréquentielle absorbée par la paroi.
+\rmq On peut utiliser la relation de dispersion pour obtenir les relations correspondantes au point de vue spectral.
+\sspartie{Loi de Wien}
+\index{Loi!wien@de Wien}
+On peut vérifier que l'allure du flux spectral émis est de cette forme~:\par
+\centerline{\includegraphics*[width=4cm,height=3cm]{images/flux_emis.eps}}\par
+Il présente donc un maximum pour une valeur qu'on peut calculer numériquement en fonction de la température~:
+\encadre{$\lambda_m T = 2898 \mu m K$}
+On vérifie alors qu'à la température ambiante, $\lambda_m$ est de l'ordre de $10 \mu m$, ce qui veut dire l'émission par
+une paroi opaque a lieu dans l'infra rouge lointain alors qu'à la température de surface su soleil, $\lambda_m$
+vaut un demi micron, ce qui montre que le soleil émet principalement dans le visible (on s'en doutait quand même un 
+peu)\par
+On peut vérifier que $98\%$ de la puissance em émise l'est pour $0.5\lambda_m\le \lambda\le 8\lambda_m$, ce qui
+permet d'affirmer que le soleil émet un peu dans les U-V et dans l'I-R, alors qu'à température ambiante, tout reste
+dans l'I-R.
+\rmq Cela justifie au passage le fait qu'une barre de métal émet progressivement dans le rouge, puis dans le blanc
+au fur et à mesure qu'on l'échauffe avec une forge ou un chalumeau.
+\sspartie{Lois de Stefan~:}
+\index{Loi!stefan@de Stefan}
+\point{Densité volumique d'énergie e-m~:}
+Elle est calculée par intégration sur $\nu$ de $e_{v, \nu}$. Après calculs, on trouve~:
+\encadre{$e_{v} = a T^4$}
+O\`u $a\sim 7.565\cdot 10^{-16}JK^{-4}$ est une constante dont l'expression littérale n'est pas importante.\par
+\point{Flux surfacique émis~:}
+De même par intégration sur $\nu$ on obtient la seconde loi de Stefan relative au flux surfacique émis, noté $\phim$~:
+\encadre{$\phim = \sigma T^4$}
+O\`u $\sigma \sim 5.67\cdot 10^{-8}W m^{-2}K^{-4}$ est une constante.
+\sspartie{Etude thermodynamique du gaz de photons~:}
+\point{Equation d'état~:}
+On a montré en physique statistique que la force moyenne subie par un élément $\delta\Sigma$ de surface de la part
+des photons incidents est de la forme~:\par
+$$\delta\ve{F_{abs}} = \frac{1}{\delta t}\sum\limits_{n = 1}^{\delta N}\ve{p_n}$$\par
+En tenant alors compte de l'isotropie de la répartition des photons dans l'espace des vitesses et en calculant la
+contribution à cette force des photons de fréquence $\nu$ et de vitesse de direction $(\theta, \phim)$, puis
+en faisant de même avec les photons émis (calcul long), on trouve~:
+\encadre{$\delta \ve{F} = \dfrac{1}{3}e_v \vz \delta\Sigma$}
+Ce qui est l'analogue d'un force de pression fluide puisque de la forme $P\vz \delta\Sigma$. On en déduit l'équation
+d'état du gaz de photons~:
+\encadre{$P = \dfrac{a}{3}T^4$}
+à partir des lois de Stefan.
+\point{Energie~:}
+Dans le vide $E = E_{em}$ et par intégration sur le volume de la cavité, on obtient la relation~:
+\encadre{$E = aT^4 V$}
+\rmq A volume constant~: $\dd{E} = C_v\dd{T}$ o\`u $C_v = 4aT^3 V$ est la capacité thermique isochore du gaz de photons.
+\point{Entropie~:}
+Pour un fluide, $\dd{E} = T\dd{S} - P\dd{V}$. On définit l'entropie de gaz de photons par analogie, à partir de la
+relation~: $\dd{S} = \dfrac{1}{T}\dd{E} + \dfrac{P}{T}\dd{V}$. Un calcul simple montre alors que~:
+\encadre{$S = \dfrac{4}{3}aT^3 V$}
+\rmq On choisit la constante d'intégration nulle du fait de $S \to 0$ lorsque $V\to 0$.
+\spartie{Bilan d'énergie en l'absence de rayonnement~:}
+\sspartie{Bilan d'énergie totale~:}
+Dans le cas particulier d'un milieu immobile, dans un état stationnaire, le bilan d'énergie totale s'écrit~:
+\encadre{$P_{th}+P_{em}^r = 0$}
+Si on suppose en outre les transferts thermiques négligeables, le bilan d'energie devient~:
+\encadre{$P_{em}^r = 0$}
+\sspartie{Bilan d'énergie électromagnétique~:}
+Les fréquences rencontrées pour un rayonnement sont telles que l'ARQS n'est plus valable et que les 
+instruments de mesure ne peuvent mesurer que des valeurs moyennes temporelles. Le bilan d'énergie em en 
+moyenne temporelle pour un régime sinusoïdal s'écrit~: $\div <\ve{J_{em}}> = <\sigma_{em}>$, soit, pour
+toute surface fermée \textit{fixe}, $P_{em}^r = -\int_V <\sigma_{em}>\dd{V} = -<P_{em}^p>$, ou encore~:
+\encadre{$<P_{em}^r> + <P_{em}^p>  = 0$}
+\sspartie{Equilibre radiatif~:}
+Dans le cas particulier o\`u les atomes du système n'absorbent ni n'émettent de photons ou alors lorsqu'ils
+en émettent dans une fréquence donnée autant qu'ils en avaient absorbés auparavant, la puissance em produite
+est nulle. On parle ``d'équilibre radiatif''.\index{Equilibre!radiatif}
+\exercice Une OPPM se propage dans un milieu diffuseur. Montrer que son intensité varie selon la loi
+$I_0e^{-\alpha x}$, en notant $\vx$ la direction et le sens de l'OPPM.\\
+\textsl{Indication~:} faire un bilan de photons sur un bon système.
+
+\sspartie{Bilan d'énergie à l'interface entre deux milieux~:}
+\point{Interface entre un milieu transparent et un conducteur métallique~:}
+Un bilan d'énergie sur un système comprenant l'interface, d'épaisseur négligeable, donne~:
+\encadre{$\phim^{i} = \phim^{r}$}
+en notant $\phim^i = <\ve{J_{em}}^i>\cdot\vz$ et $\phim^r = <\ve{J_{em}}^r>\cdot(-\vz)$.
+\point{Interface entre deux milieux transparents~:}
+De même mais cette fois il y a un flux transmis~:
+\encadre{$\phim^{i} = \phim^{r} + \phim^{t}$}
+\point{Corps noir~:}
+Par définition un corps noir est un  milieu opaque qui émet un rayonnement identique à celui d'une paroi
+de même température à l'équilibre.\index{Corps noir}
+\exercice Montrer que la puissance em émise par $\delta\Sigma$ d'un corps noir dans une direction $\ve{u}$
+à un angle solide $\delta\Omega$ près satisfait à la loi de Lambert~:
+\encadre{$\dfrac{\phim}{\pi}\delta\Sigma\delta\Omega\ve{u}\cdot\ve{n}$}
+o\`u $\phim =\sigma T^4$ désigne le flux émis dans toutes les directions.\index{Loi!lambert@de Lambert}\\
+\textsl{Indication~:} Revenir à la base et compter des photons.
+

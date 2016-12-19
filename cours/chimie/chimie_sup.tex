@@ -1,0 +1,98 @@
+\documentclass[a4paper]{article}
+%------------------------------------------------------------------------------------------
+%                                   resume resume resume de Chimie de math sup
+%------------------------------------------------------------------------------------------
+\usepackage[latin1]{inputenc}
+\usepackage[francais]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{color,amsmath,amssymb} %fontes mathématiques
+\usepackage{pst-all}               %postscript
+\usepackage{graphicx}              %encore du postscript
+\usepackage{ulem}                  %soulignages
+\usepackage{/usr/share/texmf/tex/generic/perso/maths}
+\newcommand{\ml}{m_{\ell}}
+%
+\declarecountsphi
+\taillearticle
+%
+%
+\begin{document}
+%
+%
+\titre{Chimie~: Math sup}
+\partie{Cinétique chimique~:}
+\spartie{Réaction simple~:}
+\point{Vitesse de réaction~:}
+On se place dans un système fermé, de composition chimique uniforme (gràce à une agitation), le plus souvent de
+volume stationnaire et souvent de pression stationnaire. On définit alors la vitesse instantanée de la réaction comme
+la quantité~:
+\encadre{$v(t) = \dfrac{1}{V}\df{\xi}{t}$}
+o\`u $\xi$ est l'avancement de la réaction.
+\point{Ordre d'une réaction~:}
+Lorsque la vitesse d'une réaction se met à l'instant $t$ sous la forme~: 
+\encadre{$v(t) = k\Pi_i\conc{A_i}^{q_i}$}
+le produit ne faisant intervenir que les réactifs, on dit que la réaction admet un ordre, $q_i$ est l'ordre partiel 
+de $A_i$, $q = \sum_iq_i$ est l'ordre total. De plus il faut que $k$ ne dépende que de la température. On dit qu'une 
+réaction suit la loi de Van't Hoff lorsque le $q_i$ sont égaux aux coefficients st\oe chiométriques.
+\rmq La plupart des réactions n'admettent pas d'ordre.
+\point{Loi d'Arrhénius~:}
+Une étude statistique ou une série d'expériences permettent de mettre en évidence le fait que la constante $k$ pour
+une réaction faisant intervenir deux réactifs et deux produits se met sous la forme~:
+\encadre{$k = Ae^{-\frac{E_A}{RT}}$}
+$E_A$ est appelée l'énergie d'activation.
+\point{Suivi expérimental des réactions~:}
+Les différentes méthodes pour suivre expérimentalement une réaction au cours de son déroulement sont~:
+\begin{itemize}
+\item{Conductimétrie~:} Méthode électrique, en mesurant la conductance d'une solution, on accède aux concentrations.
+\item{pH-métrie~:} Méthode électrique, en mesurant la ddp entre deux électrodes bien choisies.
+\item{Spectrophotométrie~:} On mesure l'absorbtion d'un flux lumineux traversant la solution.
+\end{itemize}
+\spartie{Réactions composées~:}
+\point{Réactions parallèles~:}
+Deux réactions sont en parallèles si elles ont un réactif en commun. Connaissant les vitesses de chaque réaction, en 
+faisantle tableau d'avancement, on trouve l'évolution de la concentration de ce réactif.
+\point{Réactions consécutives~:}
+C'est le cas si un produit de la première sert de réactif à la seconde. De même il faut connaître les cinétiques de
+chacune des réactions pour en déduire l'équation différentielle satisfaite par le constituant en question.
+\point{Hypothèse de Bodenstein~:}
+Au cours de réaction, la concentration des intermédiaires réactionnels est quasi-constante.
+\partie{Mécanismes réactionnels~:}
+On constate expérimentalement que l'ordre d'une réaction ne peut pas être prédit à partir de l'équation bilan. C'est
+parce que l'équation bilan traduit la réaction globale mais pas les échanges élémentaires qui se produisent entre-temps
+et qui n'apparaissent pas.
+\spartie{Mécanismes élémentaires~:}
+Un acte élémentaire est une réaction dont l'équation bilan traduit lé réalité microscopique.
+\point{Molécularité~:}
+On appelle molécularité d'un acte élémentaire le nombre de particules de réactifs participant à cette réaction, que ce
+soit des molécules, des atomes, des ions...\par
+\point{Loi de Van't Hoff~:}
+Une condition nécéssaire pour qu'une réaction soit élémentaire est que d'une part l'ordre partiel soit égal au 
+coefficient st\oe chiométrique et d'autre part que l'ordre global soit égal à la moléculatité.
+\point{Réactions complexes~:}
+On distingue deux types de réactions complexes~: les réactions par stades et les réactions en chaîne. Dans les 
+premières on n'a qu'un nombre fini d'étapes et chaque intermédiaire réactionnel diparaît. Dans les autres il existe une
+suite de réaction bouclant un nombre fini de fois avant de s'arrêter.
+\partie{Structure électronique des atomes~:}
+\spartie{Principes~:}
+On suppose connu la notion de nombre quantique, de fonction d'onde...(cf~:Etude quantique de l'atome d'hydrogène).
+\point{Principe d'exclusion de Pauli~:}
+\encadre{Il est impossible que deux électrons d'un même atome possèdent le même état quantique.}
+\point{Règle de Klechkowsky~:}
+\encadre{$E_{n,l}$ est une fonction croissante de $n+l$, et pour dex valeurs semblables de $n+l$, de $n$.}
+\point{Règles de Hünd~:}
+\encadre{Les électrons se disposent dans l'ordre des énergies croissantes.}
+\centerline{\includegraphics*[width=6cm,height=5cm]{remplissage.eps}}
+\point{Exemples~:}
+\begin{itemize}
+\item{Chlore} $Z =17$~: $1s^2 2s^2 2p^6 3s^2 3p^5$.
+\item{Fer} $Z = 26$~: $1s^2 2s^2 2p^6 3s^2 3p^6 3d^6 4s^2$.
+\end{itemize}
+\partie{Cristallographie~:}
+On parle de solide cristallin dès que la matière s'organise en structure régulière sur une large échelle spatiale.
+La maille est l'unité élémentaire qui permet d'engendrer tout le réseau.
+\point{Les différentes structures~:}
+\centerline{\includegraphics*[width=10cm,height=6cm]{cristaux_1.eps}}\par\vspace{10pt}
+\centerline{\includegraphics*[width=6cm,height=6cm]{cristaux_2.eps}}
+
+
+\end{document}

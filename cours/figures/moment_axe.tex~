@@ -1,0 +1,12 @@
+\documentclass{article}
+ \usepackage{epsfig}
+ \usepackage{color}
+ \usepackage[latin1]{inputenc} % Francisation
+ \usepackage[francais]{babel} % Francisation
+ \usepackage{color,amsmath,amssymb} %fontes mathématiques
+ \usepackage{/usr/share/texmf/tex/generic/perso/maths} % eventuelles commandes personnelles
+ \pagestyle{empty} % Pas de numeros de pages
+ \begin{document}
+ \input{moment_axe.pstex_t}
+ \end{document}
+ 

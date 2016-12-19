@@ -1,0 +1,538 @@
+\chapter{Optique}\index{Optique}
+\partie{Diffraction :}\index{Diffraction}
+\spartie{Introduction :}
+\sspartie{Définition :}
+On appelle diffraction tout phénomène optique qui ne suit pas les lois de l'optique géométrique.
+\sspartie{Mises en évidence expérimentale :}
+\point{Diffraction par une fente ou par un trou :}
+Lorsqu'on envoie un faisceau cylindrique sur une fente, l'éclairement observé ne suit pas les lois de l'optique 
+géométrique. En effet celles-ci prévoient un éclairement sous la forme d'une seule tache située en face de la fente
+alors qu'en réalité on observe plusieurs taches.\par
+De même lorsqu'on envoie un faisceau cylindrique sur un bord mince (lame de rasoir gilette par exemple), on 
+n'observe pas la discontinuité de l'éclairement prédite par l'optique géométrique mais des taches caractéristiques.
+De manière générale, on observe un tel phénomène dès que les lois de l'optique géométrique prédisent un 
+discontinuité de l'éclairement.
+\sspartie{Interprétation théorique :}
+Les lois de l'optique géométrique ne sont valables que dans le cadre de l'approximation faite dans le cours sur
+les ondes électromagnétiques. Or, si elles prévoient une discontinuité du champ, c'est que celui-ci varie 
+brutalement à l'échelle de la longueur d'onde. C'est une contradiction. Pour la résoudre, il faudrait résoudre
+les équations de Maxwell, ce qui n'est fait que dans quelques cas particuliers. Il faut donc introduire un nouveau 
+principe.
+\spartie{Principe d'Huygens-Fresnel :}
+\index{Principe!huygens@d'Huygens-Fresnel}
+\sspartie{Enoncé~:}
+\centerline{\begin{pspicture}(12,2.5)
+\psdots[dotstyle=+](1,1.5)
+\rput(1,1.8){A}
+\rput(2,0){demi espace source}
+\rput(1,0.5){\small{source primaire}}
+\rput(4,1.5){{\Huge{(}}\begin{tabular}{c}Système\\ 
+                                optique\end{tabular}{\Huge{)}}}
+\psline[linestyle=dashed,linewidth=0.1mm](6,1)(6,2.5)
+\rput(6,0.5){\small{surface diffractante}}
+\psline[linewidth=0.5mm](6,1.2)(6,1.6)
+\rput(6.2,1.3){$\scriptstyle{\dd{S}}$}
+\rput(5.8,1.2){\tiny{M}}
+\rput(8,1.5){{\Huge{(}}\begin{tabular}{c}Système\\ 
+                                optique\end{tabular}{\Huge{)}}}
+\psdots[dotstyle=+](11,1.5)
+\rput(11,1.8){P}
+\rput(11,0.5){\small{point d'observation}}
+\rput(9,0){demi espace d'observation}
+\end{pspicture}}\par
+\vspace{0.5cm}
+\index{montage@Montage de Frauhöfer}
+Dans ce montage général, la surface diffractante est une fente, un réseau, un trou... on suppose que la lumière 
+émise par les sources primaires est cohérente et monochromatique. \par
+Le principe d'Huygens-Fresnel stipule que chaque élément de surface $(M,\!\dd{S})$ de la surface diffractante se 
+comporte comme une source ponctuelle qui émet une onde proportionnelle à $\dd{S}$ ainsi qu'à l'onde incidente au 
+point $M$ et la constante de proportionnalité ne dépend pas de $M$ ni du temps.\par
+Dans chaque demi-espace hors de la surface de diffraction, on peut appliquer les lois de l'optique géométrique.\par
+Il peut arriver que les deux demis espaces soient confondus (comme dans un réseau à réflexion).
+\sspartie{Formulation mathématique :}
+L'élément de surface $\dd{S}$ se comporte comme une source ponctuelle émettant une onde :\\
+$C s(M,t)\dd{S}$. Dans le cadre de l'approximation scalaire de l'optique physique (cours d'électromagnétisme) on 
+sait alors que l'onde reçue au point $P$ a pour expression :\\
+\centerline{$a_{MP}e^{i\frac{2\pi}{\lambda}(MP)}Cs(M,t)\dd{S}$}
+
+O\`u $(MP) = \integrale{L}{{}}{n\dd{L}}$ désigne le chemin optique de $M$ à $P$.\\
+De plus dans les montages usuels les coefficients $a_{MP}$ ont quasiment tous la même valeur. Il reste donc à 
+intégrer sur la surface $S$ en regroupant toutes les constantes dans la grande constante de proportionnalité :\par
+\encadre{$s(P,t) \propto \integrale{S}{}{s(M,t)e^{i\frac{2\pi}{\lambda}(MP)}\dd{S}}$}\par
+\spartie{Diffraction à l'infini :}
+\sspartie{Montage expérimental :}
+\centerline{\begin{pspicture}(7.2,7.2)
+\psset{xunit=0.6cm,yunit=0.6cm}
+%grande ellipse
+\psellipse(6,6)(2,4)  
+%point C
+\psdots[dotstyle=*](6,6)
+\rput(6,5.6){\tiny{C}}
+%plan diffractant
+\psline(1.5,0)(1.5,10.5)
+\psline(1.5,10.5)(3.8,12)
+%ecran
+\psline(10.5,0)(10.5,10.5)
+\psline(10.5,10.5)(12.8,12)
+%axe optique
+\psline[linewidth=0.1mm]{->}(-0.5,6)(1,6)
+\psline[linewidth=0.1mm](0,6)(1.5,6)
+\psline[linewidth=0.1mm,linestyle=dotted](1.5,6)(2.8,6)
+\psline[linewidth=0.1mm](2.8,6)(4,6)
+\psline[linewidth=0.1mm,linestyle=dotted](4,6)(6,6)
+\psline[linewidth=0.1mm](6,6)(10.5,6)
+\psline[linewidth=0.1mm,linestyle=dotted](10.5,6)(11.8,6)
+\psline[linewidth=0.1mm]{->}(11.8,6)(13.5,6)
+%rayon passant par O
+\psline[linewidth=0.1mm]{->}(2.8,6)(3.75,6.32)
+\psline[linewidth=0.1mm](2.8,6)(4.035,6.416)
+\psline[linewidth=0.1mm,linestyle=dotted](2.8,6)(5.65,6.96)
+\psline[linewidth=0.1mm,linestyle=dotted](5.65,6.96)(12,8)
+\psline[linewidth=0.1mm]{->}(5.65,6.96)(8.825,7.48)
+\psline[linewidth=0.1mm](5.65,6.96)(10.5,7.749)
+%point O
+\psdots[dotstyle=*](2.8,6)
+\rput(2.8,5.6){\tiny{O}}
+%point F'
+\psdots[dotstyle=*](11.8,6)
+\rput(11.8,5.6){\tiny{F'}}
+%rayon parallèle
+\psline[linewidth=0.1mm]{->}(0,7)(1,7)
+\psline[linewidth=0.1mm](1,7)(1.5,7)
+\psline[linewidth=0.1mm,linestyle=dotted](1.5,7)(3.55,7)
+\psline[linewidth=0.1mm,linestyle=dotted](3.55,7)(6.4,7.96)
+\psline[linewidth=0.1mm](3.55,7)(4.12,7.192)
+\psline[linewidth=0.1mm,linestyle=dotted](6.4,7.96)(12,8)
+\psline[linewidth=0.1mm]{->}(6.4,7.96)(9.2,7.98)
+\psline[linewidth=0.1mm](6.4,7.96)(10.5,7.984)
+%Point I
+\psdots[dotstyle=*](6.4,7.96)
+\rput(6.4,8.26){\tiny{I}}
+%point M
+\psdots[dotstyle=*](3.55,7)
+\rput(3.3,7.4){\tiny{M(x,y)}}
+%rayon CP
+\psline[linewidth=0.15mm,linestyle=dashed](6,6)(12,8)
+%segment OM
+\psline[linewidth=0.1mm,linestyle=dotted](2.8,6)(3.55,7)
+%segment I?
+\psline[linewidth=0.1mm,linestyle=dotted](5.65,6.96)(6.4,7.96)
+%point P
+\psdots[dotstyle=*](12,8)
+\rput(12.2,8.4){\tiny{P(X,Y)}}
+%point H et segment HM
+\psline[linewidth=0.1mm,linestyle=dotted](3.55,7)(3.45,6.25)
+\psdots[dotstyle=*](3.45,6.25)
+\rput(3.7,6.1){\tiny{H}}
+%vecteurs u et v
+\psline[linewidth=0.2mm]{->}(6,6)(6.95,6.32)
+\psline[linewidth=0.2mm,linestyle=dotted](6.95,6.32)(6.49,6.32)
+\psline[linewidth=0.1mm]{->}(6,6)(6.49,6.32)
+\rput(6.9,6.6){$\scriptstyle{\ve{u}}$}
+\rput(6.3,6.6){$\scriptstyle{\ve{v}}$}
+%textes
+\rput(12.5,0.5){\begin{tabular}{c} 
+               \tiny{Ecran dans le plan}\\
+               \tiny{focal image}
+            \end{tabular}}
+\rput(6,.5){\begin{tabular}{c}
+               \tiny{Lentille mince}\\
+               \tiny{Convergente}
+           \end{tabular}}
+\rput(3,0.5){\begin{tabular}{c}
+               \tiny{Surface}\\
+               \tiny{diffractante}\\
+               \tiny{plane}
+           \end{tabular}}
+\rput(-0.5,0.5){\begin{tabular}{c}
+               \tiny{Faisceau cylindrique}\\
+               \tiny{en incidence normale}
+           \end{tabular}}
+\end{pspicture}}
+\par\vspace{0.5cm}
+La diffraction à l'infini est caractérisée par le montage de Frauhöfer dans lequel la lentille est utilisée dans
+les conditions de Gauss. D'un point de vue notations, $\ve{v}$ désigne la projection de $\ve{u}$ dans le plan de la
+lentille. On note ses coordonnées $(\alpha, \beta)$, celles de $M$ $(x, y)$ et celles de $P$ $(X, Y)$. 
+On montre géométriquement que $\ve{v} = \frac{\ve{F'P}}{f'}$. Ce qui se traduit par l'égalité : $X = \alpha f'$ et
+$Y = \beta f'$.
+\sspartie{Détermination de l'onde diffractée :}
+Elle peut être déterminée en connaissant l'onde incidente et le chemin optique $(MP)$.
+\point{Onde incidente, Transmittance :}
+\index{Transmittance}
+On distingue plusieurs cas selon la nature de l'objet diffractant.
+\begin{itemize}
+\item{Cas d'un simple trou :}\par
+\centerline{\begin{pspicture}(3,3)
+\psset{xunit=0.5cm,yunit=0.5cm}
+\psline[linewidth=0.1mm]{->}(0,1)(1,1)
+\psline[linewidth=0.1mm](0,1)(2,1)
+\psline[linewidth=0.1mm]{->}(0,2)(1,2)
+\psline[linewidth=0.1mm](0,2)(2,2)
+\psline[linewidth=0.1mm]{->}(0,4)(1,4)
+\psline[linewidth=0.1mm](0,4)(2,4)
+\psline[linewidth=0.1mm]{->}(0,5)(1,5)
+\psline[linewidth=0.1mm](0,5)(2,5)
+\psline[linewidth=0.1mm]{->}(0,3.5)(1,3.5)
+\psline[linewidth=0.1mm](0,3.5)(2,3.5)
+\psline{-|}(2,0)(2,2.05)
+\psline{|-}(2,3.95)(2,6)
+\psdots[dotstyle=*](2,3.5)
+\rput(2.5,3.5){\small{M}}
+\rput(2.4,5){\small{S}}
+\end{pspicture}}
+L'onde incidente en incidence normale a même valeur à un instant donné en tout point de $S$, qui est une surface
+d'onde. Elle s'écrit donc :\par
+$$s(M,t) = s_0 e^{-i\omega t}$$
+\end{itemize}
+
+\begin{itemize}
+\item{Cas d'une pellicule de transparence variable :}
+La surface $S$ est une plaque inhomogène d'indice $n$ d'épaisseur $e$, accolée à un trou comme ci-dessous.\par
+\centerline{\begin{pspicture}(3,3)
+\psset{xunit=0.5cm,yunit=0.5cm}
+\psline[linewidth=0.1mm]{->}(0,1)(1,1)
+\psline[linewidth=0.1mm](0,1)(3,1)
+\psline[linewidth=0.1mm]{->}(0,2)(1,2)
+\psline[linewidth=0.1mm](0,2)(3,2)
+\psline[linewidth=0.1mm]{->}(0,4)(1,4)
+\psline[linewidth=0.1mm](0,4)(3,4)
+\psline[linewidth=0.1mm]{->}(0,5)(1,5)
+\psline[linewidth=0.1mm](0,5)(3,5)
+\psline[linewidth=0.1mm]{->}(0,3.5)(1,3.5)
+\psline[linewidth=0.1mm](0,3.5)(3,3.5)
+\psline[linewidth=0.01mm](2,0)(2,6)
+\psline[linewidth=0.01mm](3,0)(3,6)
+\psline{-|}(3,0)(3,2.05)
+\psline{|-}(3,3.95)(3,6)
+\psdots[dotstyle=*](3,3.5)
+\psdots[dotstyle=*](2,3.5)
+\rput(3.5,3.5){\small{M}}
+\rput(1.6,3.1){\small{M'}}
+\rput(2.5,0.5){\textcircled{n}}
+\end{pspicture}}\par
+$\dfrac{s(M,t)}{s(M',t)} = a_{M'M}e^{i\frac{2\pi}{\lambda}(M'M)}$. Or de même que ci-dessus : $s(M',t) = 
+s_0'e^{-i\omega t}$ et de plus : $(M'M) = e n(M)$. Si on pose $\tau(M) = a_{M'M}$ qui est un nombre compris entre 
+$0$ et $1$ appelé transparence, et $s_0 = s_0' e^{i\frac{2\pi}{\lambda}(M'M)}$ on peut simplifier le résultat :\par
+$$s(M,t) = s_0\tau e^{-i\omega t}$$\par
+\item{Cas d'une lame transparente d'épaisseur variable :}
+Cette fois la plaque est encochée au niveau du trou et l'encoche, située du coté extérieur, est d'épaisseur $a$. 
+L'indice du milieu constituant la plaque est $n$ supposé uniforme. Tout se fait comme ci-dessus si ce n'est :\par
+$a_{M'M} = \frac{2}{1+n}\cdot 1 \cdot{\frac{2 n}{n+1}} = \frac{4n}{(n+1)^2}=T$ (cf : pb sur le transmission par des 
+dioptres). Le chemin optique dépend de la position du point $M$ par rapport à l'encoche. Selon les cas il vaut 
+$n(e-a)+a$ ou $ne$. Si on pose : $s_0 = s_0' T e^{i\frac{2\pi}{\lambda}ne}$ alors : on retrouve le résultat 
+habituel~:\par
+$$s(M,t) = s_0\tau(M)e^{i\omega t}$$\par
+En posant $\tau = e^{i\frac{2\pi}{\lambda}(1-n)a}$ dans l'encoche et $1$ ailleurs. 
+\end{itemize}
+Ce résultat est généralisable. L'onde arrivant en $M$ peut être mise sous cette forme dans laquelle $\tau$ est 
+appelé transmittance.\par
+\point{Chemin optique :}
+\index{Chemin optique}
+Le chemin optique $(MP)$ peut être calculé dans le cadre de l'optique \\
+géométrique en prenant le rayon issu de $O$ 
+pour référence : $(MP) = (HP) = (OP) - \ve{u}\cdot\ve{OM} = (OP) - \ve{v}\cdot\ve{OM}$.
+\point{Onde diffractée :}
+Un simple calcul montre que :\par
+$s(P,t) = s_0e^{-i\omega t}e^{i\frac{2\pi}{\lambda}(OP)}\integrale{S}{}{\tau(M)e^{-i\frac{2\pi}{\lambda}\ve{v}\cdot
+\ve{OM}}\dd{S}}$. On retiendra que :\par
+L'onde diffractée dans la direction $\ve{u}$ et arrivant au point $P$ tel que $\ve{F' P} = f'\ve{v}$ est 
+proportionnelle à : $$\integrale{S}{}{\tau(M)e^{-i\frac{2\pi}{\lambda}\ve{v}\cdot\ve{OM}}\dd{S}}$$\par
+\rmq L'intégrale ci dessus n'est autre que la transformée de Fourier de la transmittance.
+\sspartie{Figure de diffraction :}
+\index{Figure de diffraction}
+On appelle ``éclairement'' la valeur moyenne temporelle de la puissance\\
+électromagnétique reçue par la surface de 
+l'écran et figure de diffraction la répartition de l'éclairement.
+L'énergie lumineuse diffractée en $M$ et reçue en $P$ a une valeur moyenne temporelle proportionnelle à 
+$|s(P,t)|^2$. En conséquence l'intensité diffracte dans la direction $\ve{u}$ ou l'éclairement en $P$ sont 
+proportionnels à $\left\lvert\integrale{S}{}{\tau(M)e^{-i\frac{2\pi}{\lambda}\ve{v}\cdot\ve{OM}}\dd{S}}
+\right\rvert^2$ ainsi qu'à l'intensité $I_0$ de l'onde incidente.\par
+\sspartie{Propriétés de la figure de diffraction à l'infini :}
+\begin{itemize}
+\item{}
+La figure de diffraction n'est pas modifiée lorsque l'on déplace la surface diffractante. Cette propriété montre 
+qu'on peut accoler lentille et surface diffractante.
+\end{itemize}
+
+\begin{itemize}
+\item{}
+Une rotation de la surface diffractante autour de l'axe optique de la lentille engendre une rotation identique la 
+figure de diffraction.\par
+\item{}
+La figure de diffraction par un trou en incidence quelconque se déduit de celle en incidence normale par une 
+translation de vecteur $\ve{F'A'}$, $A'$ étant l'image géométrique du faisceau incident en l'abscence de 
+diffraction.\par
+\item{}
+Pour une surface diffractante dont la transmittance est invariante par translation le long de l'axe $(Oy)$, la 
+lumière diffractée est concentrée sur l'axe $(F'X)$.
+\end{itemize}
+\spartie{Exemples de diffration à l'infini :}
+\sspartie{Diffraction par un trou carré :}
+On suppose le trou carré, de côtés $a$ et $b$. D'après les propriétés ci-dessus, on peut : confondre le centre du 
+rectangle avec l'axe optique, prendre les axes parallèles aux côtés du rectangle, supposer le faisceau d'incidence 
+normale. Le calcul de l'intégrale donnant $s(P,t)$ à une constante multiplicative près se fait alors sans problème 
+et on trouve que :\par
+\encadre{$\mathcal{E}(P,t) =\mathcal{E}_0\sinc^2(u)\sinc^2(v)$}\par
+en posant $u = \dfrac{\pi X a}{\lambda f'}$ et $v =\dfrac{\pi Y b}{\lambda f'}$. Le calcul fait apparaître que
+l'éclairement est proportionnel au carré de la surface diffractante.\par
+\centerline{\includegraphics*[width=8cm,height=6cm]{images/eclairement.eps}}
+On remarque que si a et b tendent vers l'infini, l'éclairement est concentré au point $F'$, ce qui est concordant 
+avec les prévisions de l'optique géométrique. Si b tend vers l'infini ($b \gg a$) la lumière est concentrée sur 
+l'axe $(F'X)$. Ce résultat donne la figure de diffraction par une fente mince, ce qui peut être retrouvé en 
+utilisant la quatrième propriété du 1.3.4
+\sspartie{Apodisation :}
+\index{Apodisation}
+C'est une technique visant à supprimer les pieds de la figure de diffraction créee par une fente mince, afin 
+d'améliorer la résolution d'instruments optique. 
+Elle peut être réalisée en choisissant une transmittance idoine dans la fente. Si 
+par exemple on prend $\tau(x) = \cos (\pi\frac{x}{a})$, le calcul de l'intégrale donne l'onde diffractée dans la 
+direction $\alpha = X/f'$ (à une constante multiplicative près), ce qui fournit l'éclairement au point $P$ :\par
+\encadre{$\dfrac{\mathcal{E'}}{\mathcal{E'}_0} = \left(\dfrac{\cos u}{1 - \frac{4}{\pi^2}u^2}\right)^2$}\par
+O\`u $u = \pi\frac{a}{\lambda}\alpha$. 
+
+D'un point de vue graphique :\par
+\centerline{\includegraphics*[width=6cm,height=4cm]{images/apodisation.eps}}\par
+On note que les pieds ont quasi disparu et qu'on garde la lumière localisée au voisinage de $F'$.
+\sspartie{Fentes d'Young :}
+\index{Fentes d'Young}
+Il s'agit de deux fentes minces de même largeur $a$ écartées de $a'$. Toujours en utilisant la propiété (4), on 
+sait que l'onde diffractée dans la direction $\alpha$ est proportionnelle à l'intégrale si bien connue. Celle ci 
+se calcule sans problème et après factorisation, on trouve $2a\sinc u \cos u'$ en posant 
+$u = \pi\frac{a}{\lambda}\alpha$ et 
+$u' = \pi\frac{a'}{\lambda}\alpha$ :
+\encadre{$2 a \sinc u \cos u'$}\par
+Ce terme est le produit de deux termes, dont l'un (le sinus cardinal) correspond à l'éclairement d'une seule fente 
+et l'autre à un phénomène d'interférence.
+\sspartie{Diffraction par un trou circulaire~:}
+La surface diffractante étant invariante par rotation, il en est de même de la figure de diffraction et il suffit de 
+calculer l'onde diffractée en un point de l'axe $(F'X)$. on sait que celle-ci est proportionnelle à l'intégrale :\par
+$\integrale{S}{}{e^{-i\frac{2\pi}{\lambda}\ve{v}\cdot\ve{OM}}\dd{S}}$. Or on se place en coordonnées polaires, pour 
+lesquelles $\ve{v}\cdot\ve{OM} = \rho r\cos{\theta}$. On en déduit que l'onde diffractée est proportionnelle à 
+l'intégrale double~:\par
+$\integrale{0}{2\pi}{\left\lbrack\integrale{0}{a}{e^{-i2\pi\frac{r\rho}{\lambda f'}\cos\theta}\rho\dd{\rho}}\right
+\rbrack\dd{\theta}}$. On ``reconnait'' la fonction de Bessel. Puis l'éclairement est 
+proportionnel au carré de cette fonction de Bessel, ce qui donne un éclairement relatif de cette forme~:\par
+\centerline{\includegraphics*[width=8cm,height=6cm]{images/circulaire.eps}}\par
+On constate que la figure de diffraction présente une tache centrale, de rayon $0.61\lambda f'/a$.
+\sspartie{Diffraction par $N$ surfaces diffractantes, déduites les unes des autres par translations :}
+\point{Cas général :}
+On se donne une surface diffractante réunion de $N$ surfaces toutes identiques à la surface $S_1$, centrées chacune
+sur un point $M_n$ telle que la surface $S_n$ est déduite de $S_1$ par une translation de vecteur $\ve{M_1M_n}$.
+
+On peut choisir $M_1$ sur l'axe optique de la lentille. L'onde diffractée selon la direction $\ve{u}$ est alors
+proportionnelle à l'intégrale :\par
+$\integrale{S}{}{\tau(M)e^{-i\frac{2\pi}{\lambda}\ve{v}\cdot\ve{OM}}\dd{S}} = \serie{n = 0}{N}{\integrale{S_n}{}{%
+\tau(M)e^{-i\frac{2\pi}{\lambda}\ve{v}\cdot\ve{OM}}\dd{S}}}$.\\
+Or $\ve{OM} = \ve{OM_n}+ \ve{M_nM}$ et en remplaçant dans l'intégrale :\par
+$\serie{n=0}{N}{e^{-i\frac{2\pi}{\lambda}\ve{v}\cdot\ve{OM_n}}\integrale{S_n}{}{\tau(M)e^{-i\frac{2\pi}{\lambda}%
+\ve{v}\cdot\ve{M_nM}}\dd{S}}}$. Comme l'intégrale ci-dessus ne dépend pas de l'indice de sommation on peut la sortir
+de la somme et on trouve un produit de deux termes. L'éclairement vérifie donc :\par
+$$\mathcal{E}(P) = \mathcal{E}_1(P)\left\lvert\serie{n=1}{N}{e^{-i\frac{2\pi}{\lambda f'}\ve{F'P}\cdot\ve{OM_n}}}%
+\right\rvert^2$$\\
+Le premier terme étant l'éclairement obtenu la première surface seule, l'autre terme correspond à un terme 
+d'interférences.
+\point{Trous d'Young :}
+\index{Trous d'Young}
+On considére deux trous circulaires, de même rayon $R$ et espacés de $a$. Un peu de trigonométrie élémentaire permet
+de simplifier le terme d'interférences et on trouve :\par
+$$\mathcal{E} = 2\mathcal{E}_1 (1+\cos\frac{2\pi X a}{\lambda f'})$$
+On trouve la figure de diffraction d'un trou seul mais parcouru de raies d'interférences, comme le montre ce graphe :
+\par
+\centerline{\includegraphics*[width=8cm,height=6cm]{images/young.eps}}\par
+\sspartie{Cas de $N$ surfaces diffractantes réparties régulièrement, notion de réseau :}
+On considère une surface diffractante répartie régulièrement dans une direction donnée. C'est-à-dire telle que :
+$\ve{M_1M_n} = (n-1)a\vx$ et qu'en plus $N$ soit très grand devant $1$. Alors la somme du terme d'interférences
+apparaît comme une somme géométrique qui se calcule aisément. On trouve :\par
+$I(\alpha, \beta) = I_1(\alpha, \beta)\left(\dfrac{\sin(Nu)}{\sin u}\right)^2$. En posant 
+$u = \frac{\pi\alpha a}{\lambda}$. Lorsqu'on suppose $N$ très grand devant $1$ on obtient des pics d'éclairement, 
+répartis sur tous les multiples entiers de $\pi$. On en déduit que la figure de diffraction par un réseau est 
+concentrée dans les directions : $\alpha_p = p\frac{\lambda}{a}$.\par
+Cette formule est caractéristique de l'incidence normale et dans les conditions de Gauss. En affinant les calculs
+(fait en exercice), on démontre la formule du réseau :\par
+\encadre{$\sin i_p - \sin i = p\dfrac{\lambda}{a}$}\par
+Comme ces angles de diffraction dépendent de $\lambda$, le réseau peut-être utilisé en spectrophotométrie.
+
+\sspartie{Cas de surfaces réparties aléatoirement :}
+On reprend l'expression du terme d'interférences~:\par
+$\begin{array}{ccc}
+\left\lvert\serie{n = 1}{N}{e^{-i\frac{2\pi}{\lambda f'}\ve{F'P}\cdot\ve{OM_n}}}\right\rvert^2
+ & = & \serie{1\leq n,m\leq N}{}{e^{-i\frac{2\pi}{\lambda f'}(\ve{F'P}\cdot\ve{OM_n} - \ve{F'P}\cdot\ve{OM_m})}}\\
+\serie{1\leq n, m\leq N}{}{e^{-i\frac{2\pi}{\lambda f'}\ve{F'P}\cdot\ve{M_mM_n}}}
+  & = & N + \serie{1\leq n\neq m\leq N}{}{e^{-i\frac{2\pi}{\lambda f'}\ve{F'P}\cdot\ve{M_mM_n}}}
+\end{array}$\par
+$$N + \sum_{1\leq n\neq m\leq N}e^{i\theta_{mn}}$$\par
+En posant $\theta_{mn} = \frac{2\pi}{\lambda f'}N + \ve{F'P}\cdot\ve{M_nM_m}$.\par
+Le caractère aléatoire de la distribution impose alors que la somme est négligeable devant $N$ sauf en $F'$ et son 
+voisinage o\`u elle vaut $N^2$. On obtient donc un éclairement de la forme :\par
+\encadre{$\left\lbrace\begin{array}{lcll}
+\mathcal{E}(P) & = & N\mathcal{E}_1(P) & \mathrm{si}\;\;P\neq F'\\
+\mathcal{E}(F') & = & N^2\mathcal{E}_1(F') & \\
+\end{array}\right.$}
+
+\partie{Interférences :}\index{interferences@Interférences}
+\spartie{Définition et réalisation :}
+\sspartie{Définition :}
+\index{Onde!coherentes@cohérentes}
+\index{Onde!incoherentes@incohérentes}
+On dit que deux ondes interfèrent en un point lorsque leur superposition en ce point y donne un éclairement différent
+de la somme des éclairements obtenus avec chaque onde séparément. Les deux ondes sont dites alors cohérentes.\par
+Dans le cas contraire, les deux ondes n'interfèrent pas, on dit qu'elles sont incohérentes.\par
+Par exemple dans l'exemple ci-dessus, lorsque les $N$ surfaces sont réparties aléatoirement, elles fournissent $N$
+ondes incohérentes.
+\sspartie{Réalisation :}
+\noindent D'un point de vue expérimental, il existe deux sortes de montages interférentiels.
+\point{Diviseur d'onde :}
+Les rayons émergents qui interfèrent sont issus de deux rayons distincts. Dans ce type de montage, les interférences
+sont visibles dans un grand domaine spatial, mais seulement si la source est de faibles dimensions.
+\point{Diviseur d'amplitude :}
+Cette fois, ils sont issus du même rayon incident. Celui-ci subit des reflexions transmissions qui le scindent avant
+d'arriver au point $P$.\par
+Par exemple une lame à face parallèles donne cet effet : le rayon incident peut être transmis directement ou subir
+deux reflexions avant de ressortir. Une lentille permettant de réunir les deux au point d'observation.
+\spartie{Source ponctuelle monochromatique :}\index{Source!ponctuelle!monochromatique}
+On suppose que la source est ponctuelle et monochromatique. On se limite à la superposition de deux ondes seulement
+et à l'approximation scalaire de l'optique physique.\\
+$s(P,t) = s_1(P,t)+s_2(P,t) = s_0e^{-i\omega t}a_1e^{i\frac{2\pi}{\lambda}(SP)_1} + %
+                              s_0e^{-i\omega t}a_2e^{i\frac{2\pi}{\lambda}(SP)_2}$\par
+Soit :\\
+$s(P,t) = s_0e^{-i\omega t}e^{i\frac{2\pi}{\lambda}(SP)_1}(a_1 + a_2e^{i\phim})$\par
+En posant \fbox{$\delta(P) = (SP)_2 - (SP)_1$} la différence de marche entre les deux rayons et 
+\fbox{$\phim = 2\pi\frac{\delta}{\lambda}$} le déphasage entre les deux rayons. $\phim$ dépend de $P$. Par contre, 
+on supposera par la suite que $a_1$ et $a_2$ n'en dépendent pas. 
+
+On en déduit l'éclairement :\par
+\vspace{0.5mm}
+\encadre{$\mathcal{E}(P) = |s_0|^2\bigl(|a_1|^2+|a_2|^2 + 2|a_1||a_2|\cos(\phim-\phim_{12})\bigr)$}\par
+En posant $\phim_{12} = \arg(a_1 a_2^{\star})$.\\
+Cette expression met en évidence l'existence d'interférences.\par
+On appelle : \begin{itemize}
+\item{} Figure d'interférences : La répartition de l'éclairement.
+\item{} Franges d'interférences : Les courbes $\phim = cte$.\index{Franges}
+\item{} Franges brillantes : Les courbes $\mathcal{E} = \mathcal{E}_{max}$.
+\item{} Franges sombres : Les courbes $\mathcal{E} = \mathcal{E}_{min}$.
+\item{} Visibilité :
+\end{itemize}\index{visibilite@Visibilité}\par
+\encadre{$V = \dfrac{\mathcal{E}_{max} - \mathcal{E}_{min}}{\mathcal{E}_{max}+\mathcal{E}_{min}}$}\par
+Dans le cas de ci-dessus, si on pose $\mathcal{E}_i = |s_0a_i|^2$, l'éclairement s'écrit :\par
+$\eee = \eee_1+\eee_2+2\sqrt{\eee_1\eee_2}\cos(\phim-\phim_{12})$. Ce qui fournit la visibilité :\par
+$$V = \dfrac{2\sqrt{\rho}}{1+\rho}$$\par
+En posant $\rho = \frac{\eee_1}{\eee_2}$. On constate que $V$ est maximale lorsque $\eee_1 = \eee_2$. C'est le cas,
+en particulier, lorsque $a_1 = \pm a_2$. Dans ce cas $\eee = 2\eee_1(1\pm\cos\phim)$. $V$ est quasi-nulle si les deux
+éclairements sont très différents.
+\spartie{Source ponctuelle non-monochromatique :}\index{Source!ponctuelle!non-monochromatique}
+\sspartie{Densité spectrale de la source :}
+\index{densite@Densité!spectrale}
+$I(\lambda)$ appelé ``densité spectrale de la source'', caractérique une source non-monochromatique telle que 
+$I(\lambda)\dd{\lambda}$ désigne l'intensité émise dans l'intervalle $\segment{\lambda}{\lambda+\dd{\lambda}}$.\par
+\point{Finesse~:}
+Pour une raie, c'est-à-dire une répartition d'intensité au voisinage d'un valeur $\lambda_0$, on définit la finesse
+de la raie comme $F = \frac{\lambda_0}{\Delta\lambda}$. Ainsi pour la raie intense du mercure,
+$F\sim 10^{-3}$. pour un \textsc{Laser}, $F\sim 10^{-6}$. Pour une raie monochromatique, la finesse est infinie, ce 
+qui n'existe pas en réalité.
+\sspartie{Expression intégrale de l'éclairement :}
+On se limite aux montages interférentiels tels que $a_1 = a_2$. Dans ce cas, pour une source monochromatique, 
+$\mathcal{E} = \mathcal{I}(1+\cos\phim)$. Dans le cas général, on admettra que la source peut être considérée comme 
+la superposition de sources quasi-monochromatiques de $\lambda$ et $\delta I = I(\lambda)\dd{\lambda}$ qui émettent
+des ondes incohérentes. Alors :\par
+\encadre{$\mathcal{E} = \integrale{0}{+\infty}{\bigl(1+\cos(2\pi\dfrac{\delta}{\lambda})\bigr)\mathcal{I}(\lambda)\dd{\lambda}}%
+         $}\par
+\rmq En utilisant la relation $\lambda = 2\pi\frac{c}{\omega}$, on peut aussi définir la densité spectrale à partir
+de la pulsation $\omega$. On trouve alors :\par
+\encadre{$\mathcal{E} = \integrale{0}{+\infty}{\bigl(1+\cos(\delta\dfrac{\omega}{c})\bigr)\mathcal{I}(\omega)\dd{\omega}}%
+         $}\par
+\sspartie{Exemple : le doublet du sodium :}
+\index{Doublet du sodium}
+La vapeur de sodium émet dans le jaune des raies $\lambda_1$, $\lambda_2$ voisines de $\lambda_0 = 589.3$ nm : 
+$\lambda_1 = \lambda_0 - \frac{\Delta\lambda}{2}$, $\lambda_1 = \lambda_0 + \frac{\Delta\lambda}{2}$. La quantité
+$\Delta\lambda = \lambda_2-\lambda_1$ étant la largeur du doublet. D'un point de vue numérique : $\Delta\lambda = 
+0.6$ nm. On en déduit la finesse : $F = 10^{3}$. Si on suppose la source ponctuelle, et 
+$\mathcal{I}_1 = \mathcal{I}_2$ alors l'éclairement s'écrit :\par
+$\eee = \mathcal{I}\left(2 + \cos(2\pi\frac{\delta}{\lambda_1})+\cos(2\pi\frac{\delta}{\lambda_2})\right)$.\\
+En factorisant la somme de cosinus et en développant les termes obtenus à l'ordre $1$ en 
+$\frac{\Delta\lambda}{\lambda_0}$ : on obtient l'éclairement sous la forme simplifiée :\par
+$$\eee = \eee_0\left(1+\cos(\pi\frac{\delta}{L})\cos(2\pi\frac{\delta}{\lambda_0})\right)$$\par
+En posant $L = \dfrac{\lambda_0^2}{\delta\lambda}$. Représentons l'éclairement relatif en fonction de $\delta$ :\par
+\centerline{\includegraphics*[width=5cm,height=3cm]{images/sodium.eps}}\par
+Etant donné que le rapport des périodes des deux cosinus précédents est un IP1, localement la fonction est 
+``quasi-périodique''. On définit alors la visibilité locale au voisinage d'une valeur de $\delta$ comme la première
+définition, mais en prenant des extrémas locaux d'éclairement. On trouve ici :\par
+$$V = \va{\cos(\pi\dfrac{\delta}{L})}$$\par
+$V$ est $L-$périodique. La mesure de $L$ avec un interféromètre permet celle de $F$ soit $\Delta\lambda$. On constate
+expérimentalement que la visibilité décroit légèrement avec $\delta$. Cela est dû à la largeur non-nulle de chacune
+des raies du doublet.
+\sspartie{Exemple d'une raie gaussienne :}
+\index{Raie gaussienne}
+Cette fois la densité spectrale s'écrit :\par
+$$I(\omega) = I_0e^{-\frac{(\omega-\omega_0)}{\Delta\omega}^2}$$\par
+de sorte que $F = \frac{\Delta\omega}{\omega_0}\gg 1$. L'éclairement s'exprime avec la formule usuelle. Dans cette
+intégrale, on effectue le changement de variables $x = \frac{\omega-\omega_0}{\Delta\omega}$. 
+En posant alors $L = c\dfrac{2\pi}{\Delta\omega}$ et $\lambda_0 = 2\pi\dfrac{c}{\omega_0}$, on se ramène au calcul
+de l'intégrale :\par
+$$\integrale{-\frac{\omega_0}{\Delta\omega}}{+\infty}{\left\lbrack 1+\cos\bigl(2\pi\dfrac{\delta}{L}x+2\pi\dfrac{%
+\delta}{\lambda_0}\bigr)\right\rbrack e^{-x^2}\dd{x}}$$\\
+Or on a supposé que la finesse était grande devant 1. Etant donné la forte décroissance de la fonction à intégrer, on
+peut raisonnablement supposer que l'intégrale part de $-\infty$. En écrivant le cosinus sous forme exponentielle, 
+il reste à calculer deux intégrale du type :\\
+$\integrale{-\infty}{+\infty}{e^{-x^2}e^{i a x}\dd{x}}$. En voyant cela comme une fonction $F(a)$, les théorèmes de 
+Lebesgue de dérivation sous le signe intégrale permettent de trouver une équation différentielle satisfaite par cette
+fonction (après une IPP). On résout alors cette équation et sachant que $F(0) = \sqrt{\pi}$, on trouve :\\
+$F(a) = \sqrt{\pi}e^{-\frac{a^2}{4}}$. Il reste à appliquer dans notre cas et on obtient après simplifications :\par
+$$\eee = \eee_0\left(1+\cos\bigl(\dfrac{2\pi\delta}{\lambda_0}\bigr)e^{-\pi^2\frac{\delta^2}{L^2}}\right)$$\par
+Représentons l'éclairement en fonction de $\delta$ :\par
+\centerline{\includegraphics*[width=5cm,height=3cm]{images/gaussienne.eps}}\par
+On peut encore définir la visibilité locale et cette fois on trouve :\par
+$$V = e^{-\pi^2\frac{\delta^2}{L^2}}$$\par
+\sspartie{Intérférences en lumière blanche :}
+\index{lumiere@Lumière blanche}
+La lumière blanche est modélisée par une densité nulle en dehors d'un segment et constante sur ce segment. Si on note
+$\omega_1$ et $\omega_2$ les bornes inférieures et supérieures de ce segment et $I_0$ la valeur uniforme de la 
+densité spectrale dans l'intervalle $\segment{\omega_1}{\omega_2}$ et qu'on pose $\lambda_0$ et $L$ comme ci-dessus
+($\omega_0$ étant le milieu du segment), on obtient après calculs :\par
+$$\eee = \eee_0\left(1+\sinc(\pi\dfrac{\delta}{L})\cos(2\pi\dfrac{\delta}{\lambda_0})\right)$$\par
+En lumière blanche, la visibilité locale n'a aucun sens puisque le rapport des périodes est de l'ordre de $1$. De 
+plus l'éclairement s'atténue.\par\index{longueur@Longueur de cohérence!temporelle}
+\rmq On retiendra que $L$ appelé la ``longueur de cohérence'' vaut $F\lambda_0$ et est telle que la visibilité est
+de l'ordre de $1$ si $\delta$ est négligeable devant $L$ et quasi-nulle si c'est le contraire.\\
+De plus $L$ est de l'ordre de $1 \mu$m pour de la lumière blanche et de $1$ m pour une \textsc{Laser}\par
+\sspartie{Interprétation microscopique de la cohérence temporelle :}
+\index{coherence@Cohérence temporelle}
+\point{Train d'onde et densité spectrale :}
+La source ponctuelle est constituée d'un grand nombre d'atomes qui émettent de manière aléatoire des signaux 
+périodiques amortis appelés ``trains d'onde'', de la forme :\par
+\centerline{$\begin{array}{lcll}
+  f(t) & = & 0                                   & \mathrm{si}\;\; t < 0\\
+       & = & ae^{-\frac{t}{\tau}}\cos(\omega_0t) & \mathrm{si}\;\; t > 0
+ \end{array}$}\par
+La statistique permet de relier la densité spectrale $I(\omega)$ à la transformée de Fourier de $f$ et au nombre $N$ 
+d'atomes :\par
+\encadre{$I(\omega) \propto N \va{F(\omega)}^2$}\par
+De plus si $\tau$ désigne la durée du train d'onde et $\Delta\omega$ la largeur spectrale de la source :\\
+$$\tau\Delta\omega\sim 1$$\par
+\point{Train d'onde et visibilité :}
+Chaque train d'onde est reçu en $P$ avec un retard différent selon le rayon suivi. Ainsi, les interférences sont 
+visibles si les trains d'onde se superposent, c'est-à-dire si $\va{\dfrac{\delta}{c}}\ll\tau$.
+\index{Train d'onde}
+\spartie{Source monochromatique, mais étendue :}\index{Source!etendue@étendue}
+\sspartie{Flux émis :}
+Une telle source est caractérisée par une fonction $\phim_E(M)$ telle que $\phim_E(M)\dd{S}$ représente la valeur 
+moyenne de la puissance électromagnétique  émise par l'élément $(M, \dd{S})$ de la source. ``L'intensité'' totale
+émise par la source est alors :
+\encadre{$\integrale{S}{}\phim_E(M)\dd{S}$}
+\sspartie{Expression intégrale de l'éclairement :}
+On se limitera aux montages interférentiels tels que $a_1 = a_2$ pour lesquels l'éclairement obtenu pour une source
+ponctuelle est de la forme $(1+\cos(2\pi\frac{\delta}{\lambda}))\mathcal{I}$ à une constante multiplicative près.
+En supposant que la source étendue peut être considérée comme un ensemble de sources ponctuelles émettant des ondes
+incohérentes, l'éclairement pour la source étendue devient :
+\encadre{$\eee(P) = \integrale{S}{}{\bigl(1+\cos(2\pi\frac{\delta}{\lambda})\bigr)\phim_E(M)\dd{S}}$}
+\rmq La différence de marche $\delta$ dépend du point $M$ qui parcourt la source étendue.
+\sspartie{Longueur de cohérence spatiale :}
+Un montage interférentiel est caractérisé par sa ``longueur de cohérence spatiale'' \index{longueur@Longueur de cohérence!spatiale} qui est telle que :
+\encadre{%
+$\begin{array}{ll}
+V\sim 1 & \;\; si\;\; l\ll L\\
+V\sim 0 & \;\; si\;\; l\gg L
+\end{array}$}
+O\`u $l$ est la dimension caractérisant celles de la source (largeur, rayon).
+
+
+

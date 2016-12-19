@@ -1,0 +1,13 @@
+set title "Eclairement relatif de l'ecran\n pour un trou circulaire"
+w=3
+set isosample 70
+set xrange [-10:10]
+set yrange [-10:10]
+set autoscale z
+set ztics 0,0.5,1
+set hidden
+splot (besj0(sqrt(x**2 + y**2)))**2 notitle
+set terminal postscript eps 22
+set output "circulaire.eps"
+set size 1, 1
+replot

@@ -1,0 +1,8 @@
+\documentclass{article}
+\usepackage{epsfig}
+\usepackage{color}
+\usepackage{/usr/share/texmf/tex/generic/perso/maths}
+\pagestyle{empty}
+\begin{document}
+\input{spheriques.pstex_t}
+\end{document}

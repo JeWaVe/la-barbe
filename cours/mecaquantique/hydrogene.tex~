@@ -1,0 +1,217 @@
+\chapter{Etude quantique de l'atome d'hydrogène.}
+\partie{Principes de la mécanique quantique :}\index{mecanique@Mécanique!quantique}
+La mécanique quantique régit le comportement de la matière à l'échelle microscopique, atomique ($\sim$ 1 nm) et
+nucléaire (1 fm).\par
+Elle repose sur un certain nombre de principes dont on ne retiendra ici que ceux utiles à l'étude de l'atome 
+d'hydrogène.\par
+\spartie{Enoncé :}\index{Principe!quantique@de la mécanique quantique}
+\index{fonction@Fonction d'onde}
+\begin{itemize}
+\item{}L'état d'un point matériel est décrit par un fonction complexe (à valeurs complexes)~:
+$\Psi(\ve{r},t)$ d'espace et de temps appelée fonction d'onde telle que $\va{\Psi(\ve{r},t)}^2$ représente 
+la densité de probabilité de présence du point métériel au point $\ve{r}$ à l'instant $t$.
+\item{}A toute grandeur $A$ de la mécanique classique correspond un opérateur $\widehat{A}$. Le résultat d'une
+mesure de $A$ ne peut fournir qu'une valeur propre de l'opérateur $\widehat{A}$.
+\item{} La fonction d'onde évolue au cours du temps selon l'équation de Schrödinger~:
+\encadre{$\displaystyle{i \hbar \dpa{\Psi}{t} = \widehat{H}\Psi}$} 
+dans laquelle l'opérateur $\widehat{H}$ appelé hamiltonien 
+\index{Hamiltonien}
+correspond à l'énergie mécanique de la particule.
+\end{itemize}
+\spartie{Commentaires~:}
+\point{Normalisation~:}
+La probabilité de présence dans tout l'espace est 1. Donc $\Psi \in \mathrm{L}^2(\rr[3]\times\rr[+])$
+et de plus~: $\forall t > 0$~: $\integraless{\mathcal{E}}{{}}{\va{\Psi(\ve{r}, t)}^2 \dd{V}} = 1$. 
+On dit que la fonction $\Psi$ est normée.
+\index{Quantification}
+\point{Quantification~:}
+Lorsque les valeurs propres d'un opérateur $\chap{A}$ sont discrètes on parle de quantification. Ainsi
+l'énergie et le moment cinétique de l'atome d'hydrogène sont quantifiés.\par
+\point{Règles de correspondance~:}
+Le passage de la mécanique classique à la mécanique quantique s'opère selon les règles de correspondance~:
+\encadre{$\left\lbrace
+\begin{array}{l}
+\ve{r} \longrightarrow \ve{r}\\
+\ve{p} \longrightarrow - i \hbar \grad{{}}
+\end{array}
+\right.$}
+\index{operateur@Opérateur}
+En fait quand on parle d'opérateur $\ve{r}$, il s'agit de l'opérateur multiplication par $\ve{r}$.
+Illustrons ces règles avec l'atome d'hydrogène~:
+\sspartie{Rappels de mécanique classique~:}
+L'atome d'hydrogène comprend deux points matériels~: noyau $A_1(m_p)$ et électron $A_2(m_e)$ en interaction 
+coulombienne. L'atome d'hydrogène étant supposé isolé on sait que son étude peut être ramenée à celle de deux 
+points fictifs $G$ et $A$ avec $G(M = m_p+m_e \sim m_p)$ et $A(m = \frac{m_p m_e}{m_p+m_e}\sim m_e)$ et si
+$O$ est un point fixe du référentiel du laboratoire alors $\ve{OA} = \ve{A_1 A_2}$. On ne s'intéresse ici
+qu'au mouvement relatif de $A$ par rapport à $0$, soumis à la force centrale coulombienne 
+$\ve{f} = \ve{f_{12}} = \dfrac{-1}{4\pi \eps_0}\dfrac{e^2}{r^2}\ve{u_r}$. Le moment cinétique $\ve{L} =
+\ve{r}\land\ve{p}$ et l'énergie mécanique $E_m = \dfrac{p^2}{2m}+\dfrac{-e^2}{4\pi \eps_0 r}$ sont 
+stationnaires.
+\sspartie{En mécanique quantique~:}
+On définit alors les opérateurs suivants~:
+\point{Moment cinétique~:} 
+$\chap{\ve{L}} = -i \hbar \ve{r}\land\grad{{}}$ soit $\chap{\ve{L}}= i\hbar\left(\dfrac{\ve{u_{\theta}}}
+{\sin \theta}\dpa{{}}{\phim} - \ve{u_{\phim}}\dpa{{}}{\theta}\right)$ en coordonnées sphériques.
+A partir de cet opérateur on définit deux opérateurs essentiels~:
+\begin{itemize}
+\item{}$\chap{\ve{L_z}} = \ve{u_z}\cdot\chap{\ve{L}}$ soit $\chap{\ve{L_z}} = -i\hbar\dpa{{}}{\phim}$
+\item{}$\chap{L^2} = \chap{L}\cdot\chap{L}$ soit $\chap{L^2} = -{\hbar}^2\left(\dfrac{1}{\sin\theta}
+\dpa{{}}{\theta}\sin\theta\dpa{{}}{\theta} + \dfrac{1}{{\sin}^2\theta}\dpak{2}{{}}{\phim}\right)$.
+\end{itemize}
+\point{Hamiltonien~:} $\chap{H} = -\dfrac{\hbar^2}{2m}\laplacien-\dfrac{e^2}{4\pi\eps_0 r}$ et, connaissant 
+l'expression du laplacien en coordonnées sphériques on en déduit~:
+$\chap{H} = -\dfrac{\hbar^2}{2m r}\dpak{2}{{}}{r} + \dfrac{\chap{L^2}}{2 m r^2} - \dfrac{e^2}{4\pi\eps_0 r}$.
+
+\sspartie{Fonction d'onde stationnaire~:}
+On s'intéresse par la suite aux fonctions d'ondes dites stationnaires (au sens donné dans le cours sur les 
+ondes). On applique alors la méthode de séparation des variables dans l'équation de Schrödinger~:\par
+On remplace alors $\Psi(\ve{r}, t)$ par $\psi(\ve{r})T(t)$ dans cette équation~:\par
+$\dfrac{\chap{H}\psi}{\psi(\ve{r})} = \dfrac{i\hbar}{T(t)}\df{T}{t} = cte = E$. On appelle cette constante $E$ 
+car elle est homogène à une énergie. On en déduit~:\par
+\point{Expression de $T$} $T(t) = e^{\frac{-iE}{\hbar}t}$ à une constante multiplicative près qu'on choisit égale à 1.\par
+\point{Equation de Scrödinger indépendante du temps~:} 
+$\chap{H}\psi = E\psi$. Cette équation appelée équation de Schrödinger indépendante du temps ou encore
+équation aux valeurs propres. En effet elle signifie que $\psi$ est une fonction propre de l'opérateur 
+$\chap{H}$ associée à la valeur propre $E$.
+La fonction d'onde cherchée  s'écrit alors $\Psi(\ve{r}, t) = \psi(\ve{r})e^{\frac{-iE}{\hbar}t}$ d'o\`u~:
+$\va{\Psi(\ve{r}, t)}^2 = \va{\psi(\ve{r})}^2$. La densité de probabilité de l'électron autour du noyau est 
+donc indépendante du temps, ce qui justifie à postériori l'appellation ``fonction d'onde stationnaire''.\par
+\partie{Application à l'atome d'hydrogène~:}
+\spartie{Résolution de l'équation de Schrödinger~:}
+\index{Equation!schr@de Schrödinger}
+\sspartie{}
+L'équation de Schrödinger indépendante du temps s'écrit en coordonnées sphériques~:
+\begin{equation}
+\frac{1}{r}\dpak{2}{{}}{r}(r^2\psi)-\frac{1}{\hbar^2 r^2}\chap{L^2}+\frac{2m}{\hbar^2}\Bigl(E+\frac{e^2}%
+{4\pi\eps_0 r}\Bigr)\phim =0
+\end{equation}
+On applique alors une séparation des variables~: $\psi(\ve{r}) = R(r)Y(\theta, \phim)$. On obtient alors~:\par
+$\dfrac{r}{R(r)}\dff{{}}{r}(r R)+\dfrac{2mr^2}{\hbar^2}\Bigl(E+\dfrac{e^2}{4\pi\eps_0 r}\Bigr) = 
+\dfrac{1}{\hbar^2Y}\chap{L^2} Y = C$. O\`u $C$ est une constante.\par
+Ce qui fournit les deux équations~:\par
+\begin{equation}
+\chap{L^2}Y = \hbar C Y
+\end{equation}
+\begin{equation}
+\dff{{}}{r}(r R)+\left\lbrack\dfrac{2mr}{\hbar^2}\Bigl(E+\dfrac{e^2}{4\pi\eps_0 r}\Bigr)-\dfrac{C}{r}\right
+\rbrack R=0
+\end{equation}
+\sspartie{}
+Résoudre (2) revient à rechercher les fonctions propres de l'opérateur $\chap{L^2}$. On sépare encore les 
+variables $\theta$ et $\phim$ en posant~:
+$Y(\theta, \phim) = \Theta(\theta)\Phi(\phim)$. On obtient alors après substitution dans l'équation (2)~:\par
+$\dfrac{\sin\theta}{\Theta}\df{{}}{\theta}(\sin\theta\df{\Theta}{\theta})+C\sin^2\theta =%
+\dfrac{-1}{\Phi}\dff{\Phi}{\phim} = C'$ O\`u $C'$ est une constante. On en tire les deux équations :
+\begin{equation}
+\dff{\Phi}{\phim}+C'\Phi(\phim) = 0
+\end{equation}
+\begin{equation}
+\sin\theta\df{{}}{\theta}(\sin\theta\df{\Theta}{\theta})+C\sin^2\theta-C'=0
+\end{equation}
+
+\sspartie{}
+\begin{itemize}
+\item{} $C'<0$ On pose $\ml = \sqrt{-C'}$~:\par
+$\dff{\Phi}{\phim}-\ml^2\Phi(\phim) = 0$, qu'on résout immédiatement : $\Phi(\phim) = Ae^{\ml\phim}+
+Be^{-\ml\phim}$. Or on doit trouver une fonction $2\pi$-périodique puisque l'état de la particule est le même 
+en $\phim$ et en $\phim+2k\pi$. On exclut donc ce cas.\par
+\item{}$C'>0$ On pose $\ml = \sqrt{C'}$~:\par
+$\dff{\Phi}{\phim}+\ml^2\Phi(\phim) = 0$ D'o\`u~: $\Phi(\phim) = Ae^{i \ml\phim}+ Be^{-i \ml\phim}$.
+$\Phi$ étant $2\pi$-périodique, $\ml$ est nécessairement un entier relatif.
+\end{itemize}
+On remarquera, dans le cas particulier $A = 1, B=0$ que :
+$\chap{L_z}\Phi_{\ml}(\phim) = -i\hbar\df{\Phi_{\ml}}{\phim}$ soit : $\chap{L_z}\Phi_{\ml} = \hbar\ml\Phi_{\ml}
+(\phim)$. La fonction $\Phi_{\ml}=e^{i\ml\phim}$ est une fonction propre de l'opérateur $\chap{L_z}$ associée
+à la valeur propre $\hbar\ml$. C'est la quantification du moment cinétique selon $(Oz)$.
+\rmq Pour des raisons données dans le cours sur le dipôle magnétique, le nombre $\ml$ sera nommé ``nombre
+quantique magnétique''.
+\index{Nombre!quantique@quantique magnétique}
+\sspartie{}
+On reporte $C'= \ml^2$ dans (5) et on trouve l'équation~:\par
+\begin{equation}
+\sin\theta\df{{}}{\theta}\Bigl(\sin\theta\df{\Theta}{\theta}\Bigr)+(C\sin^2\theta-\ml^2)\Theta =0
+\end{equation}
+On admettra que les solutions de cette équation différentielle physiquement acceptables (en particulier celles
+permettant à $\Psi$ d'être normalisée) sont obtenues uniquement pour $C = \ell(\ell+1), \ell\in \zz | 
+\ell\geq\va{\ml}$, soit $\ell\in\intset{- \ell}{\ell}$.\par
+En outre en reportant cette expression de $C$ dans (2) on a~:\par
+$\chap{L^2} Y_{\ell, \ml} = \hbar^2\ell(\ell+1)Y_{\ell, \ml}$. Les fonctions $Y_{\ell, \ml}$ sont donc 
+des fonctions propres associées à la valeur propre $\hbar^2\ell(\ell+1)$. Cela traduit la quantification de la 
+norme du moment cinétique. L'entier $\ell$ est appelé ``nombre quantique azimutal'' ou ``nombre quantique 
+secondaire''. Les fonctions $Y_{\ell, \ml}$ sont appelées harmoniques sphériques.
+\index{harmoniques@Harmoniques sphériques}
+\sspartie{}
+En reportant la valeur de $C = \ell(\ell+1)$ dans (3) on obtient l'E-D :\par
+\begin{equation}
+\dff{{}}{r}(r R)+\left\lbrack\dfrac{2mr}{\hbar^2}\Bigl(E+\dfrac{e^2}{4\pi\eps_0 r}\Bigr)-\dfrac{\ell(\ell+1)}
+{r}\right\rbrack R=0
+\end{equation}
+Soit, en posant $f(r) = rR(r)$ :\par
+\begin{equation}
+\dff{f}{r}\left\lbrack\dfrac{2m}{\hbar^2}\Bigl(E+\dfrac{e^2}{4\pi\eps_0 r}\Bigr)-\dfrac{\ell(\ell+1)}
+{r^2}\right\rbrack f=0
+\end{equation}
+Etudions le comportement asymptotique de cette équation différentielle. Quand $r$ tend vers l'infini, on a 
+(formellement) :
+$\dff{f}{r}+\dfrac{2mE}{\hbar^2}f =0$
+\begin{itemize}
+\item{} Si $E > 0$ on pose $k = \sqrt{\dfrac{2mE}{\hbar^2}}$ (homogène à une longueur puissance $-1$.) 
+Seulement les solutions de cette E-D n'autorisent pas à $\Psi$ d'être normalisable. On exclut donc ce cas. (il
+correspond à un état non lié).
+\item{} si $E < 0$, on pose $k = \sqrt{-\dfrac{2mE}{\hbar^2}}$. On trouve alors $f(r) = Ae^{-k r}$ en imposant
+à $\Psi$ d'être normalisable.
+\end{itemize}
+Cette étude asymptotique amène à introduire la nouvelle fonction $P(r)$ telle que $f(r) = e^{-kr}P(r)$.
+
+On trouve une équation différentielle sur $P$~:\par
+$\dff{P}{r}-2k\df{P}{r}+\left\lbrack\dfrac{2me^2}{4\pi\eps_0\hbar^2 r}-\dfrac{\ell(\ell+1)}{r^2}\right\rbrack
+P(r) =0$\\
+L'analyse dimensionnelle de cette E-D montre immédiatement que la quantité 
+$$a = \dfrac{4\pi\eps_0\hbar^2}{m \ell^2}$$
+est homogène à une longueur appelée rayon de Bohr ($\sim 0,53$).\par
+\index{rayon@Rayon de Bohr}
+Tout cela nous mène à utiliser la variable réduite $\rho = r/a$. Après substitution dans l'E-D~:\par
+\begin{equation}
+\dff{P}{\rho}-2\nu\df{P}{\rho}+\left\lbrack\dfrac{2}{\rho}-\dfrac{\ell(\ell+1)}{\rho^2}\right\rbrack P(\rho)=0
+\end{equation}
+En posant $\nu = k a = \dfrac{4\pi\eps_0\hbar}{e^2}\sqrt{\dfrac{-2E}{m}}$, c'est un nombre sans dimension.\par
+(9) est une équation différentielle linéaire à coefficients non-constants dont on va chercher une solution 
+particulière sous forme de série entière :\par
+$P(\rho) = \serie{q=0}{+\infty}{c_q\rho^q}$
+On obtient après calculs la relation de récurrence suivante pour les coefficients $c_q$~:\\
+$\left\lbrace 
+\begin{array}{ll} 
+\forall q \geq 1, & \lbrack q(q+1)-\ell(\ell+1)\rbrack c_{q+1} = 2(\nu q - 1)c_q\\
+\forall q\leq \ell, & c_q = 0
+\end{array}
+\right.$\par
+On est alors amené à distinguer deux cas selon que $\nu$ est ou non l'inverse d'un entier.
+\begin{itemize}
+\item{} Si $\nu\not=\frac{1}{n}$ alors $\frac{c_{q+1}}{c_q}\sim \frac{2 \nu}{q}$ est la fonction $P$ est 
+équivalente à une exponentielle, ce qui empêche $\Psi$ d'être normalisable.
+\item{} Si $\exists n > \ell$ tel que~: $ \nu = \dfrac{1}{n}$ alors $c_q = 0$ pour $q>n$ et 
+$P(\rho) = \serie{q=\ell+1}{n}{c_q \rho^q}$ est un polynôme de degré $n$.\par
+\end{itemize}
+La condition trouvée sur $\nu$ s'écrit~:\par
+$\dfrac{4\pi\eps_0\hbar}{e^2}\sqrt{\dfrac{-2E}{m}} = \dfrac{1}{n}$, soit $E_n = E_1/n^2$. Avec $E_1 = 
+\dfrac{-m}{2}\left(\dfrac{e^2}{4\pi\eps_0\hbar}\right)^2\sim-13,6$ eV. L'énergie d'un atome d'hydrogène est 
+quantifiée et le nombre $n$ est appelé ``nombre quantique principal''.
+\index{Nombre!quantique principal}
+\spartie{Récapitulation :}
+Les solutions stationnaires de l'équation de Schrödinger s'écrivent~:\par
+$$\Psi_{n, \ell, \ml}(\ve{r} t) = \psi_{n, \ell, \ml}(\ve{r})e^{\frac{-iEt}{\hbar}}$$
+avec $n$ le nombre quantique principal, $\ell$ le nombre quantique magnétique et $\ml$ le nombre quantique 
+magnétique qui sont tels que~:\par
+$\begin{array}{ll}
+n\in\nn[\star]           &  \chap{H}\psi_{n, \ell, \ml} = E_n \psi_{n, \ell, \ml}\\
+l\in\intset{0}{n}        &  \chap{L^2}\psi_{n, \ell, \ml} = \hbar^2 \ell(\ell+1)\psi_{n, \ell, \ml}\\
+\ml\in\intset{-\ell}{\ell} & \chap{L_z}\psi_{n, \ell, \ml} = \hbar\ml \psi_{n, \ell, \ml}
+\end{array}$\par
+\vspace{2mm}
+Représentons les premières harmoniques sphériques, qui fournissent les densités de probabilités par unité d'angle
+solide.\par\vspace{.5cm}
+\centerline{%
+\begin{tabular}{cc}
+$\ell = 0, \ml = 0$                                     & $\ell = 1, \ml = 0$\\
+\raise1cm\hbox{\includegraphics*[width=2cm,height=2cm]{images/H00.eps}} & \includegraphics*[width=2cm,height=4cm]{images/H10.eps}
+\end{tabular}}

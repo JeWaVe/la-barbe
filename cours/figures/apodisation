@@ -1,0 +1,11 @@
+set title "Eclairement relatif de l'ecran"
+f1(x)=(sin(x)/x)**2
+f2(x)=(cos(x)/(1-(4/pi**2)*(x)**2))**2
+set xrange [-8:8]
+set yrange [0:1]
+plot f1(x) title "E/E_0"
+replot f2(x) title "E'/E'_0"
+set terminal postscript eps 22
+set output "apodisation.eps"
+set size 1,1
+replot

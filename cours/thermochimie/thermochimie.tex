@@ -1,0 +1,975 @@
+%%
+%%  cours de thermodynamique chimique
+%%  
+%%
+\chapter{Thermodynamique chimique}\index{Thermodynamique!chimique}
+\partie{Mélanges monophasés.}
+\spartie{Caractéristiques d'un mélange monophasé.}
+\sspartie{Définition.}
+\point{Phase~:}\index{Phase}
+Une phase est un milieu de température, pression et composition chimique
+uniformes.
+\point{Mélange~:}\index{melange@Mélange}
+La mise en contact de plusieurs corps purs peut permettre d'obtenir un milieu
+continu appelé mélange et dont les constituants ne sont pas toujours les corps
+purs de départ.\par
+La composition chimique d'un mélange est décrite localement par les fractions
+molaires $x_i = \frac{\delta n_i}{\delta n}$. On constate que 
+$\sum x_i = 1$ et que $0\leq x_i\leq 1$. Un mélange fluide est alors
+caractérisé par la relation~:\par
+$\dd{u} = T\dd{s} - P\dd{v} + \sum_i \mu_i\dd{x_i}$. Dans laquelle $\mu_i$ est
+le potentiel chimique molaire de $C_i$ au sein du mélange 
+(cf~: thermodynamique). Cette relation avec l'énergie interne fait intervenir le jeu de variables
+$S, V$ qui n'est généralement pas adapté au contexte industriel (on ne peut pas mesurer d'entropie!). 
+On préfère se ramener au jeu de variables $T,P$. En introduisant l'enthalpie libre molaire $g = h - Ts$, 
+on obtient~:
+$\dd{g} = -s\dd{T}+v\dd{P} + \sum\limits_i\mu_i\dd{x_i}$ qui donne l'expression suivante de $\mu_i$~: 
+\encadre{$\mu_i = \left(\dpa{g}{x_i}\right)_{T,P,x_j}$}
+\point{Mélange monophasés~:}\index{melange@Mélange!monophasé}
+C'est un mélange de température, pression et composition chimique uniforme.\par
+On en déduit que $\mu_i$ est uniforme. Les conditions d'équilibre physique (thermique, mécanique et
+diffusion) sont vérifiées. Cependant l'équilibre chimique n'est pas forcément atteint comme on le verra 
+avec la notion d'affinité. La relation précédente conduit par intégration sur la phase~:
+\encadre{$\dd{G} = -S\dd{T} + V\dd{P} + \serie{i}{}{\mu_i\dd{n_i}}$}
+On peut alors exprimer le potentiel chimique\index{Potentiel!chimique} sous la forme d'une 
+dérivée partielle de $G$.
+\sspartie{Grandeurs molaires partielles.}
+Toutes les grandeurs extensives usuelles relatives à une phase peuvent se mettre sous la forme~:
+\encadre{$X = \serie{i}{}{n_i \bar{x_i}}$}
+O\`u $\bar{x_i}$ est la grandeur molaire partielle du constituant $C_i$ dans la phase. 
+\point{Enthalpie libre~:}
+En exprimant l'extensivité de $G$ sous la forme~:\par
+$G(T,P,\ldots,n_i,\ldots) = n G(T,P\ldots, x_i\ldots, )$ et en dérivant
+partiellement par rapport à $n$ on trouve~:
+\encadre{$\bar{g_i} = \mu_i$}
+\rmq Dans le cas o\`u les constituants sont isolables à l'état pur, on peut faire tendre $x_i$
+vers $1$, ce qui permet de définir le potentiel chimique d'un corps pur monophasé comme son
+enthalpie libre molaire.
+\point{Entropie~:}
+Comme $\dd{G} = -S\dd{T} + V\dd{P} + \sum_i\mu_i\dd{n_i}$, on peut exprimer $S$ sous la forme
+$S = -\dpa{G}{T}$ ce qui donne, en remplaçant $G$ par $\sum_i \mu_in_i$~:
+\encadre{$\bar{s_i} = -\left(\dpa{\mu_i}{T}\right)_{P,n_j}$}
+\point{Volume~:}
+De même que pour l'entropie, on trouve~:
+\encadre{$\bar{v_i} = \left(\dpa{\mu_i}{P}\right)_{T,n_j}$}
+\point{Enthalpie~:}
+En exprimant~: $H = G+TS$~:
+\encadre{$\bar{h_i} = \mu_i-T\left(\dpa{\mu_i}{T}\right)_{P,n_j}$}
+\point{Energie interne~:}
+De même, comme $U = H -PV$
+\encadre{$\bar{u_i} = \bar{h_i} - P\left(\dpa{\mu_i}{P}\right)_{T,n_j}$}
+On constate que toutes ces grandeurs extensives peuvent être exprimées uniquement à partir des
+quantités $n_i$ et des potentiels chimiques.
+\sspartie{Relation de Gibbs-Duhem.}
+\index{Relation!gibbs@de Gibbs-Duhem}
+Pour une évolution infinitésimale d'un mélange monophasé, la variation d'enthalpie libre peut
+se mettre sous les deux formes~:\par
+$\dd{G} = -S\dd{T}+V\dd{P}+\sum_i\mu_i\dd{n_i} = \sum_in_i\dd{\mu_i}+\sum_i\mu_i\dd{n_i}$. On en
+déduit la relation~:
+\encadre{$\serie{i}{}{n_i\dd{\mu_i}} = -S\dd{T} + V\dd{P}$}
+\spartie{Phase idéale.}
+\index{Phase!ideale@idéale}
+\sspartie{Approche microscopique.}
+Pour un mélange des deux gaz parfaits placé dans une enceinte à $T,P$, dont toutes les 
+intéractions moléculaires sont négligées et dont toutes les molécules sont supposées ponctuelles,
+chacun des gaz se comporte comme un gaz parfait à la pression $P_i = \frac{n_iRT}{V}$. 
+Or pour un corps pur~: $\mu_1 = g_1(T,P_1) = g_1(T,P)+RT\ln(\frac{P_1}{P})$ (en plus c'est un
+gaz parfait donc $Pv = RT$). Le mélange se comporte intuitivement comme un G-P, ce qui revient
+à dire~: $PV = nRT$, soit $\frac{P_1}{P} = x_1$. Cela donne des potentiels chimiques de la 
+forme~:
+$\left\lbrace\begin{array}{l@{=}l}
+      \mu_1 & g_1(T,P)+RT\ln(x_1)\\
+      \mu_2 & g_2(T,P)+RT\ln(x_2)
+             \end{array}\right.$
+\sspartie{Approche macroscopique.}
+Une phase est dite idéale lorsque ses potentiels chimiques peuvent se mettre sous la forme
+\encadre{$\mu_i = f_i(T,P) + RT\ln(x_i)$}
+o\`u $f_i$ est une fonction qui ne dépend que de la nature chimique de la phase.\par
+\rmq Dans le cas o\`u les constituants existent à l'état pur, en passant à la limite sur $x_i$, on a~:
+$f_i = g_i$, dans le cas contraire, l'enthalpie libre du constituant est une grandeur vide de sens, d'o\`u
+l'introduction d'une fonction $f_i$.
+\exercice Un système constitué de corps purs subit une évolution monobare. Dans l'état initial
+les constituants sont séparés à $T,P$. Dans l'état final, ils forment une phase idéale à $T,P$. 
+Montrer que l'évolution ne s'accompagne d'aucune variation de son volume ni d'échange thermique
+avec l'extérieur.\par
+Pour le volume on exprime le volume initial comme $V_1 = \sum\limits_i n_iv_i(T,P)$ par extensivité du 
+volumeet le volume final comme $V_2 = \sum\limits_i n_i \bar{v_i}$ car la phase est idéale. En exprimant 
+$\bar{v_i}$ pour un corps pur on trouve $v_i$ soit $V_1 = V_2$.\par
+Pour la chaleur reçue, on l'exprime comme la variation d'enthalpie du système (un bilan d'énergie totale
+donne ce résulat pour une évolution monobare). Ensuite on fait de même que pour le volume.
+\sspartie{Cas d'une phase gazeuse idéale.}
+\point{Définition~:}\index{Phase!gazeuse@gazeuse idéale}
+Une phase gazeuse idéale est un mélange de gaz parfaits dont les potentiels chimiques sont de la 
+forme $\mu_i = g_i(T,P) + RT\ln(x_i)$.\par
+On définit également la pression partielle comme $P_i = Px_i$.
+\point{Diverses expressions du potentiel chimique~:}
+\encadre{$\mu_i = g_i(T,P) + RT\ln(x_i) = g_i(T,P_i) = g_i(T,P^{\circ}) + RT\ln(\frac{P_i}{P^{\circ}})$}
+O\`u $P^{\circ}$ est une pression ``standard'' égale par convention à $1$ bar.
+\point{Grandeurs extensives d'une phase gazeuse idéale~:}
+Les relations sur les grandeurs molaires partielles se simplifient, et vu les expressions des
+potentiels chimiques~:
+\begin{itemize}
+\item{Enthalpie libre~:}
+\encadre{$\bar{g_i} = g_i(T,P_i)$}
+\item{Entropie~:}
+\encadre{$\bar{s_i} = s_i(T,P_i)$}
+\item{Volume~:}
+\encadre{$\bar{v_i} = v_i(T,P) = \frac{RT}{P}$}
+Ce qui montre au passage qu'une phase gazeuse idéale satisfait à l'équation d'état des gaz 
+parfaits.
+\item{Enthalpie~:}
+\encadre{$\bar{h_i} = h_i(T)$} 
+Car un G-P satisait à la deuxième loi de Joule.
+\item{Energie interne~:}
+\encadre{$\bar{u_i} = u_i(T)$}
+Pour les mêmes raisons.
+\end{itemize}
+\exercice On place $n_1$ moles d'un G-P dans une première enceinte et $n_2$ d'un autre dans une 
+autre enceinte. On ouvre un robinet entre les deux enceintes supposées adiabatiques. Déterminer
+l'état d'équilibre final, en supposant le mélange obtenu idéal. Calculer la température finale du mélange. 
+Montrer que l'entropie produite est strictement positive. Que peut-on dire si les gaz sont identiques?
+\sspartie{Cas d'une solution aqueuse idéale.}
+Une solution est une phase formée en mélangeant un corps pur appelé solvant avec d'autres corps
+purs qui réagissent avec le solvant pour donner des solutés.\par
+En thermochimie, la concentration du solvant est supposée grande devant celle des solutés (hypothèse de 
+dilution). En pratique, même à de fortes concentrations ($1$ mole par litre), cette hypothèse est 
+relativement bien vérifiée et la plupart des phases aqueuses étudiées dans le cadre du programme sont 
+idéales.
+\point{Potentiel chimique de l'eau solvant~:}
+Comme l'eau existe à l'état pur et qu'aux pressions usuelles elle est quasi incompressible, on 
+peut écrire~: $\mu_{H_2O} = g_{H_2O}(T,P^{\circ}) + RT\ln(x_{H_2O})$. Or dans une solution diluée,
+$x_{H_2O}\sim 1$ et en développant le logarithme à l'ordre 0~:
+\encadre{$\mu_{H_2O} = g_{H_2O}(T,P^{\circ})$}
+\rmq Si la solution n'est pas diluée, il faut continuer le DL au moins à l'ordre 1.
+\point{Potentiel chimique d'un soluté~:}
+Cette fois on ne peut pas identifier $f_i$ et $g_i$. Cependant, pour une phase condensée au
+voisinage de $P^{\circ}$, on peut dire~: $f_i(T,P) = f_i(T,P^{\circ})$. Puis en considérant négligeables
+les concentrations et volumes des solutés devant celles de l'eau, on peut écrire~:\par
+$x_i = \frac{c_i}{c^{\circ}}c^{\circ}v_{H_2O}$. Alors on peut dire~:
+\encadre{$\mu_i = \mu_i^{\circ}(T) + RT\ln(\dfrac{c_i}{c^{\circ}})$}
+o\`u $c^{\circ}$ est une concentration standard choisie à 1 mole par litre.
+\point{Phase liquide idéale~:}
+On suppose que la phase est constituée de corps existant à l'état pur. Alors
+\encadre{$\mu_i = g_i(T,P^{\circ}) + RT\ln(x_i)$}
+\index{Potentiel!chimique standard}
+\index{activite@Activité}
+\sspartie{Potentiel chimique standard et activité.}
+En regroupant les résultats précédents, on constate qu'on peut toujours écrire~:
+\encadre{$\mu_i = \mu_i^{\circ}(T) + RT\ln(a_i)$}
+On peut regrouper tout dans un tableau~:\par
+\centerline{\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c|c|c|c|}
+\hline  
+Constituant & Phase & $\mu_i^{\circ}$ & $a_i$\\
+\hline
+\hline
+G-P & mélange gazeux & $g_i(T,P^{\circ})$ & $\dfrac{P_i}{P^{\circ}}$\\
+solvant & solution & $g_s(T,P^{\circ})$ & 1\\
+soluté & solution & - & $\dfrac{c_i}{c^{\circ}}$\\
+liquide & phase liquide & $g_i(T,P^{\circ})$ & $x_i$\\
+Corps pur condensé & corps pur & $g(T,P^{\circ})$ & 1\\
+\hline 
+\end{tabular}}\par
+\vspace{1ex}
+\rmq Le potentiel chimique standard est la valeur du potentiel chimique pour une activité égale
+à 1.
+\sspartie{Grandeurs molaires standard.}
+\point{Analogie avec le corps pur monophasé~:}
+Pour un tel corps~:\par
+\centerline{$\begin{array}{clcl}
+g &= \mu & h &= g+Ts\\
+s &= -\left(\dpa{g}{T}\right)_{P} & c_p &= T\left(\dpa{s}{T}\right)_P\\
+c_p &=\left(\dpa{h}{T}\right)_P& & 
+\end{array}$}\par
+On définit par analogie les grandeurs suivantes~:\par
+\begin{itemize}
+\item{Enthalpie libre molaire standard~:}
+\encadre{$g_i^{\circ}(T) = \mu_i^{\circ}(T)$}
+\item{Entropie molaire standard~:}
+\encadre{$s_i^{\circ}(T) = -\df{g_i^{\circ}}{T}$}
+\item{Enthalpie molaire standard~:}
+\encadre{$h_i^{\circ}(T) = g_i^{\circ} + Ts_i^{\circ}$}
+\item{Capacité thermique isobare molaire standard~:}
+\encadre{$c_{p,i}^{\circ} = T\df{s_i^{\circ}}{T} = \df{h_i^{\circ}}{T}$}
+\end{itemize}
+\point{Cas d'un constituant existant à l'état pur~:}
+Dans ce cas (cf~: tableau), $\mu_i^{\circ} = g_i(T,P^{\circ})$, et on peut simplifier toutes les grandeurs 
+standard et on trouve que ses grandeurs molaires standard sont confondues avec les grandeurs
+molaires du constituant pur évaluées à $P^{\circ}$ et à la température de la phase. On peut alors
+définir par extension l'énergie interne standard et le volume molaire standard.
+\rmq Dans le cas général, on ne peut pas définir ces deux grandeurs. En effet, on a $u = h - Pv$ qui ne
+peut pas être exprimé uniquement en fonction de l'enthalpie libre $g$. Cela correspond au fait qu'on
+a privilégié dès le début le jeu de variables $T, P$ au lieu de $S, V$ et que l'énergie interne n'est pas
+adaptée à ce premier jeu de variables. 
+\exercice Montrer que l'enthalpie d'une phase idéale a pour expression $H = \sum_i n_i h_i^{\circ}(T)$ en 
+exprimant simplement $\bar{h_i}$.
+\spartie{Phase réelle.}\index{Phase!reelle@réelle}
+\sspartie{Coefficients d'activité.}\index{Coefficient!activite@d'activité}
+L'expérience montre qu'une phase ne peut être considérée comme idéale que pour de faibles 
+pressions et de faibles concentrations. Le potentiel chimique diffère alors du cas idéal et
+se met sous la forme~:
+\encadre{$\mu_i = f_i(T,P) + RT\ln(\gamma_i x_i)$}
+\rmq $\gamma_i$ dépend de $T,P...$
+\sspartie{Exemples.}
+Dans le modèle de Debye-Hückel dans le cas dilué\index{modele@Modèle!debye@de Debye-Hückel},
+le coefficient d'activité d'un constituant $C_i$ de charge $z_i e$ et de concentration $c_i$ peut se 
+mettre sous la forme~:
+$$\ln(\gamma_i) = -\alpha z_i^2\sqrt{I}$$\par
+o\`u $\alpha$ est une constante positive et $I = \frac{1}{2}\sum_iz_i^2c_i$. On remarque que si $c_i$ tend
+vers $0$ (dilution), la phase devient idéale puisque $\gamma_i$ tend vers $1$.
+%
+%----------------------------------------PARTIE----------------------------------------
+%
+\partie{Diagrammes binaires liquide gaz}
+\spartie{Introduction.}
+Le système étudié est obtenu en mélangeant deux corps purs $C_1$ et $C_2$, non-réactifs; selon les 
+conditions expérimentales, on peut observer à l'équilibre~:
+\begin{itemize}
+\item une seule phase gazeuse
+\item une seule phase liquide
+\item une phase gazeuse et une phase liquide simultanément. 
+\end{itemize}
+
+L'observation d'une seule phase liquide suppose implicitement que les deux corps purs sont totalement 
+miscibles en phase liquide; dans le cas contraire, on peut observer simultanément deux phases 
+liquides distinctes.
+\sspartie{Notations.}
+Lorsque le mélange binaire $C_1$-$C_2$ comprend simultanément une phase gazeuse et une phase liquide, on 
+adopte les notations suivantes~:
+\begin{itemize}
+\item $n_g$ ou $n_l$~: quantité de matière dans la phase gazeuse ou liquide
+\item $n_{1g}$ ou $n_{1l}$~: quantité de $C_1$ dans la phase gazeuse ou liquide
+\item $\displaystyle x_{1g}=\frac{n_{1g}}{n_g}$ ou $\displaystyle x_{1l}=\frac{n_{1l}}{n_l}$~: 
+fraction molaire de $C_1$ dans la phase gazeuse ou liquide
+\item $n=n_g+n_l$~: quantité de matière dans le système
+\item $n_1=n_{1g}+n_{1l}$~: quantité de $C_1$ dans le système
+\item $\displaystyle x_1=\frac{n_1}{n}$~: proportion de $C_1$ dans le système.
+\end{itemize}
+
+On en déduit les deux relations~: $n_g+n_l=n$ et $x_{1g}\,n_g+x_{1l}\,n_l=x_1\,n$, d'o\`u les deux 
+autres~: 
+$\displaystyle n_g=\frac{x_1-x_{1l}}{x_{1g}-x_{1l}} n$ et $\displaystyle n_l=\frac{x_{1g}-x_1}
+{x_{1g}-x_{1l}}\ n$, dont le rapport $\displaystyle \frac{n_g}{n_l}=\frac{x_1-x_{1l}}{x_{1g}-x_1}$
+conduit au théorème des moments~:\index{theoreme@Théorème!moments@des moments}
+\encadre{$\dfrac{n_g}{n_l} = \dfrac{x_1 - x_{1l}}{x_{1g} - x_1}$}
+\sspartie{Diagrammes isothermes et isobares.}
+Le système étudié étant dans un état d'équilibre, sa température $T$ est uniforme (condition 
+d'équilibre thermique), ainsi que sa pression $P$ (condition d'équilibre mécanique).
+En outre, lorsque la phase gazeuse et la phase liquide coexistent, les conditions d'équilibre de 
+diffusion des deux consti\-tuants entre les deux phases~:
+$\mu_{1g}(T,P,x_{1g},x_{2g})=\mu_{1l}(T,P,x_{1l},x_{2l})$ et\par 
+\noindent $\mu_{2g}(T,P,x_{1g},x_{2g})=\mu_{2l}(T,P,x_{1l},x_{2l})$ montrent, 
+compte-tenu des relations $x_{2g}=1-x_{1g}$ et $x_{2l}=1-x_{1l}$, que les fractions molaires 
+$x_{1g}$ et $x_{1l}$ sont des fonctions implicites de $T$ et $P$.
+
+Un tel résultat peut être retrouvé simplement en calculant la variance du système à l'équilibre~: 
+$v=2-0-0+2-2$ (on rappelle que les deux constituants $C_1$ et $C_2$ ne réagissent pas), soit $v=2$ .
+
+On adopte alors les deux définitions suivantes~:
+\begin{itemize}
+\item A température $T$ fixée, les graphes $x_{1g}$ et $x_{1l}$ fonctions de $P$ constituent le 
+diagramme {\it isotherme} du mélange binaire
+\item A pression $P$ fixée, les graphes $x_{1g}$ et $x_{1l}$ fonctions de $T$ constituent le diagramme
+{\it isobare} du mélange binaire.
+\end{itemize}
+\spartie{Diagrammes isotherme idéal.}
+Un tel diagramme est établi en supposant que la phase gazeuse est {\it idéale}, ainsi que la phase 
+liquide; cette dernière hypothèse, contrairement à la première, n'est pas très réaliste, d'o\`u la
+possibilité d'écarts considérables entre les résultats expérimentaux et les résultats théoriques 
+établis ci-dessous.
+\sspartie{Loi de Raoult.}\index{Loi!raoult@de Raoult}
+En exprimantla condition d'équilibre de diffusion du constituant $C_1$ entre les deux phases et en
+tenant compte des hypothèses, et en introduisant la pression $P_{1T}$ de transition liquide-gaz, on 
+obtient la loi de Raoult~:
+\encadre{$P_1 = P_{1T}x_{1l}\;\; P_2 = P_{2T}x_{2l}$}
+\sspartie{Tracé du diagramme isotherme.}
+La loi de Raoult conduit directement à l'expression de la pression en fonction de la fraction 
+molaire; et on trouve qu'elle s'écrit comme une fonction affine de $x_{1l}$ et comme un fonction 
+homographique de $x_{1g}$ soit~:\par
+\centerline{\includegraphics*[width=8cm,height=6cm]{images/diag_isoth_ideal.eps}}\par
+\sspartie{Lecture du diagramme.}
+A température $T$ fixée, on peut contrôler expérimentalement la pression $P$, ainsi que la proportion
+$x_1$ du constituant $C_1$ (choisie lors de la préparation du mélange binaire); au couple $(x_1,P)$ 
+correspond un point $M$ du diagramme, dont la position par rapport aux deux courbes $C_l$ et $C_g$ 
+détermine l'état du système. Le théorème des moments permet de conclure quant aux phases se trouvant
+dans chacune des trois parties du diagramme. Dans la partie haute, le système comprend \textit{une 
+seule phase liquide}, dans la partie basse, il comprend \textit{une seule phase gazeuse}\footnote{
+du fait de la miscibilité totale} et dans la partie entre les courbes il y a deux phases. La courbe
+du haut est donc logiquement appelée ``courbe d'ébullition'' tandis que celle d'en bas est une courbe
+de ``rosée''.
+\spartie{Diagrammes expérimentaux.}
+\sspartie{Diagrammes isothermes.}
+On obtient expérimentalement trois types de diagrammes~:
+\begin{enumerate}
+\item{Diagramme du type $0_2-N_2$~:}\par
+\centerline{\includegraphics*[width=8cm,height=6cm]{images/diag_isoth_reel.eps}}\par
+Le diagramme expérimental est proche du diagramme idéal, ce qui montre que l'hypothèse d'idéalité
+de la phase aqueuse est acceptable.
+\item{Diagrammes du type $H_20-HCl$~:}\par
+\centerline{\includegraphics*[width=8cm,height=6cm]{images/diag_isoth_reel2.eps}}\par
+Le diagramme est complètement différent de l'idéal. on remarque le point $A$, qualifié de point
+d'azéotropie\index{Point!azeotropie@d'azéotropie} pour lequel le mélange se comporte comme un corps
+pur d'un point de vue transition de phase.
+\item{Diagramme du type $H_20-CH_3CH_2OH$~:}\par
+\centerline{\includegraphics*[width=8cm,height=6cm]{images/diag_isoth_reel3.eps}}\par
+Le diagramme est du même type que le précédent mais on a un maximum au lieu d'un minimum (le mélange
+est plus facile à vaporiser).
+\end{enumerate}
+\sspartie{Diagrammes isobares.}
+Cette fois c'est la pression qui est fixée (plus facile d'un point de vue expérimental). On obtient
+le même genre de diagrammes
+\sspartie{Cas d'une miscibilité non-totale.}
+On a supposé jusqu'ici que les deux corps purs $C_1$ et $C_2$ étaient miscibles, en toutes 
+proportions, dans la phase liquide (c'est le cas, par exemple, du mélange eau-éthanol); néanmoins, il
+existe des cas o\`u les deux corps purs ne sont que \textit{partiellement} miscibles (exemple du 
+mélange eau-phénol) ou même totalement \textit{non-miscibles} (exemple du mélange eau-benzène).
+\point{Miscibilité partielle~:}
+On peut alors obtenir deux phases liquides distinctes $(l_A)$ et $(l_B)$  à l'équilibre, $(l_B)$ étant
+plus riche que $(l_A)$ en constituant $C_1$ ( $x_{1\scriptscriptstyle{B}}>x_{1\scriptscriptstyle{A}}$
+). 
+
+On notera la présence d'un point d'hétéroazéotropie $H$, en lequel les trois phases $(g)$, $(l_A)$ 
+et $(l_B)$ coexistent; la variance du système vaut alors $v=2-0-0+2-3$, soit $v=1$, ce qui 
+explique, dans un diagramme isobare o\`u la pression $P$ est fixée, que la température 
+$T_{\scriptscriptstyle{H}}$ et les fractions molaires $x_{1\scriptscriptstyle{H}}$ (pour la phase 
+gazeuse), $x_{1\scriptscriptstyle{I}}$ (pour la phase liquide $A$) et $x_{1\scriptscriptstyle{J}}$ 
+(pour la phase liquide $B$ ) aient des valeurs numériques non-contrôlables par l'expérimentateur.\par
+\centerline{\includegraphics*[width=8cm,height=6cm]{images/miscibilite_part.eps}}
+\point{Non-miscibilité~:}
+Contrairement à ci-dessus, on ne peut plus avoir de phase liquide avec les deux constituants~:\par
+\centerline{\includegraphics*[width=8cm,height=6cm]{images/non_miscibilite.eps}}\par
+%
+%---------------------------------------PARTIE----------------------------------------
+%
+\partie{Caractéristiques d'une réaction chimique}
+\spartie{Avancement d'une réaction.}
+\sspartie{Coefficients st\oe chiométriques arithmétiques.}
+On écrit une réaction sous la forme~:
+$\sum_i \alpha_i r_i = \sum_i \beta_i p_i\quad (1)$ o\`u $r_i$ et $p_i$ sont les espèces 
+chimiques intervenant dans la réaction. Alors $(\alpha_i, \beta_i)_i$ est un jeu de coefficients
+st\oe chiométriques s'ils sont tous positifs et si l'équation (1) traduit le bilan de 
+matière au cours de la réaction. Ces coefficients sont donc définis à une constante 
+multiplicative près.
+\rmq Les lois de conservation de la masse totale et de la charge totale doivent être vérifiées
+lors de l'écriture de $(1)$. Certaines équations traduisent également un bilan microscopique. Elles sont
+qualifiées d'élémentaires. Par exemple~: $CH_4 + Br\cdot\longrightarrow \cdot CH_3 + HBr$. Dans ce cas
+il n'existe d'un seul jeu de coefficients st\oe chiométriques arithmétiques.
+\rmq Certaines réactions sont totales, la plupart à double sens (notées $\leftrightharpoons$). On ne parle
+pas de réaction ``réversibles'' qui prête à confusion avec la thermodynamique physique.
+\index{Coefficient!stoechiome@st\oe chiométriques}
+\sspartie{Coefficients st\oe chiométriques algébriques.}
+On choisit conventionnellement un sens d'écriture de $(1)$, guidé par un con\-tex\-te industriel. 
+Les constituants à gauche du signe $=$ sont alors nommés ``réactifs'', les autres ``produits''.
+On définit alors les coefficients st\oe chiométriques algébriques comme égaux aux arithmétiques 
+en valeur absolue, positifs pour les réactifs et négatifs pour les produits. On écrit alors
+la réaction sous la forme symbolique~:
+\encadre{$\serie{}{}{\nu_i C_i} = 0$} 
+\sspartie{Avancement.}
+\index{Avancement}
+La relation précédente traduit le fait que toutes les quantités $\dfrac{n_i - n_{i,0}}{\nu_i}$ 
+ont même valeur. Cette valeur commune est appelée ``avancement'' de la réaction tel que~:
+\encadre{$n_i = n_{i,0} + \nu_i\xi$}
+La relation précédente est utilisée en pratique sous la forme d'un tableau appelé ``tableau d'avancement''.
+\index{Tableau d'avancement}
+Par exemple pour la réaction $Fe_3O_4(s) + 4CO(g) = 3Fe(s) + 4CO_2(g)$~:\par
+\centerline{\begin{tabular}{|l||cc|cc|}
+\hline
+Constituant & $Fe3O_4(s)$ & $C0(g)$ & $Fe(s)$ & $CO_2(g)$\\
+\hline
+quantité intiale (en mol) &  $2$ & $5$ & $1$ & $3$\\
+\hline
+quantité à l'instant $t$ & $2-\xi$ & $5-4\xi$ & $1+3\xi$ & $3+4\xi$\\
+\hline
+\end{tabular}} 
+\sspartie{Degré d'avancement.}
+Une quantité de constituant étant positive ou nulle l'avancement est borné par des valeurs 
+$\xi_{max}, \xi_{min}$ qui correspondent respectivement à une réaction totale dans le sens $\to$ 
+et à une réaction totale dans le sens $\leftarrow$. On définit alors le degré d'avancement comme
+la quantité~:
+\encadre{$\eta = \dfrac{\xi - \xi_{min}}{\xi_{max}-\xi_{min}}$}
+\rmq Selon le type de réaction, $\eta$ peut aussi être dénommé ``degré de dissociation'', ``taux
+de conversion'' ou ``rendement'' pour une synthèse.
+\sspartie{Intérêt de l'avancement.}
+\point{Caractère universel~:}
+Il définit l'évolution d'une réaction quelconque au sein d'un système quelconque. Il permet aussi
+bien l'étude d'un équilibre chimique que celle d'un mécanisme réactionnel.
+\point{Etude de réctions simultanées~:}
+Un système chimique est souvent le siège de plusieurs réactions simultanées faisant intervenir 
+les mêmes constituants. En notant $\xi_r$ l'avancement de la réaction $r$, la variation de la
+quantité de $C_i$ peut se mettre sous la forme~:
+\encadre{$n_i = n_{i,0} + \serie{r}{}{\nu_{i,r}\xi_r}$}
+En pratique on exprime toutes ces relations dans un tableau appelé tableau des avancements.\par
+Par exemple, pour la dissociation de l'iodure d'ammonium~:\par
+\begin{eqnarray*}
+NH_4I(s) & = & NH_3 + HI\\
+2HI & = & H_2 + I_2
+\end{eqnarray*}\par
+on obtient le tableau suivant~:\par
+\centerline{\begin{tabular}{|l||c|cc|cc|}
+\hline
+Constituant & $NH_4I(g)$ & $NH_3$ & $HI$ & $H_2$ & $I_2$\\
+\hline
+Quantité initiale & $a$ & $0$ & $0$ & $0$ & $0$\\
+\hline
+Quantité à $t$ & $a-\xi_1$ & $\xi_1$ & $\xi_1-2\xi_2$ & $\xi_2$ & $\xi_2$\\
+\hline
+\end{tabular}}
+\sspartie{Etude d'un mécanisme réactionnel.}
+On considère un système chimique de volume $V$ constant. Pour chaque réaction, on peut définir
+la vitesse de réaction~:\index{Vitesse!de reaction@de réaction}
+\encadre{$v_r = \df{x_r}{t} = \dfrac{1}{V}\df{\xi_r}{t}$}
+En notant $x_r$ l'avancement volumique de la réaction $r$. La variation de la concentration 
+de $C_i$ est alors de la forme~:
+\encadre{$\df{\lbrack i\rbrack}{t} = \serie{r}{}{\nu_{i,r}v_r}$}
+Cette relation permet l'étude cinétique du mécanisme réactionnel.\par
+\point{réaction en chaîne~:}
+Il s'agit d'un réaction qui comporte plusieurs étapes chacune d'entre elles composée d'une ou 
+plusieurs réactions élémentaires~:\par
+\begin{itemize}\index{reaction@Réaction!en chaine@en chaîne}
+\item{} Initiation~: Permet de créer un intermédiaire réactionnel très réactif.
+\index{interme@Intermédiaire réactionnel}
+\item{} Propagation~: L'intermédiaire réactionnel est successivement détruit et régénéré un grand nombre
+de fois.
+\item{} Terminaison~: Tous les intermédiaires sont détruits sans être régénérés.
+\end{itemize}
+\uline{Exemple~:} Synthèse thermique  du bromure d'hydrogène~: 
+Le mécanisme adopté comporte cinq étapes élémentaires.
+\begin{eqnarray*}
+Br_2 + M & \longrightarrow & 2Br\cdot + M\\
+Br\cdot + H_2 & \longrightarrow & HBr + H\cdot\\
+H\cdot + Br_2 & \longrightarrow & HBr + Br\cdot\\
+2Br\cdot + M & \longrightarrow & Br_2 + M\\
+H\cdot + HBr & \longrightarrow & Br\cdot + H_2
+\end{eqnarray*}
+L'initiation correspond à $(1)$ au cours de laquelle le radical $Br\cdot$ est créé. La propagation correspond
+à $(2)$ et $(3)$ puisqu'on a alors destruction et régénération des intermédiaires $H\cdot$ et $Br\cdot$ et 
+se répètent un grand nombre de fois. La terminaison a lieu avec $(4)$ et $(5)$.
+\point{Hypothèse de Bodenstein~:}
+\index{hypothese@Hypothèse de Bodenstein}
+Lors de l'évolution d'un système chimique dans laquelle une réaction en chaine a lieu, il existe
+des constituants appelés ``intermédiaires réactionnels'', qui n'apparaissent pas dans le bilan
+global mais seulement dans les réactions intermédiaires. Ils sont crées au cours de la phase 
+d'initiation et détruits au cours de la phase de terminaison. Alors la concentration de
+ces intermédiaires réactionnels est quasi-stationnaire en cours de réaction.\par
+Une telle hypothèse permet la résolution des équations différentielles sur les concentrations. En effet on 
+dispose de la~:
+\point{Loi de Van't Hoff~:}\index{Loi!vanthoff@de Van't Hoff}
+Pour un acte élémentaire $\sum\limits_i\alpha_i r_i = \sum\limits_i \beta_i p_i$ il existe $k$ tel que 
+la vitesse de la réaction soit égale à~:
+\encadre{$v = k\Pi \left\lbrack r_i\right\rbrack^{\alpha_i}$}
+Qualitativement on dira que le bilan d'un acte élémentaire traduit un acte microscopique et donc que
+la vitesse est d'autant plus importante que la probabilité de choc ou la concentration des réactifs est
+importante.\par
+Par exemple dans le cas ci-dessus, en appliquant l'hypothèse de Bodenstein on obtient 
+$\df{\lbrack Br\cdot\rbrack}{t} = 2v_1-v_2+v_3-2v_4 + v_5\sim 0$ ainsi que 
+$\df{\lbrack H\cdot\rbrack}{t} = v_2-v_3-v_5\sim 0$. C'est-à-dire $v_4 = v_1$ et $v_2 = v_3 + v_5$. 
+Puis la loi de Van't Hoff donne
+$v_1 = k_1\lbrack Br_2\rbrack\lbrack M\rbrack = v_4 = k_4\lbrack Br\cdot\rbrack^2\lbrack M \rbrack$ et
+de même pour l'autre relation. On en déduit la vitesse de la réaction globale $H_2 + Br_2 = 2HBr$ qui vaut en
+fait $v_3 = k\dfrac{\lbrack H_2\rbrack\lbrack Br_2\rbrack^{1/2}}{1+k'\frac{\lbrack HBr\rbrack}{%
+                    \lbrack Br_2\rbrack}}$ avec $k = k_2\sqrt{\frac{k_1}{k_4}}$ et $k' = \frac{k_5}{k_3}$.
+On ne peut en particulier par définir l'ordre d'un telle réaction. Néanmoins en début de réaction, en 
+négligeant le terme au dénominateur, la réaction possède un ordre global de $3/2$, ce qui montre qu'un ordre
+n'est pas nécessairement entier.
+
+\sspartie{Réaction prépondérante.}\index{reaction@Réaction!preponderante@prépondérante}
+\point{Définition~:}
+Une réaction est dite prépondérante lorsque son avancement est très grand devant ceux des autres
+réactions.\par
+La recherche d'une telle réaction n'a d'intérêt que si les diverses réactions ont un commun
+des réactifs ou des produits.
+\point{Méthode de la réaction prépondérante~:}
+Elle a pour but la détermination de l'état d'équilibre d'un sytème chimique en s'appuyant
+sur la recherche d'une réaction prépondérante.\par
+\begin{itemize}
+\item{} On détermine toutes les réactions chimiques ayant lieu dans le système.
+\item{} On détermine une base de réactions en éliminant celles qui se déduisent des autres par
+combinaison linéaire et en gardant celle qui a une tête de prépondérante.
+\item{} On dresse le tableau des avancements.
+\item{} On suppose qu'une réaction est prépondérante selon certains critères (comparaison des
+constantes d'équilibre).
+\item{} On teste l'hypothèse retenue et éventuellement on recommence avec une autre équation.
+\end{itemize}
+\index{reaction@Réaction prépondérante}
+\point{Exemple~: pH d'un mélange acide faible $A_1$-base faible $B_2$ non-conjuguées.}
+Prenons un mélange $CH_3COOH$ à $10^{-1}$ mol par litre et $NH_3$ à $5.10^{-2}$ mol par litre.
+Les réactions éventuelles sont au nombre de $3$, à savoir~:\par
+\begin{itemize}
+\item{} $CH_3COOH + H_2O = CH_3COO^{-} + H_3O^{+}$ $K_{A_1}$
+\item{} $NH_3 + H_2O = NH_4^{+} + HO^-$ $K_{B_2}$
+\item{} $2H_2O = H_3O^+ + HO^-$ $K_e$
+\end{itemize}
+C'est la base de réactions naturelle mais les deux premières réactions ne sont par comparables. On
+la remplace donc par la base suivante~:\par
+\begin{itemize}
+\item{} $A_1 + B_2 = B_1 + A_2$, de constante de réaction $K$.
+\item{} $A_1 + H_2O  = B_1 + H_3O^+$, $K_{A_1}$
+\item{} $B_2 + H_2O = A_2 + HO^-$, $K_{B_2}$
+\end{itemize}
+En plus $K = K_{A_1}K_{B_2}/K_e \gg K_{A_1}$ et $K_{B_2}$ ce qui justifie l'hypothèse que la première 
+réaction est prépondérante. On fait alors le tableau des avancements molaires~:\par
+\centerline{\begin{tabular}{|l|cc|cc|cc|}
+\hline
+Constituants & $A_1$ & $B_2$ & $B_1$ & $A_2$ & $H_3O^+$ & $HO^-$\\
+\hline
+Quantités initiales & $C_1$ & $C_2$ & $0$ & $0$ & $0$ & $0$\\
+\hline
+Quantités à l'éq.  & $C_1 -(x_1+x)$ & $C_2-(x+x_2)$ & $x+x_1$ & $x+x_2$ & $x_1$ & $x_2$\\
+\hline
+Approximation & $C_1 -x$ & $C_2 - x$ & $x$ & $x$ & $x_1$ & $x_2$\\
+\hline
+\end{tabular}}\par
+En exprimant alors les trois conditions d'équilibre~:\par
+$K = \dfrac{x^2}{(C_1-x)(C_2-x)}$ $K_{A_1} = \dfrac{xx_1}{C-x}$ $K_{B_2} = \dfrac{xx_2}{C_2-x}$\par
+on peut alors résoudre ces équations et tester numériquement l'hypothèse. En utilisant que $A_1$ et $B_2$
+sont faibles, on peut encore simplifier car on aura $x\ll C_1, C_2$. On en déduit alors le $pH$.
+%
+\spartie{Grandeurs standard d'une réaction.}
+\sspartie{Définition.}
+Etant donné un système de température uniforme siège d'une réaction~:\par
+$\sum_i \nu_iC_i = 0$, on définit les grandeurs standard~:
+\encadre{$\begin{array}{l@{=}l}
+\stand{G}(T) & \serie{}{}{\nu_ig_i^{\circ}(T)}\\
+\stand{S}(T) & \serie{}{}{\nu_is_i^{\circ}(T)}\\
+\stand{H}(T) & \serie{}{}{\nu_ih_i^{\circ}(T)}\\
+\stand{C_p}(T) & \serie{}{}{\nu_i c_{p,i}^{\circ}(T)}
+\end{array}$}
+\sspartie{Relations de Kirchoff.}
+\index{Relation!kirchoff@de Kirchoff}
+Les relations entre les grandeurs standard des constituants $C_i$ permettent d'obtenir les 
+relations de Kirchoff par combinaisons linéaires~:
+\encadre{$\begin{array}{c@{=}c}
+\stand{G} & \stand{H} - T\stand{S}\\
+\noalign{\vspace{1mm}}
+\df{\stand{G}}{T} & -\stand{S}\\
+\noalign{\vspace{1mm}}
+\df{\stand{H}}{T} & \stand{C_p}\\
+\noalign{\vspace{1mm}}
+\df{\stand{S}}{T} & \dfrac{\stand{C_p}}{T}
+\end{array}$}
+\exercice Montrer que $\stand{G}$ est une fonction affine de la température ssi $\stand{C_p}=0$.\par
+\rmq Dans les diagrammes d'Ellingham, on est dans de cas là.
+\sspartie{Détermination expérimentale.}
+\point{Mesure à partir de la constante d'équilibre~:}
+Par définition, la constante d'équilibre d'une réaction vaut~:
+\encadre{$K(T)=e^{-\frac{\stand{G}}{RT}}$}
+(cf~: condition d'équilibre chimique). On remarque une forme de Boltzmann.\par
+La mesure de $K$ permet celle de $\stand{G}$ et celle de $\stand{S}$ ainsi que $\stand{H}$ car
+on démontre sans peine la loi de Van't Hoff~:
+\encadre{$\df{\ln(K)}{T} = \dfrac{\stand{H}}{RT^2}$}
+\index{Loi!vanthoff@de Van't Hoff}
+\point{Mesure à partir de la chaleur de réaction monobare~:}
+On suppose que la réaction étudiée est prépondérante. On fait subir au système une évolution 
+monobare telle que $T$ soit la même avant et après. Alors un bilan d'énergie totale sous la forme
+$Q = H_2 - H_1$ fournit rapidement la relation~:
+\encadre{$\stand{H} = \dfrac{Q_p}{\xi}$}
+\point{Mesure à partir de la chaleur de réaction isochore~:}
+On suppose que les constituants exitent à l'état pur. Alors en posant $\Delta_r\nu_g = 
+\sum_i\nu_{i,g}$ la variation de la quantité de gaz au cours de la réaction, énergie interne standard et 
+enthalpie standard sont liées par la relation~:
+\encadre{$\stand{H} = \stand{U} + RT\Delta_r\nu_g$}
+De plus un bilan d'énergie sur le gaz pour une évolution isochore donne la relation~:
+\encadre{$\stand{U} = \dfrac{Q_v}{\xi}$}
+\point{Mesure à partir des grandeurs de formation~:}
+$X$ désignant une grandeur extensive usuelle, on note $\standf{X_i}$ la grandeur standard de la 
+réaction de formation d'une mole du constituant $C_i$ à partir des corps purs simples le 
+composant, ceux-ci étant pris dans l'état le plus stable à la température considérée.
+\index{Grandeur!standard de formation}
+De plus on a la relation de Hess\index{Relation!hess@de Hess}, qui permet d'exprimer les 
+grandeurs standard à partir des grandeurs standard de formation~:
+\encadre{$\stand{X} = \serie{i}{}{\nu_i\standf{X_i}}$}
+Cette relation se démontrant facilement par combinaison linéaire.
+%
+%----------------------------------------PARTIE----------------------------------------
+%
+\partie{Equilibre d'un système chimique}
+\spartie{Condition d'équilibre chimique.}
+\sspartie{Relation de De Donder.}
+\index{Relation!dedonder@de De Donder}
+On considère un système chimique fermé dont l'état initial, supposé stationnaire, satisfait aux
+conditions d'équilibre physique $T,P,\mu_i$ uniformes. On provoque une évolution infinitésimale
+de ce système, au coursde laquelle $\dd{\xi}$ est non-nul. Les grandeurs intensives $T,P,\mu_i$
+étant uniformes au début, on a la relation~: $\dd{U} = T\dd{S} - P\dd{V}+\sum_i\mu_i\dd{n_i}$.
+En effectuant des bilans d'entropie, d'énergie totale et de quantité de $C_i$, on trouve
+la relation ci-dessous~:
+\encadre{$\delta S^p = \dfrac{A}{T}\dd{\xi}\quad\mathrm{o\grave{u}}\;A = -\sum_i\nu_i\mu_i$}
+\index{affinite@Affinité}
+\sspartie{Condition d'équilibre chimique.}
+La relation ci-dessus permet de donner un critère d'équilibre chimique~:
+\encadre{$A = -\serie{i}{}{\nu_i\mu_i} = 0$}
+En effet dans un état d'équilibre, le source d'entropie est nulle et donc l'entropie produite
+aussi.\index{Equilibre!chimique}
+Inversement $A \neq 0$, correspond à un état stationnaire hors d'équilibre dû à un blocage 
+cinétique de la réaction.
+\rmq S'il y a plusieurs réactions distinctes, la relation de De Donder s'écrit~:
+$\delta S^p = \sum_r\frac{A_r}{T}\dd{\xi_r}$ et la condition d'équilibre devient la nullité de 
+toutes les affinités.
+\rmq Lors d'une évolution infinitésimale réversible, $\dd{G}=-S\dd{T}+V\dd{P}-A\dd{\xi}$. D'o\`u
+une expression simplifiée de l'affinité~: $A = -\left(\dpa{G}{\xi}\right)_{T,P}$.
+\sspartie{Constante d'équilibre.}
+Le calcul de l'affinité pour une phase idéale peut être effectué en utilisant l'expression
+du potentiel chimique. On trouve alors que la condition $A=0$ correspond à la condition~:
+\encadre{$\Pi a_i^{\nu_i} = K(T)\quad\mathrm{o\grave{u}}\;K =e^{-\frac{\stand{G}}{RT}}$}
+Cette relation est la loi de Guldberg et Waage ou loi d'action des masses.\index{Loi!guldberg@de
+Guldberg et Waage}
+$K$ est appelée ``constante'' d'équilibre et dépend de la température. Elle varie selon la loi de
+Van't Hoff.
+\sspartie{Cas particuliers.}
+\point{Phase gazeuse idéale et corps purs condensés~:}
+L'activité vaut $\frac{P_i}{P^{\circ}}$ pour les gaz et $1$ pour les condensés, soit~:
+\encadre{$K(T) = \Pi_{gaz}p_i^{\nu_i}$}
+O\`u $p_i = \frac{P_i}{P^{\circ}}$ est la pression réduite de $C_i$.
+\point{Cas d'une phase aqueuse idéale diluée avec des précipités~:}
+La constante d'équilibre s'écrit~:
+\encadre{$K(T) = \Pi \lbrack i\rbrack^{\nu_i}$}
+o\`u $\lbrack i\rbrack = \frac{c_i}{c^{\circ}}$ est la concentration réduite du soluté $C_i$.
+\spartie{Variance.}
+\sspartie{Définition.}
+La variance d'un système chimique est le nombre de grandeurs intensives qu'il faut connaître pour
+déterminer toutes les grandeurs intensives liées à ce système.
+\sspartie{Théorème de Gibbs.}
+\index{theoreme@Théorème!gibbs@de Gibbs}
+La variance d'un système chimique en équilibre est donnée par la relation~:
+\encadre{$v = c-r-s+2-\phim$}
+o\`u~:
+\begin{itemize}
+\item{$c$}~: nombre de constituants.
+\item{$r$}~: nombre de réaction indépendantes.
+\item{$s$}~: nombre de relation supplémentaire, conditions initiales...
+\item{$\phim$}~: nombre de phases.
+\end{itemize}
+Ce théorème est un peu long à démontrer aussi la démonstration n'est pas présente.
+\sspartie{Signification expérimentale.}
+La variance est le nombre maximal de variables intensives contrôlables par l'expérimentateur sans
+rompre l'équilibre.
+\spartie{Perturbation d'équilibre.}
+Un système est perturbé par une modification de la température, de la pression,du volume ou des 
+$n_i$. On désire prévoir le sens de la réaction engendrée. Pour cela on calcule $A$ après 
+perturbation mais avant le début de la réaction. Comme l'affinité initiale est nulle (équilibre)
+elle a alors une valeur infinitésimale dont le signe indique le sens de réaction.\par
+Selon la variance dans l'état initial, l'état est déplacé (auquel cas le nouvel état d'équilibre
+atteint est voisin de l'état initial) ou rompu (l'état final en est très différent).\par
+Tout d'abord on s'intéressera à un système dont les contituants sont gazeux ou condensés purs.
+Dans ce cas l'affinité de la réaction a pour expression~: (après calculs)
+\encadre{$\dd{A} = \stand{H}\dfrac{\dd{T}}{T} - RT\serie{i\in g}{}{\nu_i\dfrac{\dd{P_i}}{P_i}}$}
+Le calcul se fait en exprimant les potentiels chimiques avec des activités puis en différenciant
+et on simplifie le résultat obtenu avec les relations de Kirchoff.
+\sspartie{Influence de la température.}
+\point{Variation de $T$ à $P$ constante~:}
+Un bilan de matière de $C_i$ et l'expression $P_i = x_i P$ avec $x_i = n_i/n_g$ permettent 
+d'obtenir~:
+\encadre{$\dd{A} = \stand{H}\dfrac{\dd{T}}{T}$}
+Une augmentation de température déplace ou rompt l'équilibre chimique dans le sens endothermique
+dans au sens $\stand{H}>0$.
+\point{Variation de $T$ à $V$ constanté:}
+Le même genre de raisonnement donne cette fois~:
+\encadre{$\dd{A} = \stand{U}\dfrac{\dd{T}}{T}$}
+Une augmentation de température déplace ou rompt l'équilibre chimique dans le sens endothermique
+dans au sens $\stand{U}>0$.\par
+En pratique $\stand{U}$ et $\stand{H}$ sont tous deux de même signe.
+\sspartie{Influence de la pression.}
+Si seule la pression varie~:
+\encadre{$\dd{A} = -RT\Delta_r\nu_g\dfrac{\dd{P}}{P}$}
+Une augmentation de pression à $T$ constante déplace ou rompt l'équilibre dans le sens d'une
+diminution de la quantité de gaz.
+\sspartie{Influence du volume.}
+Si $V$ varie à $T$ constante~:
+\encadre{$\dd{A} = +RT\Delta_r\nu_g\dfrac{\dd{V}}{V}$}
+\rmq On ne peut pas rompre ainsi l'équilibre car $V$ est extensive et n'intervient pas dans la
+variance.
+\sspartie{Influence de l'ajout de $n_i$.}
+\point{$T,P$ constants~:}
+Dans ce cas malsain aucune règle générale ne peut être énoncée. Cependant si $C_i$ est condensé,
+on ne modifie pas l'équilibre.
+\point{$T,V$ constants~:}
+\encadre{$\dd{A} = -RT\dfrac{\nu_j}{n_j}\delta n$}
+Ce qui veut dire que $\dd{A}$ a le signe de $-\nu_j$. 
+\sspartie{Cas d'une solution aqueuse.}
+L'étude est la même que ci-dessus et on démontre des lois similaires.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PARTIE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\partie{Diagrammes d'Ellingham}
+\spartie{Généralités.}
+\sspartie{Diagrammes d'Ellingham.}
+Ils sont introduits dans l'étude des réactions rédox du type~:\par
+$$\beta Red + O_2 = \alpha Ox$$\par
+Dans laquelle $Ox$ et $Red$ sont gazeux ou condensés dans une phase appelée ``phase sèche'', par 
+opposition aux solutions aqueuses étudiées avec les diagrammes $E-Ph$. On écrit conventionnellement
+l'équation bilan avec une mole de $O_2$. On prend pour abscisse $T$ du milieu (supposée uniforme)
+et pour ordonnée la quantité $RT\ln(p_{O_2})$.
+\sspartie{Approximation d'Ellingham.}
+\index{Approximation d'Ellingham}
+On suppose $\stand{C_p} = 0$ ou de manière équivalente que $\stand{G}$ est une fonction affine de $T$ 
+:\par
+\encadre{$\stand{G} = \stand{H}-T\stand{S}$}
+\rmq L'ordonnée à l'origine  est toujours négative car la réaction est une combustion donc 
+exothermique.
+\rmq La pente est de signe variable selon le $\Delta_r\nu_g$.
+\sspartie{Droite d'Ellingham.}
+La condition d'équilibre chimique s'écrit après un peu de réflexion~:\par
+$RT\ln(p_{O_2}) = \stand{G}(T) + RT\ln\left(\dfrac{a_{Ox}^{\alpha}}{a_{Red}^{\beta}}\right)$\par
+On définit alors la droite d'Ellingham comme $RT\ln(p_{O_2}) = \stand{G}(T)$. Les points au-dessus
+correspondent à la prédominance de l'oxydant les autres à celle du réducteur.
+\spartie{Diagramme d'Ellingham du zinc.}
+Données~:\par
+$\begin{array}{l|ccc}
+\mathrm{Constituants} & Zn(s) & ZnO(s) & O_2\\
+\hline
+\standf{H}^{\circ}(kJ\cdot mol^{-1}) & 0 & -351 & 0\\
+s^{\circ}(J\cdot K^{-1}\cdot mol^{-1}) & 41.6 & 43.6 & 205
+\end{array}$\par
+On donne aussi~:\par
+\begin{itemize}
+\item Température de fusion~: $T_F = 693 K$.
+\item Chaleur latente de fusion~: $L_F = 6.7 kJ\cdot mol^{-1}$
+\item température d'ébullition~: $T_E = 1180 K$
+\item Chaleur latente d'ébullition~: $L_E = 115$
+\end{itemize}
+\sspartie{Domaine $T<T_F$.}
+Un calcul simple à partir des données montre que~:\par
+$$\stand{G_1}(T) = -702+0.201 T$$
+La variance du système vaut $1$. La température étant déjà fixée, l'équilibre ne peut exister que sur
+la droite d'Ellingham
+\sspartie{Domaine $T_F<T<T_E$.}
+De même on trouve~:\par
+$$\stand{G_2}(T) = -715+0.220 T$$\par
+\rmq La réaction a changé puisque le zinc s'est liquéfié.
+\sspartie{Domaine $T>T_E$.}
+Cette fois on est en phase gazeuse et on trouve~:\par
+$$\stand{G_3}(T) = -944+0.415 T$$\par
+En définitive~:\par
+\centerline{\includegraphics*[width=8cm,height=6cm]{images/diag_ellingham_zinc.eps}}\par
+\spartie{Superposition de deux diagrammes.}
+\sspartie{Théorème d'Ellingham.}
+\index{theoreme@Théorème!ellingham@d'Ellingham}
+Si l'on a deux réactions du type étudié~: $(Ox_1|Red_1)$, $(Ox_2|Red_2)$ avec l'oxygène, dont les
+constituants sont gazeux ou condensés, la superposition des diagrammes conduit à deux droites
+sécantes. Si on suppose que la partie haute du diagramme est occupée par $Ox_1$ et que dans un
+domaine de température l'écart d'enthalpie libre standard varie d'au moins $10 RT$ alors l'oxydant
+$Ox_1$ réagit avec le réducteur $Red_2$ selon la réaction obtenue par combinaison des deux 
+premières en faisant disparaître l'oxygène.\par
+La démonstration est facile, en effet la constante d'équilibre de la réaction fait apparaître
+la différence des enthalpies standard et avec l'hypothèse formulée, on trouve que la réaction 
+est totale.
+\sspartie{Diagramme $Zn$, $C$.}
+Une étude similaire à celle du zinc fournit le diagramme du carbone et par superposition on
+obtient~:\par
+\centerline{\includegraphics*[width=8cm,height=6cm]{images/diag_ellingham_zc.eps}}\par
+L'étude de ce diagramme pousse à étudier trois zones distinctes pour y appliquer le théorème
+d'Ellingham~:
+\begin{itemize}
+\item{$T<T_1$} $CO_2$ et $Zn$ réagissent.
+\item{$T_1<T<T_2$} $ZnO$ et $C$ réagissent~: production de $Zn$.
+\item{$T>T_2$} Il y a deux réactions possibles.
+\end{itemize}
+Une telle étude permet de prédire les réactions se produisant entre les divers constituants 
+présents dans le milieu et donc d'élaborer des protocoles de raffinage. En effet les réactions
+ci-dessus traduisent la synthèse du $Zn$ métallique à partir de ses oxydes. Une telle méthode
+est trèc coûteuse en énergie et n'est utilisée que pour les métaux à forte valeur ajoutée (
+pyrométallurgie du Zinc).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\partie{Diagrammes $E-pH$}
+Ils sont introduits lors de l'étude de réactions rédox dont les équations sont obtenues par 
+couplage de demi-équations électroniques du type~:\par
+$$\alpha Ox + ne^{-} = \beta Red$$\par
+l'oxydant et le réducteur pouvant occuper n'importe quelle phase.\par
+Dans un tel diagramme on met en abscisse le $pH$ et en ordonnée le potentiel rédox, défini 
+ci-dessous~:
+\spartie{Potentiel rédox d'une solution.}
+\sspartie{Potentiel d'un couple rédox.}
+\point{Définition~:}\index{Potentiel!redox}
+Le potentiel rédox d'un couple de demi-équation~: $\alpha Ox + ne^{-} = \beta Red$ est~:
+\encadre{$E = \dfrac{1}{n\fff}(\alpha\mu_{Ox} - \beta\mu_{Red})$}
+\point{Formule de Nernst~:}
+\index{Formule!nernst@de Nernst}
+L'écriture du potentiel chimique sous la forme~: $\mu^{\circ} + RT\ln(a)$ permet de mettre le 
+potentiel rédox sous une forme simplifiée~:
+\encadre{$E=E^{\circ} + \dfrac{0.06}{n}\log\bigl(\dfrac{a_{Ox}^{\alpha}}{a_{Red}^{\beta}}\bigr)$}
+Dans laquelle $E^{\circ}$ désigne le potentiel rédox standard et ne dépend que de la température.
+\point{Exemples~:}
+\begin{itemize}
+\item{Couple $(H^+|H_2)$~:} Par convention $E^{\circ} = 0$, d'o\`u $E=-0.03\log(p_{H_2})-0.06pH$.
+On peut alors prendre des conventions sur la pression d'hydrogène pour obtenir un potentiel rédox
+apparent de $-0.06pH$.
+\item{Couple $(O_2|H_2O)$~:} En prenant des conventions du même acabit, on a~: $E=1.23-0.06pH$.
+\end{itemize}
+\sspartie{Affinité d'une réaction rédox en solution aqueuse.}
+On suppose ici que la réaction est obtenue par mise en contact directe des réactifs, ce qui n'est 
+pas le cas dans les sytèmes électrochimiques. Les électrons n'étant pas stables en solution 
+aqueuse, on les fait disparaître par différence car la réaction réelle est directe et s'écrit~:
+\encadre{$\alpha_1 Ox_1 + \beta_2 Red_2 = \beta_1 Red_1 + \alpha_2 Red_2$}
+\point{Expression de l'affinité~:}
+Un calcul direct à partir de la définition de l'affinité donne~:
+\encadre{$A = n\fff(E_1 - E_2)$}
+\point{Equilibre~:}
+La condition d'équilibre provenant de la relation de De Donder s'écrit alors~:
+\encadre{$E_1 = E_2$}
+On pourrait généraliser au cas de plusieurs couples rédox et la condition serait l'égalité de 
+\textbf{tous} les potentiels rédox.
+\point{Non-équilibre~:}
+Le signe de l'affinité donnant le sens de déroulement de la réaction, il suffit maintenant de 
+comparer les potentiels rédox (toujours de Donder).
+On retiendra que si $E_1>E_2$ alors la réaction se produit dans le sens direct.
+\rmq En pratique on se contente de comparer les potentiels standard~: si leur différence est 
+suffisante, on peut sans trop se tromper étendre aux potentiels tout court.
+\spartie{Diagramme $E-pH$ du fer.}
+\sspartie{Tracé.}
+\point{Position du problème~:}
+Les constituants du fer auxquels on s'intéresse sont les suivants~:\par
+$Fe(s)$, $Fe^{2+}$, $Fe(OH)_2(s)$, $Fe^{3+}$, $Fe(OH)_3(s)$.\par
+\point{Prévision qualitative~:}
+On classe les constituants selon leur nombre d'oxydation, puis selon leur caractère acide. On 
+en déduit l'allure qualitative du diagramme, puis on prélève dans une table les données numériques
+nécéssaires, soit ici 4 données à température usuelle ($298 K$), deux potentiels standard~:\par
+$E^{\circ}_{Fe^{3+}|Fe} = -0.44 V$, $E^{\circ}_{Fe^{3+}|Fe^{2+}} = 0.77 V$\par
+et deux constantes de dissociation~:\par
+$Fe(OH)_2 = Fe^{2+}+2 OH^-$, $pK_s = 15$\par
+$Fe(OH)_3 = Fe^{3+}+3 OH^-$, $pK_s = 38$\par
+\point{Construction du diagramme~:}
+On précise des conventions, que $\lbrack Fe^{2+}\rbrack = \lbrack Fe^{3+}\rbrack  = 1$ aux 
+frontières et on finit le diagramme frontière par frontière~:
+\begin{itemize}
+\item{Frontière $(Fe^{2+}|Fe)$~:} $Fe^{2+} + 2e^- = Fe$ d'o\`u $E = -0.44 V$ compte tenu des
+conventions adoptées.
+\item{$Fe^{2+}|Fe(OH)_2$~:} $Fe(OH)_2 = Fe^{2+} + 2OH^-$ l'écriture de la condition d'équilibre
+donne directement~: $pH = 6.5$.
+\item{$Fe(OH)_2|Fe$~:} $E = E^{\circ} -0.06pH$. Le calcul du potentiel standard est possible
+mais il est plus rapide d'exprimer le fait que les frontières $2, 1, 3$ se coupent en un point.
+\end{itemize}
+On continue alors sur les trois autres frontières puis on trace le diagramme en indiquant les 
+zones de prédominance~:\par
+\centerline{\includegraphics*[width=8cm,height=6cm]{images/diag_eph_fer.eps}}\par
+\sspartie{Lecture.}
+Considérons une solution aqueuse contenant des constituants du Fer utilisés ci-dessus. En ajoutant
+des tampons acido-basique ou des tampons rédox, on peut imposer le $pH$ ou le potentiel de la
+solution. La lecture du diagramme permet alors de dire sous quelle forme prépondérant se trouve 
+le Fer dans la solution.\par
+\exercice Tracer le diagramme $E-pH$ du chlore pour les solutés suivants~:\par
+$Cl^{-}, Cl_2, HClO, Cl0^-$\par
+compte-tenu des données suivantes~:\par
+$E^{\circ}_{Cl2|Cl^-} = 1.39 V$, $E^{\circ}_{HClO|Cl_2} = 1.60 V$, $pKa_{HClO|ClO^-} = 7.5$ et
+des conventions~:\par
+Concentration totale en élément chlore égale à $10^{-1}$ et sur chaque frontière, la concentration
+en solutés de Chlore 1 est égale à celle en chlore 2. 
+(par exemple~: $2\lbrack Cl_2\rbrack = \lbrack Cl^{-}\rbrack$)
+
+\spartie{Superposition de deux diagrammes.}
+Comme pour les diagrammes d'Ellingham c'est là le grand intérêt des diagrammes $E-pH$.
+\sspartie{Superposition de ceux du Fer et du chlore.}
+La superposition de ces deux diagrammes donne~:\par
+\centerline{\includegraphics*[width=8cm,height=6cm]{images/diag_eph_fecl.eps}}\par
+La superposition de ces deux diagrammes permet de prévoir les réactions obtenues en mélangeant de
+l'eau de Chlore avec une solution aqueuse de sulfate de Fer. Si le $pH$ du mélange est
+imposé par un tampon, on a plusieurs cas de figure~:\par
+\begin{itemize}
+\item{$pH = 0$~:} Le dichlore réagit directement avec le $Fe^{2+}$.
+\item{$pH = 4$~:} Le dichlore se dismute en $HClO$ et $Cl^-$ puis $HClO$  réagit avec $Fe^{2+}$
+\item{$pH = 9$~:} Le dichlore se dismute en $ClO^-$ et $Cl^-$ et on continue le processus pour
+trouver toutes les réactions.
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\partie{Systèmes électrochimiques}
+\sspartie{Définition d'un système électrochimique.}
+C'est un dipôle d'un point de vue électrique et un ensemble de deux électrodes d'un point de vue
+chimique. Chaque électrode est constituée d'un conducteur métallique et d'un couple rédox.
+A l'anode se produit une oxydation et une réduction à la cathode. (définition)\index{Anode}
+\index{Cathode}
+\sspartie{Relations entre intensité et vitesse de réaction.}
+Deux bilans de matière à chaque électrode fournissent cette relation~:
+\encadre{$i = n\fff\df{\xi}{t}$}
+o\`u $i$ est l'intensité du courant traversant le système et $\xi$ l'avancement.
+\sspartie{Exemples de tels systèmes.}
+\point{Electrolyseur~:}\index{Electrolyseur}
+\centerline{\includegraphics*[width=6cm,height=5cm]{images/electrolyseur.eps}}\par
+Un électrolyseur reçoit de l'énergie électro-magnétique de la part du dipôle extérieur. Comme 
+$P_{em}^r = vi$ et que $v$ est positive, $v$ l'est aussi. Ainsi dans un électrolyseur l'anode
+est le pôle $+$.
+\point{Pile~:}\index{Pile}
+\centerline{\includegraphics*[width=6cm,height=5cm]{images/pile.eps}}\par
+Une pile fournit de l'énergie em au dipôle extérieur, ce qui montre avec la même relation que
+dans une pile l'anode coïncide avec le pôle $-$.
+\sspartie{Divers types d'électrodes.}
+Rapidement, on rappelle qu'outre les électrodes classiques comme l'argent et le platine (...), 
+il existe d'autres électrodes plus rapides et précises~: une électrode utilisée en métrologie 
+est celle à hydrogène qui utilise une lame de platine et le couple $(H^+|H_2(g))$, l'électrode
+précise utilisée couramment est celle qu ``calomel'' qui utilise la platine et le couple
+$(Hg_2Cl_2(s)|Hg(l))$.
+\spartie{Etude thermodynamique.}
+\sspartie{Relation de De Donder électrochimique.}
+On suppose que le système qui ne comprend ni le dipôle extérieur ni la jonction éventuelle, est 
+dans un état de température, pression et potentiels chimiques uniformes. On note alors $\dd{\xi}$
+l'avancement de la réaction rédox lors d'une évolution infinitésimal quelconque du système.\par
+\point{Relation entre $U$ et $S$~:} On part de la relation $\dd{U} = T\dd{S}-P\dd{V} -A\dd{\xi}$.
+\point{Bilan d'énergie~:} 
+\begin{itemize}
+\item[$\diamondsuit$]{$\dd{E}$}~: $\dd{E} = \dd{U}$ en négligeant la variation d'énergie 
+potentielle (due au mouvement des ions dans la solution) et en négligeant l'énergie em emmagasinée
+dans le système.
+\item[$\diamondsuit$]{$\delta Q$}~: ?
+\item[$\diamondsuit$]{$\delta W$}~: $\delta E_m^r = -P\dd{V}$ (pression uniforme) et 
+$\delta E_{em}^r=\dd{t}\int_{\Sigma} V\ve{j}\cdot\ve{n}\dd{S}$. 
+\end{itemize}
+Ensuite on distingue deux cas~:\par
+$\delta W = -P\dd{V} + n\fff(V_A - V_C)\dd{\xi}$ pour un électrolyseur\par
+\noindent $\delta W = -P\dd{V} + n\fff(V_A - V_C + V'_{C} - V'_{A})\dd{\xi}$ pour une pile.
+On supposera ensuite que la ddp de jonction est négligeable devant la ddp du dipôle, auquel cas on
+trouve le bilan sous la forme~:\par
+$$\dd{U} = \delta Q - P\dd{V} + n\fff v\dd{\xi}$$\par
+\point{Bilan d'entropie~:}
+La température étant uniforme, on trouve rapidement le bilan d'entropie~:\par
+$$\dd{S} = \dfrac{\delta Q}{T} + \delta S^p$$\par
+Au final on obtient la relation de De Donder électrochimique~:
+\encadre{$\delta S^p = \dfrac{A_e}{T}\dd{\xi}$}
+o\`u $A_e$ est l'affinité électrochimique définie par~: $A_e = A+n\fff v$.
+\sspartie{Condition d'équilibre électrochimique.}
+Lorsque le système est initialement dans un état d'équilibre ou qu'il évolue réversiblement alors
+l'entropie produite est nulle on a la relation~:
+\encadre{$V_A - V_C = E_A - E_C$}
+\rmq Cette relation est obtenue directement à partir de De Donder.
+\spartie{Etude cinétique.}
+L'étude thermodynamique a permi d'établir la relation~:
+\encadre{$V_A - V_C = E_A - E_C +\dfrac{T}{n\fff}\dfrac{\delta S^p}{\dd{\xi}}$}
+ reliant la ddp électrique, la ddp chimique et la création d'entropie molaire. Par contre, aucune
+information sur la vitesse de réaction n'est donnée.
+\sspartie{Courbe intensité potentiel.}
+\point{Courbe intensité potentiel d'électrode~:}
+A l'aide d'un dispositif expérimental faisant intervenir une électrode à hydrogène, on peut tracer
+la courbe reliant $i_A$ et $V_A$ et de même pour la cathode~:\par
+\centerline{\begin{tabular}{c|c}
+Anode                                  &                    Cathode\\
+\hline
+{\includegraphics*[width=4cm,height=4cm]{images/i_v_anode.eps}} &
+{\includegraphics*[width=4cm,height=4cm]{images/i_v_cathode.eps}}
+\end{tabular}}\par
+$V_A = E_A$ correspond à l'équilibre.\par
+$E_A<v_A<v_A+\eta_A$ correspond à un état quasi-stationnaire hors d'équilibre.\par
+$\eta_A$ est la surtension anodique, elle est de l'ordre du volt et dépend de l'électrode 
+utilisée tant du point de vue du métal conducteur que du point de vue du couple rédox et même
+du point de vue de l'état de surface du métal.
+\sspartie{Courbe intensité potentiel pour un électrolyseur.}
+Etant donné que $i = i_A = -i_C$, par superposition de ces deux courbes et par une petite 
+transformation, on obtient la caractéristique $i(v)$. Celle-ci est nulle pour $i$ inférieur à une 
+certaine tension seuil au-dessous de laquelle l'électrolyseur ne fonctionne pas. Cette tension 
+seuil vaut $E_A -E_C+\eta_A-\eta_C$~:\par
+\centerline{\includegraphics*[width=5cm,height=4cm]{images/i_v_electrolyseur.eps}}\par
+On en déduit le lien entre la surtension et la création d'entropie molaire~:
+\encadre{$\eta_A - \eta_C = \dfrac{T}{n\fff}\dfrac{\delta S^p}{\dd{\xi}}$}
+Au delà de cette valeur seuil la caractéristique est affine avec une pente en $1/R$.\par
+Le bilan énergétique peut alors se mettre sous les deux formes~:
+\begin{itemize}
+\item{} $$P_{em}^r = (E_A - E_C) i + TP_S$$\par
+O\`u le premier terme indique la puissance minimale utile dans un cas idéal et le deuxième est 
+un terme correctif dû à l'irréversibilité.
+\item{}$$TP_S = (\eta_A - \eta_C)i + Ri^2$$\par
+De même le premier terme pointe l'irréversibilité chimique (surtension) et le second 
+l'irréversibilité électrique (effet Joule).
+\end{itemize}
+\sspartie{Courbe intensité potentiel pour une pile.}
+L'étude est la même mais la courbe est symétrique par rapport à un axe vertical. On constate que
+la force électromotrice diminue avec l'intensité délivrée par la pile à tel point
+qu'on a une tension seuil au delà de laquelle la pile ne fournit plus de courant.
+Le bilan énergétique s'écrit~:
+$$ - P_{em}^r = (E_C - E_A) i - TP_S$$\par
+On constate que la production d'énergie em dans le cas idéal est amputée par la destruction 
+d'entropie.

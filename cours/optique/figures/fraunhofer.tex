@@ -1,0 +1,88 @@
+\begin{pspicture}(7.2,7.2)
+\psset{xunit=0.6cm,yunit=0.6cm}
+%grande ellipse
+\psellipse(6,6)(2,4)  
+%point C
+\psdots[dotstyle=*](6,6)
+\rput(6,5.6){\tiny{C}}
+%plan diffractant
+\psline(1.5,0)(1.5,10.5)
+\psline(1.5,10.5)(3.8,12)
+%ecran
+\psline(10.5,0)(10.5,10.5)
+\psline(10.5,10.5)(12.8,12)
+%axe optique
+\psline[linewidth=0.1mm]{->}(-0.5,6)(1,6)
+\psline[linewidth=0.1mm](0,6)(1.5,6)
+\psline[linewidth=0.1mm,linestyle=dotted](1.5,6)(2.8,6)
+\psline[linewidth=0.1mm](2.8,6)(4,6)
+\psline[linewidth=0.1mm,linestyle=dotted](4,6)(6,6)
+\psline[linewidth=0.1mm](6,6)(10.5,6)
+\psline[linewidth=0.1mm,linestyle=dotted](10.5,6)(11.8,6)
+\psline[linewidth=0.1mm]{->}(11.8,6)(13.5,6)
+%rayon passant par O
+\psline[linewidth=0.1mm]{->}(2.8,6)(3.75,6.32)
+\psline[linewidth=0.1mm](2.8,6)(4.035,6.416)
+\psline[linewidth=0.1mm,linestyle=dotted](2.8,6)(5.65,6.96)
+\psline[linewidth=0.1mm,linestyle=dotted](5.65,6.96)(12,8)
+\psline[linewidth=0.1mm]{->}(5.65,6.96)(8.825,7.48)
+\psline[linewidth=0.1mm](5.65,6.96)(10.5,7.749)
+%point O
+\psdots[dotstyle=*](2.8,6)
+\rput(2.8,5.6){\tiny{O}}
+%point F'
+\psdots[dotstyle=*](11.8,6)
+\rput(11.8,5.6){\tiny{F'}}
+%rayon parallèle
+\psline[linewidth=0.1mm]{->}(0,7)(1,7)
+\psline[linewidth=0.1mm](1,7)(1.5,7)
+\psline[linewidth=0.1mm,linestyle=dotted](1.5,7)(3.55,7)
+\psline[linewidth=0.1mm,linestyle=dotted](3.55,7)(6.4,7.96)
+\psline[linewidth=0.1mm](3.55,7)(4.12,7.192)
+\psline[linewidth=0.1mm,linestyle=dotted](6.4,7.96)(12,8)
+\psline[linewidth=0.1mm]{->}(6.4,7.96)(9.2,7.98)
+\psline[linewidth=0.1mm](6.4,7.96)(10.5,7.984)
+%Point I
+\psdots[dotstyle=*](6.4,7.96)
+\rput(6.4,8.26){\tiny{I}}
+%point M
+\psdots[dotstyle=*](3.55,7)
+\rput(3.3,7.4){\tiny{M(x,y)}}
+%rayon CP
+\psline[linewidth=0.15mm,linestyle=dashed](6,6)(12,8)
+%segment OM
+\psline[linewidth=0.1mm,linestyle=dotted](2.8,6)(3.55,7)
+%segment I?
+\psline[linewidth=0.1mm,linestyle=dotted](5.65,6.96)(6.4,7.96)
+%point P
+\psdots[dotstyle=*](12,8)
+\rput(12.2,8.4){\tiny{P(X,Y)}}
+%point H et segment HM
+\psline[linewidth=0.1mm,linestyle=dotted](3.55,7)(3.45,6.25)
+\psdots[dotstyle=*](3.45,6.25)
+\rput(3.7,6.1){\tiny{H}}
+%vecteurs u et v
+\psline[linewidth=0.2mm]{->}(6,6)(6.95,6.32)
+\psline[linewidth=0.2mm,linestyle=dotted](6.95,6.32)(6.49,6.32)
+\psline[linewidth=0.1mm]{->}(6,6)(6.49,6.32)
+\rput(6.9,6.6){$\scriptsize{\ve{u}}$}
+\rput(6.3,6.6){$\scriptsize{\ve{v}}$}
+%textes
+\rput(12.5,0.5){\begin{tabular}{c} 
+               \tiny{Ecran dans le plan}\\
+               \tiny{focal image}
+            \end{tabular}}
+\rput(6,.5){\begin{tabular}{c}
+               \tiny{Lentille mince}\\
+               \tiny{Convergente}
+           \end{tabular}}
+\rput(3,0.5){\begin{tabular}{c}
+               \tiny{Surface}\\
+               \tiny{diffractante}\\
+               \tiny{plane}
+           \end{tabular}}
+\rput(-0.5,0.5){\begin{tabular}{c}
+               \tiny{Faisceau cylindrique}\\
+               \tiny{en incidence normale}
+           \end{tabular}}
+\end{pspicture}

@@ -1,0 +1,1345 @@
+\chapter{Electromagnétisme}
+\partie{Electrostatique.}
+\spartie{Théorème fondamental.}
+\sspartie{Enoncé.}
+Toute distribution stationnaire de charge engendre un champ vectoriel $\ve{E}$ appelé champ électrostatique 
+tel que la force subie par une charge ponctuelle $q$ de la part de cette distribution ait pour expression :
+\index{Force!lorentz@de Lorentz}
+\encadre{$\ve{f} = q\ve{E}$}
+Le champ électrostatique satisfait aux équations locales :\index{Champ!electrostatique@Electrostatique}
+\encadre{$\begin{array}{c}
+          \rot \ve{E} = \ve{0}\\
+          \div \ve{E} = \dfrac{\rho}{\eps_0}
+          \end{array}$}
+\sspartie{Conséquences immédiates.}
+\point{Potentiel scalaire~:} $\rot \ve{E} = \ve{0}$~: le champ électromagnétique est à circulation conservative. Il dérive donc
+d'un potentiel scalaire $V$ appelé potentiel électrostatique :\index{Potentiel!electrostatique@Electrostatique}
+\encadre{$\ve{E} = -\grad V $}
+A cette équation locale correspond l'équation intégrale~:
+\encadre{$\integrale{L}{{}}{\ve{E}\cdot\ve{t}\dd{L}} = V(A) - V(B)$}
+\rmq Le choix de $-\grad V$ se justifie par le fait que la plupart des formules de physique en sont 
+simplifiées, par exemple dans les expressions du potentiel.\par
+Le potentiel électrostatique n'est défini qu'à une constante additive près, il n'est pas mesurable.\par
+\point{Théorème de Gauss~:}
+On sait que~: $\div \ve{E} = \dfrac{\rho}{\eps_0}$~: à cette équation locale correspond l'équation 
+intégrale~:\par
+\encadre{$\integrales{S}{{}}{\ve{E}\cdot\ve{t}\dd{S}} = \dfrac{q_S}{\eps_0}$}\par
+C'est le théorème de Gauss.\par\index{theoreme@Théorème!gauss@de Gauss}
+\point{Equation de Poisson~:} Des deux équations locales~: $\ve{E} = -\grad V $ et $\div \ve{E} = \dfrac{\rho}{\eps_0}$, on 
+tire l'équation locale~:
+\encadre{$\Delta V = -\dfrac{\rho}{\eps_0}$}
+C'est l'équation de Poisson-scalaire. Dans le cas o\`u $\rho = 0$, c'est l'équation de Laplace.
+\index{Equation!poisson@de Poisson}
+\index{Equation!laplace@de Laplace}
+\spartie{Champ et potentiel.}
+\sspartie{Distributions volumiques.}
+On admet le théorème suivant valable dans le cas d'une distribution volumique bornée telle que
+$V(\infty)=0$, l'équation de Poisson scalaire admet pour solution unique~:
+\encadre{$V(P) = \dfrac{1}{4\pi\eps_0}\integraless{V}{{}}{\dfrac{\rho(M)}{r}\dd{\tau}}$}
+En exprimant ensuite le champ comme le gradient du potentiel, on trouve~:
+\encadre{$\ve{E}(P) = \dfrac{1}{4\pi\eps_0}\integraless{V}{{}}{\rho(M)\dfrac{\ve{u}}{r^2}\dd{\tau}}$}
+O\`u $r$ désigne la distance entre le point $P$ d'observation et le point $M$ source qui varie dans 
+l'intégrale. On montre facilement que le champ et le potentiel électrostatique crées par une distribution 
+volumique de charge sont continus en tout point de l'espace.
+\sspartie{Distribution surfacique.}
+Ce sont les mêmes formules en changeant $\rho$ en $\sigma$ et $V$ en $S$.
+Par contre il y a un problème avec le champ $\ve{E}$ qui n'est pas défini sur la distribution en question.
+Sa discontinuité est donnée par la relation~:
+\index{condition@Condition aux limites}
+\encadre{$\ve{E_2}-\ve{E_1} = \dfrac{\sigma(M)}{\eps_0}\ve{n_{12}}$}
+$\ve{E_2}$ désignant le champ au voisinage du point $M$ de la surface du côté $2$, $\ve{E_1}$ désignant le 
+champ au voisinage de ce point du côté $1$, et $\ve{n_{12}}$ la normale à la surface au point $M$ dans le 
+sens $1$ vers $2$.
+\sspartie{Distribution linéique.}
+Ce sont les mêmes formules en changeant $\rho$ en $\lambda$ et $V$ en $L$.
+Par contre ni le champ $\ve{E}$ ni le potentiel $V$ ne sont définis sur la distribution en question.
+\sspartie{Distribution discrète.}
+Ce sont les mêmes formules en changeant les intégrales par des sommes et les $\rho\dd{\tau}$ par des
+$q_i$.
+Ni le potentiel ni le champ ne sont définis sur chacune des charges $q_i$.
+\sspartie{Comportement face à une symétrie.}
+\index{symetrie@Symétrie}
+On suppose que la distribution de charge possède une symétrie plane. Alors, le potentiel possède la même
+symétrie de même que la composante parallèle au plan du champ $\ve{E}$. La composante perpendiculaire du 
+champ est elle antisymétrique par rapport au plan. Pour un plan d'antisymétrie, c'est le contraire.
+\spartie{Conducteur en équilibre.}
+\index{Conducteur!equilibre@en équilibre}
+\sspartie{Equilibre électrique d'un conducteur.}
+\point{Conditions d'équilibre~:}
+\index{equilibre@Equilibre!conducteur@d'un conducteur}
+Le conducteur est assimilé à un milieu ohmique solide pour lequel $u$ et $s$ satisfont à $\dd{u} = T\dd{s}$.
+(cf~: thermodynamique). Le bilan local d'énergie interne permet d'obtenir celui d'entropie (en 
+appliquant la loi de Fourier et le premier principe)~:\par
+\index{Entropie}
+$$\div\Bigl(\dfrac{\ve{J_{th}}}{T}\Bigr) + \rho\df{s}{t} = \grad\Bigl(\dfrac{1}{T}\Bigr)\cdot\ve{J_{th}} + 
+\dfrac{\ve{j}\cdot\ve{E}}{T}$$
+On en déduit les flux et forces thermodynamiques dans le conducteur~:\par
+\index{Flux!thermodynamique}
+\index{Force!thermodynamique}
+\vspace{1mm}
+\centerline{$\begin{array}{l|l|l}
+\mathrm{Flux} & \ve{J_{th}} & \ve{j}\\
+\hline
+\raise-4pt\hbox{Forces}&%
+\raise-4pt\hbox{$\grad\bigl(\frac{1}{T}\bigr)$}&\raise-4pt\hbox{$\frac{\ve{E}}{T}$}\\
+\end{array}$}\vspace{1mm}
+Ce qui donne les conditions d'équilibre du conducteur~:
+\encadre{$T$ uniforme ; $\ve{E} = \ve{0}$}
+\point{Conséquences immédiates.}
+\encadre{Le potentiel est uniforme au sein du conducteur.}
+On notera désormais $V$ la valeur de ce potentiel uniforme en adoptant la convention : $V(\infty) = 0$.
+\encadre{Un conducteur en équilibre ne peut être chargé qu'en surface.}
+Le champ régnant dans le vide au voisinage du conducteur à l'équilibre satisfait à la relation~:
+\encadre{$\ve{E}(P) = \dfrac{\sigma(M)}{\eps_0}\ve{n}$}
+\index{theoreme@Théorème!coulomb@de Coulomb}
+Ce théorème (de Coulomb) découle immédiatement de la condition aux limites déjà établie. On en déduit que
+le lignes de champ sont orthogonales à la surface du conducteur.
+\sspartie{Conducteur seul dans l'espace.}
+\index{Conducteur!seul@seul dans l'espace}
+\point{Théorème d'unicité~:}
+\index{theoreme@Théorème!unicite@d'unicité}
+La donnée soit du potentiel $V$ soit de la charge $q$ suffit à déterminer de manière unique l'état 
+d'équilibre d'un conducteur seul dans l'espace.\par
+La démonstration n'est pas facile et est faite en exercice. Ce résultat est très puissant et très utile 
+dans tous les exercices sur les conducteurs.\par
+En particulier le potentiel électrostatique solution de l'équation de Laplace dans le vide et qui satisfait
+aux deux conditions aux limites $V(P) = V$ sur une surface fermée $S$ et $V(\infty) = 0$ est unique.
+\point{Relation charge-potentiel~:}
+Le conducteur étant en équilibre, on note $\alpha(P)$ le potentiel qui règne dans le vide lorsqu'il est au 
+potentiel unité. Le théorème d'unicité permet d'affirmer que le potentiel qui règne dans le vide lorsque 
+le conducteur est porté au potentiel $V$ est $V\alpha(P)$. 
+On peut alors calculer la charge du conducteur~:\\
+$q = \integrale{S}{{}}{\sigma(M)\dd{S}} = \integrale{S'}{{}}{-\eps_0\grad(V)\cdot\ve{n}\dd{S}}$\\
+o\`u $S'$ est une surface infiniment voisine de $S$ o\`u le champ $\ve{E}$ satisfait au théorème de 
+Coulomb. On a alors~:
+\encadre{$q = CV$}\par\index{capacite@Capacité}
+A condition de poser $C = -\eps_0\integrale{S'}{{}}{\grad(\alpha)\cdot\ve{n}\dd{S}}$ la capacité du 
+conducteur.
+\point{Propriétés de la capacité~:}
+La capacité d'un conducteur en équilibre seul dans l'espace ne dépend que de la géométrie du conducteur (de 
+même que $\alpha$) et est toujours positive (se démontre avec des considérations énergétiques).
+\point{Capacité d'un conducteur sphérique~:}
+\index{Conducteur!spherique@sphérique}
+On utilise que le potentiel est uniforme et sa valeur peut être calculée facilement au centre de la boule
+conductrice. On obtient~:
+\encadre{$C = 4\pi\eps_0 R$}
+En ordre de grandeur on trouve $C = 10^{-12}F$ et cette formule permet de retenir l'unité de $4\pi\eps_0$.
+\point{Capacité d'un conducteur ellipsoïdal~:}
+\index{Conducteur!ellipsoidal@ellipsoïdal}
+On se donne un conducteur ellisoïdal de paramètres $a,b,c$ \footnote{Tels que~: $a^2 = b^2+c^2$} seul dans l'espace.
+Pour calculer sa capacité il faudrait connaître l'expression du Laplacien en coordonnées elliptiques, ce 
+qui est complètement H-P. On utilise la méthode des images électriques. En effet si l'ellipsoïde est porté 
+à un potentiel $V$, il crée dans le vide le même potentiel qu'un segment uniformément chargé $\lambda = 
+\dfrac{4\pi\eps_0 V}{\ln(\frac{a+c}{a-c})}$ (grâce au théorème d'unicité et à l'expression du potentiel crée 
+par un segment) On trouve alors $q = 2c\lambda$, ce qui fournit la capacité~:
+\encadre{$C = \dfrac{8\pi c\eps_0}{\ln(\frac{a-c}{a+c})}$}
+\rmq Si $c\to 0$ à l'aide d'un DL on retrouve la capacité du conducteur sphérique.\par
+Si $\frac{a}{b}\to\infty$, l'ellipsoïde s'allonge pour ressembler à une pointe. On constate alors (après 
+un calcul) que le champ à la pointe est très grand devant celui à l'extremité aplatie. C'est ce qu'on appelle
+``l'effet de pointe''.  Cet effet justifie des phénomènes comme le vent électrostatique.
+\point{Conducteur creux~:}
+Un conducteur creux seul dans l'espace et dont la cavité ne contient aucune charge est électriquement 
+équivalent au conducteur plein de même géométrie et porté au même potentiel.
+\sspartie{Conducteur en présence de charges à l'extérieur.}
+\point{Phénomène d'influence~:}
+\index{phenomene@Phénomène d'influence}
+La charge à la surface du conducteur dépend de ces distributions extérieures.
+\point{Effet d'écran~:}
+Un conducteur creux en équilibre dont le potentiel est maintenu constant sépare l'espace en deux régions 
+électrostatiquement indépendantes. On dit de ce conducteur qu'il constitue un écran. Cette proriété a de
+nombreuses applications.
+\index{effet@Effet d'écran}
+\sspartie{Forces subies par un conducteur.}
+\point{Pression électrostatique~:}
+\index{Pression!Electrostatique}
+Ce résultat est démontré dans le cours. Sa démonstration n'est pas très difficile une fois qu'on la vue 
+une fois. Par contre il est très utile en pratique~:\par
+Un élément de surface $\delta S$ du conducteur subit une force $\delta\ve{F}$ telle que~:
+\encadre{$\delta\ve{F} = \dfrac{\sigma^2}{2\eps_0}\ve{n}\dd{S}$}
+\spartie{Condensateur.}
+\index{Condensateur}
+\sspartie{Système de deux conducteurs en influence totale.}
+Les deux conducteurs sont en équilibres~: le champ $\ve{E}$ est nul en leur intérieur. De plus on dit qu'ils 
+sont en influence totale lorsqu'aucune ligne de champ ne va à l'infini et que de plus le potentiel est nul 
+à l'infini.
+Dans ce cas, en notant $\alpha(P)$ le potentiel crée dans le vide quand le conducteur $1$ est porté au 
+potentiel unité et le $2$ au potentiel nul. Le théorème d'unicité donne alors l'expression du potentiel en 
+fonction de $\alpha$~:
+\encadre{$V = (V_1 - V_2)\alpha(P) + V_2$}
+On en déduit que les lignes de champ coïncident avec celles de $\grad \alpha$. Elles ne dépendent donc que de
+la géométrie des conducteurs.
+\sspartie{Définition d'un condensateur.}
+Etant donné deux conducteurs en influence totale, on appelle condensateur le système formé d'un tube de 
+champ $\Sigma$ et des deux surface $S_1$ et $S_2$ qui lui correspondent sur chacun des conducteurs.
+$S_1$ et $S_2$ sont dites correspondantes et portent des charges opposées.
+On notera désormais $q = q_1 = -q_2$, $V = V_1 - V_2$ la charge et la ddp du condensateur. 
+\sspartie{Capacité d'un condensateur.}
+\index{capacite@Capacité}
+La charge d'un condensateur est proportionnelle à la ddp interarmatures. En effet~:\par
+$q = \integrale{S_1}{{}}{\sigma(M)\dd{S}} = \integrale{S_1'}{{}}{\eps_0\ve{E}(P)\cdot\ve{n}\dd{S}} = 
+\eps_0(v_1-v_2)\integrale{S_1'}{{}}{\grad(\ve{\alpha})\cdot\ve{n}\dd{S}}$. Soit~:
+\encadre{$q = Cv$}
+$C$ ne dépend que de la géométrie du condensateur (de même que $\alpha$). De plus elle est toujours positive.
+\point{Calcul de capacité~:}
+On formule certaines hypothèses sur le potentiel interconducteur à partir de la géométrie du système 
+considéré. En effet les surfaces des deux conducteurs sont deux équipotentielles et à partir de leur forme
+on peut conjecturer la forme de toutes les équipotentielles. On résout alors l'équation de Laplace dans le 
+vide avec les conditions aux limites. Cette solution est alors \textbf{la} solution grâce au théorème 
+d'unicité. On peut alors en déduire le champ, la charge surfacique, définir proprement le condensateur et 
+calculer sa capacité.
+\sspartie{Exemples de condensateurs.}
+\point{Condensateur plan~:}
+\index{Condensateur!plan}
+On formule l'hypothèse que les équipotentielles sont des plans parallèles aux plans des armatures. On en 
+déduit que $V$ ne dépend que de la distance à la première armature. 
+
+Le potentiel s'écrit donc~:\par
+$V(z) = \left\lbrace
+\begin{array}{ll}
+V_1 & \mathrm{si}\;z \leq 0\\
+(V_2-V_1)\frac{z}{e} + V_1 & \mathrm{si}\;0\leq z\leq e\\
+V_2 & \mathrm{sinon}\end{array}\right.$\par
+On en déduit le champ par un calcul de gradient (ici trivial) et le théorème de Coulomb permet alors le 
+calcul de la charge surfacique d'un armature~:\par
+$\sigma(M) = \eps_0\dfrac{V_1 - V_2}{e}$\par
+On en déduit la capacité~:
+\encadre{$C = \eps_0 \dfrac{S}{e}$}
+\point{Condensateur cylindrique~:}
+\index{Condensateur!cylindrique}
+La méthode est la même, quoiqu'ici elle soit plus difficile au point de vue calculatoire.
+En notant $r_1$ et $r_2$ les rayons des conducteurs cylindriques, on trouve pour la capacité linéique~:
+\encadre{$C_0 = \dfrac{2\pi\eps_0}{\ln(\frac{r_2}{r_1})}$}
+Cette capacité intervient dans l'étude d'un coaxial.
+\point{Condensateur sphérique~:}
+\index{Condensateur!spherique@sphérique}
+Totalement inutile en pratique ce condensateur sert à faire des calculs en sphériques. La méthode est encore
+la même. On suppose que le potentiel ne dépend que de $r$ et on le vérifie après calculs grâce au théorème 
+d'unicité~:
+\encadre{$C = 4\pi\eps_0\dfrac{R_1 R_2}{R_2 - R_1}$}
+On a encore fait un tas d'autres condensateurs comme le diédrique, l'ellipsoïdal, le cônique etc.
+\sspartie{Energie d'un condensateur.}
+\index{Energie!condensateur@d'un condensateur}
+\point{Définition~:}
+C'est l'énergie électromagnétique contenue dans le condensateur (cf~: 3.6). Comme on se situe dans le cadre
+de l'électrostatique, elle a pour expression~:
+\encadre{$E_{em} = \integrale{\tau}{{}}{\frac{\eps_0}{2}E^2\dd{\tau}}$}
+\point{Autres expressions~:}
+Un calcul astucieux permet d'obtenir les expressions équivalentes suivantes~:
+\encadre{$E_{em} = \frac{1}{2}q v = \frac{1}{2} C v^2 = \frac{1}{2}\frac{q^2}{C}$}
+On peut également interpréter cette énergie comme l'énergie que reçoit le condensateur lorsqu'on le charge
+de manière réversible.
+\sspartie{Relation entre capacité et résistance.}
+\point{Résistance électrique~:}
+\index{resistance@Résistance!electrique@électrique}
+On considère un milieu de conductivité électrique $\gamma$ compris entre deux électrodes. Le potentiel y 
+satisfait à l'équation de d'Alembert~: $\dalembert V = -\frac{\rho}{\eps_0}$. En régime stationnaire et
+dans un milieu électriquement neutre cette équation se ramène à celle de Laplace dans le vide : $
+\laplacien V = 0$ avec les conditions aux limites $V$ uniforme sur les électrodes. On en déduit, comme pour
+le condensateur : $V(P) = (V_1 - V_2)\alpha(P) + V_2$ en introduisant le même $\alpha$.\par
+Or le courant de charge satisfait à $\ve{j} = \gamma\ve{E}$ (milieu immobile. cf : cours de thermodynamique)
+ou encore $\ve{j} = -\gamma\grad V$ en régime stationnaire. Soit $\ve{j} = -\gamma(V_1 - V_2)
+\grad(\ve{\alpha})$. Les lignes de courant ne dépendent donc que de la géométrie des électrodes et cela 
+permet de définir le système compris entre un tube de champ (ou de courant) $\Sigma$ et les deux surfaces 
+$S_1, S_2$ qui lui correspondent sur les électrodes.\par
+Le courant de charge étant à flux conservatif, son flux à travers un surface délimitée par $\Sigma$, ne 
+dépend pas de cette surface. C'est l'intensité qui traverse le résistor. Pour la calculer on choisit pour
+surface $S_1'$, infiniment voisine de $S_1$.
+
+On en déduit la loi d'Ohm globale~:
+\index{Loi!ohm@d'Ohm}
+\encadre{$v = RI$}
+En posant $\dfrac{1}{R} = -\gamma\integrale{S_1'}{{}}{\grad(\alpha)\cdot \ve{n}\dd{S}}$.\\
+On reconnaît presque la capacité du condensateur à vide de même géométrie, et on en déduit l'expression~:
+\encadre{$RC = \dfrac{\eps_0}{\gamma}$}
+\point{Résistance thermique~:}
+\index{resistance@Résistance!thermique}
+On considère un milieu de conductivité thermique $\lambda$ uniforme compris entre deux thermostats de
+température $T_1,T_2$. Dans l'espace interthermostats, la température satisfait à l'équation de diffusion~:
+$\laplacien T = \dfrac{\rho c}{\lambda}\dpa{T}{t}$. En régime stationnaire, cela donne : $\laplacien T = 0$.
+Avec les mêmes méthodes que ci-dessus, on en déduit : $T = (T_1-T_2)\alpha + T_2$. Puis comme le courant
+thermique satisfait à la loi de Fourier :$\ve{J_{th}} = -\lambda\grad(T)$, on en déduit que les lignes de
+courant thermique ne dépendent que de la géométrie des thermostats. En plus le vecteur courant thermique
+est à flux conservatif (bilan local d'énergie interne). On peut donc tout faire comme ci-dessus et on en 
+déduit~:
+\encadre{$P_{th} = \dfrac{T_1 - T_2}{R_{th}}$}
+En posant $\dfrac{1}{R_{th}} = -\lambda\integrale{S_1'}{{}}{\grad(\alpha)\cdot\ve{n}\dd{S}}$. On reconnaît
+encore la capacité du condensateur à vide de même géométrie et on en déduit la relation~:
+\encadre{$R_{th}C = \dfrac{\eps_0}{\lambda}$}
+
+\spartie{Dipôle électrique.}
+\index{dipole@Dipôle!electrique@électrique}
+\sspartie{Définition.}
+Un dipôle électrique est une distribution de charge de charge totale nulle et de moment électrique non-nul
+dont les dimensions sont faibles devant la distance séparant en moyenne le dipôle des points d'observation
+et devant la longueur caractérisant les variations spatiales du champ extérieur agissant sur le dipôle.
+\sspartie{Potentiel et champ.}
+\point{Potentiel~:}
+La distribution de charge sera supposée discrète pour les calculs. La loi de Coulomb permet d'exprimer le
+potentiel crée par cette distribution en un point d'observation ``éloigné''~: 
+$V(P) = \dfrac{1}{4\pi\eps_0}\serie{i}{{}}{\dfrac{q_i}{M_iP}}$. Si on choisit $O$ un point référence voisin
+du dipôle et qu'on note $r = OP$ on peut faire un développement limité à l'ordre 1 selon $OM_i/r$.
+on fait alors apparaître  un vecteur indépendant de $O$~:
+\encadre{$\ve{p} = \serie{i}{{}}{q_i \ve{OM_i}}$}
+Ce vecteur est le ``moment électrique'', non-nul par hypothèse et tel que~:
+\encadre{$V(P) = \dfrac{1}{4\pi\eps_0}\ve{p}\cdot\dfrac{\ve{u}}{r^2}$}
+\rmq Le moment électrique peut être mis sous la forme $\ve{p} = q_{+}\ve{B_- B_+}$ o\`u $B_-$ et $B_+$ 
+désignent les barycentres des charges positives et négatives et $q_+$ la somme des charges positives.
+\index{Moment!electrique@électrique}
+\rmq Dans le cas o\`u le moment dipolaire est nul il faudrait poursuivre le DL, ce qui n'est pas 
+difficile mais vite pénible. On parle ensuite de quadrupôle, d'octupôle et de $2^n$-pôle.
+\index{dipole@Dipôle!deux@$2^n$-pôle}
+\point{Champ~:}
+En prenant le gradient et en notant $\ve{u}$ le vecteur unitaire qui joint le dipôle au point d'observation,
+on trouve l'expression suivante pour le champ~:
+\encadre{$\ve{E}(P) = \dfrac{1}{4\pi\eps_0 r^3}\bigl(3(\ve{p}\cdot\ve{u})\ve{u} - \ve{p}\bigr)$}
+\point{Lignes de champ~:}
+On peut exprimer le champ en coordonées sphrériques à partir de l'expression ci-dessus~:
+\encadre{$\begin{array}{l}
+ E_r = \frac{1}{4\pi\eps_0}\frac{2p\cos\theta}{r^3}\\
+ E_{\theta} = \frac{1}{4\pi\eps_0}\frac{p\sin\theta}{r^3}
+\end{array}$}\par
+Les lignes de champ sont donc situées dans des plans $\phim = cste$. Dans un tel plan elles ont pour 
+équation~:
+\encadre{$r = r_0\sin^2\theta$}
+\sspartie{Force subie par un dipôle.}
+\index{Force!dipole@subie par un dipôle}
+\point{Résultante~:}
+On plonge un dipôle dans un champ crée par un distribution de charge extérieure, il subit de la part de ce
+champ une force : $\ve{F} = \sum\limits_i q_i\ve{E}(M_i)$ en notant $\ve{E}$ le champ crée par le 
+distribution extérieure. 
+On peut alors faire un DL puisqu'on a supposé que la taille du dipôle était faible
+devant la longueur caractérisant les variations spatiales du champ extérieur agissant sur le dipôle. On 
+trouve à l'ordre 1~:
+\encadre{$\ve{F} = (\ve{p}\cdot\grad)\ve{E}$}
+\point{Moment~:}
+Cette fois on fait un DL à l'ordre 0 qui est suffisant~:
+\encadre{$\ve{M_P} = \ve{p}\land\ve{E}$}
+\rmq Lorsque le champ est uniforme, la résultante est nulle et les forces subies constituent un couple.
+\point{Energie potentielle~:}
+Les forces électriques subies par une distribution discrète de charge plongée dans un champ $\ve{E}$ 
+extérieur dérivent d'une e-p : $E_p = \sum\limits_i q_iV(M_i)$.
+Dans le cas du dipôle on peut faire un DL à l'ordre 1~:
+\encadre{$E_p = -\ve{p}\cdot \ve{E}$}
+
+%
+%--------------------------------------------------PARTIE--------------------------------------------------
+%
+
+\partie{Magnétostatique}
+\spartie{Théorème fondamental.}
+\sspartie{Enoncé.}
+Toute distribution stationnaire de courant engendre un champ vectoriel $\ve{B}$ appelé champ
+ma\-gné\-to\-sta\-tique tel que la force subie par une charge ponctuelle $q$ de la part de cette distribution ait 
+pour expression~:
+\index{Champ!magnetostatique@Magnétostatique}
+\index{Force!lorentz@de Lorentz}
+\encadre{$\begin{array}{c}
+            \div \ve{B} = 0\\
+            \rot{\ve{B}} = \mu_0\ve{j}
+          \end{array}$}
+\sspartie{Conséquences immédiates.}
+\point{$\div \ve{B} = 0$~:} le champ magnétique est à flux conservatif. il dérive donc d'un potentiel
+vecteur~:
+\encadre{$\ve{B} = \rot \ve{A}$}
+\rmq Ce potentiel n'est défini qu'à un gradient près.\par
+\index{Potentiel!vecteur}
+\point{Théorème d'Ampère~:} $\rot \ve{B} = \mu_0\ve{j}$ : à cette équation locale correspond l'équation intégrale~:\par
+$$\integrale{L}{{}}{\ve{B}\cdot\ve{t}\dd{L}} = \mu_0\integrales{S}{{}}{\ve{j}\cdot\ve{n}\dd{S}}$$
+De plus $\ve{j}$ est à flux conservatif d'après le bilan local de charge total. On obtient l'équation intégrale~:
+\encadre{$\integrale{L}{{}}{\ve{B}\cdot\ve{t}\dd{L}} = \mu_0 I_L$}
+C'est le théorème d'Ampère.\par 
+\index{theoreme@Théorème!ampere@d'Ampère}
+\point{Equation de Poisson~:}
+Les équations locales précédentes~: $\rot \ve{B} = \mu_0\ve{j}$ et $\ve{B} = \rot \ve{A}$ permettent 
+d'obtenir un nouvelle équation~: $\Delta \ve{A} = -\mu_0\ve{j} + \grad (\div \ve{A})$. Et en choisissant
+judicieusement $\ve{A}$ (de sorte que sa divergence soit nulle, ce qui est possible en prenant un bon 
+gradient)~:
+\encadre{$\Delta \ve{A} = -\mu_0\ve{j}$}
+C'est l'équation de Poisson vectorielle.
+\index{Equation!poisson@de Poisson}
+\spartie{Champ et potentiel vecteur.}
+\sspartie{Distribution volumique.}
+L'équation de Poisson vectorielle à laquelle on adjoint la condition $\ve{A}(\infty) = \ve{0}$ et dans le 
+cas d'une distribution bornée, admet pour solution unique~:
+\encadre{$\ve{A} = \dfrac{\mu_0}{4\pi}\integraless{V}{{}}{\dfrac{\ve{j}(M)}{r}\dd{\tau}}$}
+On déduit de cela la loi de Biot-et-Savart~:
+\encadre{$\ve{B} = \dfrac{\mu_0}{4\pi}\integraless{V}{{}}{\ve{j}(M)\wedge \dfrac{\ve{u}}{r^2}\dd{\tau}}$}
+Les champs $\ve{A}$ et $\ve{B}$ sont définis et continus en tout point de l'espace.
+\rmq On peut démontrer ces résultats en utilisant la résolution de l'é\-qua\-tion de Poisson-scalaire.
+\sspartie{Distribution surfacique.}
+On garde tout sauf que $\ve{j}$ devient $\ve{k}$ et $V$ devient $S$.\par
+Le potentiel vecteur est continu partout par contre le champ magnétostatique connaît une discontinuité au 
+voisinage de la distribution considérée~:
+\encadre{$\ve{B_2}-\ve{B_1} = \mu_0\ve{k}(M)\wedge \ve{n_{1 2}}$}
+\index{condition@Condition aux limites}
+\sspartie{Distribution linéique.}
+C'est pareil mais comme $\ve{j}$ est à flux conservatif, $I$ a même valeur en tout point et donc~:
+\encadre{$\begin{array}{cc}
+\ve{A}(P) = \dfrac{\mu_0}{4\pi}I\integrale{L}{{}}{\dfrac{\ve{t}}{r}\dd{L}}\\
+\ve{B}(P) = \dfrac{\mu_0}{4\pi}I\integrale{L}{{}}{\ve{t}\wedge\dfrac{\ve{u}}{r^2}\dd{L}}
+          \end{array}$}
+De plus ni le champ ni le potentiel vecteur ne sont définis sur la distribution considérée.
+\sspartie{Comportement face à une symétrie.}
+\index{symetrie@Symétrie}
+Le potentiel vecteur $\ve{A}$ se comporte comme le champ électrostatique, à l'inverse du champ $\ve{B}$.
+\spartie{Circuits filiformes.}
+\index{Circuit@Circuit filiforme}
+\sspartie{Définition.}
+Un circuit filiforme est une distribution volumique de courant dont le vecteur $\ve{j}$ est quasi uniforme sur
+toute section droite du fil.
+\rmq Le courant circule le long du fil. Le vecteur $\ve{j}$ est donc tangent à la surface du fil. Comme il est
+quasi-uniforme, il l'est donc sur toute section droite du fil et on peut dire qu'en tout point : 
+$\ve{j} = \frac{I}{s}\ve{t}$ (Si on se place en magnétostatique ou dans l'ARQS,
+$\div \ve{j} = 0$). D'o\`u : $\ve{j}\dd{\tau} = I\ve{t}\dd{l}$. Cette relation permet de transformer toute 
+intégrale volumique en une intégrale curviligne.
+\rmq Toute distribution de courant peut être décomposée en circuits filiformes, d'o\`u cette étude. Cependant
+il importe de ne pas confondre circuit filiforme et distribution linéique de courant pour laquelle le champ n'est
+pas continu.
+\sspartie{Flux d'un champ magnétique à travers un circuit filiforme.}
+On notera $\ve{B},\ve{A}$ le champ magnétique et un potentiel vecteur crées par une distribution quelconque, $L$
+une courbe qui épouse la forme d'un tel circuit et $S$ une surface qui s'appuie sur $L$. Dans ces conditions~:
+\encadre{$\Phi = \integrale{L}{{}}{\ve{A}\cdot\ve{t}\dd{L}} = \integrale{S}{{}}{\ve{B}\cdot\ve{n}\dd{S}}$}
+et $\Phi$ est appelé flux de $\ve{B}$ à travers le circuit filiforme.
+\spartie{Inductance propre.}
+\index{Inductance}
+\point{Définition~:}
+Le flux du champ $\ve{B}$ crée par un circuit filiforme à travers lui-même est appelé ``flux propre'' du circuit.
+On montre avec un calcul que~:
+\encadre{$\Phi = LI$}
+En posant $\Phi = \dfrac{\mu_0}{4\pi}\integrale{L}{{}}{\integrale{L'}{{}}{\dfrac{\ve{t}\cdot\ve{t'}}{%
+r}\dd{L}\dd{L'}}}$. O\`u $L'$ est une courbe qui s'appuie sur le circuit filiforme et qui sert à exprimer le 
+potentiel vecteur.
+C'est l'inductance propre du circuit filiforme.
+\point{Propriétés~:}
+$L$ ne dépend que des caractéristiques géométriques du circuit elle est toujours positive (on le montrera avec des
+considérations énergétiques), et s'exprime en Henry. Typiquement elle vaut $10 mH$.
+\point{Bobine torique~:}
+\index{Inductance!bobine@d'une Bobine torique}
+On prend une bobine torique à section rectangulaire comprenant $N$ spires jointives, parcourue par un courant
+d'intensité $I$. On note $a$ la distance cu côté intérieur de la bobine à l'axe et $b$ la distance de coté 
+extérieur à l'axe ainsi que $h$ la hauteur du rectangle. Etant donné que le potentiel vecteur $\ve{A}$ est continu
+sur une boule compacte qui enveloppe le circuit, il y est uniformément continu. On peut donc dire que pour le 
+calcul du flux, tout se passe comme si chaque spire était indépendante 
+(elles sont supposées voisines les unes des autres). Or on connaît le champ crée~: 
+$\ve{B} = \dfrac{\mu_0 N I}{2\pi r}\ve{u_{\theta}}$. On peut donc calculer le flux du champ à travers chaque 
+spire : $\phim = \dfrac{\mu_0N I h}{2\pi}\ln\bigl(\frac{b}{a}\bigr)$.
+Il reste à sommer sur toutes les spires~:
+\encadre{$L = \dfrac{\mu_0 N^2}{2\pi}h\ln\left(\dfrac{b}{a}\right)$}
+\point{Bobine cylindrique~:}
+\index{Inductance!bobine@d'une Bobine cylindrique}
+On suppose que les spires ont une densité linéique $n$ uniforme et que la bobine est de longueur $l$. Le circuit 
+n'est pas fermé mais on peut généraliser et définir le flux comme la somme des flux sur toutes les spires.
+En supposant la bobine infinie ou en négligeant les effets de bord on trouve que le flux est proportionnel à $I$.
+On parle encore d'inductance propre et sa valeur est~:
+\encadre{$L = \mu_0n^2l\pi R^2$}
+\point{Ligne bifilaire~:}
+\index{Inductance!bifilaire@d'une ligne bifilaire}
+Deux circuits fils cylindriques parallèles sont parcourus par des courants $I$ et $-I$. Si on calcule le flux de
+$\ve{B}$ à travers une surface rectangulaire s'appuyant les axes des fils et de hauteur $h$, on trouve qu'il est 
+proportionnel à $I$ et on parle encore d'inductance propre~:
+\encadre{$L = \dfrac{\mu_0}{\pi}\left(\dfrac{1}{2}+\ln\Bigl(\dfrac{a}{R}\Bigr)\right)$}\par
+En notant $a$ la distance entre les axes et $R$ le rayon des fils.
+\sspartie{Matrice inductance.}
+\index{Matrice!inductance}
+\point{Définition~:}
+Pour un système de circuits filiformes, chacun étant parcouru par une intensité $I_j$, un calcul pénible permet 
+d'affirmer qu'il existe des coefficients $L_{ij}$ tels que : $\Phi_i = \sum\limits_j L_{ij}I_j$. Les 
+coefficients $L_{ij}$ forment une matrice carrée symétrique dont les coefficients diagonaux sont les 
+inductances propres des circuits. Les coefficients non-diagonaux peuvent être négatifs. Ils se calculent en 
+annulant certaines intensités dans le circuit, en calculant le champ et son flux.
+\spartie{Considérations énergétiques en magnétostatique.}
+\sspartie{Energie magnétique d'une distribution stationnaire de courants.}
+\point{Définition~:}
+\index{Energie!magnetique@magnétique}
+L'énergie électromagnétique est un grandeur extensive de densité volumique $\frac{1}{2\mu_0}B^2$ (dans le cadre de 
+la magnétostatique). On définit l'énergie magnétique d'une distribution de courant délimitée par un volume $\tau$
+comme~:
+\encadre{$E_{em} = \integrale{\tau}{{}}{\dfrac{1}{2}\ve{j}\cdot\ve{A}\dd{\tau}} = 
+\integrale{\mathcal{E}}{{}}{\dfrac{1}{2\mu_0}B^2\dd{\tau}}$}\par
+On montre facilement que ces deux expressions sont équivalentes.
+\point{Cas du circuit filiforme~:}
+Un simple calcul donne~:
+\encadre{$E_{em} = \dfrac{1}{2}LI^2$}
+On en déduit que $L$ est toujours positive. De plus cette expression permet de définir l'inductance propre de 
+circuits non filiformes comme un cable coaxial.
+\sspartie{Travail des forces magnétiques.}
+\point{Loi de Laplace~:}
+\index{Loi!laplace@de Laplace}
+On considére une particule de matière, plongée dans un champ ma\-gné\-to\-sta\-ti\-que extérieur quasi-uniforme sur le volume
+$\delta\tau$ de la particule. Alors le calcul de la force subie par la particule se fait en séparant les 
+constituants dans la force de Lorentz et en reconnaissant le courant de charge total dans l'expression obtenue~:
+\encadre{$\delta\ve{F} = \ve{j}\land\ve{B}\delta{\tau}$}
+Cette expression pouvant être étendue au cas de distributions surfaciques ou linéiques.
+\rmq Les forces ci dessus sont appelées forces de Laplace.\index{Force!laplace@de Laplace}\par
+Dans le cadre du système S-I, l'ampère est l'intensité d'un courant qui, maintenu stationnaire dans deux fils 
+rectilignes parallèles infiniment longs, placés à une distance de un mètre, engendre entre ces deux fils des forces
+de résultante $2~\cdot~10^{-7}$N.\index{ampere@Ampère}
+\point{Travail des forces subies par un circuit filiforme~:}
+On considère un circuit filiforme fermé se déplaçant dans un champ $\ve{B}$ extérieur stationnaire. Si on note 
+$l$ et $l'$ les positions occupées par le circuit à deux instants voisins $t$ et $t'$, on peut calculer le travail 
+des forces magnétiques lors de ce déplacement en commençant par calculer le travail subi par une portion de circuit
+située entre $M$ et $N$ points voisins. Par intégration le long le long du circuit, on en déduit :\par
+$\delta\mathcal{T} = I \integrale{\Sigma}{}{\ve{B}\cdot\ve{n}\dd{S}}$\par
+O\`u $\Sigma $ est la surface décrite par le circuit lors de son déplacement. On peut calculer cette intégrale en 
+exprimant la nullité du flux du champ à travers une grande surface fermée s'appuyant sur $l$ et $l'$ et contenant
+$\Sigma$. En notant alors $\phi$ le flux du champ à travers le circuit~:\par
+$\integrale{\Sigma}{}{\ve{B}\cdot\ve{n}\dd{S}} + \phi - \phi' = 0$ soit~:
+\encadre{$\delta\mathcal{T} = I\dd{\phi}$}
+\exercice Deux solénoides cylindriques coaxiaux tels que $R_2 < R_1$, parcourus par un courant stationnaire. 
+Déterminer la résulante des forces subies par le petit solénoide, puis en déduire qu'il n'existe qu'une seule 
+position d'équilibre stable.\\
+\textsl{Indication :} Considérer plusieurs cas et faire un raisonnement de type Joule-Thomson~: on trouve que 
+la seule position se trouve au milieu du grand solénoide ($x=0$).
+\rmq Le calcul à partir de la force de laplace en négligeant les effets de bord conduit à une résulante 
+uniformément nulle  Ceci montre que la force est due aux effets de bord.
+\point{Cas d'un courant stationnaire~:}
+Dans ce cas $\delta\ttt = \dd{I\phi}$. On en déduit que les forces magnétiques dérivent d'une e-p de la forme :
+\encadre{$E_p = - I \phi$}
+\point{Moment magnétique d'un circuit filiforme~:}
+\index{Moment!magnetique@magnétique}
+Dans le cas o\`u le courant parcourant le circuit est uniforme et le champ extérieur est uniforme au voisinage du
+circuit, les forces magnétiques dérivent de l'e-p~:\par
+$E_p = -I\phi = -(I\integrale{S}{}{\ve{n}\dd{S}})\cdot\ve{B}$ Soit~:
+\encadre{$E_p = -\ve{m}\cdot\ve{B}$}
+o\`u $\ve{m}$ désigne le moment magnétique.
+\rmq Un calcul simple permet de montrer que 
+\encadre{$\ve{m} = I\integrale{S}{}{\ve{n}\dd{S}} = \frac{I}{2}\integrale{L}{}{\ve{r}\land\ve{t}\dd{l}}$}
+Ce qui montre que le moment magnétique ne dépend que du circuit filiforme et pas de la surface $S$.
+\exercice Calculer le moment d'un circuit filiforme contenu dans un plan. En déduire le moment d'un solénoide 
+comprenant $N$ spires jointives.
+\spartie{Dipôle magnétique.}
+\index{dipole@Dipôle!magnetique@magnétique}
+\sspartie{Définition.}
+Un dipôle magnétique est une distribution de courant de moment magnétique non-nul dont les dimensions sont faibles 
+devant la distance séparant en moyenne le dipôle des points d'observation et devant la longueur caractérisant les 
+variations spatiales du champ extérieur agissant sur le dipôle.
+\rmq A l'échelle microscopique on définit le moment magnétique (orbital ou de spin) de l'entité. A l'echelle
+macroscopique on définit le moment par unité de volume, appelé $\ve{M}$ ``vecteur aimantation''. Si ce vecteur est
+non-nul le milieu est dit aimanté.
+\sspartie{Champ d'un dipôle.}
+\point{Potentiel vecteur magnétique~:}
+Comme toute distribution de courant peut être décomposée en circuits filiformes, on se restreint aux circuits 
+filiformes. Pour un tel circuit le potentiel vecteur peut être calculé directement grâce à la relation~:
+$\ve{A}(P) = \dfrac{\mu_0 I}{4\pi}\integrale{l}{}{\dfrac{\ve{t}}{MP}\dd{l}}$. En notant $O$ un point au voisinage
+du dipôle $OM$ est très petit devant $OP$. La méthode naturelle consiste à faire un DL comme on l'avait fait pour
+le dipôle électrique. Cette méthode est laborieuse et inélégante. On introduit un champ vectoriel uniforme $\ve{a}$
+intermédiaire de calcul~: $\ve{a}\cdot\ve{A}$ se calcule simplement grâce au théorème de Stokes. Puis, en 
+effectuant un DL à l'ordre $0$ on obtient le résultat~:
+\encadre{$\ve{A} = \dfrac{\mu_0}{4\pi}\ve{m}\land\dfrac{\ve{u}}{r^2}$}
+En notant $r = OP$ et $\ve{u}$ le vecteur $\ve{OP}$ normalisé.
+\point{Champ magnétique~:}
+On prend le rotationnel du potentiel ci-dessus et, via un petit calcul on obtient~:
+\encadre{$\ve{B} = \dfrac{\mu_0}{4\pi r^3}(3(\ve{m}\cdot\ve{u})\ve{u}-\ve{m})$}
+\rmq Les lignes de champ sont donc les mêmes que celles du dipôles électrique.
+\point{Actions subies par un dipôle~:}
+On peut calculer le torseur des forces subies directement mais c'est pénible. on préfère utiliser une méthode
+plus originale. On imagine un déplacement infinitésimal du dipôle au cours duquel celui-ci est supposé indéformable
+est parcouru par un courant stationnaire. Le travail de ces forces peut être calculé de deux manières.\\
+D'un part $\delta\mathcal{T} = \dd{t}\mathcal{F}\mathcal{V}=\dd{t}(\ve{F}\cdot\ve{v_P}+\ve{M_P}\cdot\ve{\omega})$.
+(cf~: mécanique du solide).\\
+D'autre part :$\delta\ttt = -\dd{E_p}$ avec $E_p = -\ve{m}\cdot\ve{B}$ car $\ve{B}$ est uniforme au voisinage
+du dipôle.
+\begin{itemize}
+\item{Résultante~:}
+On choisit pour déplacement  une translation de vecteur $\dd{x}\vx$. On obtient dans ce cas $F_x = 
+\ve{m}\cdot\dpa{\ve{B}}{x}$. C'est-à-dire $(\ve{m}\cdot\grad)B_x$ dans le cas o\`u il n'y a pas de courant au 
+voisinage du dipôle ($\rot\ve{B} = \ve{0}$). Puis~:
+\encadre{$\ve{F} = (\ve{m}\cdot\grad)\ve{B}$}
+\item{Moment en $P$~:}
+Cette fois on choisit une rotation autour de $P$ et obtient facilement :
+\encadre{$\ve{M_P} = \ve{m}\land\ve{B}$}
+\end{itemize}
+
+%
+%--------------------------------------------------PARTIE--------------------------------------------------
+%
+
+\partie{Equations de Maxwell}
+\index{Equation!maxwell@de Maxwell}
+\spartie{Principe fondamental de l'électromagnétisme.}
+\index{Principe!electromagnetisme@de l'électromagnétisme}
+\sspartie{Enoncé.}
+Toute distribution de charge et de courant engendre un champ électro\-magnétique $(\ve{E}, \ve{B})$ tel que la
+force exercée par cette distribution sur une charge ponctuelle $q$ ait pour expression~:\par
+\encadre{$\ve{F} = q (\ve{E} + \ve{v}\wedge \ve{B})$}\par
+\index{Force!lorentz@de Lorentz}
+Ce champ e-m satisfait aux équations de Maxwell~:\par\vspace{2pt}
+\index{Champ!electromagnetique@électromagnétique}
+\centerline{\fbox{{\renewcommand{\arraystretch}{1.5}
+$\begin{array}{lclc}
+(1) & \rot\ve{E} = -\dpa{\ve{B}}{t} & (2) & \div\ve{B} = 0\\
+(3) & \div\ve{E} = \dfrac{\rho}{\eps_0}   & (4) & \rot\ve{B} = \mu_0\Bigl(\ve{j}+\eps_0\dpa{\ve{E}}{t}\Bigl)
+\end{array}$}}}
+\sspartie{Propriétés.}
+Les deux premières équations sont celles dites de structure. Elles sont in\-dé\-pen\-dan\-tes du milieu considéré.
+D'un point de vue théorique elles traduisent les carac\-téristiques (masse nulle et spin unité) du photon, 
+particule associée au champ e-m.\par
+Les deux dernières ne sont valables que dans les milieux non-polarisés non-aimantés. Les équations générales sont présentées
+après, mais ne sont pas au programme de MP.
+Les équations de Maxwell admettent comme cas particulier celles des deux chapitres précédents.\par
+Dans le cas général il n'est plus possible de séparer l'étude des champs $\ve{E}$ et $\ve{B}$ car ils sont
+couplés.\par
+Ces équations portent des noms particuliers. Ainsi $(2)$ est l'équation de Maxwell-Faraday, $(3)$ celle de Maxwell-Gauss
+et $(4)$ celle de Maxwell-Ampère. Elles montrent que la grandeur extensive ``charge totale'' est conservative. En prenant la 
+divergence de Maxwell-Ampère on tire~:
+\encadre{$\div\ve{j}+\dpa{\rho}{t}=0$}
+Les équations de Maxwell sont linéaires, ce qui justifie le théorème de superposition et la notation 
+complexe.
+\spartie{Le potentiel électromagnétique.}
+\sspartie{Définition.}
+\index{Potentiel!electromagnetique@électromagnétique}
+Etant donné que $\div\ve{B} = 0$, $\ve{B}$ dérive d'un potentiel vecteur noté $\ve{A}$. Ensuite en prenant le
+rotationnel de $\ve{E} + \dpa{\ve{A}}{t}$ on trouve qu'il dérive d'un potentiel scalaire. Il existe donc un 
+couple $(V, \ve{A})$ tel que~:
+\encadre{%
+$\begin{array}{c}
+\ve{B} = \rot\ve{A}\\
+\ve{E} = -\grad V - \dpa{\ve{A}}{t}
+\end{array}$}
+\sspartie{Non-unicité.}
+Si $(V_0, \ve{A_0})$ est un potentiel dont dérive le champ e-m, alors $(V_0-\dpa{f}{t},\ve{A_0}+\grad{f})$
+en est un aussi. Cette non-unicité est mise à profit pour simplifier les équations de D'Alembert sur
+le potentiel e-m.
+\spartie{Equations de D'Alembert.}
+\index{Equation!alembert@de d'Alembert}
+En choisissant un bon potentiel qui satisfait à la jauge de Lorentz : $\div\ve{A}+\eps_0 \mu_0 \dpa{V}{t}
+=0$ on peut arriver aux équations suivantes~:\index{Jauge!lorentz@de Lorentz}
+\encadre{{\renewcommand{\arraystretch}{1.5}$\begin{array}{c}
+\laplacien V-\eps_0 \mu_0 \dpak{2}{V}{t} = -\dfrac{\rho}{\eps_0}\\
+\laplacien \ve{A}-\eps_0 \mu_0 \dpak{2}{\ve{A}}{t} = -\mu_0 \ve{j}
+\end{array}$}}
+Et si on utilise l'opérateur d'Alembertien défini par : $\dalembert = \laplacien - \eps_0 \mu_0 \dpak{2}{{}}{t}$, 
+on peut récrire ces équations sous la forme plus jolie :\par
+\encadre{{\renewcommand{\arraystretch}{1.5}$\begin{array}{c}
+\dalembert V = -\dfrac{\rho}{\eps_0}\\
+\dalembert \ve{A} = -\mu_0 \ve{j}\end{array}$}}
+Dans le vide l'équation de d'Alembert relative au potentiel électrique est une équation d'onde.\\
+$\laplacien V = \dfrac{1}{c^2}\dpak{2}{V}{t}$ dont la célérité est $c=\sqrt{\eps_0 \mu_0}$.
+\spartie{L'ARQS}
+\sspartie{Potentiel retardé.}
+\index{Potentiel!retarde@retardé}
+On généralise la résolution de l'équation de Poisson et on montre que le potentiel électromagnétique est de la 
+forme~:
+\encadre{{\renewcommand{\arraystretch}{1.5}
+$\begin{array}{c}
+V(P, t) = \dfrac{1}{4\pi\eps_0}\integraless{V}{{}}{\dfrac{\rho(M,t-\frac{r}{c})}{r}\dd{\tau}}\\
+\ve{A}(P, t) = \dfrac{\mu_0}{4\pi}\integraless{V}{{}}{\dfrac{\ve{j}(M,t-\frac{r}{c})}{r}\dd{\tau}}
+\end{array}$}}
+On interprète cette expression du potentiel comme le fait que l'information e-m se propage à la vitesse de la 
+lumière et le retard $\frac{r}{c}$ correspond au temps mis part la charge ou le courant en M pour agir en P.
+\sspartie{Définition de l'ARQS.}
+L'ARQS revient à se placer dans le cadre de la mécanique classique dans laquelle l'information se propage 
+instantanément, ce qui veut dire qu'on considère que $c$ est infini.\\
+On suppose donc que le temps mis par la distribution pour subir des variations notables est très supérieur au 
+temps $r/c$. D'o\`u l'appellation ``quasi-stationnaire''.
+\sspartie{Conséquences.}
+On va donc négliger tous les termes qui contiennent des $\frac{1}{c}$ et les remplacer par 0, ce qui va 
+simplifier toutes les équations de l'électromagnétisme.
+\index{ARQS}
+Ainsi les nouvelles équations de Maxwell sont~:
+\encadre{$\begin{array}{ll}
+\rot\ve{E} = -\dpa{\ve{B}}{t} & \div \ve{B} = 0\\
+\div\ve{E} = \dfrac{\rho}{\eps_0} & \rot\ve{B} = \mu_0\ve{j}
+\end{array}$}
+\index{theoreme@Théorème!gauss@de Gauss}
+\index{theoreme@Théorème!ampere@d'Ampère}
+On a toujours le théorème de Gauss et on a en prime le théorème d'Ampère sur la circulation de $\ve{B}$.
+En prenant la divergence de la nouvelle équation de Maxwell-Ampère, on trouve que le vecteur courant de charge
+$\ve{j}$ est à flux conservatif. Cette propriété permet de justifier la loi des noeuds.
+\rmq On ne peut pas faire l'étude du condensateur plan dans le cadre de l'ARQS.\par
+Les potentiels retardés se simplifient trop simple en les lois de Coulomb et Biot-et-Savart pour les potentiels,
+de même le champ magnétique satisfait à la loi de Biot-et-Savart mais pas le champ électrique.
+\index{Jauge!lorentz@de Lorentz}\index{Jauge!coulomb@de Coulomb}
+\index{Equation!poisson@de Poisson}
+Les équations de d'Alembert retombent sur les équations de Poisson et la jauge de Lorentz retombe sur la jauge de 
+Coulomb : $\div\ve{A} = 0$. En conclusion~:\par\index{Jauge!coulomb@de Coulomb}
+Tous les résultats de la magnétostatique restent valables et la plupart de ceux de l'électrostatique (excepté
+la loi de Coulomb et la relation $\ve{E} = -\grad V$).
+\sspartie{Domaine de validité de l'ARQS.}
+La transformation de Fourier intégrale permet de ramener l'étude de n'importe quelle fonction ``régulière'' à 
+celle d'une fonction périodique de période T pour laquelle l'ARQS revient à supposer que $\dfrac{r}{c} \ll T$.
+\spartie{Conditions aux limites du champ e-m.}
+Soit une interface entre deux milieux (ex : vide / métal). Dans le cas limite du modèle surfacique, le champ 
+$(\ve{E}, \ve{B})$ n'est pas défini sur l'interface et présente une discontinuité à sa traversée.
+On va montrer que la discontinuïté du champ est donnée par la relation~:
+\encadre{\vbox{\hbox{$\ve{E}(P_2, t)-\ve{E}(P_1, t)=\dfrac{\sigma(M, t)}{\eps_0}\ve{n}_{12}$}%
+               \hbox{$\ve{B}(P_2, t)-\ve{B}(P_1, t)=\mu_0\ve{K}(M, t)\wedge \ve{n}_{12}$}}}\par
+\sspartie{Forme intégrale des équations de Maxwell :}
+A chacune des équations de Maxwell locales on fait correspondre une é\-qua\-tion in\-té\-grale~:\par
+\centerline{{\renewcommand{\arraystretch}{2}
+$\begin{array}{lll}
+\rot\ve{E}=-\dpa{\ve{B}}{t} & \longrightarrow &%
+              \integrale{L}{{}}{\ve{E}\cdot\ve{t}\dd{L}} =-\integrales{S}{{}}{\dpa{\ve{B}}{t}\cdot\ve{n}\dd{S}}\\
+\div\ve{B}=0 & \longrightarrow & \integrales{S}{{}}{\ve{B}\cdot\ve{n}\dd{S}} = 0\\
+\div{\ve{E}}=\dfrac{\rho}{\eps_0} & \longrightarrow & \integrales{S}{{}}{\ve{E}\cdot\ve{n}\dd{S}} = %
+                                                                \dfrac{q_S}{\eps_0}\\
+\rot{\ve{B}} = \mu_0(\ve{j}+\eps_0\dpa{\ve{B}}{t}) & \longrightarrow & %
+                 \integrale{L}{{}}{\ve{B}\cdot\ve{t}\dd{L}} = \mu_0 I_S+\eps_0\mu_0%
+                 \integrales{S}{{}}{\dpa{\ve{B}}{t}\cdot\ve{n}\dd{S}}
+\end{array}$}}
+\sspartie{Etablissement des conditions aux limites.}
+\index{condition@Condition aux limites}
+On commence par choisir une surface comme figurée ci-dessous, de sorte que $\sigma_l$ soit négligeable par rapport 
+à $\sigma$. C'est à dire que $\eps\partial\sigma\ll\sigma$, en notant $\partial\sigma$ le périmètre de la surface
+$\sigma$, elle même infinitésimale, de sorte que les densités surfaciques de charge et de courant y soient uniformes.\par
+\centerline{\includegraphics*[width=10cm,height=3.5cm]{images/cond_limites.eps}}\par
+En intégrant sur cette surface les deux équations centrales ci-dessus, on trouve deus conditions aux limites.
+Pour trouver les deux autres, on intègre le long de cadres qui sont parallèles aux axes de coordonnées $\vx,\vy$ et
+possèdent les mêmes propriétés que la boîte ci-dessus.
+\centerline{{\renewcommand{\arraystretch}{1.5}$\begin{array}{lll}
+\rot\ve{E}=-\dpa{\ve{B}}{t} & \longrightarrow & \ve{E}_{2\para} = \ve{E}_{1\para}\\
+\div{\ve{E}}=\dfrac{\rho}{\eps_0} & \longrightarrow & \ve{E}_{2\bot}-\ve{E}_{1\bot}=\dfrac{\sigma}{\eps_0}%
+\ve{n_{12}}\\
+\div\ve{B}=0 & \longrightarrow & \ve{B}_{2\bot} = \ve{B}_{1\bot}\\
+\rot{\ve{B}} = \mu_0(\ve{j}+\eps_0\dpa{\ve{B}}{t}) & \longrightarrow & \ve{B}_{2\para}-\ve{B}_{1\para}=\mu_0%
+\ve{K}\wedge\ve{n_{12}}
+\end{array}$}}\par
+En regroupant ces informations et en utilisant que le courant surfacique est tangent à l'interface, on obtient
+les conditions aux limites annoncées au début du paragraphe.
+\sspartie{Equations de Maxwell générales.}
+\index{Equation!maxwell@de Maxwell!generales@générales}
+On généralise les équations de Maxwell dans le cas des milieux polarisés et aimantés en introduisant les 
+vecteurs moment dipolaire électrique $\ve{P}$ et moment dipolaire magnétique $\ve{M}$. Ainsi que les vecteurs 
+excitation électrique $\ve{D} = \eps_0\ve{E}+\ve{P}$ et excitation magnétique $\ve{H}=\dfrac{1}{\mu_0}\ve{B}%
+-\ve{M}$. Dans ces conditions, les équations de Maxwell deviennent~:\par
+\centerline{$\begin{array}{ll}
+\rot\ve{E} = -\dpa{\ve{B}}{t} & \div \ve{D} = \rho\\
+\div\ve{B} = 0                & \rot\ve{H}=\ve{j}+\dpa{\ve{D}}{t}
+\end{array}$}
+
+Et en faisant la même méthode que ci-dessus on retrouve des conditions aux limites (plus simples que les 
+précédentes)~:\par
+\centerline{{\renewcommand{\arraystretch}{1.5}$\begin{array}{ll}
+\ve{E_{2\para}} - \ve{E_{1\para}} = \ve{0} & \ve{B_{2\bot}} - \ve{B_{1\bot}} = \ve{0}\\
+\ve{D_{2\bot}} - \ve{D_{1\bot}} = \sigma\ve{n_{12}} & \ve{H_{2\para}} - \ve{H_{1\para}} = \ve{K}\wedge\ve{n_{12}}
+\end{array}$}}
+
+\spartie{Energie électromagnétique.}
+\index{Energie!electromagnetique@électromagnétique}
+\sspartie{Définition.}  
+En calculant la divergence ci-dessous et en utilisant les équations de Maxwell on démontre la relation~:
+\encadre{$\div\left(\dfrac{\ve{E}\wedge\ve{B}}{\mu_0}\right)+\dpa{{}}{t}\left(%
+          \dfrac{\eps_0}{2}E^2+\dfrac{1}{2\mu_0}B^2\right)=-\ve{j}\cdot\ve{E}$}
+Une telle équation traduit le bilan d'une grandeur extensive~: l'Energie électromagnétique.
+$\ve{J_{em}} = \dfrac{\ve{E}\wedge\ve{B}}{\mu_0}$ est le courant volumique d'énergie e-m, on l'appelle le vecteur
+de Poynting.
+\sspartie{Puissance électromagnétique.}
+\noindent Dans le cas général, il suffit de calculer le flux du vecteur de Poynting~:
+$P_{em}^{r} = \integrales{S}{{}}{\ve{J_{em}}\cdot\ve{n}\dd{S}}$\par
+Dans le cas particulier du régime stationnaire, on écrit $\ve{E} = -\grad V$ et on simplifie le vecteur de 
+Poynting. puis on recalcule le flux et on trouve~:
+\encadre{$P_{em}^{r} =\integrales{S}{{}}{V\ve{j}\cdot\ve{n}\dd{S}}$}
+\rmq Tout ceci n'est valable que dans la cas d'une frontière fixe.\par
+On peut alors facilement calculer la puissance électromagnétique reçue par un dipôle électrocinétique parcouru
+par un courant d'intensité i et soumis à une ddp de v~:
+\encadre{$P_{em}^{r} = vi$}
+\index{Champ!complexe}
+\spartie{Notation complexe en électromagnétisme.}
+\sspartie{Théorème.}
+Si le couple $(\underline{\ve{E}}, \underline{\ve{B}})$ est solution des équations de Maxwell pour
+la distribution $(\underline{\rho}, \underline{\ve{j}})$, alors le couple $(\ve{E}, \ve{B})$ est solution des 
+équations de Maxwell pour la distribution $(\rho, \ve{j})$.
+\sspartie{Intérêt de la notation complexe.}
+Le calcul direct du champ réel est souvent plus difficile que le calcul en trois étapes suivants~:\par
+\centerline{\begin{tabular}{ccc}
+Distribution réelle $(\rho, \ve{j})$ & $(\longrightarrow)$ & Champ réel $(\ve{E}, \ve{B})$\\
+$\downarrow$ &                                           & $\uparrow$\\
+Distribution complexe $(\underline{\rho}, \underline{\ve{j}})$ & $\longrightarrow$ & Champ complexe%
+                                                           $(\underline{\ve{E}}, \underline{\ve{B}})$
+\end{tabular}}
+
+\newcommand{\ecompl}{\underline{\ve{E}}}
+\newcommand{\bcompl}{\underline{\ve{B}}}
+\rmq Montrer le résultat suivant dans le cas du régime sinuso\"idal~:
+\encadre{$<\ve{J_{em}}> = \re{\dfrac{\vecom{E}\land\vecom{B}^{\star}}{2\mu_0}}$}
+Ce résultat n'en a pas l'air mais il est utile dans le cours sur les ondes électromagnétiques.
+\partie{Induction électromagnétique.}
+\index{Induction}
+\spartie{Généralités.}
+\sspartie{Définition.}
+Un conducteur est le siège d'un phénomène d'induction dès qu'apparaissent des courants induits par la mobilité 
+du conducteur ou par la non-stationnarité du champ magnétique qui y règne.
+\point{Cas de Lorentz~:}
+\index{Cas!lorentz@de Lorentz}
+Le conducteur est mobile dans un champ stationnaire.
+\point{Cas de Neumann~:}
+\index{Cas!neumann@de Neumann}
+Le conducteur est immobile dans un champ stationnaire.
+\sspartie{Mise en évidence expérimentale.}
+\point{Cas de Lorentz~:}
+\begin{itemize}
+\item{rail~:} La translation d'une tige conductrice dans un champ uniforme stationnaire, engendre un courant induit
+non-nul dès que la vitesse de la tige est non-nulle.
+\item{Roue de Barlow~:}
+\index{Roue de Barlow} La rotation d'une roue conductrice dans un champ uniforme engendre un courant non-nul dès 
+que la vitesse angulaire de la roue est non-nulle.
+\end{itemize}
+\point{Cas de Neumann~:}
+\begin{itemize}
+\item{Bobine et aimant~:} Un aimant se déplace entre les spires d'une bobine et y engendre un courant électrique.
+\item{Transformateur~:} Le montage est constitué de deux parties, circuit primaire et secondaire, chacun constitué 
+d'un enroulement de fils et traversés sans contact par un barreau conducteur. Le circuit primaire est alimenté par 
+une tension sinusoidale. On constate l'apparition d'un courant dans le circuit secondaire.\index{Transformateur}
+\end{itemize}
+\sspartie{Freinage par induction.}
+On considère un pendule conducteur qui passe dans un zone o\`u règne un champ magnétique au cours de ses 
+balancements. On constate alors le ralentissement du pendule. De même avec une roue subissant un champ. Cet effet 
+peut être utilisé pour le freinage par induction des poids lourds.\index{Freinage par induction}
+\sspartie{Chauffage par induction.}
+Le courant induit dans un conducteur engendre un effet joule qui permet de chauffer. Par exemple de la soudure à 
+l'étain ou des tripoux sur des plaques à induction.\index{Tripoux}
+\spartie{Champ électromoteur d'induction.}
+Dans un conducteur métallique, la charge est nulle et donc $\ve{j} = \ve{j}^{\star}$. Le courant total de charge
+satisfait donc à la loi d'Ohm locale~:
+\encadre{$\ve{j} = \gamma(\ve{E}+\ve{v}\land\ve{B})$}
+o\`u $\ve{v}$ désigne la vitesse macroscopique du métal au point considéré. On définit alors le champ électromoteur d'induction 
+comme la quantité vectorielle~:
+\encadre{$\ve{E_{em}} = \ve{v}\land\ve{B}-\dpa{\ve{A}}{t} = \dfrac{\ve{j}}{\gamma} + \grad V$}
+Ce champ est homogène à un champ électrique et est nul en l'absence de phénomène d'induction, d'o\`u son nom.
+\spartie{Phénomène d'induction dans un circuit filiforme.}
+\sspartie{Force électromotrice d'induction.}
+\index{Force!electromotrice@électromotrice}
+\point{Définition~:}
+Etant donné un circuit filiforme quelconque, on définit la f.e.m comme~:
+\encadre{$e = \integrale{l}{}{\ve{E_m}\cdot\ve{t}\dd{l}}$}
+\rmq Cette valeur dépend de la convention choisie pour le sens de circulation.
+\point{Expression de la d.d.p~:}
+Le calcul de la f.e.m se fait facilement, et sachant que $R = \integrale{l}{}{\dfrac{\dd{l}}{\gamma s}}$ désigne
+la résistance électrique du circuit (mise en série de tubes conducteurs élémentaires, de résistance 
+$\delta R = \frac{\dd{l}}{\gamma s}$) on trouve l'expression suivante~:
+\encadre{$e = Ri + V_B - V_A$}
+o\`u $A$ et $B$ désignent les deux extrémités du circuit, éventuellement confondues.\par
+Cette expression est valable que le circuit soit ouvert ou fermé. Dans le cas o\`u il est ouvert, l'ARQS donne $i=0$ et 
+$V_A - V_B = -e$. Dans le cas o\`u il est fermé, $e=Ri$.
+\sspartie{Loi de Faraday}
+\index{Loi!faraday@de Faraday}
+On considère un cicuit filiforme fermé et on note $\phi$ le flux du champ magnétique total à travers ce circuit.
+Calculons sa variation entre $t$ et $t+\dd{t}$, en notant $S$ et $S'$ des surfaces fermées s'appuyant sur le 
+circuit, l'une à l'instant $t$, l'autre à l'instant $t+\dd{t}$. On note également $\ve{B}$ et $\ve{B'}$ le champ 
+magnétique à ces deux instants.\par
+$\dd{\phi}=\integrale{S'}{}{\ve{B'}\cdot\ve{n}\dd{S}}-\integrale{S'}{}{\ve{B}\cdot\ve{n}\dd{S}}+
+           \integrale{S'}{}{\ve{B}\cdot\ve{n}\dd{S}}-\integrale{S}{}{\ve{B}\cdot\ve{n}\dd{S}}$\par
+On scinde alors sur les deux différences d'intégrales. On note la première $\delta \phim_N$ et l'autre $\delta\phim_L$
+car elles correspondent respectivement à un cas de Neumann ou de Lorentz.\par
+{\begin{minipage}{7cm}
+{\begin{eqnarray*}
+\delta\phim_L & = & \integrale{S'}{}{\ve{B}\cdot\ve{n}\dd{S}}-\integrale{S}{}{\ve{B}\cdot\ve{n}\dd{S}}\\
+              & = & \integrale{\Sigma}{}{\ve{B}\cdot\ve{n}\dd{S}}\\
+              & = & \integrale{l}{}{\ve{B}\cdot\bigl\lbrack (\ve{v}\dd{t})\land\ve{t}\dd{l}\bigr\rbrack}\\
+              & = & \dd{t}\integrale{l}{}{\ve{B}\cdot(\ve{v}\land\ve{t})\dd{l}}\\
+              & = & -\dd{t}\integrale{l}{}{(\ve{v}\land\ve{B})\cdot\ve{t}\dd{l}}
+\end{eqnarray*}}
+{\begin{eqnarray*}
+\delta\phim_N & = & \integrale{S'}{}{\ve{B'}\cdot\ve{n}\dd{S}}-\integrale{S'}{}{\ve{B}\cdot\ve{n}\dd{S}}\\
+              & = & \dd{t}\integrale{S'}{}{\dpa{\ve{B}}{t}\cdot\ve{n}\dd{S}}\\
+              & = & \dd{t}\integrale{S'}{}{\rot\dpa{\ve{A}}{t}\cdot\ve{n}\dd{S}}\\
+              & = & \dd{t}\integrale{l'}{}{\dpa{\ve{A}}{t}\cdot\ve{t}\dd{l}}\\
+              & = & \dd{t}\integrale{l}{}{\dpa{\ve{A}}{t}\cdot\ve{t}\dd{l}}
+\end{eqnarray*}}
+\end{minipage}}
+\includegraphics*[width=6cm,height=4cm]{images/faraday.eps}\par
+En regroupant ces deux termes, on obtient la loi de faraday, qui n'est valable que pour un circuit fermé~:
+\encadre{$\df{\phi}{t} = -e$}
+La loi de Faraday permet de calculer le courant induit circulant dans un circuit filiforme \textbf{fermé}, en 
+utilisant : $e = Ri$.
+\sspartie{Exemples et applications.}
+\point{Bobine d'induction~:}
+On considère une bobine parcourue par un courant d'intensité $i$. La bobine est un circuit ouvert mais la forme
+curviligne du flux permet de définir le flux $\phi = \integrale{l}{}{\ve{A}\cdot\ve{n}\dd{l}}$. Un calcul trivial
+montre alors que la relation de Faraday reste valable (ce qui n'était pas prévisible puisque le circuit est ouvert). 
+En utilisant la formule $\phi = Li$ définie en magnétostatique, on obtient les relations électrocinétiques de la bobine~:
+\encadre{$v=Ri+L\df{i}{t}$}\index{Bobine}
+\exercice Couplage par inductance mutuelle de deux circuits~: transformateur.\par\index{Transformateur}
+On considère deux circuits $L,C$ dont l'un contient une source de tension sinusoïdale et l'autre pas, couplés par
+induction : le flux $\phi$ à travers l'une ou l'autre bobine fait intervenir le coefficient d'inductance mutuelle.
+(cf : matrice inductance)~:\par
+\centerline{\includegraphics*[width=6cm,height=5cm]{images/transfo.eps}}\par
+Montrer alors que le circuit privé secondaire est parcouru par un courant, d'intensité non-nulle dès que le coefficient 
+d'inductance mutuelle est non-nul.
+\point{Alternateur~:}
+\index{Alternateur}\index{Alternateur}
+C'est un système produisant du courant à partir d'un mouvement de rotation : on considère $N$ spires rectangulaires
+de cotés $a$ et $b$, de centre $O$ et tournant autour de l'axe $Oz$ à la vitesse stationnaire $\omega$, placée dans
+une région de l'espace o\`u règne un champ magnétique uniforme stationnaire $\ve{B_0}$, normal à l'axe de rotation~:\par
+\centerline{\includegraphics*[width=8cm,height=5cm]{images/alternateur.eps}}\par
+\begin{itemize}
+\item{Equation électromagnétique~:}
+On note $L$ et $R$ l'inductance et la résistance du circuit. Le circuit étant une bobine, on peut appliquer la loi 
+de Faraday. On décompose ensuite le flux en flux propre qui s'exprime avec l'inductance et en flux extérieur, donné
+par un calcul direct. On aboutit à l'équation~:\par
+$$L\df{i}{t} + Ri = \omega\phi_0\sin(\omega t)$$\par
+En notant $\phi_0 = N B_0 ab$ une quantité homogène à un flux, qui apparaît dans les calculs. La résolution de 
+cette ED se fait sans problème en complexe, en négligeant le régime transitoire~:
+\encadre{$i = I_0\sin(\omega t+\phim)$}
+\item{Equation mécanique~:}
+On applique au cadre supposé indéformable le théorème du moment cinétique selon l'axe $\vz$, fixe (cf : mécanique).
+Le moment d'inertie étant stationnaire ainsi que $\omega$, le moment des forces extérieures est nul. Or celles
+ci se réduisent au moment des forces exercées par un moteur pour entretenir la rotation ($M_{op}$) et au forces
+magnétiques de l'aimant (on néglige la viscosité de l'air, on suppose l'axe vertical et la liaison pivot parfaite).
+Or le moment des forces magnétiques s'exprime grâce qu moment magnétique du circuit~: 
+$M_{aim}=(\ve{m}\land\ve{B_0})\cdot\vz$. On trouve alors~:
+\encadre{$M_{op} = i\phi_0\sin(\omega t)$}
+\item{Travail de l'opérateur durant une période~:}
+Entre $t$ et $t+\dd{t}$ : $\delta\mathcal{T}_{op} = M_{op}\omega\dd{t}$. Soit~:\par
+$Ri^2 + Li\dd{i}$ grâce aux formules étblies précedemment. Par intégration~:
+\encadre{$\mathcal{T} = \frac{1}{2}T R I_0^2 = \dfrac{\pi R\omega\phi_0^2}{R^2+L^2\omega^2}$}
+\end{itemize}
+\exercice Vérifier que les forces magnétiques subies par un circuit filiforme de moment magnétique $\ve{m}$, plongé
+dans un champ uniforme, constitue un couple de moment $\ve{M} = \ve{m}\land\ve{B}$.\\
+\textsl{Indication :} La méthode est la même que pour un dipôle, on imagine un déplacement élémentaire et on applique
+un théorème énergétique.
+\spartie{Induction dans un con\-duc\-teur de forme quel\-con\-que.}
+L'étude d'un conducteur malsain d'un point de vue forme peut être ramenée à celle du circuit filiforme en 
+décomposant le long des lignes de courant. Dans d'autres cas il vaut mieux revenir aux équations de Maxwell.
+\sspartie{Roue de Barlow.}
+\index{Roue de Barlow|textbf}
+On considère un disque conducteur de rayon $a$ en rotation autour de son centre placé dans un champ magnétique
+uniforme normal au plan du disque. Ce disque est parcouru par un courant~: il est alimenté en son centre par un 
+fil parcouru d'un intensité $i$ et ce courant ressort par un fil placé en bas du disque, le contact étant mobile.
+On suppose que la liaison pivot est parfaite. On note $\ve{B} = B\vz$ le champ uniforme et stationnaire dans lequel 
+est plongé le disque, $\vz$ étant le vecteur unitaire et de même sens que $\ve{\omega}$. On note également 
+$v = V_O - V_A$ la différence de potentiel au bornes du disque.\par
+\centerline{\includegraphics*[width=6cm,height=4cm]{images/barlow.eps}}\par
+\point{Equation électromagnétique~:}
+L'idée est de décomposer le disque en un réseau de circuits filiformes d'ex\-tré\-mi\-tés $O$ et $A$, suivant les 
+lignes de courant au sein du disque, et parcourus par un courant $\delta i$. On note alors $\delta G$ l'inductance
+infinitésimale du circuit. Alors $v = \frac{\delta i}{\delta G} - e$. Or $\ve{E_{em}} = 
+\ve{v}\land\ve{B} - \dpa{\ve{A}}{t}\sim\ve{v}\land\ve{B_0}$. En négligeant le champ crée par le fil devant celui de
+l'aimant. Au final $\ve{E_{em}}\sim B_0r\omega\vr$.  Puis par intégration le long le long de la ligne de courant, en 
+utilisant que $\ve{t}\dd{l} = \dd{\ve{r}} = \dd{r}\vr + r\dd{\theta}\vtheta$, on trouve~:
+\encadre{$e = \dfrac{1}{2}B_0a^2\omega$}
+Soit en regroupant les informations précédentes et en sommant tous les circuits filiformes élémentaires~:
+\encadre{$Ri = v + \dfrac{1}{2}B_0a^2\omega$}
+\point{Equation mécanique~:}
+On applique le TMC autour de $Oz$ fixe dans le référentiel du labo galiléen. On introduit un frottement visqueux de
+moment $-f\omega$ et en reprenant la décomposition en circuits filiformes on trouve~:
+\encadre{$M_{op} = \dfrac{1}{2}m a^2\dot{\omega}+f\omega+\dfrac{1}{2}B_0a^2i$}
+\rmq Dans le cas o\`u $M_{op}$ est nul, on peut déterminer le mouvement de la roueen trouvant une équation différentielle
+du premier ordre sur $\omega$. En exprimant le temps caratérisant l'arrêt, on remarque le champ magnétique introduit une 
+contribution analogue au frottement fluide. En outre la rotation de la roue est la cause du phénomène d'induction. C'est 
+un cas particulier de la Loi de Lenz~:
+\encadre{Les effets de l'induction s'opposent à leur cause.}
+\index{Loi!lenz@de Lenz}
+\sspartie{Four à induction.}
+\index{Four@Four à induction}
+\point{Principe~:}
+On considère un solénoïde infiniment long de rayon $a$ parcouru par un courant sinusoïdal. L'intérieur est rempli
+par un conducteur ohmique immobile. Le champ magnétique n'étant pas stationnaire, des courants induits appelés ``courants
+de Foucault'' apparaissent dans le conducteur et provoque par effet joule un échauffement du métal. On veut déterminer le 
+champ de température au sein du métal.
+\point{Equations de Maxwell~:}
+\index{metal@Métal}
+Dans un métal immobile~: $\ve{j} = \gamma\ve{E}$. La valeur de $\gamma$ dans un métal usuel est de l'ordre de 
+$10^8\;\Omega^{-1}m^{-1}$. En se plaçant dans le cas sinusoïdal (quitte à s'y ramener par analyse de Fourier) et
+aux fréquences usuelles de l'électrocinétique ($N\leq 100\;MHz$), le courant de déplacement $\ve{j_D} = 
+\eps_0\dpa{\ve{E}}{t}$ est négligeable devant le courant de charge $\ve{j} = \gamma\ve{E}$. Dans ces conditions :
+$\rot\ve{B} \sim \mu_0\ve{j} = \mu_0\gamma \ve{E}$, ce qui montre que $\div{E} = 0$ et donc que la charge vérifie
+$\rho = 0$. Dans un métal et aux fréquences usuelles les équations de Maxwell s'écrivent alors~:
+\index{Equations!maxwell@de Maxwell!metal@dans un métal}
+\centerline{{\renewcommand{\arraystretch}{1.5}
+$\begin{array}{ll}
+\div{\ve{E}} = 0 & \div{\ve{B}} = 0\\
+\rot\ve{B} = \mu_0\gamma\ve{E} & \rot{E} = -\dpa{\ve{B}}{t}
+\end{array}$}}
+\point{Equation magnétique~:}
+Un calcul classique à partir des équation ci-dessus fournit l'équation de diffusion~:
+\encadre{$\laplacien\ve{B} = \mu_0\gamma\dpa{\ve{B}}{t}$}
+\point{Température dans le métal~:}
+Elle peut être déduite du bilan local d'énergie interne~:\par
+$$\div\ve{J_{th}} + \rho\df{u}{t} = \sigma_u$$\par
+En appliquant successivement la loi de Fourier, le premier principe, la loi d'ohm et la relation $\dd{u} = c\dd{T}$ 
+valable pour une phase condensée, on ramène l'équation à une équation de diffusion avec second membre~:
+\encadre{$-\lambda\laplacien T +\rho c\dpa{T}{t} = \dfrac{j^2}{\gamma}$}
+Ces deux équations de diffusion peuvent se résoudre (difficile) pour obtenir le champ de température en tout point 
+à tout instant.
+
+\partie{Ondes électromagnétiques}
+\index{Onde!electromagnetique@électromagnétique}
+\spartie{Ondes électromagnétiques dans le vide.}
+\sspartie{Equations d'onde.}
+\index{Equation!onde@d'onde}
+Tout potentiel électromagnétique satisfaisant à la jauge de Lorentz : $\div \ve{A} + \dfrac{1}{c^2}\dpa{V}{t}$ 
+satisfait aussi aux équations de d'Alembert qui s'écrivent dans le vide ($\rho = 0,\ve{j} = \ve{0}$)~:
+\encadre{$\begin{array}{cc}
+         \laplacien V = \dfrac{1}{c^2}\dpak{2}{V}{t} & \laplacien{\ve{A}} = \dfrac{1}{c^2}\dpak{2}{\ve{A}}{t}
+          \end{array}$}\par
+Les équations de Maxwell dans le vide conduisent rapidement aux équations d'onde~:\par
+\encadre{$\begin{array}{cc}
+         \laplacien \ve{E} = \dfrac{1}{c^2}\dpak{2}{\ve{E}}{t} & 
+         \laplacien{\ve{B}} = \dfrac{1}{c^2}\dpak{2}{\ve{B}}{t}
+          \end{array}$}
+Le champ électromagnétique est donc une onde de célérité $c$ telle que $\eps_0\mu_0c^2 = 1$.
+\sspartie{Structure d'une OPPM électromagnétique dans le vide.}
+On écrit, conformément à la définition d'une OPPM, le champ électro\-ma\-gné\-tique en notation complexe sous la 
+forme~:\par
+$\underline{\ve{E}}(\ve{r},t) = \underline{\ve{E}}_0 \oppm$ et $\underline{\ve{B}}(\ve{r},t) = \underline{%
+\ve{B}}_0\oppm$\par
+\index{OPPM!electromagnetique@électromagnétique}
+Or, pour une OPPM, on a des expressions simples des opérateurs usuels, à savoir~:\par
+$$\div \ecompl=i\ve{k}\cdot\ecompl,\quad\rot\ecompl=i\ve{k}\land\ecompl,\quad\dpa{\ecompl}{t}=-i\omega\ecompl$$
+\par
+\noindent Ce qui fournit facilement les relations entre les champs $\ecompl$ et $\bcompl$, qui s'étendent au vecteurs 
+réels car $\ve{k}$ est un vecteur réel et $\omega$ est un réel~:\par
+$$\ve{E} = -c^2\dfrac{\ve{k}}{\omega}\land\ve{B}\quad \ve{B} = \dfrac{\ve{k}}{\omega}\land\ve{E}$$\par
+\index{Relation!dispersion@de dispersion}
+\noindent Par une simple substitution, on trouve la relation de dispersion du vide pour les OPPM 
+électromagnétiques : $\omega = k c$. Cette relation étant linéaire, on en déduit que le vide est un milieu 
+non-dispersif pour les ondes électromagnétiques. On peut introduire le vecteur $\ve{u} = \ve{k}/k$ indiquant 
+le sens et la direction de propagation de l'OPPM qui permet de simplifier les écritures des équations ci-dessus.
+L'OPPM est dite transversale vu que le vecteur d'onde est normal au vecteur amplitude (immédiat vu les relations
+ci-dessus).
+On retiendra les deux relations suivantes, qui donnent la structure de l'OPPM dans le vide~:
+\encadre{$\begin{array}{lcl}
+\ve{k} & = & \frac{\omega}{c}\ve{u}\\
+\ve{E} & = & -c\ve{u}\land\ve{B}
+\end{array}$}
+\sspartie{Polarisation d'une OPPM e-m.}
+Cette notion n'a de sens que pour des ondes vectorielles avec une composante transversale.
+\point{Définition~:}
+Etant donné les relations ci-dessus, on ne s'intéresse qu'au champ, $\ve{E}$. En partant de l'expression du 
+champ complexe, on va calculer les composantes du champ réel. On pose $\vz = \ve{u}$ et on complète en une base orthonormée
+directe $(\vx,\vy,\vz)$. On peut alors écrire~: $\underline{\ve{E}}_0 = E_{0x}e^{i\alpha}\vx +  E_{0y}e^{i\beta}\vy$ et on note 
+$\oppm = e^{i\phim}$ de sorte que~:\\
+$\ve{E} = E_{0x}\cos(\phim+\alpha)\vx+E_{0y}\cos(\phim+\beta)\vy$
+et en posant en plus~:\par
+$\phim' = kz-\omega t+\alpha$ et $\phi = \alpha - \beta$ on a l'expression~:
+\encadre{$E_{0x}\cos(\phim')\vx+E_{0y}\cos(\phim'-\phi)\vy$}
+Si $\phi$ est quelconque, le vecteur $\ve{E}$ décrit une ellipse, on dit que l'onde est polarisée 
+elliptiquement.
+\index{Polarisation}
+Si $\phi$ est nul, $\ve{E}$ décrit un segment de longueur $2 E_0$, on dit que l'onde est polarisée rectilignement.
+
+Si $\phi = \pm \frac{\pi}{2}$ et $E_{0x} = E_{0y}$ alors le vecteur $\ve{E}$ décrit un cercle de rayon $E_0$. On dit que l'OPPM est 
+polarisée circulairement. Si $\phi$ est positif on parle de circulaire droite, de gauche dans le cas contraire.
+
+\point{Théorèmes~:}
+Une OPPM de polarisation quelconque peut toujours être considérée comme la superposition de deux OPPM 
+polarisées rectilignements et de directions orthogonales.
+
+Une OPPM polarisée rectilignement peut toujours être considérée comme la superposition de deux OPPM polarisées 
+circulairement dans des sens opposés.
+
+La démonstration de ces théorèmes est triviale.
+\sspartie{Intensité d'une OPPM e-m dans le vide.}
+\index{intensite@Intensité!oppm@d'une OPPM}
+Calculons la valeur moyenne du vecteur de Poynting pour une OPPM électromagnétique en notation réelle~:\par
+$\begin{array}{lclclcl}
+\ve{\Pi} & = &\frac{1}{\mu_0}\ve{E}\land\ve{B} & = & \frac{1}{\mu_0}\ve{E}\land \Bigl(\frac{\ve{u}}{c}\land\ve{E}\Bigr) & = &
+  \frac{1}{\mu_0} \Bigl(-c\ve{u}\land\ve{B}\Bigr)\land\ve{B}\\
+        & & & = & \eps_0cE^2\ve{u} & = &c\frac{1}{\mu_0}B^2\ve{u}
+\end{array}$\par
+On obtient, en prenant la valeur moyenne temporelle que  la valeur moyenne du vecteur de Poynting est proportionnelle à $\ve{u}$. On
+définit l'intensité de l'OPPM comme cette constante de proportionnalité et on la note $I$~:
+\encadre{$<\ve{\Pi}> = I\ve{u}$}
+On retiendra de ces calculs les diverses expressions de cette intensité~:
+\encadre{$\begin{array}{cc}
+           c\eps_0<E^2> & \frac{c}{\mu_0}<B^2>\\
+           \frac{c\eps_0}{2}\ecompl_0 \cdot \ecompl_0^{\star} & \frac{c}{2\mu_0}\ecompl_0 \cdot \ecompl_0^{%
+                 \star}
+           \end{array}$}\par
+D'un point de vue interprétation physique, l'intensité d'une OPPM se propageant dans la direction et le sens de 
+$\ve{u}$ est la valeur moyenne temporelle de la puissance e-m qui tranvers une surface unité orthogonale à 
+$\ve{u}$ dans le sens de $\ve{u}$.
+\exercice Définir et calculer la puissance d'un laser émettant une lumière monochromatique polarisée 
+circulairement à l'intérieur d'un cylindre de section droite $s_0$.
+\spartie{Ondes électromagnétiques dans un milieu optique.}
+\sspartie{Notion de milieu optique.}
+\index{Milieu!optique}
+Un milieu optique est un milieu polarisé non-aimanté. Il n'est nichargé, ni parcouru par un courant. Les équations 
+de Maxwell générales (cf : 2.3.5) s'écrivent alors~:\par
+\centerline{$\begin{array}{ll}
+\rot\ve{E} = -\dpa{\ve{B}}{t} & \div\ve{D} = 0\\
+\div\ve{B} = 0 & \rot\ve{B} = \mu_0 \dpa{\ve{D}}{t}\end{array}$}\par
+En optique linéaire, le vecteur $\ve{D}$ est lié au champ électrique $\ve{E}$ par la relation matricielle~:\par
+\centerline{$\begin{pmatrix}
+               D_x\\
+               D_y\\
+               D_z
+             \end{pmatrix} = 
+             \begin{pmatrix}
+               \eps_x & 0 & 0\\ 
+               0 & \eps_y & 0\\
+               0 & 0 & \eps_z
+             \end{pmatrix}
+             \begin{pmatrix}
+              E_x\\
+              E_y\\
+              E_z
+             \end{pmatrix}$}\par
+En se plaçant dans une base de vecteurs propres de la matrice (On admet qu'elle est diagonalisable). Un milieu 
+optique est dit homogène si cette matrice est uniforme, isotrope si elle est scalaire.
+\sspartie{Milieu optique homogène isotrope.}
+La relation matricielle précédent s'écrit alors $\ve{D} = \eps \ve{E}$. $\eps$ est une constante que l'on peut mettre
+sous les formes~:\par
+$\eps = \eps_0 \eps_r$ o\`u $\eps_r$ est la constante diélectrique du milieu, sans dimension.\par
+$\eps = \eps_0 n^2$ en notant $n = \sqrt{\eps_r}$ l'indice optique du milieu.
+Les équations de Maxwell s'ecrivent alors comme celles du vide à condition d'effectuer les substitutions~:\par
+\encadre{$c\longrightarrow \dfrac{c}{n}\quad\eps\longrightarrow \eps_0n^2$}
+La structure de l'OPPM est donc la même que dans le vide, à une constante multiplicative près. L'intensité de l'OPPM
+a pour expression~: $I = \dfrac{c\eps_0 n}{2}\ecompl\cdot\ecompl^{\star}$\par
+\sspartie{Milieu homogène anisotrope.}
+On se contente d'étudier le cas d'une lame polaroïd de normale $\vz$ qui se comporte comme un milieu optique
+transparent pour une OPPM polarisée rectilignement dans le sens de $\vx$ et comme un miroir pour une OPPM polarisée
+selon l'axe $vy$. L'axe $\vx$ est nommé l'axe du polaroïd. Une OPPM polarisée de façon quelconque qui rencontre ce 
+milieu est partiellement transmise. Le champ électrique $\ve{E_{\tau}}$ transmis est polarisé selon $\vx$.
+\exercice Loi de Malus. 
+On fait arriver une OPPM polarisée rectilignement dans une direction $\ve{u}$ formant un angle $\theta$ avec l'axe
+du polaroïd. Calculer l'intensité de l'OPPM transmise connaissant celle de l'onde incidente. On trouve~:
+\encadre{$I_{\tau} = I \cos^2\theta$}
+\index{Loi!malus@de Malus}
+\sspartie{Milieu optique isotrope mais inhomogène.}
+On réécrit les équations de Maxwell générales en prenant garde que l'indice n'est plus uniforme~:\par
+\centerline{$\begin{array}{ll}
+ \rot\ve{E} = -\dpa{\ve{B}}{t} & \div(n^2\ve{E}) = 0\\
+ \div\ve{E} = 0               & \rot\ve{B} = \dfrac{n^2}{c^2}\dpa{\ve{E}}{t}
+             \end{array}$}
+\point{Recherche d'une solution particulière des équations de Maxwell~:}
+Une simple OPPM ne convient plus, il faut chercher une solution sous la forme~:\par
+\centerline{$\ecompl(\ve{r},t) = \ecompl_0(\ve{r})e^{i(k_0 R(\ve{r}) - \omega t)}$}\par
+avec $k_0 = \omega / c$. En substituant dans Maxwell-ampère et Maxwell-Faraday on trouve les relations~:\par
+\centerline{$\begin{array}{l}
+               \ecompl_0\land\grad R + c\bcompl_0 = -\dfrac{i}{k_0}\rot{\ecompl_0}\\
+               \bcompl_0\land\grad R - \dfrac{n^2}{c}\ecompl_0 = -\dfrac{i}{k_0}\rot{\bcompl_0}
+             \end{array}$}
+\point{Approximation de l'optique géométrique~:}
+\index{Approximation!geometrique@de l'optique géométrique}
+Elle consiste à supposer $\rot\ecompl_0\ll k_0c\bcompl_0$ et $c\rot\bcompl_0\ll k_0n^2\ecompl_0$. Auquel cas les 
+relations ci-dessus s'écrivent~:
+\encadre{$\begin{array}{lr}
+               \ecompl_0\land\grad R + c\bcompl_0 = \ve{0} & (1)\\
+               \bcompl_0\land\grad R - \frac{n^2}{c}\ecompl_0 = \ve{0} & (2)
+             \end{array}$}
+On montre alors que les deux autres équations de Maxwell sont satisfaites. Puis, en reportant $(1)$ dans $(2)$ on
+obtient la relation importante~:\par
+$\lbrack(\grad R)^2 - n^2\rbrack \ecompl_0 = \ve{0}$ ce qui fournit l'existence d'un vecteur $\ve{u}$ unitaire tel 
+que $\grad R = n\ve{u}$ et on peut réécrire les équations de structure~:
+\encadre{$\begin{array}{l}
+            \ve{E} = -\dfrac{c}{n}\ve{u}\land \ve{B}\\
+            \ve{B} = n\dfrac{\ve{u}}{c}\land\ve{E}\end{array}$}
+Ce qui rappelle celles du vide sauf que cette fois $\ve{u}$ n'est pas uniforme! On dit que le champ e-m a 
+localement la structure d'une OPPM se propageant dans la direction et le sens de $\ve{u}$.
+\point{Définition d'un rayon lumineux~:}
+C'est une ligne de courant d'énergie électromagnétique.
+\index{rayon@Rayon lumineux}
+Comme $\ve{\Pi}$ le vecteur de Poynting est de colinéaire et de même sens que le vecteur $\ve{u}$ on en déduit que
+$\ve{u}$ est tangent au rayon lumineux et que sons sens indique le sens de propagation de la lumière.
+\point{Equation curviligne d'un rayon~:}
+On se place le long d'un rayon lumineux et on y choisit deux points voisins $M$ et $M'$. On effectue ensuite la
+différentielle de la relation $\grad R = n\ve{u}$. Un calcul astucieux permet ensuite d'affirmer que~:
+\encadre{$\df{n\ve{u}}{s} = \grad R$}
+Dans le cas particulier o\`u $n$ est uniforme on retrouve que le rayon lumineux est une droite.
+\point{Théorème de Fermat~:}
+\index{theoreme@Théorème!fermat@de Fermat}
+Avec ce qu'on a fait ci dessus on peut démontrer le théorème de Fermat, habituellement érigé en principe : étant 
+donnée une courbe $L$ voisine d'un rayon lumineux $L_0$, l'intégrale $\int_L n\dd{L}$ est égale à l'ordre 1 au chemin
+optique le long de $L_0$.
+\encadre{$(M_1 M_2) = \integrale{L}{}{n\dd{L}}$}
+\point{Surface d'onde, théorème de Malus~:}
+On appelle surface d'onde, ou surface équiphase toute surface sur laquelle la phase est uniforme. Une surface d'onde
+est donc caractérisée par une valeur uniforme de $R$.\par
+Etant donné que $\grad R$ est normal à une telle surface et que $n\ve{u} = \grad R$, les rayons lumineux sont
+orthogonaux aux surfaces d'onde (de même que les lignes de champ étaient orthogonales aux surfaces équipotentielles
+en électrostatique).
+\point{Identification de $R$ à un chemin optique~:}
+\index{chemin@Chemin optique}
+En introduisant le rayon lumineux passant par $M$, qui coupe la surface d'onde correspndant à $R=0$ en $M_0$, et en
+utilisant le théorème ci-dessus on trouve~:
+\encadre{$R(M) = (M_0 M)$}
+On peut identifier le champ scalaire $R$ au chemin optique ainsi défini.
+\point{Domaine de validité de l'approximation~:}
+Si on analyse précisément l'approximation effectuée pour faire tout cela, on constate que l'approximation de 
+l'optique géométrique revient à supposer que les variations de l'amplitude du champ varie peu en valeur relative à
+l'échelle de la longueur d'onde.\par
+Dans le cas contraire, les lois de l'optique géométrique doivent être remplacées par celles de la diffraction.
+\sspartie{Appoximation scalaire de l'optique géométrique.}
+\index{Approximation!scalaire}
+Elle consiste à remplacer l'onde électromagnétique $(\ve{E}, \ve{B})$ se propageant dans un milieu optique d'indice 
+$n$ par une onde scalaire $s$.\par
+On se place dans une région de l'espace o\`u les lois de  l'optique géométrique sont valables, dans laquelle on 
+choisit deux point $M_1$ $M_2$ situés sur un même rayon alors l'onde scalaire $s$ vérifie la relation~:
+\encadre{$\dfrac{s(M_2, t)}{s(M_1, t)} = a_{12}e^{i\frac{2\pi}{\lambda}(M_1 M_2)}$}
+On démontre cette relation dans tous les cas usuels de l'optique géométrique~: faisceau cylindrique dans un milieu
+homogène, faisceau conique et milieu inhomogène.
+\spartie{Réflexion d'une OPPM sur un conducteur parfait plan.}
+\sspartie{Onde incidente, Onde réfléchie.}
+Une source émet une OPPM électromagnétique qui se propage avant d'arriver sur un plan conducteur parfait situé à 
+droite du plan $z=0$. on désire déterminer le champ en tout point de l'espace.
+\point{Dans le conducteur parfait~:}
+Le champ em y est nul en régime sinusoïdal et le conducteur ne peut être chargé ou parcouru par un courant que sur
+l'interface $z=0$.\par
+En effet dan sun conducteur parfait, $\gamma\to\infty$ et la loi d'ohm pour un conducteur immobile assure 
+$\ve{E}\to\ve{0}$. En régime sinusoïdal l'équation de Maxwell Faraday permet d'affirmer $\ve{B} = \ve{0}$. 
+Puis Maxwell-Gauss et Maxwell-Ampère donnent $\rho = 0$ et $\ve{j} = \ve{0}$ en l'intérieur du conducteur. De plus 
+l'OPPM engendre nécéssairement une distribution de charge ou de courant à la surface du conducteur. En effet dans le 
+cas contraire le champ à l'intérieur du conducteur serait réduit de l'OPPM, non-nul.
+\point{Dans le vide~:}
+Il suffit de superposer à l'OPPM incidente une OPPM réfléchie, engendrée par la distribution de charge et de courant
+à la surface du conducteur, notée $(\ve{K},\sigma)$.\par
+Les conditions aux limites à l'interface vide conducteur s'écrivent~:\par
+$\begin{array}{l}
+-\ve{E}(x,y,0^-,t) = \dfrac{\sigma(x,y,t)}{\eps_0}\vz\\
+-\ve{B}(x,y,0^-,t) = \mu_0\ve{K}(x,y,t)\land\vz
+\end{array}$\par
+On note alors $\ve{E_0},\ve{B_0}$ les amplitudes de l'OPPM incidente $(\ve{E_i},\ve{B_i})$ et $\ve{E_0'},\ve{B_0'}$ 
+celles de l'OPPM réfléchie $(\ve{E_r},\ve{B_r})$, ainsi que $\ve{k},\ve{k'},\omega,\omega'$ leurs vecteurs d'onde
+et pulsations respectifs.
+\rmq Comme l'OPPM incidente vérifie les équations de Maxwell et que le champ total superposition de l'incidente et
+de la réfléchie les vérifie aussi par principe, par linéarité, le champ réfléchi les vérifie aussi.\par
+Les conditions aux limites s'écrivent alors de façon plus pénible mais en faisant intervenir les deux champs 
+précédents.
+\sspartie{Lois de Descartes relatives à la réflexion.}
+\index{Loi!descartes@de Descartes}
+Les conditions aux limites imposent~:\par
+$\ve{E_{0,\para}}e^{i(k_xx+k_yy-\omega t)}+\ve{E_{0,\para}'}e^{i(k_x'x+k_y'y-\omega' t)}=\ve{0}$\par
+Cette condition doit être vérifiée pour tout $x,y,t$ ce qui impose $\omega = \omega'$, $k'=k$ et $\ve{k_{\para}}=
+\ve{k_{\para}}$. Les deux seules solutions sont alors que $\ve{k} = \ve{k'}$ ce qui impossible (le vérifier) et
+$\ve{k'}$ symétrique de $\ve{k}$ par rapport au plan de réflexion. Cela implique les lois de Descartes relatives à
+la reflexion, c'est-à-dire que les plans d'incidence et de reflexion sont confondus et que les angles d'incidence
+et de reflexion sont égaux.
+\sspartie{Détermination de l'OPPM réfléchie.}
+Les conditions aux limites et les relations sur les amplitudes permettent de déterminer les quatre amplitudes 
+inconnues avec un calcul simple dans le cas d'une OPPM polarisée rectilignement selon $\vy$ puis selon $\vz$,
+le cas général s'en déduisant par superposition.
+\sspartie{Cas d'une incidence normale.}
+On suppose $\ve{u} = \vz$. Alors après quelques calculs on trouve~:\par
+$$\left\lbrace\begin{array}{l}
+\ve{E}(M,t) = 2E_0\sin(\omega t)\sin(kz)\vx\\
+\ve{B}(M,t) = \dfrac{2 E_0}{c}\cos(kz)\cos(\omega t)\vy
+\end{array}\right.$$\par
+On constate que le champ a une structure d'onde stationnaire.
+\sspartie{Pression électromagnétique.}
+\index{Pression!electromagnetique@électromagnétique}
+Les lois de De broglie\index{Loi!broglie@de De Broglie} affirment qu'à chaque OPPM correspond une particule et
+réciproquement. Cette dualité se traduit par les relations~:
+\encadre{$\begin{array}{l}
+            \ve{p} = \hbar\ve{k}\\
+            E = \hbar \omega\end{array}$}
+En particulier à toute OPPM électromagnétique est associé un photon de quantité de mouvement $\ve{p} = 
+\dfrac{h\nu}{c}\ve{u}$ et d'énergie $E = h\nu$.\par
+Les photons arrivant sur le plan $z=0$ y exercent une force $\delta\ve{F}$ par élément de surface $\delta S$. On
+note $\delta^2 N$ le nombre de photons arrivant sur $\delta S$ pendant $\delta t$ (grand devant la période du photon
+de l'ordre de $10^{-15}$. Alors en notant $\ve{p_n}$ et $\ve{p_n'}$ la quantité de mouvement du photon $n$ avant
+intéraction et après intéraction, la physique statistique (fait en td) nous apprend que la force a pour expression :
+$\delta\ve{F} = \dfrac{1}{\delta t}\serie{n=1}{\delta^2N}{\ve{p_n}-\ve{p_n'}}$, ce qui donne $2\dfrac{h\nu}{c}
+\cos(i_0)\vz$, ce qui montre que : $\delta\ve{F} = 2\dfrac{\delta^2N}{\delta t}\dfrac{h\nu}{c}\cos i_0\vz$. Or 
+$h\nu\delta^2 N$ est l'énergie e-m reçue par $\delta S$ dans l'intervalle $\segment{t_1}{t_2}$ de longueur 
+$\delta t$. Or cette énergie peut être calculée grâce au vecteur de Poynting~:\par
+$h\nu\delta^2 N = \integrale{t_1}{t_2}{\ve{\Pi}\cdot\vz\delta S\dd{t}}$. Or on a supposé que $\delta t$ était grand
+devant la période de l'OPPM, c'est-à-dire que l'on peut assimiler $\Pi$ à sa valeur moyenne temporelle, ce qui 
+permet de calculer l'intégrale simplement. Après un bref calcul on obtient~:
+\encadre{$\delta \ve{F} = \dfrac{2 I}{c}\cos^2i_0\delta S\vz$}
+En faisant intervenir l'intensité $I$ de l'OPPM, définie précédemment. Cette force est proportionnelle à $\delta S$
+et est analogue à la force de pression, soit :$\delta{\ve{F}} = p\delta S \vz$ avec :
+\encadre{$p = 2\dfrac{I}{c}\cos^2i_0$}
+Cette pression e-m est à l'origine de nombreux phénomènes, comme la courbure de la queue des comètes, la 
+lévitation d'une bille conductrice dans un faisceau laser ou le déplacement d'une voile solaire.
+\exercice Calculer la pression e-m subie par une bille conductrice, plongée dans un faisceau laser cylindrique et
+stationnaire.
+\spartie{Propagation guidée, guide d'onde rectangulaire.}
+\index{Propagation!guidee@guidée}
+\sspartie{Description.}
+Le guide d'onde est un tuyau métallique creux dont la section est un rectangle de côtés $a>b$. Le matériau composant
+le guide est assimilé à un conducteur parfait alors que l'air remplissant le tuyau est est considéré comme du vide.
+On montre qu'un tel guide permet la transmission d'un signal em dont les longueurs d'ondes sont de l'ordre des 
+dimensions transversales du guide.
+\sspartie{Recherche d'une solution.}
+On ne fait ici que rappeler les étapes de la résolution du problème, les calculs restant à faire.\\
+On recherche un signal de la forme $f(Kz-\omega t)$ dans le vide inter-conducteurs, susceptible de traduire une 
+propagation. La recherche d'une simple OPPM est vouée à l'échec du fait des conditions aux limites au voisinage des 
+parois. Au final on recherche une onde de la forme :
+\encadre{$\ve{E} = f(x,y)e^{i(Kz-\omega t)}\vy$}
+\rmq On a choisi de chercher une onde transversale électrique polarisée selon $\vy$ car le guide n'est pas carré
+et on verra qu'une onde selon $\vx$ n'était pas à privilégier.
+\sspartie{Détermination de la solution.}
+Les équations de Maxwell dans le vide fournissent directement les équations~:\par
+$$\div\ve{E} = 0\quad \dalembert\ve{E} = \ve{0}$$\par
+En substituant dans ces équations le champ électrique, on obtient des conditions sur $f$~:
+\encadre{$\begin{array}{l}
+            \dpa{f}{y} = 0\\
+            \noalign{\vspace{1mm}}
+            \dpak{2}{f}{x} + \left(\dfrac{\omega^2}{c^2}-K^2\right)f(x) = 0
+          \end{array}$}
+Ce qui montre que $f$ ne dépend pas de $y$ (le domaine de définition de $f$ est un ouvert convexe) et qu'on a 
+forcément $\dfrac{\omega^2}{c^2}-K^2 > 0$ pour avoir des solutions bornées. Les conditions aux limites sur les 
+parois permettent alors d'obtenir la charge et le courant surfacique ainsi que la condition 
+$\sqrt{\dfrac{\omega^2}{c^2}-K^2}\in \dfrac{\pi}{a}\zz$. C'est-à-dire qu'on a des modes propres et que~:\par
+L'onde T-E cherchée est une superposition de solutions particulières, appelées modes propres qui s'écrivent~:
+\encadre{$\ve{E_n}=A_ne^{i(n\frac{\pi}{a}x+K_nz-\omega t)}\vy-(-1)^{n}A_ne^{-i(n\frac{\pi}{a}x+K_nz-\omega t)}\vy$}
+Avec $K_n^2 = \frac{\omega^2}{c^2}-n^2\frac{\pi^2}{a^2}$.
+\sspartie{Interprétation.}
+Ce mode peut être interprété comme la superposition de deux OPPM de polarisation électrique rectiligne selon $\vy$,
+se prpageant dans le vide à la célérité $c$ dont les vecteurs d'onde évoquent des réflexions successives sur les
+parois conductrices.
+\sspartie{Mode fondamental.}
+Ces réflexions sont suivies d'une atténuation du signal du fait des pertes d'énergie e-m au sein du conducteur qui
+en pratique n'est pas rigoureusement parfait. L'atténuation globale est d'autant  plus faible que l'angle entre
+la paroi et la direction de propagation de l'OPPM est faible. Le mode $n = 1$ est donc prédominant après quelques
+réflexions. Pour cette raison, on supposera qu'il est seul à se propager dans le guide. On trouve donc un champ 
+électrique réel de la forme~:
+\encadre{$\ve{E} = E_1\cos(\pi\frac{x}{a})\cos(K_1z-\omega t)\vz$}
+Et le champ magnétique s'en déduit avec les équations de Maxwell.
+\sspartie{Fréquence de coupure.}
+Il n'y a propagation que si $K_1> 0$, ce qui se traduit par~:
+\encadre{$\lambda<\lambda_c\quad\mathrm{avec}\quad\lambda_c = 2a$}
+\sspartie{Vitesse de propagation.}
+On peut trouver le résultat avec différentes méthodes et interprétations (optique ou énergétique). La plus simple
+consiste à calculer $c\cos\theta_1$ ce qui donne la vitesse de propagation de l'information :
+\encadre{$v_g = c\sqrt{1-\left(\dfrac{\omega}{\omega_c}\right)^2}$}
+\spartie{Propagation libre, rayonnement dipolaire.}
+\index{Propagation!libre}
+On considère un dipôle électrique oscillant selon une loi sinusoïdale~:\par
+\centerline{\includegraphics*[width=4cm,height=4cm]{images/dipole_osc.eps}}\par
+o\`u $\ve{p}(t) = p_0\cos(\omega t)\vz$.
+\sspartie{Détermination des champs et potentiels.}
+\point{Potentiel vecteur~:}
+On admet par analogie avec les potentiels retardés que le potentiel vecteur engendré au point $P$ par le dipôle 
+oscillant est de la forme~:\par
+$$\ve{A} = \dfrac{\mu_0}{4\pi}\integrale{\tau}{}{\dfrac{\ve{j}(M,t-\frac{r}{c})}{r}\dd{V}}$$\par
+En notant $r$ la distance entre le point source $M$ et le point d'observation $P$. Comme on se place dans le cadre
+de l'approximation dipôlaire, on peut faire un DL et assimiler $r$ à la distance entre le point source et l'origine.
+Ici, le potentiel vecteur peut se mettre sous la forme~:\par
+$\ve{A} = -\dfrac{\mu_0}{4\pi}\dfrac{\omega}{r}\sin(\omega(t-\frac{r}{c}))p_0\vz$\par
+Ce qui, en notation complexe implicite donne~:
+\encadre{$\ve{A} = -i\dfrac{\alpha}{r}e^{i(kr-\omega t)}\vz$}
+en notant $\alpha = \dfrac{\mu_0}{4\pi}p_0\omega$ et $k = \frac{\omega}{c}$.
+\point{Potentiel scalaire~:}
+On cherche un potentiel vecteur qui satisfasse à la jauge de Lorentz~:\\
+$\div\ve{A} + \eps_0\mu_0\dpa{V}{t} = 0$. Cette relation donne en complexe que 
+$V = -i\dfrac{c^2}{\omega}\div\ve{A}$. Un calcul de divergence en complexe fournit alors le potentiel scalaire 
+électrique~:
+\encadre{$V = \dfrac{\alpha c^2}{\omega r^2}(ikr -1)e^{i(kr -\omega t)}\cos\theta$}
+\point{Champ à grande distance $(r\gg\lambda)$~:}
+Si on suppose qu'on est à grande distance du dipôle, le potentiel scalaire se simplifie en~:\par
+$$-i\dfrac{\alpha}{r}ce^{i(kr -\omega t)}\cos\theta$$\par
+On peut alors en déduire le champ électromagnétique à partir des relations~:\par
+$\ve{E} = -\grad V -\dpa{\ve{A}}{t}$ et $\ve{B} = \rot\ve{A}$.\par
+Un calcul assez sanglant (1 page) donne le résultaten notation réelle~:
+\encadre{\begin{tabular}{c}
+$\ve{E} = -\dfrac{\mu_0}{4\pi}p_0\omega^2\cos(kr -\omega t)\dfrac{\sin\theta}{r}\vtheta$\\
+$\ve{B} = -\dfrac{\mu_0}{4\pi}\dfrac{p_0\omega^2}{c}\cos(kr -\omega t)\dfrac{\sin\theta}{r}\vphi$
+\end{tabular}}
+On constate qu'à grande distance~:
+\encadre{\begin{tabular}{c}
+$\ve{B} = \dfrac{\vr}{c}\land\ve{E}$\\
+$\ve{E} = -c\vr\land\ve{B}$
+\end{tabular}}
+Ce qui montre que le champ a localement la structure d'une OPPM.
+\sspartie{Puissance rayonnée par le dipôle.}
+La valeur moyenne du bilan local d'énergie électromagnétique montre que la puissance rayonnée à travers une surface
+$\Sigma$, à savoir~:\par
+$$P = \integrale{\Sigma}{}{<\ve{\Pi}>\cdot\ve{n}\dd{S}}$$\par
+ne dépend pas du choix de la surface fermée considérée. On peut calculer cette puissance en calculant l'intensité de
+l'OPPM locale~:
+\encadre{$I(r,\theta) = \dfrac{\alpha^2 \omega^2}{2\mu_0 c}\dfrac{\sin^2\theta}{r^2}$}
+On constate que cette intensité dépende de $\theta$, d'o\`u le caractère anistrope du rayonnement dipôlaire.
+Ensuite pour calculer $P$ on prend une sphère de rayon $R$ et on trouve~:
+\encadre{$P = \dfrac{\mu_0}{4\pi}\dfrac{p_0^2\omega^4}{3c}$}
+\rmq La partie difficile est la structure d'OPPM locale. Pour retrouver rapidement le résultat, on peut se contenter
+de l'admettre, auquel cas c'est beaucoup plus rapide.
+\point{Propagation guidée-propagation libre~:}
+Grâce à la propagation guidée, on n'a pas de perte d'intensité avec la distance mais cela nécessite un grande 
+infrastructure matérielle, contrairement à la propagation libre.
+\sspartie{Vue d'ensemble des ondes électromagnétiques.}
+Un petit schéma permet de visualiser la classification des ondes em selon leur longueur d'onde~:\par
+\centerline{\includegraphics*[width=12cm,height=2.5cm]{images/ondes_em.eps}}\par
+

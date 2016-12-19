@@ -1,0 +1,48 @@
+\documentclass[a4paper,10pt]{book}
+%------------------------------------------------------------------------------------------
+%                                   Cours de Physique
+%------------------------------------------------------------------------------------------
+\usepackage[latin1]{inputenc}
+\usepackage[francais]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{color,amsmath,amssymb} %fontes mathématiques
+\usepackage{pst-all}               %postscript
+\usepackage{graphicx}              %encore du postscript
+\usepackage{ulem}                  %soulignages
+\usepackage{/usr/share/texmf/tex/generic/perso/maths}
+\usepackage{makeidx}               %index
+\makeindex
+\newcommand{\ml}{m_{\ell}}
+\title{Cours de Physique}
+\author{J.M~\textsc{Mercier}\\ Mise en forme : R.Portalez}
+\date{12 décembre 2005}
+\declarecountsphi
+\taillebook
+%
+%
+\begin{document}
+%
+%
+\maketitle
+\tableofcontents
+\include{preliminaires/preliminaires}
+\include{electromagnetisme/electrostat}
+\include{thermodynamique/thermodynamique}
+\include{thermochimie/thermochimie}
+\include{mecanique/mecanique}
+\include{ondes/ondes}
+\include{optique/optique}
+\include{mecaquantique/hydrogene}
+\printindex
+%
+\end{document}
+
+
+
+
+
+
+
+
+
+

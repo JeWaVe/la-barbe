@@ -1,0 +1,12 @@
+set title "Eclairement relatif de l'ecran\n pour un trou carre"
+w=3
+set isosample 70
+set xrange [-4:4]
+set yrange [-4:4]
+set zrange [0:1]
+set hidden
+splot ((sin(w*x)/(w*x))*((sin(w*y))/(w*y)))**2 notitle
+set terminal postscript eps 22
+set output "eclairement.eps"
+set size 1, 1
+replot

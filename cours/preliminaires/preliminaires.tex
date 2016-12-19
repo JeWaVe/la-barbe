@@ -1,0 +1,222 @@
+\chapter{Préliminaires}
+On part du principe qu'en abordant ce cours on connaît déjà bien toutes les mathématiques nécéssaires
+à sa compréhension, à savoir l'analyse vectorielle, les fonctions de plusieurs variables, les espaces
+euclidiens, les courbes du plan et de l'espace, les surfaces dans $\rr[3]$. Ainsi il est vain de
+l'aborder en fin de sup~: il ne s'agit que d'un résumé de cours destiné aux révisions pour l'oral,
+c'est-à-dire qu'on doit déjà avoir une vue d'ensemble du programme pour tout bien saisir. De plus, 
+ce cours va parfois au delà du programme par exemple avec la physique statistique ou les grandeurs 
+extensives.\par
+Volontairement, je n'y ai pas fait figurer l'électrocinétique et l'optique géo\-mé\-tri\-que ainsi qu'un 
+certain nombre d'autres notions qui sont soit faciles, soit dépendant directement du cours de sup.\par
+Pour chaque résultat ou théorème, la démonstration n'est pas intégralement rédigée dans un but de 
+concision. Toutefois afin d'assurer la rigueur du travail effectué, l'idée et les étapes de la 
+démonstration sont rappelées à chaque fois. De plus, les raisonnements les plus difficiles comme la 
+démonstration du théorème de Faraday en induction sont très détaillés car il est difficile passé un 
+certain temps de s'en rappeler.\par
+Il y a dans ce cours un certain nombre d'exercices. La plupart sont difficiles car l'énoncé est 
+volontairement vague. Ils nécessitent une parfaite connaissance du cours pour les réussir.
+\partie{Grandeurs extensives.}
+La notion de grandeur extensive peut être comparée à la population d'un pays, dont la variation peut
+être calculée à partir de deux termes, l'un correspondant à l'immigration et l'émigration, l'autre
+correspondant aux naissances et aux décès au sein du pays. 
+\sspartie{Définition d'une grandeur extensive.}
+Une grandeur physique est \textsl{extensive} dès qu'on peut lui attribuer une densité volumique, 
+notée $x_v$ ou de manière équivalente, une densité massique, $x$ telle que $\rho x = x_v$, o\`u $\rho$ 
+est la masse volumique.
+\index{Grandeur extensive}
+Une telle définition montre que le volume, la masse totale, la charge totale, l'énergie cinétique sont
+des grandeurs extensives. Ainsi la quantité d'une grandeur $X$ présente dans un volume $\tau$ est
+donnée par l'intégrale~:\par
+$$X = \integrale{\tau}{}{x_v \dd{\tau}}$$\par
+\sspartie{Système.}\index{systeme@Système}
+Un système physique par définition est l'intérieur d'un surface fermée. Celle-ci évolue éventuellement 
+dans le temps.\par
+Ainsi il n'est pas nécessairement fermé puisque de la matière ou d'autres grandeurs peuvent traverser la 
+paroi. Par exemple, quand on mélange deux gaz, on ne peut pas prendre comme système l'un des deux gaz
+puisque dans l'état final on ne peut pas définir de frontière.\par
+Par une relation de Chasles, si $X_1$ et $X_2$ désigne la quantité de $X$ au sein de deux systèmes
+disjoints, la quantité de $X$ dans leur réunion est $X_1 + X_2$. Une telle définition est très utile
+mais ne constitue pas une définition, comme on peut le voir dans certains ouvrages.
+\spartie{Grandeur extensive reçue par un système.}
+\sspartie{Définitions.}
+Une grandeur extensive peut gé\-né\-ra\-le\-ment tra\-ver\-ser la fron\-ti\-ère d'un système. Un tel 
+transfert est caractérisée par la quantité $X^{r}$ appelée grandeur reçue par le système, comptée dans 
+le sens de la normale rentrante. Un système est dit isolé vis-à-vis de $X$ si $X^r = 0$ en toute 
+circonstance~:\par
+\vspace{3pt}
+\centerline{\includegraphics*[width=6cm,height=3cm]{images/systeme.eps}}\par
+\sspartie{Courant d'un grandeur extensive.}
+Le transfert d'une grandeur extensive $X$ est décrit localement par un vecteur courant $\ve{J_X}$ tel 
+que $\dd{t}\ve{J_X}\cdot\ve{n}\dd{S}$ est la quantité de $X$ qui traverse $\dd{S}$ \textsl{fixe} dans 
+le sens de la normale $\ve{n}$ pendant $\dd{t}$. Ainsi la quantité de $X$ reçue à travers $S$ pendant 
+$\dd{t}$ est :
+\encadre{$\delta X^r = \dd{t}\integrale{S}{}{\ve{J_X}\cdot\ve{n}\dd{S}}$}
+\sspartie{Courant non-convectif.}
+\index{Courant non-convectif}
+On appelle convectif tout transfert de $X$ par déplacement de la matière et non-convectif tout autre 
+transfert pouvant exister dans un référentiel o\`u la matière est immobile.\par
+Si la frontière du système épouse le mouvement de la matière, elle est qualifiée de convective.\par
+La matière qui traverse $\dd{S}$ pendant $\dd{t}$ dans le sens de $\ve{n}$ est celle qui se trouve dans
+ce cylindre, qui peut être défini car la vitesse $\ve{v}$ est localement uniforme.\par
+\centerline{\includegraphics*[width=6cm,height=3cm]{images/cylindre.eps}}\par
+\rmq Le mouvement de la matière dépend en fait du constituant et on fait alors ce raisonnement pour un 
+seul constituant. Ensuite on somme pour tous les constituants pour obtenir le résultat en définissant~:
+\par
+$$\rho = \sum_i\rho_i\;\mathrm{et}\;\ve{v} = \frac{\sum_i\rho_i\ve{v_i}}{\sum_i\rho_i}$$\par
+\noindent C'est la vitesse barycentrique des divers constituants.\par
+Le volume de ce cylindre vaut $\delta V = \ve{v}\dd{t}\cdot\ve{n}\dd{S}$ et il contient $x_v\delta V$
+de $X$. On en déduit la contribution convective $x_v\ve{v}$ au courant total. Le courant non-convectif
+s'écrit alors :
+\encadre{$\ve{J_X^{\star}} = \ve{J_X} - x_v\ve{v}$}
+On obtient alors avec $\ve{J} = \rho\ve{v}$ que le transfert de masse est purement convectif.
+\spartie{Grandeur extensive produite.}
+\sspartie{Définition.}
+Une grandeur extensive peut aussi être produite au sein de la frontière du système, de même qu'il y a 
+des naissances et décès dans les frontières d'un pays. Cette production est donnée par une quantité 
+algébrique $X^p$.
+\sspartie{Source d'une grandeur extensive.}
+La production de $X$ dans un élément de volume $\dd{\tau}$ entre $t$ et $t+\dd{t}$ est donnée par 
+$\sigma_X\dd{\tau}\dd{t}$, de sorte que la production (algébrique) globale s'écrive :
+\encadre{$\dd{t}\integrale{\tau}{}{\sigma_X \dd{\tau}}$}
+\sspartie{Conservation.}\index{Conservation}
+Une grandeur est dite \textsl{conservative} si quoi qu'il arrive sa source est nulle.\par
+Il en est ainsi de l'énergie totale (cf~: thermodynamique) ou plus simplement du volume. Il faut faire
+attention avec ce terme ``conservative'' car il est souvent galvaudé. Dans la suite, on l'emploiera
+toujours dans ce sens bien précis.
+\spartie{Bilan d'une grandeur extensive.}
+\sspartie{Bilan global.}
+On écrit simplement qu'entre deux instants $t_1$ et $t_2$, la variation de $X$ au sein du système est la
+somme de ce qui est produit et de ce qui est reçu :\par
+$$X_2 - X_1 = X^r + X^p$$\par
+Entre deux instants voisins le bilan s'écrit~:\par
+$$\dd{X} = \delta X^r + \delta X^p$$\par
+Pour tout système on connaît l'expression de la production par contre ce qui est reçu dépend du système
+considéré selon qu'il est à frontière fixe ou convective.
+\begin{itemize}
+\item{Fontière fixe~:}
+On a directement le bilan~:
+\encadre{$\dd{X} = \dd{t}\integrale{S}{}{\ve{J_X}\cdot\ve{n}\dd{S}} + \dd{t}\integrale{\tau}{}{\sigma_X
+               \dd{\tau}}$}
+\item{Frontière convective~:}
+Cette fois la quantité de $X$ tranversant $\dd{S}$ dans le sens de $\ve{n}$ pendant $\dd{t}$ est donnée
+par le courant non-convectif~:
+\encadre{$\dd{X} = \dd{t}\integrale{S}{}{\ve{J_X^{\star}}\cdot\ve{n}\dd{S}} + \dd{t}\integrale{\tau}{}{
+            \sigma_X\dd{\tau}}$}
+\end{itemize}
+\sspartie{Bilan local.}
+\begin{itemize}
+\item{Frontière fixe~:}
+Une simple application du théorème d'Ostrogradsky fournit l'expression du bilan global entre $t$ et 
+$t+\dd{t}$~:\par
+$$\integrale{\tau}{}{(\div\ve{J_X}+\dpa{x_v}{t}-\sigma_X)\dd{\tau}} = 0$$\par
+Et comme cette expression est valable quelle que soit la taile du système, on en déduit l'équation 
+locale du premier type~:
+\encadre{$\div \ve{J_X} + \dpa{x_v}{t} = \sigma_X$}
+\item{Frontière convective~:}
+De manière analogue on obtient l'équation locale du second type~:
+\encadre{$\div\ve{J_X^{\star}} +\rho\df{x}{t} = \sigma_X$}
+O\`u $\df{}{t} = \dpa{}{t}+\ve{v}\cdot\grad$ est l'opérateur ``dérivée particulaire'', et $x$ est la 
+densité massique de $X$ tandis que $\rho$ est la masse volumique locale du système.
+\end{itemize}
+\index{derivee@Dérivée particulaire}
+\index{Bilan local}
+\exercice En faisant le bilan entre $t$ et $t+\dd{t}$ de la grandeur $X$ contenue dans un système à
+frontière fixe, démontrer l'équation locale du premier type puis, après avoir fait de même avec un 
+système à frontière convective et l'équation du second type, démontrer l'équivalence entre ces deux
+équations.
+\exercice En partant de l'équation locale traduisant la conservation de la masse~: 
+$\div(\rho \ve{v}) + \dpa{\rho}{t} = 0$ (qu'on redémontrera), démontrer la relation
+$\div(-\ve{v})+\rho\df{w}{t} = 0$ o\`u $w$ est le volume massique, puis en considérant une particule de
+fluide de masse constante, démontrer la relation : $\dd{(\delta V)} = \div\ve{v}\delta V\dd{t}$ et en
+déduire à quelle condition un fluide est incompressible.
+\exercice En appliquant le théorème de la résultante cinétique à une particule de fluide de masse 
+constante démontrer l'équation d'Euler~: $\rho\df{\ve{v}}{t} = -\grad P + \rho \ve{f}$, o\`u $\ve{f} = 
+\ve{f'} -\grad e_p$ désigne la densité massique des forces de champ subies par le fluide, décomposée
+en un terme dérivant d'une énergie potentielle est un autre terme. En faisant le produit scalaire par
+$\ve{v}$ de cette équation, en déduire l'équation du second type traduisant le bilan local d'énergie
+mécanique.\index{Equation!euler@d'Euler}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\partie{Physique statistique.}
+\spartie{Etude statistique du gaz parfait.}
+\sspartie{Rappels.}
+On étudie une particule de gaz parfait. On introduit pour cela les coordonnées sphériques~:\par
+\centerline{\includegraphics*[width=6cm,height=6cm]{images/spheriques.eps}}\par
+Il est connu que l'élément de volume vaut $\dd{{}^3 r} = r^2\sin{\theta}\dd{\theta}\dd{\phim}$.
+Afin d'étudier les vitesses, on fait de même avec les vitesses et on rappelle l'élément d'angle
+solide~: $\delta\Omega = \sin\theta\dd{\theta}\dd{\phim}$.
+\sspartie{Loi de Boltzmann.}\index{Loi!boltzmann@de Boltzmann}
+Dans un gaz en équilibre, la probabilité pour une particule de se trouver en 
+$(\ve{r}, \ve{v}, \ldots)$ à $(\dd{{}^3 r},\dd{{}^3 v}, \ldots)$ près vaut~:
+\encadre{$P(\ve{r},\ve{v},\ldots) = C exp\left\lbrack -\dfrac{e_m(\ve{r},\ve{v},\ldots)}{k T}\right
+                                                         \rbrack\dd{{}^3 r}\dd{{}^3 v}\ldots$}
+O\`u $k$ est la constante de Boltzmann.
+\rmq Cette probabilité a donc une densité. On verra que dans le cas le plus simple du gaz parfait, c'est
+une densité gaussienne. La position d'une particule dans l'espace des vitesses est donc une variable 
+aléatoire gaussienne centrée. Cela justifie en partie la prédominance de cette loi de probabilité en 
+physique comme en mathématiques.
+\rmq Puisque le gaz est en équilibre, la température est uniforme (cf : thermodynamique).\par
+$C$ est une constante servant à normaliser l'intégrale, dont l'expression dépend du gaz considéré.
+\sspartie{Probabilité pour la localisation, dans un gaz parfait :}
+Calculons la probabilité pour une molécule de gaz parfait d'être à $\ve{r}$ à $\dd{{}^3r}$ près. Dans 
+un gaz parfait, on n'a pas d'interaction mutuelle entre les particules, et si l'on suppose 
+négligeables les actions extérieures, on a : $e_m = e_c = \frac{1}{2}m v^2$. En sommant alors
+l'expression de la probabilité sur tout l'espace des vitesses, on a :\par
+$$P(\ve{r}) = C\left\lbrack \integrale{-\infty}{+\infty}{e^{-\frac{mv_x^2}{2kT}}\dd{v_x}}
+                            \integrale{-\infty}{+\infty}{e^{-\frac{mv_y^2}{2kT}}\dd{v_y}}
+                            \integrale{-\infty}{+\infty}{e^{-\frac{mv_z^2}{2kT}}\dd{v_z}}\right\rbrack$$
+\par
+On en déduit immédiatement que la probabilité pour une particule de se trouver dans un volume $\delta V$
+au sein d'une enceinte de volume $V$ vaut 
+\encadre{$P = \dfrac{\delta V}{V}$}
+Et la répartition des particules est uniforme au sein de l'enceinte.
+\sspartie{Probabilité pour la vitesse, dans un gaz parfait :}
+Cette fois on intègre sur tout l'espace ordinaire et en notant $a = \dfrac{m}{2kT}$, on trouve :
+\encadre{$P(\ve{v}) = Ae^{-av^2}\dd{{}^3v}$}
+La constante $A$ peut être calculée en sommant sur l'espace des vitesses et on obtient au final :\par
+\encadre{$P(\ve{v}) = \left(\dfrac{a}{\pi}\right)^{\frac{3}{2}}e^{-av^2}\dd{{}^3v}$}
+On en déduit que cette probabilité ne dépend pas de $\phim, \theta$ : on parle d'isotropie dans l'espace
+des vitesses.
+\sspartie{Vitesse, vitesse quadratique moyenne :}
+$<v> \;=\;\integrale{E_v}{}{vP(v)} = \left(\dfrac{a}{\pi}\right)^{\frac{3}{2}}%
+                                      \integrale{0}{\infty}{\integrale{0}{\pi}{\integrale{0}{2\pi}{
+                                               v^3e^{-av^2}\dd{v}\sin\theta\dd{\theta}\dd{\phim}}}}$
+Après calculs, on trouve alors :
+\encadre{$<v> = \sqrt{\dfrac{8 k T}{m\pi}}$}
+De même, on obtient la vitesse quadratique moyenne :
+\encadre{$\sqrt{<v^2>} = \sqrt{\dfrac{3kT}{m}}$}
+D'un point de vue ordre de grandeurs, on remarque que la vitesse moyenne des particules est de l'ordre
+de la vitesse du son dans le gaz.
+\sspartie{Energie interne :}
+Par définition, $U = e_{c,i} + e_{p,i}$. Si le nombre $N$ de particules est suffisamment grand, on peut
+écrire :\par
+$e_{c,i} = N<e_c> = \frac{N}{2}m<v^2> = \frac{3}{2}Nk T$\par
+Et comme il n'y a pas d'interactions, $e_{p,i} = 0$ soit :
+\encadre{$U = \dfrac{3}{2}nRT$}
+\sspartie{Force de pression :}
+\centerline{\includegraphics*[width=9cm,height=3cm]{images/particules_incidentes.eps}}\par
+Calculons la force moyenne exercée par les $\delta N$ particules arrivant sur $\dd{S}$ pendant $\delta t$ et 
+montrons qu'elle a pour expression~:
+\encadre{$\ve{F} = \dfrac{1}{\delta t}\serie{i = 1}{\delta N}{\ve{p_i}-\ve{p'_i}}$}
+o\`u $\ve{p_i}$ est la quantité de mouvement de la particule $i$ avant son interaction avec la paroi et 
+$\ve{p'_i}$ celle après interaction. En effet $\ve{f_i} = \int_{t_i}^{t_i'}\dd{\ve{f_i}}$ Or le TRC nous 
+dit que~: $\df{\ve{p_i}}{t} = \dd{\ve{f_i}}$, l'intervalle de temps étant infinitésimal, on a le résultat.\par
+Puis en utilisant l'isotropie dans l'espace des vitesses :
+$F_y = F_x = 0$ et $F_z = \frac{2 m}{\delta t}\sum_i v_{i,z}$.\par
+Puis, en notant $\nu$ la densité particulaire (uniforme), la contribution à cette somme de la part des
+particules ayant une vitesse $\ve{v}$ (schéma) vaut :\par
+\centerline{$\underbrace{v\cos\theta}_{\mathrm{contribution}}\;\;$%
+$\underbrace{\nu\cdot v\dd{t}\cos\theta\dd{S}}_{\mathrm{nombre\;de\;particules}}\;\;$%
+$\underbrace{P(\ve{v})\dd{{}^3v}}_{\mathrm{Proba\;d'avoir\;cette\;vitesse}}$}\par
+En intégrant sur $v$ de $0$ à $\infty$, sur $\phim$ de $0$ à $2\pi$ et sur $\theta$ de $0$ à 
+$\frac{\pi}{2}$, on trouve le résultat suivant :
+\encadre{$\ve{F} = P\dd{S}\vz$ avec $P = \nu k T$}
+\sspartie{Equation d'état :}
+Un calcul fournit alors l'équation d'état du gaz parfait~:
+\encadre{$PV = nRT$}
+\spartie{Constante diélectrique d'un gaz :}
+Un gaz est constitué de particules quasi-ponctuelles dont on néglige les interactions mutuelles. Chacune
+de ces particules possède un moment électrique $\ve{p}$ de norme constante. On plonge le gaz dans un
+champ électrique constant et on suppose le gaz à l'équilibre.\par
+\exercice Calculer la probabilité pour une particule d'avoir un moment électrique $\ve{p}$, la valeur 
+moyenne $<\ve{p}>$ du moment dipolaire puis le vecteur polarisation $\ve{P}$ du gaz.
+

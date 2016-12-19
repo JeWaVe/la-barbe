@@ -1,0 +1,652 @@
+\chapter{Mécanique}\index{mecanique@Mécanique}
+\partie{Référentiels :}\index{referentiel@Référentiel}
+\spartie{Définitions :}
+\sspartie{Référentiels :}
+On appelle référentiel un ensemble d'au moins trois points immobiles les uns par rapport aux autres.\\
+Cela nécéssite l'introduction d'un repère d'espace. En mécanique classique le temps est invariant par
+changement de référentiel. Un repère d'espace suffit à définir un référentiel d'o\`u la notation : 
+${\cal{R}} (O, \ve{u_x}, \ve{u_y}, \ve{u_z})$.\par
+\rmq Si un référentiel est défini à partir d'un repère d'espace, le contraire est faux.
+\sspartie{Référentiel d'observation :}
+C'est le référentiel dans lequel sont définies les grandeurs cinématiques, ci\-né\-ti\-ques et dynamiques du 
+système étudié.
+\spartie{Changement de référentiel :}\index{referentiel@Référentiel!changement}
+\sspartie{Vecteur rotation de $\cal{R}$ par rapport à $\cal{R}'$ :}
+Le mouvement de $\cal{R}'(\vx', \vy', \vz')$ par rapport au référentiel d'observation $\cal{R}$ peut être 
+décrit par :\par
+\begin{itemize}
+\item{} Le mouvement de l'origine $O'$ $/\cal{R}$ : $\ve{v_{O'}}$
+\item{} Le mouvement de la base $(\vx', \vy', \vz')$ $/\cal{R}$ : $\ve{\omega_{\cal{R}'/\cal{R}}}$.
+\end{itemize}
+En effet on a la relation matricielle :\\
+$\df{{}}{t}
+\begin{pmatrix}
+\vx'\\
+\vy'\\
+\vz'
+\end{pmatrix} = A
+\begin{pmatrix}
+\vx'\\
+\vy'\\
+\vz'
+\end{pmatrix}$ 
+La dérivée étant prise dans le référentiel ${\cal{R}}$. En exprimant que les vecteurs $\vx', \vy', \vz'$ 
+forment une base orthonormée de l'espace on trouve que $A$ est une matrice antisymétrique. Ce qui permet 
+d'affirmer qu'il existe un vecteur $\ve{\omega}$ 
+\index{Vecteur!rotation}
+tel que :\\
+$\df{{}}{t}
+\begin{pmatrix}
+\vx'\\
+\vy'\\
+\vz'
+\end{pmatrix} = \ve{\omega}\land
+\begin{pmatrix}
+\vx'\\
+\vy'\\
+\vz'
+\end{pmatrix}$\par 
+En plus on montre facilement que $\ve{\omega}$ ne dépend pas du repère d'espace choisi pour définir l'un 
+et l'autre référentiel. C'est pourquoi on le note :\par
+\encadre{$\ve{\omega} = \ve{\omega_{\cal{R}'/\cal{R}}}$}\par
+\sspartie{Théorème relatif au changement de référentiel :}
+Soient deux référentiels quelconques $\cal{R}$ et $\cal{R}'$ ainsi qu'un vecteur $\ve{V}$ de l'espace.
+On a l'identité :\par
+$\ve{V} = V_x\vx + V_y\vy + V_z\vz = V_x'\vx' +V_y'\vy' +V_z'\vz'$ qu'on peut dériver dans le référentiel
+$\cal{R}$. En utilisant alors la propriété fondamentale du vecteur $\ve{\omega}$ on a la relation :\par
+\encadre{$\Bigl(\df{\ve{V}}{t}\Bigr)_{\cal{R}} = \Bigl(\df{\ve{V}}{t}\Bigr)_{\cal{R}'}+
+          \ve{\omega_{\cal{R}'/\cal{R}}}\land\ve{V}$}\par 
+\sspartie{Théorèmes annexes :}
+\point{Trois référentiels :}
+\encadre{$\ve{\omega_{\cal{R}'/\cal{R}}}=\ve{\omega_{\cal{R}'/\cal{R}''}}+
+          \ve{\omega_{\cal{R}''/\cal{R}}}$}\par
+\point{Transformation de vitesses :}
+Etant donnés deux points $A$ et $B$ d'un même référentiel $\cal{R}'$, leurs vitesses $\ve{v_A},
+\ve{v_B}$ dans un autre référentiel $\cal{R}$ satisfont à la relation :\par
+\encadre{$\ve{v_A} = \ve{v_B}+\ve{\omega_{\cal{R}'/\cal{R}}}\land\ve{AB}$}\par
+La démonstration est très simple, par contre ce corrollaire à une très grande importance pratique dans le
+cours de mécanique de solide.
+
+\point{Lois de composition des vitesses et accélérations :}
+\index{Loi!composition@de Composition des vitesses}
+\encadre{$\begin{array}{l}
+          \ve{v_P} = \ve{v_P}' + \ve{v_{P_c}}\\
+          \ve{a_P} = \ve{a_P}' + \ve{a_{P_c}}+ 2 \ve{\omega}\land\ve{v_P}'
+          \end{array}$}\par
+O\`u on a fait les notations suivantes :
+$\ve{v_P} = \Bigl(\df{\ve{OP}}{t}\Bigr)_{\cal{R}}$, $\ve{v_P}' = \Bigl(\df{\ve{O'P}}{t}\Bigr)_{\cal{R}'}$
+$\ve{a_P} = \Bigl(\df{\ve{v_P}}{t}\Bigr)_{\cal{R}}$, $\ve{a_P}' = \Bigl(\df{\ve{v_P}'}{t}\Bigr)_{\cal{R}'}$ et
+$\ve{\omega} = \ve{\omega_{\cal{R}'/\cal{R}}}$\par
+Et on définit le point $P_c$ comme le point de $\cal{R}'$ coincidant avec le point $P$ à l'instant $t$.\par
+Pour démontrer ce théorème, on fait le calcul en introduisant une origine et on applique le théorème ci-dessus.
+On obtient une identité qu'on sait être vraie pour $P_c$, ce qui permet de simplifier l'expression obtenue.
+\rmq Les termes supplémentaires qui apparaissent dans ces lois de composition portent des noms : 
+$\ve{v_{P_c}}$ et $\ve{a_{P_c}}$ sont qualifiés de vitesse et accélération d'entraînement alors que
+le terme : $2 \ve{\omega}\land\ve{v_P}'$ se nomme accélération de Coriolis.
+\spartie{Classification des mouvements d'un référentiel par rapport à un autre :}
+Etant donnés deux référentiels, le mouvement de $\cal{R}'$ par rapport à $\cal{R}$ peut être classé selon
+le nombre de points communs à ces référentiels :\\
+$\va{\cal{R}\cap\cal{R}'} = 0$ et $\ve{\omega}\neq \ve{0}$ : Mouvement le plus général.\\
+$\va{\cal{R}\cap\cal{R}'} = 0$ et $\ve{\omega}= \ve{0}$ : Mouvement de translation.\\
+$\va{\cal{R}\cap\cal{R}'} = 1$ : Mouvement de rotation par rapport à un point fixe.\\
+$\va{\cal{R}\cap\cal{R}'} = 2$ : Mouvement de rotation par rapport à un axe fixe.\\
+$\va{\cal{R}\cap\cal{R}'} = 3$ : Les deux référentiels sont confondus.\par
+\sspartie{Translation :}
+Il découle immédiatement de la définition que tous les points de $\cal{R}'$ ont même vitesse dans $\cal{R}$.
+En effet il suffit d'appliquer le second corrolaire ci dessus.
+\sspartie{Rotation autour d'un axe fixe :}\index{Rotation!axe@autour d'un axe fixe}
+On note $O$ et $A$ deux points communs à $\cal{R}'$ et à $\cal{R}$. En appliquant le second corollaire
+on obtient immédiatement que $\ve{\omega}\land\ve{OA} = \ve{0}$. C'est-à-dire qu'il existe $k\in\rr[\star]$
+tel que $\ve{\omega} = k \ve{OA}$. Si on note $(O, \vz)$ cet axe $(OA)$ et $(r, \theta, z)$ les coordonnées
+cylindriques dans $\cal{R}$ d'un point quelconque $P$ de $\cal{R}'$ : \\
+$\ve{v_P} = \ve{v_O} + \ve{\omega}\land\ve{OP} = r\omega\ve{u_{\theta}}$. Et comme de plus $\ve{v_P} = 
+r point\vr + r\dot{\theta}\vtheta + \dot{z}\vz$. D'o\`u les relations :\par
+\encadre{$r = cste;\quad\dot{\theta} = \omega;\quad z = cste$}\par
+Cela traduit que $\cal{R}'$ est en rotation autour de $(Oz)$.\par
+\rmq On retiendra que $\theta$ désigne un angle entre une direction $(0x)$ fixe dans $\cal{R}$ et une 
+direction $(Op)$ fixe dans $\cal{R}'$ dont la valeur algébrique est définie en conformité avec le sens de 
+$(Oz)$. (Cette remarque n'en a pas l'air comme ça mais elle est très importante!).
+\sspartie{Rotation autour d'un point fixe :}
+\index{Rotation!point@autour d'un point fixe}
+On note $O$ le seul point fixe commun aux deux référentiels. La même méthode fournit la relation~:
+\encadre{$\ve{v_P} = \ve{\omega}\land\ve{OP}$}
+\exercice Calculer le vecteur rotation du référentiel ${\cal{R}'}(0, \vr, \vtheta, \vphi)$ et retrouver à 
+l'aide de la loi de transformation des vitesses l'expression de la vitesse d'un point en coordonnées 
+sphériques. On pourra introduire des référentiels intermédiaires en rotation autour d'axe fixes.
+
+\sspartie{Référentiels confondus :}
+Dans le cas o\`u $\cal{R}$ et $\cal{R}'$  ont trois points communs(ou plus), les référentiels sont égaux.
+\spartie{Référentiel du centre de masse :}
+\index{referentiel@Référentiel!centre@du centre de masse}
+Etant donné un système matériel et un référentiel d'observation $\cal{R}$, on appelle référentiel du centre
+de masse et note $\cal{R}^{\star}$ le référentiel en translation à la vitesse $\ve{v_G}$ du centre de masse
+du système matériel.
+
+\noindent Avec ce référentiel, les lois de composition s'écrivent :\par
+\encadre{$\begin{array}{l}
+          \ve{v_P} = \ve{v_P}^{\star} + \ve{v_{G}}\\
+          \ve{a_P} = \ve{a_P}^{\star} + \ve{a_{G}}
+          \end{array}$}\par
+%--------------------------------------------------PARTIE--------------------------------------------------
+\partie{Théorèmes généraux de la mécanique :}
+\spartie{Notion de torseur :}
+\index{Torseur}
+\sspartie{Définition :}
+Un champ vectoriel est une application de $\rr[3]$ dans lui même. On s'intéresse ici à des champs vectoriels
+affines. C'est-à-dire que si on note $\ve{M_A}$ la valeur du champ au point $A$, il existe un application
+linéaire $u$ ou encore un matrice $\cal{M}$ telle que : $\ve{M_B} - \ve{M_A} = \cal{M}\ve{AB}$. On 
+qualifie le champ vectoriel d'antisymétrique lorsque la matrice $\cal{M}$ est antisymétrique. On sait
+alors qu'il existe un vecteur $\ve{V}$ appelé ``vecteur caractéristique du champ'' tel que :\par
+\encadre{$\ve{M_B} = \ve{M_A} + \ve{V}\land \ve{AB}$}\par
+On définit alors le torseur associé au champ vectoriel comme le couple $(\ve{M_A}, \ve{V})$ qu'on note :\par
+\encadre{$\cal{T} = \left\lvert\begin{matrix}\ve{M_A}\\
+                                             \ve{V}\end{matrix}\right.$}
+Le moment est entièrement déterminé par son valeur en un point $A$. C'est pourquoi on ne distingue pas deux 
+torseurs dont la seule différence est le point o\`u est pris le moment. Pour les définir intrinsèquement on
+pourrait passer à des classes d'équivalence mais ça n'a pas d'intérêt pratique. On ne s'attache pas non
+plus à l'ordre entre moment et vecteur caractéristique, du moment qu'on sait de quoi on parle. Ainsi parfois
+le moment sera en bas et d'autres fois en haut.
+\sspartie{``Algèbre'' torsorielle :}
+\point{Egalité de deux torseurs :}\par
+$$\cal{T} = \cal{T}' \equivaut \left\lvert\begin{array}{l}
+                                           \ve{V} = \ve{V}'\\
+                                           \exists A\;|\; \ve{M_A} = \ve{M_A'}
+                                         \end{array}\right.$$\par
+\point{Somme de deux torseurs :}\par
+$${\cal{T}} = {\cal{T}}_1 + {\cal{T}}_2  \equivaut \left\lvert\begin{array}{l}
+                                                          \ve{V} = \ve{V}_1 + \ve{V}_2\\
+                                                          \ve{M_A} = \ve{{M_{1}}_A} + \ve{{M_{2}}_A}
+                                                       \end{array}\right.$$\par
+\point{Produit par un scalaire :}\par
+$$\cal{T} = \lambda\cal{T}' \equivaut \left\lvert\begin{array}{l}
+                                           \ve{V} = \lambda\ve{V}'\\
+                                           \ve{M_A} = \lambda\ve{M_A'}
+                                         \end{array}\right.$$\par
+\point{Produit de deux torseurs :}\par
+C'est là que ça ne marche pas pour avoir une vraie algèbre en effet ce produit ne définit pas une loi 
+interne : \par
+$$\cal{T}\cal{T}' = \ve{V}\cdot\ve{M_A}' + \ve{V}'\cdot\ve{M_A}$$\par
+Et cette définition ne dépend pas du point $A$ choisi.\par
+\point{Projection d'un torseur sur un axe :}\par
+Etant donné un axe $(O,\ve{u})$ et un torseur $\cal{T} = \left\lvert\begin{matrix}\ve{M_O}\\
+                                             \ve{V}\end{matrix}\right.$ on appelle projection du torseur sur
+l'axe la quantité : $$M_{\Delta} = \ve{u}\cdot\ve{M_O}$$ 
+Et ça ne dépend pas du point $O$ choisi sur l'axe.
+\index{Collection de pointeurs}
+\sspartie{Torseur associé à une collection de pointeurs :}
+\point{Définition :}\par
+Etant donné une collection de pointeurs $(A_i, \ve{V_i})$, le champ vectoriel 
+$\ve{M_A} = \sum\limits_{i}\ve{AA_i}\land\ve{V_i}$ est antisymétrique. Son vecteur caractéristique est le 
+vecteur $\ve{V} = \sum\limits_{i}V_i$.\\
+On peut alors définir le torseur associé à la collection de pointeurs :
+$$\cal{T} = \left\lvert\begin{array}{ll}\sum\limits_{i}\ve{V_i}&\mathrm{R\acute esultante}\\
+                                     \sum\limits_{i}\ve{AA_i}\land \ve{V_i}&\mathrm{moment\;au\;point\;A}
+                       \end{array}\right.$$\par
+\point{Equivalence torsorielle de deux collections de pointeurs :}\par
+On dit que deux collections de pointeurs sont torsoriellement équivalents lorsque leurs torseurs associés
+sont égaux.\par
+\index{Torseur!equivalent@équivalence}
+Par exemple une collection de pointeurs parallèles $(A_i, \ve{V_i} = V_i \ve{u})$ est torsoriellement
+équivalente à un pointeur unique $(B, \sum\limits_{i}\ve{V_i})$, o\`u $B$ désigne le barycentre des points
+$A_i$ affectés des coefficients $V_i$. \par
+Il en est ainsi des forces de pesanteur :\par
+Les forces de pesanteur qui s'exercent sur un système de masse totale $M$ sont torsoriellement équivalentes
+à une force unique $M\ve{g}$ qui s'exerce au centre de masse $G$ du système.\par
+(Encore une remarque qui n'en a pas l'air mais qui est très importante!).
+\spartie{Torseur cinétique :}
+\index{Torseur!cinetique@cinétique}
+\sspartie{Définition :}
+Etant donné un système matériel et un référentiel d'observation, le torseur cinétique de ce système dans 
+$\mathcal{R}$ est celui associé à la collection de pointeurs $(A_i, \ve{p_i})$ o\`u $\ve{p_i}$ désigne
+la quantité de mouvement du point matériel $A_i$. On note ce torseur :\par
+$$\mathcal{C} = \left\lvert\begin{array}{ll}\ve{P} = \sum\limits_{i}m_i\ve{v_i}&
+                                                  \mathrm{R\acute esultante\;cin\acute etique}\\
+                                            \ve{L_A} = \sum\limits_{i}\ve{AA_i}\land \ve{p_i}&
+                                                  \mathrm{Moment\;cin\acute etique\;au\;point\;A}
+                           \end{array}\right.$$
+Le moment cinétique est un champ vectoriel antismétrique, d'o\`u la relation :\par
+\encadre{$\ve{L_B} = \ve{L_A} + \ve{P}\land\ve{AB}$}\par
+La projection du torseur cinétique sur un axe est appelée moment cinétique par rapport à cet axe.
+\sspartie{Autre expression de la résultante cinétique :}
+\index{resultante@Résultante cinétique}
+Par définition : $\ve{P} = \sum\limits_{i}m_i\ve{v_i}$. En supposant le système fermé de masse stationnaire
+et en appliquant la définition du centre de masse on a la relation :\par
+\encadre{$\ve{P} = M\ve{v_G}$}\par
+En particulier dans le référentiel du centre de masse, vu que $\ve{v_G}^{\star} = \ve{0}$, on a :\par
+\encadre{$\ve{P}^{\star} = \ve{0}$}\par
+\index{Moment!cinetique@cinétique}
+\rmq De ce fait le moment cinétique d'un système exprimé dans son ré\-fé\-ren\-tiel du centre de masse a même 
+valeur en tout point. (encore une remarque importante).
+\sspartie{Théorème de K\oe nig relatif au moment cinétique :}
+\index{theoreme@Théorème!koenig@de K\oe nig}
+\encadre{$\ve{L_G} = \ve{L_G}^{\star}$}\par
+
+\sspartie{Extensivité du torseur cinétique :}
+Le torseur cinétique est un grandeur extensive. En effet on peut définir une densité volumique de résultante
+cinétique ($\rho\ve{v}$) et une densité volumique de moment cinétique ($\rho\ve{r}\land\ve{v}$). (encore
+un truc important...)
+\spartie{Torseur dynamique :}
+\index{Torseur!dynamique}
+\sspartie{Définition :}
+Le torseur dynamique d'un système matériel dans un référentiel est celui associé à la collection de 
+pointeurs ($A_i, \df{\ve{p_i}}{t}$) o\`u $\df{\ve{p_i}}{t}$ désigne la quantité d'accélération du point 
+$A_i$ dans $\mathcal{R}$ :\par
+$$\mathcal{D} = \left\lvert\begin{array}{ll}\ve{P} = \sum\limits_{i}m_i\ve{a_i}&
+                                                  \mathrm{R\acute esultante\;dynamique}\\
+                                            \ve{L_A} = \sum\limits_{i}\ve{AA_i}\land \df{\ve{p_i}}{t}&
+                                                  \mathrm{Moment\;dynamique\;au\;point\;A}
+                           \end{array}\right.$$
+\sspartie{Relation entre $\cal{C}$ et $\cal{D}$ :}
+En général, on a la relation suivante :\par
+\encadre{Moment dynamique au point $A = \df{\ve{L_A}}{t} + M\ve{v_A}\land \ve{v_G}$}\par
+\index{Moment!dynamique}
+Ce qui est bien dommage, du coup on se limite à deux cas particuliers : $A$ est un point commun
+aux deux référentiels ou $A=G$. Pour ces deux points on a la relation bien plus pratique :\par
+\encadre{$\mathcal{D} = \df{\mathcal{C}}{t}$}\par
+\spartie{Torseur force :}
+\index{Torseur!force}
+\sspartie{Définition :}
+Le torseur force d'un système matériel est celui associé à la collection de pointeurs $(A_i, \ve{f_i})$, 
+o\`u $\ve{f_i}$ désigne une force d'un type donné subie par le point matériel $A_i$.\par
+$$\mathcal{F} = \left\lvert\begin{array}{ll}\ve{F} = \sum\limits_{i}\ve{f_i}&
+                                                  \mathrm{R\acute esultante}\\
+                                            \ve{M_A} = \sum\limits_{i}\ve{AA_i}\land \ve{f_i}&
+                                                  \mathrm{Moment\;au\;point\;A}
+                           \end{array}\right.$$
+Le moment des forces est un champ vectoriel antisymétrique :\par
+\encadre{$\ve{M_B} = \ve{M_A} + \ve{F}\land\ve{AB}$}\par
+\rmq Le moment par rapport à un axe $\Delta$ d'un force $\ve{F}$ appliquée au point $P$ se calcule 
+facilement :\par
+\centerline{\includegraphics*[width=9cm,height=4cm]{images/moment_axe.eps}}\par
+$M_{\Delta} = \ve{u}\cdot \ve{M_p} = \ve{u}\cdot(\ve{pP}\land\ve{F}) = 
+\ve{u}\cdot(\ve{pH}\land\ve{F_{\bot}})$. On en déduit :\par
+\encadre{$M_{\Delta} = \pm d F_{\bot}$}\par
+on choisit $+$ ou $-$ selon que la force a tendance à faire tourner le bras de levier dans le sens positif
+ou négatif.
+\sspartie{Cas particulier o\`u $F = 0$ :}
+\index{Couple}
+Un ensemble de forces dont la résultante est nulle est appelée un ``couple''. Son moment a même valeur en 
+tout point.
+\point{Exemple} Les forces électriques subies par un dipôle de moment $\ve{p}$ plongé dans un champ
+électrostatique uniforme constitue un couple de moment $\ve{p}\land\ve{E}$.
+
+\sspartie{Cas particulier o\`u $M_A = 0$ :}
+Un ensemble de forces dont le moment en un point $A$ est nul est torsoriellement équivalent à une force
+unique appliquée en $A$ et égale à la résultante de ces forces. 
+\spartie{Principe fondamental et théorèmes généraux :}
+\sspartie{Principe fondamental :}
+\index{Principe!meca@de la mécanique}
+\begin{itemize}
+\item{} Le torseur dynamique d'un système fermé quelconque dont le mouvement est observé par rapport à un 
+référentiel quelconque, est la somme du torseur des forces extérieures et du torseur des forces d'inertie :
+$$\mathcal{D} = \mathcal{F}_{ext} + \mathcal{F}_{inert}$$\par
+\index{referentiel@Référentiel!galileen@galiléen}
+\item{} Il existe des référentiels dits galiléens, dans lesquels les forces d'inertie sont nulles.
+\end{itemize}
+\point{Commentaires} On notera que le système est fermé, donc de masse stationnaire.\par
+On notera ensuite que les forces intérieures n'interviennent pas alors qu'elles interviendront dans les
+thérèmes énergétiques.\par
+Enfin, l'utilisation de ce principe nécessite des définitions précises du système, du référentiel...
+\sspartie{Théorèmes généraux :}
+\index{theoreme@Théorème!resultante@de la résultante cinétique}
+\point{Théorème de la résultante cinétique :}\par
+L'égalité torsorielle implique l'égalité des résultantes.\par
+\encadre{$\df{\ve{P}}{t} = \ve{F_{ext}}+ \ve{F_{inert}}$}
+\exercice Calculer la force de poussée d'un fusée connaissant la vitesse d'éjection des gaz et leur
+débit massique $D$.\par
+\centerline{\includegraphics*[width=8cm,height=6cm]{images/fusee.eps}}\par\index{Gagarine Youri}
+On choisit pour système l'ensemble carcasse+équipement+carburant contenu dans le réservoir à l'instant $t$+
+youri gagarine. On note $M(t)$ la masse de ce système à l'instant $t$, $D(t)$ le débit massique et $u(t)>0$ 
+la vitesse des gaz à la sortie par rapport au référentiel de la carcasse. Appliquer alors le théorème de la 
+résultante cinétique au système dans le référentiel terrestre supposé galiléen. En notant $v(t)$ la vitesse de
+la carcasse par rapport au sol, exprimer la résultante cinétique eu fonction des forces extérieures et d'un
+terme complémentaire $D u$.
+\point{Théorème du moment cinétique :}\par
+\index{theoreme@Théorème!moment@du moment cinétique}
+La même égalité torsorielle implique aussi l'égalité des moments en un point quelconque. En pratique on 
+choisit un point $O$ du référentiel d'observation ou le centre de masse $G$. Par exemple pour le point O~:
+\encadre{$\df{\ve{L_O}}{t} = \ve{M_{O,ext}}+\ve{M_{O,inert}}$}
+Et de même pour le centre de masse. On peut projeter cette relation sur un axe fixe passant par le point O :
+\encadre{$\df{L_{\Delta}}{t} = M_{\Delta,ext} + M_{\Delta, inert}$}\par
+Et de même pour un axe mobile mais de direction stationnaire passant par $G$.\par
+\rmq On appelle ``point matériel'' tout système dont l'étude mécanique peut être assurée par le seul
+théorème de la résultante cinétique.\par
+\point{Théorème d'intéraction :}
+\index{theoreme@Théorème!interaction@d'interaction}
+Par principe les forces intérieures d'un système quelconque sont invariantes par changement de référentiel.
+Pour démontrer une de leurs propriétés on peut donc choisir un référentiel galiléen. On commence par 
+effectuer une partition du système $\mathcal{S} = \bigcup\limits_{i\in I}\mathcal{S}_i$. Le torseur 
+dynamique étant une grandeur extensive on a :
+$\mathcal{D} = \sum\limits_{i\in I}\mathcal{D}_i = \sum\limits_{i\in I}\mathcal{F}_{ext, i} + 
+\sum\limits_{\begin{array}{c}(i,j)\in I^2\\ i\neq j\end{array}}\mathcal{F}_{j/i}$. Et comme $\mathcal{D} = \mathcal{F}_{ext}$
+on fait apparaître que $\sum\limits_{\begin{array}{c}(i,j)\in I^2\\ i\neq j\end{array}}\mathcal{F}_{j/i} = 0$ d'o\`u le 
+théorème d'intéraction :\par
+\encadre{Le torseur des forces intérieures d'un système matériel est nul}\par
+\exercice Montrer que l'étude mécanique (cinématique, cinétique et dynamique) d'un système isolé de deux 
+point matériels $A_1$ et $A_2$ de masses $m_1$ et $m_2$ peut être ramenée à celle de deux points matériels 
+fictifs $G(M = m_1+m_2)$ et $A(\mu = \frac{m_1 m_2}{m1+m_2})$ tel que $G$ soit le centre de masse du sytème 
+et $\ve{OA} = \ve{A_1 A_2}$. (On se place dans un référentiel galiléen).
+
+\sspartie{Torseur des forces d'inertie :}
+\index{Force!inertie@d'inertie}
+L'utilisation du principe fondamental de la dynamique n'est posible que si on connaît le torseur des forces
+d'inertie.\par
+\point{Détermination dans le cas général :}\par
+On introduit un référentiel galiléen intermédiaire (par principe il en existe) dans lequel le PFD s'écrit :
+$\mathcal{F}_{ext} = \mathcal{D}^{(g)}$. En effet les forces extérieures ne dépendent pas du référentiel).
+On a alors : $\mathcal{F}_{inert} = \mathcal{D}-\mathcal{D}^{(g)}$ ce qui montre que $\mathcal{F}_{inert}$ 
+est le torseur associé à la collection de pointeurs $(A_i, m_i(\ve{a_i} - \ve{a_i}^{(g)}))$ et la loi
+de composition des accélérations permet ce calcul. En conclusion :\par
+$$\mathcal{F}_{inert} = \left\lvert\begin{array}{ll}%
+   \sum\limits_{i}m_i(\ve{a_{i,ent}}+\ve{a_{i,cor}})& \mathrm{R\acute esultante}\\
+   \sum\limits_{i}m_i\ve{AA_i}\land(\ve{a_{i,ent}}+\ve{a_{i,cor}})&\mathrm{Moment\;au\;point\;A}
+                        \end{array}\right.$$\par
+\point{Cas particulier de $\cal{R}$ en translation $/{\cal{R}}^{(g)}$ :}\par
+Dans ce cas tout se simplifie puisque $\ve{a_{i,ent}} = \ve{a}$ et $\ve{a_{i,cor}} = \ve{0}$. En prenant
+le moment au centre de masse on trouve :\par
+$$\mathcal{F}_{inert}\left\lvert\begin{array}{l}
+                      -M\ve{a}\\
+                      \ve{0}\end{array}\right.$$
+\spartie{Energie mécanique :}
+
+\sspartie{Puissance d'un ensemble de forces :}
+\index{Puissance}
+\point{Définitions :}\par
+Etant donné un système matériel soumis à une distribution de forces $(A_i, \ve{f_i})$, on appelle puissance
+de ces forces dans un référentiel $\mathcal{R}$ la quantité :
+\encadre{$P = \sum\limits_{i}\ve{f_i}\cdot\ve{v_i}$}
+o\`u $\ve{v_i}$ désigne la vitesse dans ${\cal{R}}$ du point $A_i$.
+\index{Travail}
+On introduit également le travail élémentaire des ces forces :
+\encadre{$\delta\mathcal{T} = P\dd{t} = \sum\limits_{i}\ve{f_i}\cdot\ve{v_i}$}\
+\point{Puissances des forces intérieures :}
+\encadre{La puissance des forces intérieures est invariante par changement de référentiel.}\par
+En effet, si on considère deux référentiels, $P_{int}-P_{int}'$ se calcule grâce à la loi de 
+transformation des vitesses en introduisant $A_{i_c}$ le point de $\mathcal{R}'$ qui coincide avec $A_i$ à 
+l'instant $t$ : $P_{int}-P_{int}' = -\sum\limits_{i}\ve{v_{i_c}}\cdot\ve{f_i}$ et comme $A_{i_c}$ et
+$O'$ sont deux points du même référentiel : $\ve{v_{i_c}} = \ve{v_{O'}} + \ve{\omega}\land\ve{OA_{i_c}}$.
+On fait alors apparaître résultante et moment des forces inérieures qui sont nuls d'après le théorème
+d'intéraction.\par
+\point{Puissance des forces de Coriolis :}\par
+\encadre{La puissance des forces de Coriolis est nulle.}\par
+\sspartie{Energie Cinétique :}
+\point{Définition :}\par
+\encadre{$E_c = \sum\limits_{i}\frac{1}{2}m_i v_i^2$}\par
+L'énergie cinétique ne dépend que du mouvement du système matériel.
+
+\point{Théorème de K\oe nig :}\par
+\index{theoreme@Théorème!koenig@de K\oe nig}
+\encadre{$E_c = \frac{1}{2}Mv_G^2 + E_c^{\star}$}
+O\`u $E_c^{\star}$ désigne l'énergie cinétique du système dans le référentiel du centre de masse.\par
+\exercice Déterminer l'énergie cinétique d'un chenille de dameuse qui roule sans glisser en fonction de la 
+vitesse $\ve{v}$ de son centre de masse $G$.\par
+\centerline{\includegraphics*[width=8cm,height=2.5cm]{images/dameuse.eps}}\par
+\point{Théorème de l'énergie cinétique :}\par
+
+\index{theoreme@Théorème!energie@de l'énergie cinétique}
+\encadre{$\dd{E_c} = E_c(t+\dd{t})-E_c(t) = \delta\mathcal{T}$}\par
+O\`u $\delta\mathcal{T}$ désigne le travail élémentaire de toutes les forces qui agissent sur le système 
+matériel.\par
+En effet $\dd{E_c} = \dd{\Bigl(\sum\limits_i \frac{m_i}{2}v_i^2\Bigr)} = \sum\limits_i m_i\ve{v_i}\cdot
+\ve{a_i}\dd{t}$ Or le théorème de la résultante cinétique appliqué au point $A_i$ nous assure que 
+$m_i\ve{a_i} = \ve{f_i}$. O\`u $\ve{f_i}$ désigne la résultante de toutes les forces qui s'exercent sur le 
+point $A_i$. On déduit le théorème.\par
+\sspartie{Energie potentielle :}
+\index{Energie!potentielle|textbf}
+\point{Définition :}
+On dit qu'un ensemble de forces relatives à un système matériel dérive d'une énergie potentielle lorsque le
+travail de ces forces peut être mis sous la forme :\par
+\encadre{$\delta\mathcal{T} = -\dd{E_p}$}\par
+O\`u $E_p$ est une quantité qui ne dépend que de la position du système matériel.\par
+\exercice Définir et calculer l'énergie potentielle  d'un système de deux points matériels élastiquement liés.
+\point{Cas des forces de pesanteur :}
+Les forces de pesanteur subies par un système matériel dérivent d'une énergie potentielle : \par
+\encadre{$E_p = -M\ve{g}\cdot\ve{OG} = M g z_G$}\par
+en notant $z_G$ l'altitude du centre de masse.\par
+\point{Cas des forces d'inertie :}\par
+On suppose le référentiel d'observation en rotation stationnaire autour d'un axe fixe dans un référentiel 
+galiléen. Les forces d'inertie dérivent alors d'une énergie potentielle : \par
+\encadre{$E_p = -\dfrac{1}{2}I\omega^2$}\par
+O\`u $I = \sum\limits_i m_i r_i^2$ désigle le moment d'inertie du système matériel par rapport à l'axe.\par
+\point{Cas des forces de frottements :}\par
+Les forces de frottements de glissement entre deux solides ne dérivent pas d'une énergie potentielle comme
+le montrent les lois de Coulomb (III).
+\sspartie{Energie potentielle d'un système matériel :}
+On définit l'énergie potentielle d'un système matériel comme la somme de toutes les énergies potentielles
+dont dérivent un ensemble de forces qui s'exercent sur le système.
+\sspartie{Energie mécanique :}
+\index{Energie!mecanique@mécanique|textbf}
+\point{Définition :}\par
+On définit l'énergie mécanique d'un système matériel comme la somme de son énergie cinétique et de son 
+énergie potentielle.
+\point{Théorème de l'énergie mécanique :}
+C'est un corollaire du théorème de l'énergie cinétique~:
+\index{theoreme@Théorème!energie@de l'énergie mécanique}
+\encadre{$\dd{E_m} = \delta\mathcal{T}'$}\par
+O\`u $\delta\mathcal{T}'$ désigne le travail de toutes les forces s'exerçant sur le système matériel qui ne
+dérivent pas d'une énergie potentielle.
+\exercice Une corde parfaitement souple glisse sans frottement sur une table horizontale car son extrémité
+pend sur le rebord. Determiner son mouvement en supposant qu'elle est lachée sans vitesse initiale. L'absence
+de frottement et l'unique degré de liberté conduisent à utiliser un théorème énergétique.
+%
+%--------------------------------------------------PARTIE--------------------------------------------------
+%
+\partie{Mécanique du solide :}\index{mecanique@Mécanique!solide@du solide}
+\spartie{Etude cinématique :}
+\sspartie{Mouvement d'un solide par rapport à un référentiel quelconque :}
+En mécanique, un solide est système matériel constitué de points matériels immobiles les uns par rapport aux 
+autres. Il définit donc un référentiel, appelé référentiel du solide.\par
+\index{referentiel@Référentiel!solide@du solide}
+L'étude cinématique d'un solide se rémène donc à celles de son référentiel associé qu'on notera dorénévant :
+$(\mathcal{S})$. Le calcul des vitesses se fait grâce à la relation torsorielle :\par
+\encadre{$\ve{v_B}= \ve{v_A} + \ve{\omega}\land\ve{AB}$}\par
+On note que $A$ n'est pas forcément un point matériel.
+\sspartie{Mouvement relatif de deux solides en contact ponctuel :}
+\point{Définition :}
+Etant donnés deux solides en contact ponctuel on note : $I$ le point de contact, $(I_1)$ le point de $\mathcal{
+S}_1$ coïncidant avec $I$ à l'instant $t$ et $I_2$ le même dans $\mathcal{S}_2$. On note $\Pi$ le plan tangent
+aux deux solides, qui existe toujours en pratique. On définit alors la vitesse de glissement de $(1)$ par
+rapport à $(2)$ comme la vitesse de $I_1$ par rapport à $\mathcal{S}_2$. On a le théorème suivant :\par
+\encadre{$\ve{v_{I_1/\mathcal{S}_2}} = \ve{v_{I_1}} - \ve{v_{I_2}}$}\par
+On définit des vitesses de pivotement et de roulement comme les composantes parallèles et orthogonales du 
+vecteur rotation de $(1)$ par rapport à $(2)$.\par
+\point{Condition cinématique de non-glissement :}
+\index{Glissement}
+On dit qu'il y a non-glissement lorsque la vitesse de glissement est nulle soit : \par
+\encadre{$\ve{v_{I_1}} = \ve{v_{I_2}}$}\par
+Et cette condition peut être généralisée dans des cas o\`u le contact n'est plus ponctuel. On montre ensuite
+que : $\ve{v_{12}} = -\ve{v_{21}}$ et que s'il n'y a pas glissement la distance parcourue par $I$ sur chaque
+solide est la même.\par
+\sspartie{Exemples :}
+\point{Disque roulant sur une règle :}
+Un disque de rayon $R$ roule sur un règle horizontale rectiligne. Déterminer la condition cinématique de non 
+glissement.
+\point{Disque roulant dans un cylindre en rotation :}
+Un disque de rayon $a$ roule à l'intérieur d'un cylindre de rayon $b$. Le mouvement se fait dans le plan 
+$(O,x,y)$. Déterminer les vecteurs rotation de chaque solide par rapport au référentiel d'observation, puis
+les vitesses $\ve{v_{I_1}}$ et $\ve{v_{I_2}}$ ainsi que $\ve{v_I}$ (à définir). En déduire la vitesse de 
+glissement, de roulement, de pivotement.
+\point{Disque roulant sans glisser sur une table :}
+Un disque de rayon $b$ roule sans glisser sur une table horizontale immobile dans le référentiel d'observation
+repérée par les vecteurs $\vx,\vy$. Il est retenu par un arbre horizontal qui lie son centre $C$ à un point 
+$C'$ de l'axe $(O,\vz)$. On note $I$ le point de contact entre le disque et la table et $\theta$ l'angle 
+$(\vx,\ve{OI})$ tel que $\dot{\theta} = cste$. Déterminer l'accélération dun point du disque qui coïncide 
+avec $J$ diamétralement opposé au point $I$.
+\spartie{Eléments cinétiques :}
+\sspartie{Centre de masse :}
+\index{Centre de masse}
+\point{Définition :}
+Le centre de masse d'un système matériel est le barycentre des points $(A_i,\!m_i)$
+\point{Propriétés :}
+Le centre de masse est situé sur tout élément de symétrie (plan, droite, point). La quantité :$M\ve{OG}$ est 
+une grandeur extensive (très utile!!).
+
+\point{Exemples :}
+Déterminer les centres de masses des solides suivants : \par
+demi-boule homogène, cône homogène, cône surmonté d'une demi-boule de même rayon.
+\point{Théorème de Guldin :}
+\index{theoreme@Théorème!guldin@de Guldin}
+On se donne une courbe homogène de longueur $L$ et un axe $\Delta$ ne coupant pas cette courbe. La rotation
+de $2\pi$ de la courbe autour de l'axe engendre une surface de surface $S$ telle que si $r_G$ désigne la 
+distance du centre de masse de la courbe à l'axe : \par
+\encadre{$2\pi L r_G = S$}\par
+On en déduit le centre de masse d'un demi-cercle homogène en considérant $\Delta$ le diamètre du demi-cercle
+car on connaît la surface $S$. De même en appliquant le théorème dans l'autre sens on en déduit la surface 
+d'un tore.
+\point{Théorème de Guldin n°2 :}
+Cette fois on considère une plaque homogène de surface $S$ et un axe $\Delta$. Si le volume engendré par 
+rotation de la plaque autour de l'axe est $V$ on a la relation :\par
+\encadre{$2\pi S r_G = V$}\par
+On en déduit le centre de masse d'un demi-disque ou le volume d'un tore.\par
+
+\sspartie{Moment d'inertie :}
+\index{Moment!inertie@d'inertie}
+\point{Définition :}
+On définit le moment d'inertie d'un solide par rapport à un ensemble de points comme la quantité :\par
+\encadre{$I_A = \sum\limits_i m_ir_i^2$}\par
+O\`u $r_i$ désigne la distance du point $A_i$ à l'ensemble $A$. On prend toujours pour $A$ un point, 
+une droite ou un plan.
+\point{Relations entre moments d'inertie :}
+Dans un repère $(O, \vx, \vy, \vz)$ la relation de pythagore fournit les relations :\par
+\encadre{$I_O = I_{xOy}+I_{yOz}+I_{zOx}=\frac{1}{2}(I_{xx}+I_{yy}+I_{zz})$}\par
+Le moment d'inertie est une grandeur extensive (très important!).
+\point{THéorème d'Huygens :} 
+\index{theoreme@Théorème!huygens@d'Huygens}
+Etant donné un système matériel de masse $M$ et une droite $\Delta$ quelconque :\par
+\encadre{$I_{\Delta} = I_{\Delta_G}+Md^2$}\par
+O\`u $\Delta_G$ est la droite parallèle à $\Delta$ qui passe par $G$ le centre de masse du système matériel.
+$d$ désigne la distance de $G$ à $\Delta$.
+\point{Exemples :}
+Calculer le moment d'inertie par rapport à un diamètre d'un boule homogène, d'un disque homogène, d'une tige
+homogène par rapport à son centre, par rapport à une extrémité, d'un cône homogène plein par rapport à son axe,
+d'un cône surmonté d'une demi-boule de même rayon par rapport à l'axe du cône...\par
+\sspartie{Moment cinétique d'un solide :}
+\index{Moment!cinetique@cinétique d'un solide}
+\point{Moment cinétique en un point commun à $\mathcal{S}$ et $\mathcal{R}$ :}
+Le moment cinétique par rapport à ce point $O$ vaut :\par
+$\ve{L_O}=\sum\limits_i m_i \ve{OA_i}\land\ve{v_i} = \sum\limits_i m_i\ve{OA_i}\land(\ve{\omega}\land\ve{v_i})
+         =\sum\limits_i m_i(OA_i^2\ve{\omega} -(\ve{OA_i}\cdot\ve{\omega})\ve{OA_i})$\par
+Et ensuite un calcul de composantes sur une base orthonormée directe fait apparaître des moments d'inertie 
+ainsi que des termes nouveaux baptisés ``produits d'inertie'' :\par
+$I_{xx} = \sum\limits_i m_i(y_i^2+z_i^2), I_{xy} = -\sum\limits_i m_ix_iy_i$. On obtient au final une relation
+matricielle :\par
+\index{Matrice!inertie@d'inertie}
+\index{Produit d'inertie}
+\encadre{$\ve{L_O} = I \ve{\omega}$}\par
+O\`u $I$ est la matrice d'inertie remplie des moments d'inertie et des produits d'inertie. Cette matrice 
+d'inertie est évidemment symétrique.
+
+\point{Axes principaux :}
+\index{Axe principal}
+Un axe est principal lorsque c'est une vecteur propre de la matrice d'inertie. On voit que tout axe de 
+symétrie est principal et que tout axe orthogonal à un plan de symétrie est principal lors du calcul du moment
+cinétique au point d'intersection de l'axe et du plan.
+\point{Exemples :}
+Matrice d'inertie d'une boule homogène, d'un cylindre homogène.
+\point{Moment cinétique d'un solide en son centre de masse :}
+Etant donné que le centre de masse est un point commun entre le référentiel du solide et le référentiel du
+centre de masse, on peut appliquer les relations précédentes en faisant les substitutions qui s'imposent :\par
+$O\to G, \mathcal{R}\to\mathcal{R}^{\star}$. En effet le théorème de K\oe nig permet d'identifier les 
+vecteurs $\ve{L_G}$ et $\ve{L_G}^{\star}$ et les vecteurs $\ve{\omega}$ et $\ve{\omega}^{\star}$ sont égaux 
+puisque le référentiel du centre de masse est en translation.
+\point{Moment d'inertie d'un solide en rotation autour d'un axe fixe :}
+Dans tous les cas, on a la relation suivante :\par
+\encadre{$L_{\Delta} = I_{\Delta}\omega$}\par
+et si de plus $\Delta$ est un axe principal alors on égalité des vecteurs.
+\sspartie{Energie cinétique d'un solide :}
+\index{Energie!cinetique@cinétique}
+\point{Expression générale :}
+Un petit calcul montre l'égalité :\par
+\encadre{$E_c = \dfrac{1}{2}\mathcal{C}\cdot\mathcal{V}$}\par
+O\`u $\mathcal{C}$ et $\mathcal{V}$ désignent les torseurs cinétiques et torseurs vitesses du solide. Dans le
+référentiel du centre de masse on retrouve vite le théorème de K\oe nig.
+\point{Expression dans les cas d'une rotation autour d'un axe fixe :}
+Si on note : $\Delta =(O, \vz)$ l'axe de rotation, on trouve la relation :\par
+\encadre{$E_c = \dfrac{1}{2}I_{\Delta}\omega^2$}
+\point{Exemples :}
+-Calculer le moment cinétique d'une barre homogène glissant le long de deux parois orthogonales. Calculer 
+ensuite son énergie cinétique par le théorème précédent puis par le théorèpe de K\oe nig.\par
+-Une boule homogène roule sans glisser dans une cornière fixe assimilée à un dièdre de demi-angle au sommet
+$\alpha$. Calculer son énergie cinétique en fonction de $\alpha, M$ et de $v_G$. Que peut on en déduire quant
+à la définition d'un point matériel?\par
+-Une plaque rectangulaire homogène est en rotation autour d'une de ses diagonales. Calculer son moment 
+cinétique au centre de la plaque, en déduire son $E_c$.
+\spartie{Etude dynamique :}
+\sspartie{Interaction de contact entre deux solides :}
+\point{Notations :}
+Le contact étant ponctuel on note~:
+\begin{itemize}
+\item{}$\ve{v_{12}}$ la vitesse de glissement de $1/2$ qui est parallèle au plan tangent ou nulle.
+\item{}$\ve{R_{12}}$ la force exercée par $1$ sur $2$.
+\end{itemize}\par
+\centerline{\includegraphics*[width=6cm,height=3.5cm]{images/coulomb.eps}}
+\point{Lois de Coulomb :}
+\index{Loi!coulom@de Coulomb|textbf}
+Les lois énoncées ici sont relatives au mouvement de glissement mais il existe des lois analogues pour les 
+mouvements de roulement et de pivotement. Elles fournissent des informations sur $\ve{R_{12}}$. Elles sont 
+dites empiriques au sens o\`u elles ne reposent par sur une démonstration mais sur l'expérience qui montre
+qu'elles sont valables avec une excellente précision. Elles s'énoncent en deux parties, l'une porte sur
+$\ve{R_{12, \para}}$ l'autre sur $\ve{R_{12, \bot}}$~:
+\encadre{\begin{tabular}{l}
+$\ve{R_{12,\bot}}$ est colinéaire et de même sens que $\ve{n_{12}}$.\\
+Le contact entre les deux solides a lieu ssi $\ve{R_{12,\bot}}\neq 0$
+\end{tabular}}\par
+\encadre{\begin{tabular}{ll}
+Glissement & \begin{tabular}{l}$\ve{R_{12,\para}}$ est colinéaire et de même sens que $\ve{v_{12,\para}}$\\
+                               Sa norme vaut : $R_{12,\para} = f R_{12,\bot}$\end{tabular}\vspace{1mm}\\
+\hline
+Non-glissement & \begin{tabular}{l}\raise-1.5mm\hbox{$\ve{R_{12,\para}}$ est de direction et sens inconnus.}\\
+                               Sa norme vérifie : $R_{12,\para} < f R_{12,\bot}$\end{tabular}
+\end{tabular}}\par
+\vspace{2mm}
+$f$ est appelé coefficient de frottement statique ou dynamique selon qu'il y a glissement ou non. Dans tous les
+cas (glissement ou non) on dispose d'un nombre suffisant d'informations pour l'étude mécanique du système 
+composé des deux solides. Les cas limites $f$ tendant vers zéro ou vers l'infini sont approchés avec certaines
+surfaces de contact mais en pratique $f\sim 1$ et le non-glissement n'a lieu que si $f$ est supérieur à une 
+certaine valeur qui dépend des conditions.
+\index{Coefficient!frottement@de frottement}
+\sspartie{Exemples :}
+- Une brique poreuse est déposée sans vitesse initiale sur un plan incliné. Déterminer les conditions de 
+non-basculement et de non glissement.\par
+- Une boule de billard homogène, de rayon $a$ glisse sur une table horizontale. On note $\ve{v_{G_0}},
+\ve{\omega}_0$ la vitesse du centre de masse et le vecteur rotation initiaux de la boule. Déterminer le 
+mouvement du centre de masse (sans tenir compte des frottements de pivotement et de roulement).\par
+- Un cylindre homogène, à base circulaire, de rayon $b$, roule sur un plateau horizontal qui est en mouvement
+de translation horizontale selon la loi : $\ve{AO} = X_0\sin(\omega_0 t)\vx$. O\`u $A$ désigne un point du 
+référentiel d'observation et $O$ un point du plateau. Déterminer la valeur minimale du coefficient de 
+frottement pour que le roulement ait lieu sans glissement.\par
+\spartie{Etude énergétique :}
+\sspartie{Puissance des forces subies par un solide :}
+Un petit calcul du même acabit que celui de l'énergie cinétique montre que la puissance dans le référentiel
+d'observation d'un ensemble quelconque de forces subies par un solide a pour puissance :\par
+\encadre{$P = \mathcal{F}\cdot\mathcal{V}$}\par
+En notant $\mathcal{F}, \mathcal{V}$ les torseurs forces et vitesses du solide. Dans le cas particulier d'un
+mouvement de translation ça donne $P = \ve{F}\cdot\ve{v}$ et pour une rotation autour d'un axe fixe :
+$P = \omega M_{\Delta}$.
+\sspartie{Forces intérieures :}
+\index{Force!interieure@intérieures}
+\encadre{La puissance des forces intérieures est nulle.}\par
+\sspartie{Puissance des forces de contact ponctuel entre deux solides :}
+Pour ces forces là tout dépend du système choisi, selon qu'il contient l'un ou les deux solides :
+\point{Le système comprend les deux solides :}
+Les forces de contact sont intérieures et leur puissance a même valeur dans tout référentiel. Par exemple on
+peut calculer dans le référentiel d'observation et on trouve :\par
+\encadre{$P_{12} = \ve{R_{12}}\cdot\ve{v_{12}} = - \ve{R_{12, \para}}\cdot\ve{v_{12}}$}\par 
+On en déduit que cette puissance est négative s'il y a simultanément glissement et frottement et nulle dans 
+tous les autres cas. En pratique on prendra de préférence ce système là, cependant on peut faire le calcul avec
+un autre système :
+\point{Le système étudié comprend uniquement un solide (1) :}
+On trouve $P_1 = \ve{R_{12}}\cdot\ve{v_{I_1}}\neq P_{12}$
+
+\sspartie{Puissance des forces de liaison :}
+\index{Force!liaison@de liaison}
+On appelle liaison tout dispositif matériel qui permet de diminuer le nombre de degrés de liberté. Dans la 
+suite on s'intéressera surtout à deux types de liaison : pivot et rotule. La première impose un rotation 
+autour d'un axe, la seconde autour d'un point.Une liaison est dite parfaite lorsque la puissance des forces
+intérieures de liaison est nulle.\par
+Dans le cas d'une liaison pivot parfaite, cette condition se traduit par l'é\-ga\-li\-té : $M_{\Delta} = 0$.\par
+\encadre{\begin{tabular}{c}Si un solide est soumis à une liaison pivot parfaite, \\
+le moment par rapport à l'axe des forces
+de liaison est nul.\end{tabular}}\par
+De même pour la liaison rotule.
+

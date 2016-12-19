@@ -1,0 +1,262 @@
+\chapter{Ondes}\index{Onde}
+\partie{Ondes dans un milieu non-dispersif~:}
+\spartie{Equation d'onde :}
+\index{Equation!onde@d'onde}
+\sspartie{Définition :}
+On appelle onde toute fonction d'espace et de temps $s(M,t)$ qui vérifie l'équation d'onde :
+\encadre{$\laplacien{s} = \dfrac{1}{c^2}\dpak{2}{s}{t}$}
+dite équation d'onde dans laquelle la constante $c$ homogène à une vitesse est appelée célérité de  l'onde dans le milieu.\par
+\index{Milieu!dispersif@non-dispersif}
+Une telle définition n'est valable que dans un milieu non-dispersif pour une fonction scalaire. Le cas des ondes vectorielles peut s'y ramener simplement par projection sur une base
+cartésienne.
+\sspartie{Linéarité :}
+L'équation d'onde est linéaire. On en déduit immédiatement les théorèmes suivants :
+\point{Théorème de superposition :}
+Etant donné deux ondes $s_1,s_2$ de même célérité, la fonction $s = \lambda s_1 + \mu s_2$ est également une onde de même célérité.
+\point{Notation complexe :}
+Etant donné une fonction complexe $\underline{s}$ qui satisfait à l'équation d'onde de célérité $c$, la fonction $s =\re{\underline{s}}$ est une onde de célérité $c$.
+
+\spartie{Exemples d'ondes :}
+\sspartie{Onde électromagnétique dans le vide :}
+En partant des équations de Maxwell dans le vide (cf : électromagnétisme), on montre facilement que les champs $\ve{E}$ et $\ve{B}$ satisfont à l'équation d'onde :
+\encadre{$\laplacien\ve{E} = \dfrac{1}{c^2}\dpak{2}{\ve{E}}{t}\;. \laplacien\ve{B} = \dfrac{1}{c^2}\dpak{2}{\ve{B}}{t}$}
+de célérité $c$ telle que $\eps_0\mu_0 c^2 = 1$.
+\sspartie{Onde électromagnétique dans un coaxial :}
+Un coaxial\index{Cable coaxial} est constitué dde deux parties conductrices parcourues par des intensités opposées.
+On note $v(x,t)$ la différence de potentiel entre l'âme et la gaine~:\par
+\centerline{\includegraphics*[width=6cm,height=5cm]{images/coaxial.eps}}\par
+On suppose que les conducteurs sont parfaits et que l'espace interconducteurs est vide. on note alors $C_0$ et $L_0$ les capacités et inductance linéique du coaxial. On a montré dans le cours
+d'électromagnétisme que : $C_0 = \frac{2\pi\eps_0}{\ln(\frac{R_2}{R_1})}$ et $L_0 = \frac{\mu_0}{2\pi}\ln(\frac{R_2}{R_1})$.
+D'un point de vue électrocinétique, le coaxial est équivalent au circuit traditionnel avec une bobine et un condensateur.\par
+\centerline{\includegraphics*[width=8cm,height=3cm]{images/ligne_transmission.eps}}\par
+
+O\`u $v(x,t)$ désigne la différence de potentiel entre l'âme et la gaine dans un plan d'abscisse $x$ normal à l'axe du coaxial (dirigé par $\vx$) et $i(x,t)$ l'intensité parcourant l'âme o\`u
+la gaine. (dans des sens opposés). A partir de ce schéma équivalent on trouve rapidement les équations vérifiées par $v$ et $i$ : ce sont les mêmes :
+\encadre{$\dpak{2}{v}{t} = C_0 L_0 \dpak{2}{v}{t}$}
+C'est une équation d'onde, de célérité $c = \dfrac{1}{\sqrt{C_0 L_0}}$. En remplaçant les capacités et inductance par leur valeurs, on trouve la célérité de la lumière dans le vide.\par
+Remarquons que l'étude de la ligne bifilaire est formellement analogue. Ces deux systèmes sont des lignes de transmission de l'information.
+\sspartie{Ondes sonores dans un tuyau~:}
+On considère un tuyau vide de section $\Sigma$ uniforme, suffisamment faible pour qu'on puisse dans la suite considérer le système comme unidimensionnel. On néglige tout effet de pesanteur, de
+sorte que la pression du fluide au repos est une fonction constante $P_0$.\par\vspace{3mm}
+\centerline{\begin{pspicture}(8,6)
+\psline(0,6)(8,6)
+\psline(0,0)(8,0)
+\psline(0,2)(8,2)
+\psline(0,4)(8,4)
+\psframe[linewidth=.1mm,fillstyle=vlines*,fillcolor=yellow](1,4)(1.5,6)
+\psframe[linewidth=.1mm,fillstyle=vlines*,fillcolor=yellow](3,0)(3.8,2)
+\psline[linewidth=.1mm]{->}(1,2.75)(3,2.75)
+\rput(2,2.6){\scriptsize{$\xi(x,t)$}}
+\rput(2.6,3.5){\scriptsize{$\xi(x\!+\!\!\dd{x},t)$}}
+\psline[linewidth=.1mm]{->}(1.5,3.25)(3.8,3.25)
+\rput(1,3.85){\scriptsize{$x$}}
+\rput(1.7,3.85){\scriptsize{$x\!+\!\!\dd{x}$}}
+\rput(7,5){Fluide au repos}
+\rput(7,1){Fluide à l'instant $t$}
+\rput(0.8,5){$\Sigma$}
+\end{pspicture}}\par\vspace{1mm}
+On pose alors $P_1(x,t) = P(x,t) - P_0$ la surpression. On rajoute l'hypothèse que $\xi$ et $P_1$ sont des IP$_1$.
+On applique alors le théorème de la résultante cinétique à la trache de fluide située au repos entre $x$ et $x+\dd{x}$, en projection sur $\vx$ et en notant $\rho_0$ la masse volumique du fluide
+au repos. En négligeant la viscosité du fluide dans le tuyau, on trouve l'EDP~:\par
+\centerline{$\rho_0\dpak{2}{\xi}{t} = -\dpa{P_1}{x}$}\par
+En supposant alors l'évolution adiabatique réversible (ce qui se justifie car le terme de source de l'entropie est d'ordre 2), on peut introduire le coefficient de compressibilité isentropique :
+\\$\chi_{\scriptstyle{S}} = -\dfrac{1}{V}\left(\dpa{V}{P}\right)_S = -\dfrac{1}{V}\left(\df{V}{P}\right)_S$ à entropie constante. En effet $\dfrac{\dd{\delta\tau}}{\delta\tau} = -\chi_S \dd{P}$.
+Or $\delta\tau = \Sigma\dd{x}$ et $\dd{\delta\tau} = \Sigma(\dd{x} + \xi(x+\dd{x},t)-\xi(x,t))-\Sigma\dd{x} =\Sigma\dd{x}\dpa{\xi}{x}$. Donc $\dfrac{\dd{\delta\tau}}{\delta\tau} = \dpa{\xi}{x}$.
+De plus, $\dd{P} = P(x,t) -P_0 = P_1$. On en déduit la deuxième EDP~:\par
+\centerline{$\dpa{\xi}{x} = -\chi_{S,0}P_1$}\par
+En effet comme $P_1$ est d'ordre 1 il suffit d'avoir $\chi_S$ à l'ordre 0. On en déduit une équation d'onde satisfaite par $\xi$ et $P_1$~:
+\encadre{$\dpak{2}{\xi}{x} = \rho_0\chi_{S,0}\dpak{2}{\xi}{t}$}
+En traduisant la conservation de la masse de l'élément de fluide considéré, on trouve une relation sur la masse volumique du fluide et la pression. Si on note $\rho_1 = \rho - \rho_0$ l'excédent
+de masse volumique, on a :\par
+\centerline{$\rho_1 = \dfrac{P_1}{c^2}$}\par
+
+Si on connaît l'équation d'état du fluide, en utilisant la relation de Reech (cf : thermodynamique) : $\chi_S = \dfrac{\chi_T}{\gamma}$, on peut calculer $\chi_S$ et donc la célérité du son dans
+le fluide. Pour un gaz parfait, étant donné que l'évolution est adiabatique réversible, on peut utiliser les relations de Laplace $P V^{\gamma} = cste$.\par
+Cette relation permet le calcul de
+$\chi_{S,0} = \dfrac{1}{\gamma P_0}$ et donc la célérité du son dans le gaz parfait~:
+\encadre{$c = \sqrt{\dfrac{\gamma R T_0}{M}}$}
+Et d'un point de vue numérique, on trouve à peu près $340\;m s^{-1}$.
+\sspartie{Onde de vibration transversale dans une corde :}
+\point{Corde au repos :}
+On suppose les forces de champ négligeables devant les forces de tension du fil. Si on exprime alors le TRC à un élément de corde $MM'$, en notant $T$ la tension au point $M$ et $\ve{u}$ le 
+vecteur unitaire tangent à la corde au point $M$, $\ve{0} = -T\ve{u} + T'\ve{u}'$ On en déduit que $\ve{u}$ est uniforme et donc que la corde est rectiligne. On notera $T_0$ la valeur également
+uniforme de la tension et on choisit un repère d'espace cartésien de sorte que l'axe $(Ox)$ coïncide avec l'axe de la corde au repos.
+\point{Corde en vibration :}
+On étudie les vibrations transversales telles que le déplacement d'un point $M_0$ de la corde au repos soit de la forme $\ve{M_0 M} = y(x,t)\vy$. On suppose les vibrations de faible amplitude
+de sorte que $y$ et toutes ses dérivées soient des IP1. On pose $\alpha$ l'angle tel que $\tan\alpha= \dpa{y}{x}$. On applique alors le TRC à un élément de corde situé entre $x$ et $x+\dd{x}$ et
+on trouve après un petit calcul $\mu\dpak{2}{y}{t} = \dpa{T\ve{u}}{x}$. Ce qui donne, en projection sur $\vy$ et en remarquant que $T\ve{u}\cdot\vy = T\sin\alpha = T_0\dpa{y}{x}$ à l'ordre 1.
+D'o\`u l'équation d'onde satisfaite par $y$~:
+\encadre{$\dpak{2}{y}{x} = \dfrac{\mu}{T_0}\dpak{2}{y}{t}$}
+\spartie{Onde plane :}
+\index{Onde!plane}
+\sspartie{Résolution de l'équation d'onde :}
+On s'intéresse au cas particulier unidimensionnel. Pour résoudre l'équation $\dpak{2}{s}{x} = \dfrac{1}{c^2}\dpak{2}{s}{t}$ on fait le changement de variables $a = t-x/c, b = t+x/c$ qui conduit
+après calculs à une nouvelle EDP : $\ddpa{S}{a}{b} = 0$ o\`u $S(a,b) = s(x,t)$. Si on suppose que l'on se place sur un domaine convenable (comme c'est toujours le cas en physique), on en déduit
+que $S$ s'écrit $S(a,b) = f(a) + g(b)$ o\`u $f$ et $g$ sont des fonctions de classe $\mathcal{C}^2$. Ce qui fournit la solution générale de l'équation d'onde unidimensionnelle~:
+\encadre{$s(x,t) = f\left(t-\dfrac{x}{c}\right)+g\left(t+\dfrac{x}{c}\right)$}
+\sspartie{Interprétation physique :}
+Cas particulier $s(x,t) = f(t-\frac{x}{c})$ :
+On remarque que $s(x,t_2) = s(x-c(t_2-t_1), t_1)$. Ce qui permet de tracer de tels graphes :\par\vspace{7mm}
+\centerline{\begin{pspicture}(12cm,4cm)
+                    \rput(0,3){
+                            % le repère
+                            \psset{xunit=.5cm,yunit=1cm,plotpoints=200}
+                            % le tracé
+                            \psline[linewidth=.1mm]{->}(0,0)(24,0)
+                            \psline[linewidth=.1mm]{->}(0,0)(0,1.5)
+                            \psplot[linewidth=.1mm,linecolor=red]{0}{23}{2.71828 0 x 5 sub 2 exp sub exp}
+                                  }
+                     \rput(0,1){
+                            % le repère
+                            \psset{xunit=.5cm,yunit=1cm,plotpoints=200}
+                            \psline[linewidth=.1mm]{->}(0,1.5)
+                            \psline[linewidth=.1mm]{->}(24,0)
+                            % le tracé
+                            \psplot[linewidth=.1mm,linecolor=red]{0}{23}{2.71828 0 x 7 sub 2 exp sub exp}
+                     \rput(23,1){$t_2$}
+                     \rput(23,3){$t_1$}
+                     \psline[linewidth=.1mm]{->}(4,1.5)(6,1.5)
+                     \psline[linewidth=.1mm](6,1.55)(6,0.38)
+                     \psline[linewidth=.1mm](4,1.45)(4,2.35)
+                     \rput(5.1,1.65){\tiny{$c(t_2\!-\!t_1)$}}
+                               }
+            \end{pspicture}}\par
+L'onde plane étudiée est progressive, elle se propage à la célérité $c$ dans le sens des $x$ croissants.
+L'autre cas particulier fournit une onde progressive qui se propage dans le sens des $x$ décroissants.\par
+Dans le cas général, une onde plane est la superposition de deux ondes progressives, l'une dans le sens des $x$ croissants l'autre dans le sens des $x$ décroissants.
+\spartie{Ondes sphériques :}
+\index{Onde!spherique@sphérique}
+\sspartie{Résolution de l'équation d'onde :}
+On suppose $s(r,t)$ de sorte que l'équation d'onde s'écrive en coordonnées sphériques :\par
+$\dfrac{1}{r}\dpak{2}{rs}{r} = \dfrac{1}{c^2}\dpak{2}{s}{t}$. On en déduit que la fonction $rs$ est une onde plane et s'écrit comme ci-dessus. On trouve donc~:
+\encadre{$s(r,t) = \dfrac{1}{r}\left\lbrack f(r-\dfrac{t}{c}) + g(r+\dfrac{t}{c}\right\rbrack$}
+\sspartie{Interprétation physique :}
+Une onde sphérique peut toujours être considérée comme la superposition de deux ondes progressives de même célérité $c$.
+\rmq On note la présence du $1/r$ qui, on le verra, traduit la conservation de l'énergie associée à l'onde.
+\exercice Etant donnée une distribution de charge de volume fini seule dans l'espace, résoudre l'équation de d'Alembert $\dalembert V = \dfrac{-\rho}{\eps_0}$ et en déduire 
+l'équation du potentiel retardé. (cf : électromagnétisme)
+\spartie{Ondes stationnaires :}
+\index{Onde!stationnaire}
+\sspartie{Définition :}
+De manière générale, on appelle onde stationnaire toute onde qui en notation réelle est le produit d'une fonction d'espace et d'une fonction périodique du temps.\par
+Ainsi une onde plane qui est la superposition de deux ondes progressives sinusoïdale se propageant en sens inverse, via une transformation trigonométrique élémentaire, est une onde stationnaire.
+\spartie{Onde stationnaire quelconque :}
+Toute onde satisfait dans un milieu non-dispersif à l'équation des ondes introduite en début de chapitre. Dans le cas d'une onde stationnaire : $s(M,t) = F(M)G(t)$ et $G$ est une fonction
+périodique. En remplaçant dans l'équation des ondes et en séparant les variables $M$ et $t$ indépendantes, on arrive aux équations : $\dfrac{c^2}{F}\laplacien F = \dfrac{1}{G}\dff{G}{t} = cte$.
+Si la constante est positive cette équation conduit à $G$ non-périoque, ce cas est à rejeter. Si la constante est négative, on la note $-\omega^2$ par souci d'homogénéité et on obtient 
+$G(t) = G_0\sin(\omega t +\alpha)$ et la fonction $F$ satisfait à l'équation de Helmholtz :$\laplacien F + k^2 F = 0$ en posant $k = \omega / c$.\par
+
+En conclusion une onde stationnaire quelconque dans un milieu non-dispersif s'écrit~:
+\encadre{$s(M,t) = F(M)\sin(\omega t + \alpha)$}
+Avec $F$ une fonction d'espace qui vérifie l'équation de Helmholtz~:
+\encadre{$\laplacien F + k^2 F = 0$}
+\sspartie{Onde stationnaire plane :}
+\point{Equation générale :}
+Dans le cas d'une onde plane stationnaire, l'équation de Helmholtz se simplifie : $\dff{F}{x} + k^2 F = 0$. on en déduit immédiatement : $F(x) = F_0\sin (kx+\beta)$.
+Une onde stationnaire plane s'écrit donc :
+\encadre{$s(x,t) = s_0\sin(kx+\beta)\sin(\omega t+\alpha)$}
+La fonction d'espace est donc périodique, de période :
+\encadre{$\lambda = \dfrac{2\pi}{k} = c\dfrac{2\pi}{\omega} = cT$}
+\rmq Une onde stationnaire ne se propage pas! Cependant une onde plane stationnaire peut être considérée comme la superposition de deux ondes planes progressives.
+\point{Exemple de la corde de Melde~:}
+\index{Corde de Melde}
+\centerline{\includegraphics*[width=12cm,height=4cm]{images/melde.eps}}\par
+Si $M$ est un point de la corde, on note $M_0$ le point correspondant lorsque la corde est au repos. On suppose que ces points sont à la verticale l'un de l'autre (vibrations transversales). 
+On note alors $y(x,t)$ la variation d'altitude à l'instant $t$ du point de la corde situé à l'abscisse $x$. On impose au vibreur une vibration de la forme $y(l,t) = a\sin(\omega t)$ (en notant 
+$l$ la longueur supposée stationnaire de la corde). On montre que la tension de la corde au repos est uniforme de valeur $T_0 = mg$. D'après l'étude faite au 1.2.4 on sait que le déplacement 
+transversal satisfait à l'équation d'onde de célérité $c = \sqrt{\dfrac{T_0}{\mu}} = \sqrt{\dfrac{mg}{\mu}}$. De plus on a les conditions aux limites :\par
+$\left\lbrace\begin{array}{lcl}
+y(0,t) & = & 0\\
+y(l,t) & = & a\sin(\omega t)\end{array}\right.$ à tout instant. En cherchant des solutions stationnaires on obtient facilement une solution :
+\encadre{$y(x,t) = \dfrac{a}{\sin(kl)}\sin(kx)\sin(\omega t)$}
+\rmq L'amplitude des vibrations est censée devenir infinie lorsque $\sin(kl)$ est nul. En fait dans ces cas toute l'étude ne s'applique plus puisque on perd l'hypothèse que $\alpha$ est un IP1,
+il apparaît des phénomènes irréversibles... En pratique cette amplitude devient grande devant celle du vibreur. La corde prend alors l'aspect de fuseaux avec des noeuds immobiles.
+\point{Exemple de la corde de guitare :}
+Cette fois la corde est immobile aux deux extrémités. Se référer au problème sur la corde du guitare.
+
+\spartie{Onde plane progressive monochromatique :}
+\sspartie{Transformée de Fourier :}
+\index{transformee@Transformée de Fourier}
+\newcommand{\ffff}{\mathfrak{F}}
+\newcommand{\llll}{\mathfrak{L}}
+On va faire un peu de maths sans rien démontrer car ce qui suit n'est au programme ni en maths ni en physique.\par
+On notera ici $\mathfrak{L}^1$ le $\cc$-espace vectoriel des fonctions de $\rr$ dans $\cc$ continues par morceaux et intégrables sur $\rr$. Pour une telle fonction on note $\mathfrak{F}f$ la 
+transformée de Fourier de la fonction $f$ définie par~:
+\encadre{$\mathfrak{F}f(x) = \dfrac{1}{\sqrt{2\pi}}\integrale{-\infty}{+\infty}{f(t)e^{-ixt}\dd{t}}$}
+$\mathfrak{F}$ est une application linéaire de $\mathfrak{F}^1$ dans l'ensemble des applications continues bornées. De plus on a quelques propriétés algébriques intéréssantes :
+\point{Parité :} Si $f$ est réelle et paire alors $\ffff f$ est réelle et paire. Si $f$ est réelle et paire, $\ffff f$ est imaginaire pure et impaire.
+\point{Translatée} $\ffff f(t-a)(x) = e^{-ixa}\ffff f(x)$
+\index{Lemme de Lebesgue}
+\point{Lemme de Lebesgue version intégrale :} $\ffff f(x)\tendf{x}{\pm\infty} 0$ mais $\ffff f$ n'est pas forcément $\llll^1$.
+\point{Dérivation :} Si $tf(t)$ et $f$ sont $\llll^1$ alors $\ffff f$ est $\mathcal{C}^1$ sur $\rr$ et $(\ffff f)'(x) = -i\ffff(tf(t))(x)$.
+\index{Convolution}
+\point{Convolution :} Si $f$ est $\llll^1$ et $g$ continue par morceaux et bornée alors le produit de convolution de $f$ et $g$ défini par $f*g(x) = \dfrac{1}{\sqrt{2\pi}}\integrale{-\infty}{%
+\infty}{f(t)g(x-t)\dd{t}}$ est $\llll^1$ et sa transformée de Fourier vérifie : $\ffff(f*g) = (\ffff f)(\ffff g)$.
+\point{Réciprocité :} On a pour toute fonction $f$ $\llll^1$ telle que $\ffff f$ soit encore $\llll^1$ :
+\encadre{$\integrale{-\infty}{+\infty}{\ffff f(u)e^{ixu}\dd{u}} = \dfrac{1}{\sqrt{2\pi}}\widetilde{f}(x)$}
+O\`u $\widetilde{f}$ désigne la régularisée de $f$ telle qu'elle est définie dans le cours de maths.\par
+Seulement en physique on est malsains donc on retiendra le résultat suivant :
+\encadre{$s(t) = \dfrac{1}{2\pi}\integrale{-\infty}{+\infty}{\left\lbrack\integrale{-\infty}{+\infty}{s(t)}e^{i\omega t}\dd{t}\right\rbrack e^{-i\omega t}\dd{\omega}}$}
+L'étude peut être étendue au cas de fonctions de plusieurs variables, en particulier pour une fonction d'espace et de temps~:
+\encadre{$s(\ve{r},t) = \integrale{{}}{{}}{S(\ve{k},\omega)e^{i(\ve{k}\cdot\ve{r}-\omega t)}\dd{{}^3k}\dd{\omega}}$}
+\sspartie{Définition d'une OPPM :}
+\index{OPPM}
+On appelle OPPM une fonction complexe d'espace et de temps de la forme $\underline{s_0}\oppm$. $\ve{k}$ appelé vecteur d'onde et $\omega$ la pulsation, sont liés par une relation 
+$\omega(\ve{k})$ appelée relation de dispersion. $\underline{s_0}$ est l'amplitude complexe de l'OPPM. $\phim = \ve{k}\cdot\ve{r}-\omega t$ est la phase de l'OPPM. On qualifie une OPPM de 
+longitudinale lorsque $\ve{s_0}\land\ve{k} = \ve{0}$ et de tranversale lorsque $\ve{s_0}\cdot\ve{k} = 0$.
+\point{Exemple :}
+On considère une OPPM électromagnétique se propageant dans le vide. En prenant sa divergence montrer que l'onde est transversale. De même on considère une OPPM sonore se déplaçant dans un
+fluide non-visqueux. En admettant que le rotationnel de cette OPPM est nul (cf : problème sur les ondes sonores), montrer que le champ de vitesse est longitudinal.
+\sspartie{Propriétés d'une OPPM dans un milieu quelconque :}
+$\ast$ Dans un repère cartésien tel que $\vx$ soit parallèle et de même sens que $\ve{k}$ l'OPPM s'écrit : $e^{i(k x-\omega t)}$. La phase a même valeur à un instant donné en tout point d'un 
+plan $x=cste$. L'onde est dite ``plane''.\par
+$\ast$ En posant $v_{\phim} = \frac{\omega}{k}$, l'onde est une fonction $f(t-x/v_{\phim})$. C'est pourquoi elle est qualifiée de ``progressive'' : elle se propage dans le sens des 
+$x$ croissants.\par
+$\ast$ L'onde ne possède qu'une seule pulsation. C'est pourquoi elle est ``monochromatique''.
+\sspartie{Structure dans un milieu  non-dispersif :}
+Dans un tel milieu l'OPPM satisfait à l'équation d'onde. Un calcul é\-lé\-men\-taire montre alors  qu'on a la relation de dispersion linéaire suivante :
+\encadre{$\omega = ck$ ou $\lambda = cT$}
+O\`u $\lambda$ et $T$ désignent les périodes spatiales et temporelles.
+\partie{Ondes dans un milieu dispersif :}
+\index{Milieu!dispersif}
+\spartie{Définition :}
+\sspartie{Ondes :}
+\index{Onde|textbf}
+De manière générale on appelle ``onde'' toute superposition d'OPPM :
+\encadre{$s(\ve{r},t) = \integrale{{}}{{}}{S(\ve{k})\oppm \dd{{}^3k}}$}
+Dans laquelle $\omega$ est une fonction du vecteur d'onde.
+\sspartie{Milieux non-dispersifs :}
+Un milieu est dit non-dispersif lorsque la relation de dispersion est linéaire i-e :$\omega = c k$ o\`u $c>0$ est la célérité de l'onde. Dans un tel milieu, moyennant certaines propriétés de 
+sommabilité des fonctions, on peut dériver sous le signe intégral et on peut rerouver l'équation des ondes introduite au I.
+\sspartie{Milieux dispersifs :}
+Dans un tels cas on définit :
+\encadre{$\begin{array}{lclc}
+            v_{\phim} & = & \dfrac{\omega}{k}& \mathrm{vitesse\; de\; phase}\\
+            \noalign{\vspace{1mm}}
+            v_g & = & \df{\omega}{k} & \mathrm{vitesse\; de\; groupe}\end{array}$}
+Un calcul simple montre l'équivalence :\par
+\centerline{$v_{\phim} = v_g \equivaut $ milieu non-dispersif~:}
+\rmq Dans le cas du milieu dispersif, le vecteur d'onde peut être complexe, ce qui autorise des ondes amorties ou évanescentes.
+\index{Onde!evane@évanescente}
+\spartie{Interprétation :}
+\point{Vitesse de phase :}
+\index{Vitesse!de phase}
+Un calcul simple montre que la vitesse de phase est comme son nom l'indique, la vitesse de propagation de la phase d'une OPPM.
+\point{Vitesse de groupe :}
+\index{Vitesse!de groupe}
+L'appellation ``vitesse de groupe'' provient de l'étude d'une onde particulière appelée ``paquet d'ondes'', qui est une superposition d'OPPM de vecteur d'onde voisins. Ainsi, un paquet d'onde 
+plane est de la forme : $\integrale{}{}{\underline{S}(k)\oppm\dd{k}}$, dans laquelle la fonction $\underline{S}$ est nulle en dehors d'un voisinage de la valeur $k_0$. 
+
+En supposant le diamètre de ce voisinage très faible devant l'amplitude moyenne de l'onde, on peut faire un DL selon les puissances de $k-k_0$. On fait alors apparaître l'égalité suivante :
+\encadre{$\underline{s}(x,t) = e^{-i\omega_0 t\bigl(1-\frac{v_g}{v_\phim}\bigr)}\underline{s}(x-v_g t, 0)$} 
+Si le milieu est non-dispersif, $v_\phim =v_g$ et le paquet d'onde se propage à la célérité $c$. Si le milieu est dispersif, le paquet d'onde subit une déformation au cours du temps. Cependant 
+cette fois c'est l'amplitude du paquet d'onde qui se propage à la vitesse $v_g$. En sachant que l'énergie associée à l'onde est nulle en dehors du voisinage considéré, la vitesse de groupe est 
+aussi la vitesse de propagation de l'énergie associée à un paquet d'onde.
+\spartie{Description dans un milieu optique :}
+\sspartie{Mise en évidence expérimentale :}
+Dans le cas d'un milieu optique, la relationde dispersion s'écrit localement :
+\encadre{$k = n\dfrac{\omega}{c}$}
+(cf : optique) un milieu optique est dit dispersif lorsque l'indice $n$ varie selon la longueur d'onde $\lambda$. Ainsi le caractère dispersif d'un verre est mis en évidence par l'expérience 
+historique de Newton et de son prisme.
+\sspartie{Mesure des vitesses de phase et de groupe :}
+Elles peuvent être obtenues à partir du graphe $n = f(\lambda)$.
