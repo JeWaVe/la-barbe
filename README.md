@@ -7,6 +7,8 @@ Source does not built yet, since I lost the package (sty), which has to be rewri
 
 I don't have the time for it now. 
 
+BUILD : just run make clean all
+
 The build MUST not use pdflatex. 
 
 commits which require pdflatex will all be rejected. 
