@@ -1,0 +1,71 @@
+% This is the package to build physics lessons book
+% 
+% (c) Regis Portalez
+%
+%% This program can be redistributed and/or modified under the terms
+%% of the LaTeX Project Public License Distributed from CTAN archives
+%% in directory macros/latex/base/lppl.txt.
+% 
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{labarbe}
+  [2017/03/07 : package for physics lessons]
+  \RequirePackage{amssymb}
+  \RequirePackage{stmaryrd}
+  \newcounter{exercicecounter}
+  \setcounter{exercicecounter}{1}
+
+  \newcommand\partie[1]{\section{#1}}
+  \newcommand\spartie[1]{\subsection{#1}}
+  \newcommand\sspartie[1]{\par\noindent\textbf{#1}\par}
+  \newcommand\rr[1][]{\mathbb{R}^{#1}}
+  \newcommand\nn{\mathbb{N}}
+  \newcommand\zz{\mathbb{Z}}
+  \newcommand\cc{\mathbb{C}}
+  \newcommand\sinc{\mathrm{sinc}}
+  \newcommand\declarecountsphi{\newcounter{phi}}
+  \newcommand\dd[1]{\ensuremath{\mathrm{d}\hspace{1pt}{#1}}} 
+  \newcommand\integrale[3]{{\displaystyle\int_{#1}^{#2}{#3}}}
+  \newcommand\integrales[3]{{\displaystyle\iint_{#1}^{#2}{#3}}}
+  \newcommand\integraless[3]{{\displaystyle\iiint_{#1}^{#2}{#3}}}
+  \newcommand\serie[3]{{\displaystyle \sum_{#1}^{#2}{#3}}}
+  \newcommand\ve[1]{\vec{#1}}
+  \newcommand\encadre[1]{\begin{center}\fbox{#1}\end{center}}
+  \newcommand\rmq{\textit{Remarque~:}}
+  \newcommand\dpa[2]{\ensuremath{\frac{\partial {#1}}{\partial {#2}}}}
+  \newcommand\dff[2]{\ensuremath{\frac{\partial^2 {#1}}{\partial {#2}^2}}}
+  \newcommand\dpak[3]{\ensuremath{\frac{\partial^{#1} {#2}}{\partial {#3}^{#1}}}}
+  \newcommand\ddpa[3]{\ensuremath{\frac{\partial^2 {#1}}{\partial {#2}\partial{#3}}}}
+  \newcommand\df[2]{\ensuremath{\frac{\dd {#1}}{\dd {#2}}}}
+  \newcommand\grad{\ve{\nabla}}
+  \newcommand\rot{\ve{\mathrm{rot}}}
+  \renewcommand\div{\mathrm{div}}
+  \newcommand\phim{\varphi}
+  \newcommand\vr{\ve{u_r}}
+  \newcommand\vtheta{\ve{u_\theta}}
+  \newcommand\vphi{\ve{u_\varphi}}
+  \newcommand\vx{\ve{u_x}}
+  \newcommand\vy{\ve{u_y}}
+  \newcommand\vz{\ve{u_z}}
+  \newcommand\eps{\varepsilon}
+  \newcommand\exercice{\par\noindent\rule{20pt}{5pt}\hspace{5pt}Exercice~\theexercicecounter\hspace{5pt}\rule{60pt}{5pt}\par\noindent\refstepcounter{exercicecounter}}
+  \newcommand\point[1]{\par\noindent$\bullet$\hspace{10pt}\underline{#1}\par\noindent}
+  \newcommand\laplacien{\mathop{}\Delta}
+  \newcommand\dalembert{\mathop{}\!\mathbin\Box}
+  \newcommand\eee{\mathcal{E}}
+  \newcommand\ttt{\mathcal{T}}
+  \newcommand\fff{\mathcal{F}}
+  \newcommand\para{\mathbin{\!/\mkern-5mu/\!}}
+  \newcommand\re[1]{\mathfrak{#1}}
+  \newcommand\vecom[1]{\underline{#1}}
+  \newcommand\oppm{e^{i(\ve{k}\cdot\ve{r} - \omega t)}}
+  \newcommand\segment[2]{[#1;#2]}
+  \newcommand\equivaut{\Leftrightarrow}
+  \newcommand\implique{\Rightarrow}
+  \newcommand\crochet[1]{\left[#1\right]}
+  \newcommand\intset[2]{\llbracket[#1,#2\rrbracket]}
+  \newcommand\va[1]{\left|#1\right|}
+  \newcommand\limf[2]{{\displaystyle\lim_{#1}{#2}}}
+  \newcommand\tendf[2]{{\:\xrightarrow[#1\rightarrow #2]{}\:}}
+  \newcommand\stand[1]{\laplacien_r{#1}^{\circ}}
+  \newcommand\standf[1]{\laplacien_f{#1}}
+  \newcommand\chap[1]{\hat{#1}}
